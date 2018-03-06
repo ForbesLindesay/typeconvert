@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parse ./index.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "forceType": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 3,
+          },
+          "filename": "test-cases/any-type/index.js.flow",
+          "start": Position {
+            "column": 15,
+            "line": 2,
+          },
+        },
+        "localName": "forceType",
+        "params": Array [
+          Object {
+            "name": "value",
+            "type": Object {
+              "kind": "AnyType",
+            },
+          },
+          Object {
+            "name": "type",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "VoidType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "forceType",
+    },
+  ],
+}
+`;
+
+exports[`print ./index.d.ts 1`] = `
+"declare function forceType(value: any, type: string): void;
+export default forceType;"
+`;
+
+exports[`print ./index.js.flow 1`] = `
+"// @flow
+
+declare function forceType(value: any, type: string): void;
+export default forceType;"
+`;

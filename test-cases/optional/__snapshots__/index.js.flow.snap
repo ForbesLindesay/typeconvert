@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parse ./index.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Optional": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 8,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 8,
+                "line": 1,
+              },
+              "filename": "test-cases/optional/index.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 1,
+              },
+            },
+            "start": 0,
+            "type": "CommentLine",
+            "value": " @flow",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 4,
+          },
+          "filename": "test-cases/optional/index.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 2,
+          },
+        },
+        "localName": "Optional",
+        "right": Object {
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": "foo",
+              "optional": true,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "a": Array [
+      Object {
+        "kind": "VariableDeclaration",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 6,
+          },
+          "filename": "test-cases/optional/index.js.flow",
+          "start": Position {
+            "column": 6,
+            "line": 6,
+          },
+        },
+        "localName": "a",
+        "mode": "const",
+        "typeAnnotation": Object {
+          "kind": "ReferenceType",
+          "name": "Optional",
+        },
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "a",
+    },
+  ],
+}
+`;
+
+exports[`print ./index.d.ts 1`] = `
+"type Optional = {foo?: string};
+declare const a: Optional;
+export default a;"
+`;
+
+exports[`print ./index.js.flow 1`] = `
+"// @flow
+
+type Optional = {foo?: string};
+declare var a: Optional;
+export default a;"
+`;
