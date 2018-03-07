@@ -1,0 +1,7264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parse ./color/complement.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "complement": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * Returns the complement of the provided color. This is identical to adjustHue(180, <color>).
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   background: complement('#448'),
+ *   background: complement('rgba(204,205,100,0.7)'),
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   background: \${complement('#448')};
+ *   background: \${complement('rgba(204,205,100,0.7)')};
+ * \`
+ *
+ * // CSS in JS Output
+ * element {
+ *   background: \\"#884\\";
+ *   background: \\"rgba(153,153,153,0.7)\\";
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 34,
+          },
+          "filename": "test-cases/polished/color/complement.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 28,
+          },
+        },
+        "localName": "complement",
+        "params": Array [
+          Object {
+            "name": "color",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "StringType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "complement",
+    },
+  ],
+}
+`;
+
+exports[`parse ./color/grayscale.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "grayscale": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * Converts the color to a grayscale, by reducing its saturation to 0.
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   background: grayscale('#CCCD64'),
+ *   background: grayscale('rgba(204,205,100,0.7)'),
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   background: \${grayscale('#CCCD64')};
+ *   background: \${grayscale('rgba(204,205,100,0.7)')};
+ * \`
+ *
+ * // CSS in JS Output
+ * element {
+ *   background: \\"#999\\";
+ *   background: \\"rgba(153,153,153,0.7)\\";
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 33,
+          },
+          "filename": "test-cases/polished/color/grayscale.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 28,
+          },
+        },
+        "localName": "grayscale",
+        "params": Array [
+          Object {
+            "name": "color",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "StringType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "grayscale",
+    },
+  ],
+}
+`;
+
+exports[`parse ./color/invert.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "invert": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * Inverts the red, green and blue values of a color.
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   background: invert('#CCCD64'),
+ *   background: invert('rgba(101,100,205,0.7)'),
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   background: \${invert('#CCCD64')};
+ *   background: \${invert('rgba(101,100,205,0.7)')};
+ * \`
+ *
+ * // CSS in JS Output
+ *
+ * element {
+ *   background: \\"#33329b\\";
+ *   background: \\"rgba(154,155,50,0.7)\\";
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 38,
+          },
+          "filename": "test-cases/polished/color/invert.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 29,
+          },
+        },
+        "localName": "invert",
+        "params": Array [
+          Object {
+            "name": "color",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "StringType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "invert",
+    },
+  ],
+}
+`;
+
+exports[`parse ./helpers/directionalProperty.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "Object": Array [],
+    "directionalProperty": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * The directional property helper enables shorthand for direction based properties. It accepts a property and up to four values that map to top, right, bottom, and left, respectively. You can optionally pass an empty string to get only the directional values as properties. You can optionally pass a null argument for a directional value to ignore it.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...directionalProperty('padding', '12px', '24px', '36px', '48px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${directionalProperty('padding', '12px', '24px', '36px', '48px')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'padding-top': '12px',
+ *   'padding-right': '24px',
+ *   'padding-bottom': '36px',
+ *   'padding-left': '48px'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 49,
+          },
+          "filename": "test-cases/polished/helpers/directionalProperty.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 44,
+          },
+        },
+        "localName": "directionalProperty",
+        "params": Array [
+          Object {
+            "name": "property",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": Object {
+          "name": "values",
+          "type": Object {
+            "kind": "GenericApplicationType",
+            "params": Array [
+              Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "NullType",
+                  },
+                  Object {
+                    "kind": "StringType",
+                  },
+                  Object {
+                    "kind": "VoidType",
+                  },
+                ],
+              },
+            ],
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Array",
+            },
+          },
+        },
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "directionalProperty",
+    },
+  ],
+}
+`;
+
+exports[`parse ./helpers/em.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "em": Array [
+      Object {
+        "kind": "VariableDeclaration",
+        "leadingComments": Array [
+          Object {
+            "end": 534,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 3,
+                "line": 27,
+              },
+              "filename": "test-cases/polished/helpers/em.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 5,
+              },
+            },
+            "start": 59,
+            "type": "CommentBlock",
+            "value": "*
+ * Convert pixel value to ems. The default base value is 16px, but can be changed by passing a
+ * second argument to the function.
+ * @function
+ * @param {string|number} pxval
+ * @param {string|number} [base='16px']
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   'height': em('16px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   height: \${em('16px')}
+ * \`
+ *
+ * // CSS in JS Output
+ *
+ * element {
+ *   'height': '1em'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 68,
+            "line": 30,
+          },
+          "filename": "test-cases/polished/helpers/em.js.flow",
+          "start": Position {
+            "column": 6,
+            "line": 30,
+          },
+        },
+        "localName": "em",
+        "mode": "const",
+        "typeAnnotation": Object {
+          "kind": "FunctionType",
+          "params": Array [
+            Object {
+              "name": "value",
+              "type": Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "NumberType",
+                  },
+                  Object {
+                    "kind": "StringType",
+                  },
+                ],
+              },
+            },
+            Object {
+              "name": "base",
+              "type": Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "NumberType",
+                  },
+                  Object {
+                    "kind": "StringType",
+                  },
+                ],
+              },
+            },
+          ],
+          "restParam": undefined,
+          "returnType": Object {
+            "kind": "StringType",
+          },
+        },
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "em",
+    },
+  ],
+}
+`;
+
+exports[`parse ./helpers/modularScale.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Ratio": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 44,
+          },
+          "filename": "test-cases/polished/helpers/modularScale.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 26,
+          },
+        },
+        "localName": "Ratio",
+        "right": Object {
+          "kind": "UnionType",
+          "types": Array [
+            Object {
+              "kind": "NumberType",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "augFourth",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "doubleOctave",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "goldenSection",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "majorEleventh",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "majorSecond",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "majorSeventh",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "majorSixth",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "majorTenth",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "majorThird",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "majorTwelfth",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "minorSecond",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "minorSeventh",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "minorSixth",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "minorThird",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "octave",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "perfectFifth",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "perfectFourth",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "modularScale": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * Establish consistent measurements and spacial relationships throughout your projects by incrementing up or down a defined scale. We provide a list of commonly used scales as pre-defined variables, see below.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *    // Increment two steps up the default scale
+ *   'font-size': modularScale(2)
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *    // Increment two steps up the default scale
+ *   font-size: \${modularScale(2)}
+ * \`
+ *
+ * // CSS in JS Output
+ *
+ * element {
+ *   'font-size': '1.77689em'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 83,
+          },
+          "filename": "test-cases/polished/helpers/modularScale.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 67,
+          },
+        },
+        "localName": "modularScale",
+        "params": Array [
+          Object {
+            "name": "steps",
+            "type": Object {
+              "kind": "NumberType",
+            },
+          },
+          Object {
+            "name": "base",
+            "type": Object {
+              "kind": "UnionType",
+              "types": Array [
+                Object {
+                  "kind": "NumberType",
+                },
+                Object {
+                  "kind": "StringType",
+                },
+              ],
+            },
+          },
+          Object {
+            "name": "ratio",
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Ratio",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "StringType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "ratioNames": Array [
+      Object {
+        "kind": "VariableDeclaration",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 5,
+          },
+          "filename": "test-cases/polished/helpers/modularScale.js.flow",
+          "start": Position {
+            "column": 6,
+            "line": 5,
+          },
+        },
+        "localName": "ratioNames",
+        "mode": "const",
+        "typeAnnotation": Object {
+          "exact": true,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": "minorSecond",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 1.067,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "majorSecond",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 1.125,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "minorThird",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 1.2,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "majorThird",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 1.25,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "perfectFourth",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 1.333,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "augFourth",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 1.414,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "perfectFifth",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 1.5,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "minorSixth",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 1.6,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "goldenSection",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 1.618,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "majorSixth",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 1.667,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "minorSeventh",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 1.778,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "majorSeventh",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 1.875,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "octave",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 2,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "majorTenth",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 2.5,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "majorEleventh",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 2.667,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "majorTwelfth",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 3,
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "doubleOctave",
+              "optional": false,
+              "type": Object {
+                "kind": "NumericLiteralType",
+                "value": 4,
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "modularScale",
+    },
+    Object {
+      "exportedName": "ratioNames",
+      "kind": "NamedExportStatement",
+      "localName": "ratioNames",
+    },
+  ],
+}
+`;
+
+exports[`parse ./helpers/rem.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "rem": Array [
+      Object {
+        "kind": "VariableDeclaration",
+        "leadingComments": Array [
+          Object {
+            "end": 538,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 3,
+                "line": 27,
+              },
+              "filename": "test-cases/polished/helpers/rem.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 5,
+              },
+            },
+            "start": 59,
+            "type": "CommentBlock",
+            "value": "*
+ * Convert pixel value to rems. The default base value is 16px, but can be changed by passing a
+ * second argument to the function.
+ * @function
+ * @param {string|number} pxval
+ * @param {string|number} [base='16px']
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   'height': rem('16px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   height: \${rem('16px')}
+ * \`
+ *
+ * // CSS in JS Output
+ *
+ * element {
+ *   'height': '1rem'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 69,
+            "line": 30,
+          },
+          "filename": "test-cases/polished/helpers/rem.js.flow",
+          "start": Position {
+            "column": 6,
+            "line": 30,
+          },
+        },
+        "localName": "rem",
+        "mode": "const",
+        "typeAnnotation": Object {
+          "kind": "FunctionType",
+          "params": Array [
+            Object {
+              "name": "value",
+              "type": Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "NumberType",
+                  },
+                  Object {
+                    "kind": "StringType",
+                  },
+                ],
+              },
+            },
+            Object {
+              "name": "base",
+              "type": Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "NumberType",
+                  },
+                  Object {
+                    "kind": "StringType",
+                  },
+                ],
+              },
+            },
+          ],
+          "restParam": undefined,
+          "returnType": Object {
+            "kind": "StringType",
+          },
+        },
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "rem",
+    },
+  ],
+}
+`;
+
+exports[`parse ./helpers/stripUnit.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "stripUnit": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * Strip the unit from a given CSS value, returning just the number. (or the original value if an invalid string was passed)
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   '--dimension': stripUnit(100px)
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   --dimension: \${stripUnit(100px)}
+ * \`
+ *
+ * // CSS in JS Output
+ *
+ * element {
+ *   '--dimension': 100
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 28,
+          },
+          "filename": "test-cases/polished/helpers/stripUnit.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 24,
+          },
+        },
+        "localName": "stripUnit",
+        "params": Array [
+          Object {
+            "name": "value",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "UnionType",
+          "types": Array [
+            Object {
+              "kind": "NumberType",
+            },
+            Object {
+              "kind": "StringType",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "stripUnit",
+    },
+  ],
+}
+`;
+
+exports[`parse ./index.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "adjustHue": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [
+          Object {
+            "end": 829,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 8,
+                "line": 24,
+              },
+              "filename": "test-cases/polished/index.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 24,
+              },
+            },
+            "start": 821,
+            "type": "CommentLine",
+            "value": " Color",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 25,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 25,
+          },
+        },
+        "localName": "adjustHue",
+        "relativePath": "./color/adjustHue",
+      },
+    ],
+    "animation": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [
+          Object {
+            "end": 1748,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 13,
+                "line": 49,
+              },
+              "filename": "test-cases/polished/index.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 49,
+              },
+            },
+            "start": 1735,
+            "type": "CommentLine",
+            "value": " Shorthands",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 50,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 50,
+          },
+        },
+        "localName": "animation",
+        "relativePath": "./shorthands/animation",
+      },
+    ],
+    "backgroundImages": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 23,
+            "line": 51,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 51,
+          },
+        },
+        "localName": "backgroundImages",
+        "relativePath": "./shorthands/backgroundImages",
+      },
+    ],
+    "backgrounds": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 52,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 52,
+          },
+        },
+        "localName": "backgrounds",
+        "relativePath": "./shorthands/backgrounds",
+      },
+    ],
+    "borderColor": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 53,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 53,
+          },
+        },
+        "localName": "borderColor",
+        "relativePath": "./shorthands/borderColor",
+      },
+    ],
+    "borderRadius": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 19,
+            "line": 54,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 54,
+          },
+        },
+        "localName": "borderRadius",
+        "relativePath": "./shorthands/borderRadius",
+      },
+    ],
+    "borderStyle": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 55,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 55,
+          },
+        },
+        "localName": "borderStyle",
+        "relativePath": "./shorthands/borderStyle",
+      },
+    ],
+    "borderWidth": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 56,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 56,
+          },
+        },
+        "localName": "borderWidth",
+        "relativePath": "./shorthands/borderWidth",
+      },
+    ],
+    "buttons": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 57,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 57,
+          },
+        },
+        "localName": "buttons",
+        "relativePath": "./shorthands/buttons",
+      },
+    ],
+    "clearFix": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [
+          Object {
+            "end": 250,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 9,
+                "line": 9,
+              },
+              "filename": "test-cases/polished/index.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 9,
+              },
+            },
+            "start": 241,
+            "type": "CommentLine",
+            "value": " Mixins",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 10,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 10,
+          },
+        },
+        "localName": "clearFix",
+        "relativePath": "./mixins/clearFix",
+      },
+    ],
+    "complement": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 26,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 26,
+          },
+        },
+        "localName": "complement",
+        "relativePath": "./color/complement",
+      },
+    ],
+    "darken": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 27,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 27,
+          },
+        },
+        "localName": "darken",
+        "relativePath": "./color/darken",
+      },
+    ],
+    "desaturate": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 28,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 28,
+          },
+        },
+        "localName": "desaturate",
+        "relativePath": "./color/desaturate",
+      },
+    ],
+    "directionalProperty": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [
+          Object {
+            "end": 8,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 8,
+                "line": 1,
+              },
+              "filename": "test-cases/polished/index.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 1,
+              },
+            },
+            "start": 0,
+            "type": "CommentLine",
+            "value": " @flow",
+          },
+          Object {
+            "end": 19,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 10,
+                "line": 2,
+              },
+              "filename": "test-cases/polished/index.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 2,
+              },
+            },
+            "start": 9,
+            "type": "CommentLine",
+            "value": " Helpers",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 3,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 3,
+          },
+        },
+        "localName": "directionalProperty",
+        "relativePath": "./helpers/directionalProperty",
+      },
+    ],
+    "ellipsis": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 11,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 11,
+          },
+        },
+        "localName": "ellipsis",
+        "relativePath": "./mixins/ellipsis",
+      },
+    ],
+    "em": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 9,
+            "line": 4,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 4,
+          },
+        },
+        "localName": "em",
+        "relativePath": "./helpers/em",
+      },
+    ],
+    "fontFace": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 12,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 12,
+          },
+        },
+        "localName": "fontFace",
+        "relativePath": "./mixins/fontFace",
+      },
+    ],
+    "grayscale": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 29,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 29,
+          },
+        },
+        "localName": "grayscale",
+        "relativePath": "./color/grayscale",
+      },
+    ],
+    "hiDPI": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 14,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 14,
+          },
+        },
+        "localName": "hiDPI",
+        "relativePath": "./mixins/hiDPI",
+      },
+    ],
+    "hideText": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 13,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 13,
+          },
+        },
+        "localName": "hideText",
+        "relativePath": "./mixins/hideText",
+      },
+    ],
+    "hsl": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 30,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 30,
+          },
+        },
+        "localName": "hsl",
+        "relativePath": "./color/hsl",
+      },
+    ],
+    "hsla": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 31,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 31,
+          },
+        },
+        "localName": "hsla",
+        "relativePath": "./color/hsla",
+      },
+    ],
+    "invert": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 32,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 32,
+          },
+        },
+        "localName": "invert",
+        "relativePath": "./color/invert",
+      },
+    ],
+    "lighten": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 33,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 33,
+          },
+        },
+        "localName": "lighten",
+        "relativePath": "./color/lighten",
+      },
+    ],
+    "margin": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 58,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 58,
+          },
+        },
+        "localName": "margin",
+        "relativePath": "./shorthands/margin",
+      },
+    ],
+    "mix": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 34,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 34,
+          },
+        },
+        "localName": "mix",
+        "relativePath": "./color/mix",
+      },
+    ],
+    "modularScale": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 19,
+            "line": 5,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 5,
+          },
+        },
+        "localName": "modularScale",
+        "relativePath": "./helpers/modularScale",
+      },
+    ],
+    "normalize": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 15,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 15,
+          },
+        },
+        "localName": "normalize",
+        "relativePath": "./mixins/normalize",
+      },
+    ],
+    "opacify": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 35,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 35,
+          },
+        },
+        "localName": "opacify",
+        "relativePath": "./color/opacify",
+      },
+    ],
+    "padding": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 59,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 59,
+          },
+        },
+        "localName": "padding",
+        "relativePath": "./shorthands/padding",
+      },
+    ],
+    "parseToHsl": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 36,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 36,
+          },
+        },
+        "localName": "parseToHsl",
+        "relativePath": "./color/parseToHsl",
+      },
+    ],
+    "parseToRgb": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 37,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 37,
+          },
+        },
+        "localName": "parseToRgb",
+        "relativePath": "./color/parseToRgb",
+      },
+    ],
+    "placeholder": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 16,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 16,
+          },
+        },
+        "localName": "placeholder",
+        "relativePath": "./mixins/placeholder",
+      },
+    ],
+    "position": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 60,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 60,
+          },
+        },
+        "localName": "position",
+        "relativePath": "./shorthands/position",
+      },
+    ],
+    "radialGradient": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 21,
+            "line": 17,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 17,
+          },
+        },
+        "localName": "radialGradient",
+        "relativePath": "./mixins/radialGradient",
+      },
+    ],
+    "rem": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 6,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 6,
+          },
+        },
+        "localName": "rem",
+        "relativePath": "./helpers/rem",
+      },
+    ],
+    "retinaImage": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 18,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 18,
+          },
+        },
+        "localName": "retinaImage",
+        "relativePath": "./mixins/retinaImage",
+      },
+    ],
+    "rgb": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 38,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 38,
+          },
+        },
+        "localName": "rgb",
+        "relativePath": "./color/rgb",
+      },
+    ],
+    "rgba": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 39,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 39,
+          },
+        },
+        "localName": "rgba",
+        "relativePath": "./color/rgba",
+      },
+    ],
+    "saturate": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 40,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 40,
+          },
+        },
+        "localName": "saturate",
+        "relativePath": "./color/saturate",
+      },
+    ],
+    "selection": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 19,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 19,
+          },
+        },
+        "localName": "selection",
+        "relativePath": "./mixins/selection",
+      },
+    ],
+    "setHue": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 41,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 41,
+          },
+        },
+        "localName": "setHue",
+        "relativePath": "./color/setHue",
+      },
+    ],
+    "setLightness": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 19,
+            "line": 42,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 42,
+          },
+        },
+        "localName": "setLightness",
+        "relativePath": "./color/setLightness",
+      },
+    ],
+    "setSaturation": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 43,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 43,
+          },
+        },
+        "localName": "setSaturation",
+        "relativePath": "./color/setSaturation",
+      },
+    ],
+    "shade": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 44,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 44,
+          },
+        },
+        "localName": "shade",
+        "relativePath": "./color/shade",
+      },
+    ],
+    "size": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 61,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 61,
+          },
+        },
+        "localName": "size",
+        "relativePath": "./shorthands/size",
+      },
+    ],
+    "stripUnit": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 7,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 7,
+          },
+        },
+        "localName": "stripUnit",
+        "relativePath": "./helpers/stripUnit",
+      },
+    ],
+    "textInputs": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 62,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 62,
+          },
+        },
+        "localName": "textInputs",
+        "relativePath": "./shorthands/textInputs",
+      },
+    ],
+    "timingFunctions": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 22,
+            "line": 20,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 20,
+          },
+        },
+        "localName": "timingFunctions",
+        "relativePath": "./mixins/timingFunctions",
+      },
+    ],
+    "tint": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 45,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 45,
+          },
+        },
+        "localName": "tint",
+        "relativePath": "./color/tint",
+      },
+    ],
+    "toColorString": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 46,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 46,
+          },
+        },
+        "localName": "toColorString",
+        "relativePath": "./color/toColorString",
+      },
+    ],
+    "transitions": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 63,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 63,
+          },
+        },
+        "localName": "transitions",
+        "relativePath": "./shorthands/transitions",
+      },
+    ],
+    "transparentize": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 21,
+            "line": 47,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 47,
+          },
+        },
+        "localName": "transparentize",
+        "relativePath": "./color/transparentize",
+      },
+    ],
+    "triangle": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 21,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 21,
+          },
+        },
+        "localName": "triangle",
+        "relativePath": "./mixins/triangle",
+      },
+    ],
+    "wordWrap": Array [
+      Object {
+        "kind": "ImportDefault",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 22,
+          },
+          "filename": "test-cases/polished/index.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 22,
+          },
+        },
+        "localName": "wordWrap",
+        "relativePath": "./mixins/wordWrap",
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "exportedName": "adjustHue",
+      "kind": "NamedExportStatement",
+      "localName": "adjustHue",
+    },
+    Object {
+      "exportedName": "animation",
+      "kind": "NamedExportStatement",
+      "localName": "animation",
+    },
+    Object {
+      "exportedName": "backgroundImages",
+      "kind": "NamedExportStatement",
+      "localName": "backgroundImages",
+    },
+    Object {
+      "exportedName": "backgrounds",
+      "kind": "NamedExportStatement",
+      "localName": "backgrounds",
+    },
+    Object {
+      "exportedName": "borderColor",
+      "kind": "NamedExportStatement",
+      "localName": "borderColor",
+    },
+    Object {
+      "exportedName": "borderRadius",
+      "kind": "NamedExportStatement",
+      "localName": "borderRadius",
+    },
+    Object {
+      "exportedName": "borderStyle",
+      "kind": "NamedExportStatement",
+      "localName": "borderStyle",
+    },
+    Object {
+      "exportedName": "borderWidth",
+      "kind": "NamedExportStatement",
+      "localName": "borderWidth",
+    },
+    Object {
+      "exportedName": "buttons",
+      "kind": "NamedExportStatement",
+      "localName": "buttons",
+    },
+    Object {
+      "exportedName": "clearFix",
+      "kind": "NamedExportStatement",
+      "localName": "clearFix",
+    },
+    Object {
+      "exportedName": "complement",
+      "kind": "NamedExportStatement",
+      "localName": "complement",
+    },
+    Object {
+      "exportedName": "darken",
+      "kind": "NamedExportStatement",
+      "localName": "darken",
+    },
+    Object {
+      "exportedName": "desaturate",
+      "kind": "NamedExportStatement",
+      "localName": "desaturate",
+    },
+    Object {
+      "exportedName": "directionalProperty",
+      "kind": "NamedExportStatement",
+      "localName": "directionalProperty",
+    },
+    Object {
+      "exportedName": "ellipsis",
+      "kind": "NamedExportStatement",
+      "localName": "ellipsis",
+    },
+    Object {
+      "exportedName": "em",
+      "kind": "NamedExportStatement",
+      "localName": "em",
+    },
+    Object {
+      "exportedName": "fontFace",
+      "kind": "NamedExportStatement",
+      "localName": "fontFace",
+    },
+    Object {
+      "exportedName": "grayscale",
+      "kind": "NamedExportStatement",
+      "localName": "grayscale",
+    },
+    Object {
+      "exportedName": "invert",
+      "kind": "NamedExportStatement",
+      "localName": "invert",
+    },
+    Object {
+      "exportedName": "hideText",
+      "kind": "NamedExportStatement",
+      "localName": "hideText",
+    },
+    Object {
+      "exportedName": "hiDPI",
+      "kind": "NamedExportStatement",
+      "localName": "hiDPI",
+    },
+    Object {
+      "exportedName": "hsl",
+      "kind": "NamedExportStatement",
+      "localName": "hsl",
+    },
+    Object {
+      "exportedName": "hsla",
+      "kind": "NamedExportStatement",
+      "localName": "hsla",
+    },
+    Object {
+      "exportedName": "lighten",
+      "kind": "NamedExportStatement",
+      "localName": "lighten",
+    },
+    Object {
+      "exportedName": "margin",
+      "kind": "NamedExportStatement",
+      "localName": "margin",
+    },
+    Object {
+      "exportedName": "mix",
+      "kind": "NamedExportStatement",
+      "localName": "mix",
+    },
+    Object {
+      "exportedName": "modularScale",
+      "kind": "NamedExportStatement",
+      "localName": "modularScale",
+    },
+    Object {
+      "exportedName": "normalize",
+      "kind": "NamedExportStatement",
+      "localName": "normalize",
+    },
+    Object {
+      "exportedName": "opacify",
+      "kind": "NamedExportStatement",
+      "localName": "opacify",
+    },
+    Object {
+      "exportedName": "padding",
+      "kind": "NamedExportStatement",
+      "localName": "padding",
+    },
+    Object {
+      "exportedName": "parseToHsl",
+      "kind": "NamedExportStatement",
+      "localName": "parseToHsl",
+    },
+    Object {
+      "exportedName": "parseToRgb",
+      "kind": "NamedExportStatement",
+      "localName": "parseToRgb",
+    },
+    Object {
+      "exportedName": "placeholder",
+      "kind": "NamedExportStatement",
+      "localName": "placeholder",
+    },
+    Object {
+      "exportedName": "position",
+      "kind": "NamedExportStatement",
+      "localName": "position",
+    },
+    Object {
+      "exportedName": "radialGradient",
+      "kind": "NamedExportStatement",
+      "localName": "radialGradient",
+    },
+    Object {
+      "exportedName": "rem",
+      "kind": "NamedExportStatement",
+      "localName": "rem",
+    },
+    Object {
+      "exportedName": "retinaImage",
+      "kind": "NamedExportStatement",
+      "localName": "retinaImage",
+    },
+    Object {
+      "exportedName": "rgb",
+      "kind": "NamedExportStatement",
+      "localName": "rgb",
+    },
+    Object {
+      "exportedName": "rgba",
+      "kind": "NamedExportStatement",
+      "localName": "rgba",
+    },
+    Object {
+      "exportedName": "saturate",
+      "kind": "NamedExportStatement",
+      "localName": "saturate",
+    },
+    Object {
+      "exportedName": "selection",
+      "kind": "NamedExportStatement",
+      "localName": "selection",
+    },
+    Object {
+      "exportedName": "setHue",
+      "kind": "NamedExportStatement",
+      "localName": "setHue",
+    },
+    Object {
+      "exportedName": "setLightness",
+      "kind": "NamedExportStatement",
+      "localName": "setLightness",
+    },
+    Object {
+      "exportedName": "setSaturation",
+      "kind": "NamedExportStatement",
+      "localName": "setSaturation",
+    },
+    Object {
+      "exportedName": "shade",
+      "kind": "NamedExportStatement",
+      "localName": "shade",
+    },
+    Object {
+      "exportedName": "size",
+      "kind": "NamedExportStatement",
+      "localName": "size",
+    },
+    Object {
+      "exportedName": "stripUnit",
+      "kind": "NamedExportStatement",
+      "localName": "stripUnit",
+    },
+    Object {
+      "exportedName": "textInputs",
+      "kind": "NamedExportStatement",
+      "localName": "textInputs",
+    },
+    Object {
+      "exportedName": "timingFunctions",
+      "kind": "NamedExportStatement",
+      "localName": "timingFunctions",
+    },
+    Object {
+      "exportedName": "tint",
+      "kind": "NamedExportStatement",
+      "localName": "tint",
+    },
+    Object {
+      "exportedName": "toColorString",
+      "kind": "NamedExportStatement",
+      "localName": "toColorString",
+    },
+    Object {
+      "exportedName": "transitions",
+      "kind": "NamedExportStatement",
+      "localName": "transitions",
+    },
+    Object {
+      "exportedName": "transparentize",
+      "kind": "NamedExportStatement",
+      "localName": "transparentize",
+    },
+    Object {
+      "exportedName": "triangle",
+      "kind": "NamedExportStatement",
+      "localName": "triangle",
+    },
+    Object {
+      "exportedName": "wordWrap",
+      "kind": "NamedExportStatement",
+      "localName": "wordWrap",
+    },
+  ],
+}
+`;
+
+exports[`parse ./internalHelpers/_curry.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "A": Array [],
+    "Array": Array [],
+    "B": Array [],
+    "C": Array [],
+    "CurriedFn2": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 10,
+          },
+          "filename": "test-cases/polished/internalHelpers/_curry.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 8,
+          },
+        },
+        "localName": "CurriedFn2",
+        "right": Object {
+          "kind": "IntersectionType",
+          "types": Array [
+            Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "GenericApplicationType",
+                  "params": Array [
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "B",
+                    },
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "C",
+                    },
+                  ],
+                  "type": Object {
+                    "kind": "ReferenceType",
+                    "name": "Fn1",
+                  },
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn1",
+              },
+            },
+            Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "B",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "C",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn2",
+              },
+            },
+          ],
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "C",
+            "variance": "invariant",
+          },
+        ],
+      },
+    ],
+    "CurriedFn3": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 400,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 42,
+                "line": 11,
+              },
+              "filename": "test-cases/polished/internalHelpers/_curry.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 11,
+              },
+            },
+            "start": 358,
+            "type": "CommentLine",
+            "value": " eslint-disable-next-line no-unused-vars",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 15,
+          },
+          "filename": "test-cases/polished/internalHelpers/_curry.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 12,
+          },
+        },
+        "localName": "CurriedFn3",
+        "right": Object {
+          "kind": "IntersectionType",
+          "types": Array [
+            Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "GenericApplicationType",
+                  "params": Array [
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "B",
+                    },
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "C",
+                    },
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "D",
+                    },
+                  ],
+                  "type": Object {
+                    "kind": "ReferenceType",
+                    "name": "CurriedFn2",
+                  },
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn1",
+              },
+            },
+            Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "B",
+                },
+                Object {
+                  "kind": "GenericApplicationType",
+                  "params": Array [
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "C",
+                    },
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "D",
+                    },
+                  ],
+                  "type": Object {
+                    "kind": "ReferenceType",
+                    "name": "Fn1",
+                  },
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn2",
+              },
+            },
+            Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "B",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "C",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "D",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn3",
+              },
+            },
+          ],
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "C",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "D",
+            "variance": "invariant",
+          },
+        ],
+      },
+    ],
+    "D": Array [],
+    "Fn1": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 8,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 8,
+                "line": 1,
+              },
+              "filename": "test-cases/polished/internalHelpers/_curry.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 1,
+              },
+            },
+            "start": 0,
+            "type": "CommentLine",
+            "value": " @flow",
+          },
+          Object {
+            "end": 106,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 96,
+                "line": 3,
+              },
+              "filename": "test-cases/polished/internalHelpers/_curry.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 3,
+              },
+            },
+            "start": 10,
+            "type": "CommentLine",
+            "value": " Type definitions taken from https://github.com/gcanti/flow-static-land/blob/master/src/Fun.js",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 51,
+            "line": 4,
+          },
+          "filename": "test-cases/polished/internalHelpers/_curry.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 4,
+          },
+        },
+        "localName": "Fn1",
+        "right": Object {
+          "kind": "FunctionType",
+          "params": Array [
+            Object {
+              "name": "a",
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "A",
+              },
+            },
+          ],
+          "restParam": Object {
+            "name": "rest",
+            "type": Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "VoidType",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Array",
+              },
+            },
+          },
+          "returnType": Object {
+            "kind": "ReferenceType",
+            "name": "B",
+          },
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+        ],
+      },
+    ],
+    "Fn2": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 60,
+            "line": 5,
+          },
+          "filename": "test-cases/polished/internalHelpers/_curry.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 5,
+          },
+        },
+        "localName": "Fn2",
+        "right": Object {
+          "kind": "FunctionType",
+          "params": Array [
+            Object {
+              "name": "a",
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "A",
+              },
+            },
+            Object {
+              "name": "b",
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "B",
+              },
+            },
+          ],
+          "restParam": Object {
+            "name": "rest",
+            "type": Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "VoidType",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Array",
+              },
+            },
+          },
+          "returnType": Object {
+            "kind": "ReferenceType",
+            "name": "C",
+          },
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "C",
+            "variance": "invariant",
+          },
+        ],
+      },
+    ],
+    "Fn3": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 69,
+            "line": 6,
+          },
+          "filename": "test-cases/polished/internalHelpers/_curry.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 6,
+          },
+        },
+        "localName": "Fn3",
+        "right": Object {
+          "kind": "FunctionType",
+          "params": Array [
+            Object {
+              "name": "a",
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "A",
+              },
+            },
+            Object {
+              "name": "b",
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "B",
+              },
+            },
+            Object {
+              "name": "c",
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "C",
+              },
+            },
+          ],
+          "restParam": Object {
+            "name": "rest",
+            "type": Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "VoidType",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Array",
+              },
+            },
+          },
+          "returnType": Object {
+            "kind": "ReferenceType",
+            "name": "D",
+          },
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "C",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "D",
+            "variance": "invariant",
+          },
+        ],
+      },
+    ],
+    "curry": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "LineComment",
+            "value": " eslint-disable-next-line no-unused-vars",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 70,
+            "line": 18,
+          },
+          "filename": "test-cases/polished/internalHelpers/_curry.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 18,
+          },
+        },
+        "localName": "curry",
+        "params": Array [
+          Object {
+            "name": "f",
+            "type": Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "B",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "C",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn2",
+              },
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "GenericApplicationType",
+          "params": Array [
+            Object {
+              "kind": "ReferenceType",
+              "name": "A",
+            },
+            Object {
+              "kind": "ReferenceType",
+              "name": "B",
+            },
+            Object {
+              "kind": "ReferenceType",
+              "name": "C",
+            },
+          ],
+          "type": Object {
+            "kind": "ReferenceType",
+            "name": "CurriedFn2",
+          },
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "C",
+            "variance": "invariant",
+          },
+        ],
+      },
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "LineComment",
+            "value": " eslint-disable-next-line no-redeclare",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 79,
+            "line": 20,
+          },
+          "filename": "test-cases/polished/internalHelpers/_curry.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 20,
+          },
+        },
+        "localName": "curry",
+        "params": Array [
+          Object {
+            "name": "f",
+            "type": Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "B",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "C",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "D",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn3",
+              },
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "GenericApplicationType",
+          "params": Array [
+            Object {
+              "kind": "ReferenceType",
+              "name": "A",
+            },
+            Object {
+              "kind": "ReferenceType",
+              "name": "B",
+            },
+            Object {
+              "kind": "ReferenceType",
+              "name": "C",
+            },
+            Object {
+              "kind": "ReferenceType",
+              "name": "D",
+            },
+          ],
+          "type": Object {
+            "kind": "ReferenceType",
+            "name": "CurriedFn3",
+          },
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "C",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "D",
+            "variance": "invariant",
+          },
+        ],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "curry",
+    },
+  ],
+}
+`;
+
+exports[`parse ./internalHelpers/_endsWith.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "anonymous": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 9,
+          },
+          "filename": "test-cases/polished/internalHelpers/_endsWith.js.flow",
+          "start": Position {
+            "column": 15,
+            "line": 7,
+          },
+        },
+        "localName": "anonymous",
+        "params": Array [
+          Object {
+            "name": "string",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+          Object {
+            "name": "suffix",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "BooleanType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "anonymous",
+    },
+  ],
+}
+`;
+
+exports[`parse ./internalHelpers/_guard.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "guard": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 5,
+          },
+          "filename": "test-cases/polished/internalHelpers/_guard.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 3,
+          },
+        },
+        "localName": "guard",
+        "params": Array [
+          Object {
+            "name": "lowerBoundary",
+            "type": Object {
+              "kind": "NumberType",
+            },
+          },
+          Object {
+            "name": "upperBoundary",
+            "type": Object {
+              "kind": "NumberType",
+            },
+          },
+          Object {
+            "name": "value",
+            "type": Object {
+              "kind": "NumberType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "NumberType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "guard",
+    },
+  ],
+}
+`;
+
+exports[`parse ./internalHelpers/_hslToHex.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "hslToHex": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 17,
+          },
+          "filename": "test-cases/polished/internalHelpers/_hslToHex.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 15,
+          },
+        },
+        "localName": "hslToHex",
+        "params": Array [
+          Object {
+            "name": "hue",
+            "type": Object {
+              "kind": "NumberType",
+            },
+          },
+          Object {
+            "name": "saturation",
+            "type": Object {
+              "kind": "NumberType",
+            },
+          },
+          Object {
+            "name": "lightness",
+            "type": Object {
+              "kind": "NumberType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "StringType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "hslToHex",
+    },
+  ],
+}
+`;
+
+exports[`parse ./internalHelpers/_hslToRgb.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "ConversionFunction": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 8,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 8,
+                "line": 1,
+              },
+              "filename": "test-cases/polished/internalHelpers/_hslToRgb.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 1,
+              },
+            },
+            "start": 0,
+            "type": "CommentLine",
+            "value": " @flow",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 79,
+            "line": 3,
+          },
+          "filename": "test-cases/polished/internalHelpers/_hslToRgb.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 3,
+          },
+        },
+        "localName": "ConversionFunction",
+        "right": Object {
+          "kind": "FunctionType",
+          "params": Array [
+            Object {
+              "name": "red",
+              "type": Object {
+                "kind": "NumberType",
+              },
+            },
+            Object {
+              "name": "green",
+              "type": Object {
+                "kind": "NumberType",
+              },
+            },
+            Object {
+              "name": "blue",
+              "type": Object {
+                "kind": "NumberType",
+              },
+            },
+          ],
+          "restParam": undefined,
+          "returnType": Object {
+            "kind": "StringType",
+          },
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "hslToRgb": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 58,
+          },
+          "filename": "test-cases/polished/internalHelpers/_hslToRgb.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 13,
+          },
+        },
+        "localName": "hslToRgb",
+        "params": Array [
+          Object {
+            "name": "hue",
+            "type": Object {
+              "kind": "NumberType",
+            },
+          },
+          Object {
+            "name": "saturation",
+            "type": Object {
+              "kind": "NumberType",
+            },
+          },
+          Object {
+            "name": "lightness",
+            "type": Object {
+              "kind": "NumberType",
+            },
+          },
+          Object {
+            "name": "convert",
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "ConversionFunction",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "StringType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "hslToRgb",
+    },
+  ],
+}
+`;
+
+exports[`parse ./internalHelpers/_isValidDimensionValue.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "anonymous": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 3,
+          },
+          "filename": "test-cases/polished/internalHelpers/_isValidDimensionValue.js.flow",
+          "start": Position {
+            "column": 15,
+            "line": 1,
+          },
+        },
+        "localName": "anonymous",
+        "params": Array [],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "BooleanLiteralType",
+          "value": true,
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "anonymous",
+    },
+  ],
+}
+`;
+
+exports[`parse ./internalHelpers/_nameToHex.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "nameToHex": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 161,
+          },
+          "filename": "test-cases/polished/internalHelpers/_nameToHex.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 157,
+          },
+        },
+        "localName": "nameToHex",
+        "params": Array [
+          Object {
+            "name": "color",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "StringType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "nameToHex",
+    },
+  ],
+}
+`;
+
+exports[`parse ./internalHelpers/_numberToHex.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "numberToHex": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 6,
+          },
+          "filename": "test-cases/polished/internalHelpers/_numberToHex.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 3,
+          },
+        },
+        "localName": "numberToHex",
+        "params": Array [
+          Object {
+            "name": "value",
+            "type": Object {
+              "kind": "NumberType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "StringType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "numberToHex",
+    },
+  ],
+}
+`;
+
+exports[`parse ./internalHelpers/_pxto.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "pxtoFactory": Array [
+      Object {
+        "kind": "VariableDeclaration",
+        "leadingComments": Array [
+          Object {
+            "end": 182,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 3,
+                "line": 9,
+              },
+              "filename": "test-cases/polished/internalHelpers/_pxto.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 6,
+              },
+            },
+            "start": 108,
+            "type": "CommentBlock",
+            "value": "*
+ * Factory function that creates pixel-to-x converters
+ * @private
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 10,
+          },
+          "filename": "test-cases/polished/internalHelpers/_pxto.js.flow",
+          "start": Position {
+            "column": 6,
+            "line": 10,
+          },
+        },
+        "localName": "pxtoFactory",
+        "mode": "const",
+        "typeAnnotation": Object {
+          "kind": "FunctionType",
+          "params": Array [
+            Object {
+              "name": "to",
+              "type": Object {
+                "kind": "StringType",
+              },
+            },
+          ],
+          "restParam": undefined,
+          "returnType": Object {
+            "kind": "FunctionType",
+            "params": Array [
+              Object {
+                "name": "pxval",
+                "type": Object {
+                  "kind": "UnionType",
+                  "types": Array [
+                    Object {
+                      "kind": "NumberType",
+                    },
+                    Object {
+                      "kind": "StringType",
+                    },
+                  ],
+                },
+              },
+              Object {
+                "name": "base",
+                "type": Object {
+                  "kind": "UnionType",
+                  "types": Array [
+                    Object {
+                      "kind": "NumberType",
+                    },
+                    Object {
+                      "kind": "StringType",
+                    },
+                  ],
+                },
+              },
+            ],
+            "restParam": undefined,
+            "returnType": Object {
+              "kind": "StringType",
+            },
+            "typeParameters": Array [],
+          },
+          "typeParameters": Array [],
+        },
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "pxtoFactory",
+    },
+  ],
+}
+`;
+
+exports[`parse ./internalHelpers/_reduceHexValue.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "reduceHexValue": Array [
+      Object {
+        "kind": "VariableDeclaration",
+        "leadingComments": Array [
+          Object {
+            "end": 8,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 8,
+                "line": 1,
+              },
+              "filename": "test-cases/polished/internalHelpers/_reduceHexValue.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 1,
+              },
+            },
+            "start": 0,
+            "type": "CommentLine",
+            "value": " @flow",
+          },
+          Object {
+            "end": 84,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 3,
+                "line": 6,
+              },
+              "filename": "test-cases/polished/internalHelpers/_reduceHexValue.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 3,
+              },
+            },
+            "start": 10,
+            "type": "CommentBlock",
+            "value": "*
+ * Reduces hex values if possible e.g. #ff8866 to #f86
+ * @private
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 7,
+          },
+          "filename": "test-cases/polished/internalHelpers/_reduceHexValue.js.flow",
+          "start": Position {
+            "column": 6,
+            "line": 7,
+          },
+        },
+        "localName": "reduceHexValue",
+        "mode": "const",
+        "typeAnnotation": Object {
+          "kind": "FunctionType",
+          "params": Array [
+            Object {
+              "name": "value",
+              "type": Object {
+                "kind": "StringType",
+              },
+            },
+          ],
+          "restParam": undefined,
+          "returnType": Object {
+            "kind": "StringType",
+          },
+          "typeParameters": Array [],
+        },
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "reduceHexValue",
+    },
+  ],
+}
+`;
+
+exports[`parse ./internalHelpers/_statefulSelectors.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "Function": Array [],
+    "State": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 10,
+          },
+          "filename": "test-cases/polished/internalHelpers/_statefulSelectors.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 7,
+          },
+        },
+        "localName": "State",
+        "right": Object {
+          "kind": "UnionType",
+          "types": Array [
+            Object {
+              "kind": "NullType",
+            },
+            Object {
+              "kind": "ReferenceType",
+              "name": "undefined",
+            },
+            Object {
+              "kind": "StringType",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "statefulSelectors": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * Function helper that adds an array of states to a template of selectors. Used in textInputs and buttons.
+ * @private
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 26,
+          },
+          "filename": "test-cases/polished/internalHelpers/_statefulSelectors.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 16,
+          },
+        },
+        "localName": "statefulSelectors",
+        "params": Array [
+          Object {
+            "name": "states",
+            "type": Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "State",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Array",
+              },
+            },
+          },
+          Object {
+            "name": "template",
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Function",
+            },
+          },
+          Object {
+            "name": "stateMap",
+            "type": Object {
+              "kind": "UnionType",
+              "types": Array [
+                Object {
+                  "kind": "GenericApplicationType",
+                  "params": Array [
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "State",
+                    },
+                  ],
+                  "type": Object {
+                    "kind": "ReferenceType",
+                    "name": "Array",
+                  },
+                },
+                Object {
+                  "kind": "NullType",
+                },
+                Object {
+                  "kind": "VoidType",
+                },
+              ],
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "StringType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "undefined": Array [],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "statefulSelectors",
+    },
+  ],
+}
+`;
+
+exports[`parse ./mixins/clearFix.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Object": Array [],
+    "clearFix": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * CSS to contain a float (credit to CSSMojo).
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *    ...clearFix(),
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${clearFix()}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * '&::after': {
+ *   'clear': 'both',
+ *   'content': '\\"\\"',
+ *   'display': 'table'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 35,
+          },
+          "filename": "test-cases/polished/mixins/clearFix.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 26,
+          },
+        },
+        "localName": "clearFix",
+        "params": Array [
+          Object {
+            "name": "parent",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "clearFix",
+    },
+  ],
+}
+`;
+
+exports[`parse ./mixins/ellipsis.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Object": Array [],
+    "ellipsis": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * CSS to represent truncated text with an ellipsis.
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...ellipsis('250px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${ellipsis('250px')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div: {
+ *   'display': 'inline-block',
+ *   'max-width': '250px',
+ *   'overflow': 'hidden',
+ *   'text-overflow': 'ellipsis',
+ *   'white-space': 'nowrap',
+ *   'word-wrap': 'normal'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 38,
+          },
+          "filename": "test-cases/polished/mixins/ellipsis.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 29,
+          },
+        },
+        "localName": "ellipsis",
+        "params": Array [
+          Object {
+            "name": "width",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "ellipsis",
+    },
+  ],
+}
+`;
+
+exports[`parse ./mixins/fontFace.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "FontFaceConfiguration": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 8,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 8,
+                "line": 1,
+              },
+              "filename": "test-cases/polished/mixins/fontFace.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 1,
+              },
+            },
+            "start": 0,
+            "type": "CommentLine",
+            "value": " @flow",
+          },
+          Object {
+            "end": 16,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 6,
+                "line": 3,
+              },
+              "filename": "test-cases/polished/mixins/fontFace.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 3,
+              },
+            },
+            "start": 10,
+            "type": "CommentBlock",
+            "value": "* ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 14,
+          },
+          "filename": "test-cases/polished/mixins/fontFace.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 4,
+          },
+        },
+        "localName": "FontFaceConfiguration",
+        "right": Object {
+          "exact": false,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": "fontFamily",
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "fontFilePath",
+              "optional": true,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "fontStretch",
+              "optional": true,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "fontStyle",
+              "optional": true,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "fontVariant",
+              "optional": true,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "fontWeight",
+              "optional": true,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "fileFormats",
+              "optional": true,
+              "type": Object {
+                "kind": "GenericApplicationType",
+                "params": Array [
+                  Object {
+                    "kind": "StringType",
+                  },
+                ],
+                "type": Object {
+                  "kind": "ReferenceType",
+                  "name": "Array",
+                },
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "localFonts",
+              "optional": true,
+              "type": Object {
+                "kind": "GenericApplicationType",
+                "params": Array [
+                  Object {
+                    "kind": "StringType",
+                  },
+                ],
+                "type": Object {
+                  "kind": "ReferenceType",
+                  "name": "Array",
+                },
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "unicodeRange",
+              "optional": true,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "Object": Array [],
+    "fontFace": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * CSS for a @font-face declaration.
+ *
+ * @example
+ * // Styles as object basic usage
+ * const styles = {
+ *    ...fontFace({
+ *      'fontFamily': 'Sans-Pro'
+ *      'fontFilePath': 'path/to/file'
+ *    })
+ * }
+ *
+ * // styled-components basic usage
+ * injectGlobal\`\${
+ *   fontFace({
+ *     'fontFamily': 'Sans-Pro'
+ *     'fontFilePath': 'path/to/file'
+ *   }
+ * )}\`
+ *
+ * // CSS as JS Output
+ *
+ * '@font-face': {
+ *   'font-family': 'Sans-Pro',
+ *   'src': 'url(\\"path/to/file.eot\\"), url(\\"path/to/file.woff2\\"), url(\\"path/to/file.woff\\"), url(\\"path/to/file.ttf\\"), url(\\"path/to/file.svg\\")',
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 92,
+          },
+          "filename": "test-cases/polished/mixins/fontFace.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 61,
+          },
+        },
+        "localName": "fontFace",
+        "params": Array [
+          Object {
+            "name": undefined,
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "FontFaceConfiguration",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "fontFace",
+    },
+  ],
+}
+`;
+
+exports[`parse ./mixins/hiDPI.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "hiDPI": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * Generates a media query to target HiDPI devices.
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *  [hiDPI(1.5)]: {
+ *    width: 200px;
+ *  }
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${hiDPI(1.5)} {
+ *     width: 200px;
+ *   }
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * '@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+ *  only screen and (min--moz-device-pixel-ratio: 1.5),
+ *  only screen and (-o-min-device-pixel-ratio: 1.5/1),
+ *  only screen and (min-resolution: 144dpi),
+ *  only screen and (min-resolution: 1.5dppx)': {
+ *   'width': '200px',
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 40,
+          },
+          "filename": "test-cases/polished/mixins/hiDPI.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 32,
+          },
+        },
+        "localName": "hiDPI",
+        "params": Array [
+          Object {
+            "name": "ratio",
+            "type": Object {
+              "kind": "NumberType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "StringType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "hiDPI",
+    },
+  ],
+}
+`;
+
+exports[`parse ./mixins/hideText.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "hideText": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * CSS to hide text to show a background image in a SEO-friendly way.
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   'background-image': 'url(logo.png)',
+ *   ...hideText(),
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   background-image: url(logo.png);
+ *   \${hideText()};
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * 'div': {
+ *   'background-image': 'url(logo.png)',
+ *   'text-indent': '101%',
+ *   'overflow': 'hidden',
+ *   'white-space': 'nowrap',
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 35,
+          },
+          "filename": "test-cases/polished/mixins/hideText.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 29,
+          },
+        },
+        "localName": "hideText",
+        "params": Array [],
+        "restParam": undefined,
+        "returnType": Object {
+          "exact": false,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": undefined,
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": undefined,
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": undefined,
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "hideText",
+    },
+  ],
+}
+`;
+
+exports[`parse ./mixins/normalize.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Object": Array [],
+    "normalize": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * CSS to normalize abnormalities across browsers (normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css)
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *    ...normalize(),
+ * }
+ *
+ * // styled-components usage
+ * injectGlobal\`\${normalize()}\`
+ *
+ * // CSS as JS Output
+ *
+ * html {
+ *   font-family: sans-serif,
+ *   line-height: 1.15,
+ *   -ms-text-size-adjust: 100%,
+ *   -webkit-text-size-adjust: 100%,
+ * } ...
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 295,
+          },
+          "filename": "test-cases/polished/mixins/normalize.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 41,
+          },
+        },
+        "localName": "normalize",
+        "params": Array [
+          Object {
+            "name": "excludeOpinionated",
+            "type": Object {
+              "kind": "BooleanType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "normalize",
+    },
+  ],
+}
+`;
+
+exports[`parse ./mixins/placeholder.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Object": Array [],
+    "placeholder": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * CSS to style the selection psuedo-element.
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...placeholder({'color': 'blue'})
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.input\`
+ *    \${placeholder({'color': 'blue'})}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * 'input': {
+ *   '&:-moz-placeholder': {
+ *     'color': 'blue',
+ *   },
+ *   '&:-ms-input-placeholder': {
+ *     'color': 'blue',
+ *   },
+ *   '&::-moz-placeholder': {
+ *     'color': 'blue',
+ *   },
+ *   '&::-webkit-input-placeholder': {
+ *     'color': 'blue',
+ *   },
+ * },
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 50,
+          },
+          "filename": "test-cases/polished/mixins/placeholder.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 35,
+          },
+        },
+        "localName": "placeholder",
+        "params": Array [
+          Object {
+            "name": "styles",
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Object",
+            },
+          },
+          Object {
+            "name": "parent",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "placeholder",
+    },
+  ],
+}
+`;
+
+exports[`parse ./mixins/radialGradient.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "Object": Array [],
+    "RadialGradientConfiguration": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 8,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 8,
+                "line": 1,
+              },
+              "filename": "test-cases/polished/mixins/radialGradient.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 1,
+              },
+            },
+            "start": 0,
+            "type": "CommentLine",
+            "value": " @flow",
+          },
+          Object {
+            "end": 16,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 6,
+                "line": 3,
+              },
+              "filename": "test-cases/polished/mixins/radialGradient.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 3,
+              },
+            },
+            "start": 10,
+            "type": "CommentBlock",
+            "value": "* ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 2,
+            "line": 10,
+          },
+          "filename": "test-cases/polished/mixins/radialGradient.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 4,
+          },
+        },
+        "localName": "RadialGradientConfiguration",
+        "right": Object {
+          "exact": false,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": "colorStops",
+              "optional": false,
+              "type": Object {
+                "kind": "GenericApplicationType",
+                "params": Array [
+                  Object {
+                    "kind": "StringType",
+                  },
+                ],
+                "type": Object {
+                  "kind": "ReferenceType",
+                  "name": "Array",
+                },
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "extent",
+              "optional": true,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "fallback",
+              "optional": true,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "position",
+              "optional": true,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "shape",
+              "optional": true,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "radialGradient": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * CSS for declaring a radial gradient, including a fallback background-color. The fallback is either the first color-stop or an explicitly passed fallback color.
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...radialGradient({
+ *     colorStops: ['#00FFFF 0%', 'rgba(0, 0, 255, 0) 50%', '#0000FF 95%'],
+ *     extent: 'farthest-corner at 45px 45px',
+ *     position: 'center',
+ *     shape: 'ellipse',
+ *   })
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${radialGradient({
+ *     colorStops: ['#00FFFF 0%', 'rgba(0, 0, 255, 0) 50%', '#0000FF 95%'],
+ *     extent: 'farthest-corner at 45px 45px',
+ *     position: 'center',
+ *     shape: 'ellipse',
+ *   })}
+ *\`
+ *
+ * // CSS as JS Output
+ *
+ * div: {
+ *   'background-color': '#00FFFF',
+ *   'background-image': 'radial-gradient(center ellipse farthest-corner at 45px 45px, #00FFFF 0%, rgba(0, 0, 255, 0) 50%, #0000FF 95%)',
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 79,
+          },
+          "filename": "test-cases/polished/mixins/radialGradient.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 67,
+          },
+        },
+        "localName": "radialGradient",
+        "params": Array [
+          Object {
+            "name": undefined,
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "RadialGradientConfiguration",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "radialGradient",
+    },
+  ],
+}
+`;
+
+exports[`parse ./mixins/retinaImage.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Object": Array [],
+    "retinaImage": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * The retina-image mixin is a helper to generate a retina background image and non-retina
+ * background image. The retina background image will output to a HiDPI media query. The mixin uses
+ * a _2x.png filename suffix by default.
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *  ...retinaImage('my-img')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${retinaImage('my-img')}
+ * \`
+ *
+ * // CSS as JS Output
+ * div {
+ *   backgroundImage: 'url(my-img.png)',
+ *   '@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+ *    only screen and (min--moz-device-pixel-ratio: 1.3),
+ *    only screen and (-o-min-device-pixel-ratio: 1.3/1),
+ *    only screen and (min-resolution: 144dpi),
+ *    only screen and (min-resolution: 1.5dppx)': {
+ *     backgroundImage: 'url(my-img_2x.png)',
+ *   }
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 48,
+          },
+          "filename": "test-cases/polished/mixins/retinaImage.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 33,
+          },
+        },
+        "localName": "retinaImage",
+        "params": Array [
+          Object {
+            "name": "filename",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+          Object {
+            "name": "backgroundSize",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+          Object {
+            "name": "extension",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+          Object {
+            "name": "retinaFilename",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+          Object {
+            "name": "retinaSuffix",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "retinaImage",
+    },
+  ],
+}
+`;
+
+exports[`parse ./mixins/selection.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Object": Array [],
+    "selection": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * CSS to style the selection psuedo-element.
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...selection({
+ *     'background': 'blue'
+ *   }, 'section')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${selection({'background': 'blue'}, 'section')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * 'div': {
+ *   'section::-moz-selection': {
+ *     'background-color':'blue',
+ *   },
+ *   'section::selection': {
+ *     'background-color': 'blue',
+ *   }
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 40,
+          },
+          "filename": "test-cases/polished/mixins/selection.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 31,
+          },
+        },
+        "localName": "selection",
+        "params": Array [
+          Object {
+            "name": "styles",
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Object",
+            },
+          },
+          Object {
+            "name": "parent",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "selection",
+    },
+  ],
+}
+`;
+
+exports[`parse ./mixins/timingFunctions.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "TimingFunction": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 59,
+          },
+          "filename": "test-cases/polished/mixins/timingFunctions.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 35,
+          },
+        },
+        "localName": "TimingFunction",
+        "right": Object {
+          "kind": "UnionType",
+          "types": Array [
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInBack",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInCirc",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInCubic",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInExpo",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInOutBack",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInOutCirc",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInOutCubic",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInOutExpo",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInOutQuad",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInOutQuart",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInOutQuint",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInOutSine",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInQuad",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInQuart",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInQuint",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeInSine",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeOutBack",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeOutCirc",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeOutCubic",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeOutExpo",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeOutQuad",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeOutQuart",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeOutQuint",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "easeOutSine",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "timingFunctions": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * String to represent common easing functions as demonstrated here: (github.com/jaukia/easie).
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   'transition-timing-function': timingFunctions('easeInQuad')
+ * }
+ *
+ * // styled-components usage
+ *  const div = styled.div\`
+ *   transition-timing-function: \${timingFunctions('easeInQuad')};
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * 'div': {
+ *   'transition-timing-function': 'cubic-bezier(0.550,  0.085, 0.680, 0.530)',
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 84,
+          },
+          "filename": "test-cases/polished/mixins/timingFunctions.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 82,
+          },
+        },
+        "localName": "timingFunctions",
+        "params": Array [
+          Object {
+            "name": "timingFunction",
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "TimingFunction",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "StringType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "timingFunctions",
+    },
+  ],
+}
+`;
+
+exports[`parse ./mixins/triangle.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Object": Array [],
+    "PointingDirection": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 8,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 8,
+                "line": 1,
+              },
+              "filename": "test-cases/polished/mixins/triangle.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 1,
+              },
+            },
+            "start": 0,
+            "type": "CommentLine",
+            "value": " @flow",
+          },
+          Object {
+            "end": 16,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 6,
+                "line": 3,
+              },
+              "filename": "test-cases/polished/mixins/triangle.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 3,
+              },
+            },
+            "start": 10,
+            "type": "CommentBlock",
+            "value": "* ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 60,
+            "line": 4,
+          },
+          "filename": "test-cases/polished/mixins/triangle.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 4,
+          },
+        },
+        "localName": "PointingDirection",
+        "right": Object {
+          "kind": "UnionType",
+          "types": Array [
+            Object {
+              "kind": "StringLiteralType",
+              "value": "bottom",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "left",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "right",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "top",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "TriangleArgs": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 12,
+          },
+          "filename": "test-cases/polished/mixins/triangle.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 6,
+          },
+        },
+        "localName": "TriangleArgs",
+        "right": Object {
+          "exact": false,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": "backgroundColor",
+              "optional": true,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "foregroundColor",
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "height",
+              "optional": false,
+              "type": Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "NumberType",
+                  },
+                  Object {
+                    "kind": "StringType",
+                  },
+                ],
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "width",
+              "optional": false,
+              "type": Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "NumberType",
+                  },
+                  Object {
+                    "kind": "StringType",
+                  },
+                ],
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "pointingDirection",
+              "optional": false,
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "PointingDirection",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "triangle": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 81,
+          },
+          "filename": "test-cases/polished/mixins/triangle.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 61,
+          },
+        },
+        "localName": "triangle",
+        "params": Array [
+          Object {
+            "name": undefined,
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "TriangleArgs",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "triangle",
+    },
+  ],
+}
+`;
+
+exports[`parse ./mixins/wordWrap.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "wordWrap": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * Provides an easy way to change the \`word-wrap\` property.
+ *
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...wordWrap('break-all')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${wordWrap('break-all')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * const styles = {
+ *   overflow-wrap: 'break-all',
+ *   word-wrap: 'break-all',
+ *   word-break: 'break-all',
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 33,
+          },
+          "filename": "test-cases/polished/mixins/wordWrap.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 26,
+          },
+        },
+        "localName": "wordWrap",
+        "params": Array [
+          Object {
+            "name": "wrap",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "exact": false,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": undefined,
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": undefined,
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": undefined,
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "wordWrap",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/animation.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "AnimationProperty": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 8,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 8,
+                "line": 1,
+              },
+              "filename": "test-cases/polished/shorthands/animation.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 1,
+              },
+            },
+            "start": 0,
+            "type": "CommentLine",
+            "value": " @flow",
+          },
+          Object {
+            "end": 16,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 6,
+                "line": 3,
+              },
+              "filename": "test-cases/polished/shorthands/animation.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 3,
+              },
+            },
+            "start": 10,
+            "type": "CommentBlock",
+            "value": "* ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 38,
+            "line": 4,
+          },
+          "filename": "test-cases/polished/shorthands/animation.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 4,
+          },
+        },
+        "localName": "AnimationProperty",
+        "right": Object {
+          "kind": "UnionType",
+          "types": Array [
+            Object {
+              "kind": "NumberType",
+            },
+            Object {
+              "kind": "StringType",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "Array": Array [],
+    "animation": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * Shorthand for easily setting the animation property. Allows either multiple arrays with animations
+ * or a single animation spread over the arguments.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...animation(['rotate', '1s', 'ease-in-out'], ['colorchange', '2s'])
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${animation(['rotate', '1s', 'ease-in-out'], ['colorchange', '2s'])}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'animation': 'rotate 1s ease-in-out, colorchange 2s'
+ * }
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...animation('rotate', '1s', 'ease-in-out')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${animation('rotate', '1s', 'ease-in-out')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'animation': 'rotate 1s ease-in-out'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 62,
+          },
+          "filename": "test-cases/polished/shorthands/animation.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 42,
+          },
+        },
+        "localName": "animation",
+        "params": Array [],
+        "restParam": Object {
+          "name": "args",
+          "type": Object {
+            "kind": "GenericApplicationType",
+            "params": Array [
+              Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "GenericApplicationType",
+                    "params": Array [
+                      Object {
+                        "kind": "ReferenceType",
+                        "name": "AnimationProperty",
+                      },
+                    ],
+                    "type": Object {
+                      "kind": "ReferenceType",
+                      "name": "Array",
+                    },
+                  },
+                  Object {
+                    "kind": "ReferenceType",
+                    "name": "AnimationProperty",
+                  },
+                ],
+              },
+            ],
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Array",
+            },
+          },
+        },
+        "returnType": Object {
+          "exact": false,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": "animation",
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "animation",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/backgroundImages.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "backgroundImages": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * The backgroundImages shorthand accepts any number of backgroundImage values as parameters for creating a single background statement..
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...backgroundImages('url(\\"/image/background.jpg\\")', 'linear-gradient(red, green)')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${...backgroundImages('url(\\"/image/background.jpg\\")', 'linear-gradient(red, green)')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'background-image': 'url(\\"/image/background.jpg\\"), linear-gradient(red, green)'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 27,
+          },
+          "filename": "test-cases/polished/shorthands/backgroundImages.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 23,
+          },
+        },
+        "localName": "backgroundImages",
+        "params": Array [],
+        "restParam": Object {
+          "name": "properties",
+          "type": Object {
+            "kind": "GenericApplicationType",
+            "params": Array [
+              Object {
+                "kind": "StringType",
+              },
+            ],
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Array",
+            },
+          },
+        },
+        "returnType": Object {
+          "exact": false,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": undefined,
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "backgroundImages",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/backgrounds.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "backgrounds": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * The backgrounds shorthand accepts any number of background values as parameters for creating a single background statement..
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...backgrounds('url(\\"/image/background.jpg\\")', 'linear-gradient(red, green)', 'center no-repeat')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${...backgrounds('url(\\"/image/background.jpg\\")', 'linear-gradient(red, green)', 'center no-repeat')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'background': 'url(\\"/image/background.jpg\\"), linear-gradient(red, green), center no-repeat'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 26,
+          },
+          "filename": "test-cases/polished/shorthands/backgrounds.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 22,
+          },
+        },
+        "localName": "backgrounds",
+        "params": Array [],
+        "restParam": Object {
+          "name": "properties",
+          "type": Object {
+            "kind": "GenericApplicationType",
+            "params": Array [
+              Object {
+                "kind": "StringType",
+              },
+            ],
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Array",
+            },
+          },
+        },
+        "returnType": Object {
+          "exact": false,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": "background",
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "backgrounds",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/borderColor.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "Object": Array [],
+    "borderColor": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * The border-color shorthand accepts up to four values, including null to skip a value, and uses the directional-property mixin to map them to their respective directions.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...borderColor('red', 'green', 'blue', 'yellow')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${borderColor('red', 'green', 'blue', 'yellow')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'border-top-color': 'red',
+ *   'border-right-color': 'green',
+ *   'border-bottom-color': 'blue',
+ *   'border-left-color': 'yellow'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 29,
+          },
+          "filename": "test-cases/polished/shorthands/borderColor.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 27,
+          },
+        },
+        "localName": "borderColor",
+        "params": Array [],
+        "restParam": Object {
+          "name": "values",
+          "type": Object {
+            "kind": "GenericApplicationType",
+            "params": Array [
+              Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "NullType",
+                  },
+                  Object {
+                    "kind": "StringType",
+                  },
+                  Object {
+                    "kind": "VoidType",
+                  },
+                ],
+              },
+            ],
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Array",
+            },
+          },
+        },
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "borderColor",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/borderRadius.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Object": Array [],
+    "borderRadius": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * The border-radius shorthand accepts a value for side and a value for radius and applies the radius value to both corners of the side.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...borderRadius('top', '5px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${borderRadius('top', '5px')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'border-top-right-radius': '5px',
+ *   'border-top-left-radius': '5px',
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 41,
+          },
+          "filename": "test-cases/polished/shorthands/borderRadius.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 24,
+          },
+        },
+        "localName": "borderRadius",
+        "params": Array [
+          Object {
+            "name": "side",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+          Object {
+            "name": "radius",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "borderRadius",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/borderStyle.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "Object": Array [],
+    "borderStyle": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * The border-style shorthand accepts up to four values, including null to skip a value, and uses the directional-property mixin to map them to their respective directions.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...borderStyle('solid', 'dashed', 'dotted', 'double')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${borderStyle('solid', 'dashed', 'dotted', 'double')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'border-top-style': 'solid',
+ *   'border-right-style': 'dashed',
+ *   'border-bottom-style': 'dotted',
+ *   'border-left-style': 'double'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 29,
+          },
+          "filename": "test-cases/polished/shorthands/borderStyle.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 27,
+          },
+        },
+        "localName": "borderStyle",
+        "params": Array [],
+        "restParam": Object {
+          "name": "values",
+          "type": Object {
+            "kind": "GenericApplicationType",
+            "params": Array [
+              Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "NullType",
+                  },
+                  Object {
+                    "kind": "StringType",
+                  },
+                  Object {
+                    "kind": "VoidType",
+                  },
+                ],
+              },
+            ],
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Array",
+            },
+          },
+        },
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "borderStyle",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/borderWidth.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "Object": Array [],
+    "borderWidth": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * The border-width shorthand accepts up to four values, including null to skip a value, and uses the directional-property mixin to map them to their respective directions.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...borderWidth('12px', '24px', '36px', '48px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${borderWidth('12px', '24px', '36px', '48px')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'border-top-width': '12px',
+ *   'border-right-width': '24px',
+ *   'border-bottom-width': '36px',
+ *   'border-left-width': '48px'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 29,
+          },
+          "filename": "test-cases/polished/shorthands/borderWidth.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 27,
+          },
+        },
+        "localName": "borderWidth",
+        "params": Array [],
+        "restParam": Object {
+          "name": "values",
+          "type": Object {
+            "kind": "GenericApplicationType",
+            "params": Array [
+              Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "NullType",
+                  },
+                  Object {
+                    "kind": "StringType",
+                  },
+                  Object {
+                    "kind": "VoidType",
+                  },
+                ],
+              },
+            ],
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Array",
+            },
+          },
+        },
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "borderWidth",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/buttons.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "ButtonState": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 301,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 6,
+                "line": 13,
+              },
+              "filename": "test-cases/polished/shorthands/buttons.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 13,
+              },
+            },
+            "start": 295,
+            "type": "CommentBlock",
+            "value": "* ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 19,
+          },
+          "filename": "test-cases/polished/shorthands/buttons.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 14,
+          },
+        },
+        "localName": "ButtonState",
+        "right": Object {
+          "kind": "UnionType",
+          "types": Array [
+            Object {
+              "kind": "NullType",
+            },
+            Object {
+              "kind": "ReferenceType",
+              "name": "undefined",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "active",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "focus",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "hover",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "Object": Array [],
+    "buttons": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * Populates selectors that target all buttons. You can pass optional states to append to the selectors.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   [buttons('active')]: {
+ *     'border': 'none'
+ *   }
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   > \${buttons('active')} {
+ *     border: none;
+ *   }
+ * \`
+ *
+ * // CSS in JS Output
+ *
+ *  'button:active,
+ *  'input[type=\\"button\\"]:active,
+ *  'input[type=\\\\\\"reset\\\\\\"]:active,
+ *  'input[type=\\\\\\"submit\\\\\\"]:active: {
+ *   'border': 'none'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 50,
+          },
+          "filename": "test-cases/polished/shorthands/buttons.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 48,
+          },
+        },
+        "localName": "buttons",
+        "params": Array [],
+        "restParam": Object {
+          "name": "states",
+          "type": Object {
+            "kind": "GenericApplicationType",
+            "params": Array [
+              Object {
+                "kind": "ReferenceType",
+                "name": "ButtonState",
+              },
+            ],
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Array",
+            },
+          },
+        },
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "undefined": Array [],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "buttons",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/margin.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "Object": Array [],
+    "margin": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * The margin shorthand accepts up to four values, including null to skip a value, and uses the directional-property mixin to map them to their respective directions.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...margin('12px', '24px', '36px', '48px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${margin('12px', '24px', '36px', '48px')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'margin-top': '12px',
+ *   'margin-right': '24px',
+ *   'margin-bottom': '36px',
+ *   'margin-left': '48px'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 29,
+          },
+          "filename": "test-cases/polished/shorthands/margin.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 27,
+          },
+        },
+        "localName": "margin",
+        "params": Array [],
+        "restParam": Object {
+          "name": "values",
+          "type": Object {
+            "kind": "GenericApplicationType",
+            "params": Array [
+              Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "NullType",
+                  },
+                  Object {
+                    "kind": "StringType",
+                  },
+                  Object {
+                    "kind": "VoidType",
+                  },
+                ],
+              },
+            ],
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Array",
+            },
+          },
+        },
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "margin",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/padding.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "Object": Array [],
+    "padding": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * The padding shorthand accepts up to four values, including null to skip a value, and uses the directional-property mixin to map them to their respective directions.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...padding('12px', '24px', '36px', '48px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${padding('12px', '24px', '36px', '48px')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'padding-top': '12px',
+ *   'padding-right': '24px',
+ *   'padding-bottom': '36px',
+ *   'padding-left': '48px'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 29,
+          },
+          "filename": "test-cases/polished/shorthands/padding.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 27,
+          },
+        },
+        "localName": "padding",
+        "params": Array [],
+        "restParam": Object {
+          "name": "values",
+          "type": Object {
+            "kind": "GenericApplicationType",
+            "params": Array [
+              Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "NullType",
+                  },
+                  Object {
+                    "kind": "StringType",
+                  },
+                  Object {
+                    "kind": "VoidType",
+                  },
+                ],
+              },
+            ],
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Array",
+            },
+          },
+        },
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "padding",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/position.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "Object": Array [],
+    "position": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * The position shorthand accepts up to five values, including null to skip a value, and uses the directional-property mixin to map them to their respective directions. The first calue can optionally be a position keyword.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...position('12px', '24px', '36px', '48px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${position('12px', '24px', '36px', '48px')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'top': '12px',
+ *   'right': '24px',
+ *   'bottom': '36px',
+ *   'left': '48px'
+ * }
+ *
+ * // Styles as object usage
+ * const styles = {
+ *   ...position('absolute', '12px', '24px', '36px', '48px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${position('absolute', '12px', '24px', '36px', '48px')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'position': 'absolute',
+ *   'top': '12px',
+ *   'right': '24px',
+ *   'bottom': '36px',
+ *   'left': '48px'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 59,
+          },
+          "filename": "test-cases/polished/shorthands/position.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 49,
+          },
+        },
+        "localName": "position",
+        "params": Array [
+          Object {
+            "name": "positionKeyword",
+            "type": Object {
+              "kind": "UnionType",
+              "types": Array [
+                Object {
+                  "kind": "NullType",
+                },
+                Object {
+                  "kind": "StringType",
+                },
+              ],
+            },
+          },
+        ],
+        "restParam": Object {
+          "name": "values",
+          "type": Object {
+            "kind": "GenericApplicationType",
+            "params": Array [
+              Object {
+                "kind": "UnionType",
+                "types": Array [
+                  Object {
+                    "kind": "NullType",
+                  },
+                  Object {
+                    "kind": "StringType",
+                  },
+                  Object {
+                    "kind": "VoidType",
+                  },
+                ],
+              },
+            ],
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Array",
+            },
+          },
+        },
+        "returnType": Object {
+          "kind": "ReferenceType",
+          "name": "Object",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "position",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/size.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "size": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * Mixin to set the height and width properties in a single statement.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...size('300px', '250px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${size('300px', '250px')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'height': '300px',
+ *   'width': '250px',
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 29,
+          },
+          "filename": "test-cases/polished/shorthands/size.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 24,
+          },
+        },
+        "localName": "size",
+        "params": Array [
+          Object {
+            "name": "height",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+          Object {
+            "name": "width",
+            "type": Object {
+              "kind": "StringType",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "exact": false,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": "height",
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "width",
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "size",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/textInputs.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "InputState": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 710,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 6,
+                "line": 25,
+              },
+              "filename": "test-cases/polished/shorthands/textInputs.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 25,
+              },
+            },
+            "start": 704,
+            "type": "CommentBlock",
+            "value": "* ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 31,
+          },
+          "filename": "test-cases/polished/shorthands/textInputs.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 26,
+          },
+        },
+        "localName": "InputState",
+        "right": Object {
+          "kind": "UnionType",
+          "types": Array [
+            Object {
+              "kind": "NullType",
+            },
+            Object {
+              "kind": "ReferenceType",
+              "name": "undefined",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "active",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "focus",
+            },
+            Object {
+              "kind": "StringLiteralType",
+              "value": "hover",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "textInputs": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * Populates selectors that target all text inputs. You can pass optional states to append to the selectors.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   [textInputs('active')]: {
+ *     'border': 'none'
+ *   }
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   > \${textInputs('active')} {
+ *     border: none;
+ *   }
+ * \`
+ *
+ * // CSS in JS Output
+ *
+ *  ''input[type=\\"color\\"]:active,
+ *  'input[type=\\"date\\"]:active,
+ *  'input[type=\\"datetime\\"]:active,
+ *  'input[type=\\"datetime-local\\"]:active,
+ *  'input[type=\\"email\\"]:active,
+ *  'input[type=\\"month\\"]:active,
+ *  'input[type=\\"number\\"]:active,
+ *  'input[type=\\"password\\"]:active,
+ *  'input[type=\\"search\\"]:active,
+ *  'input[type=\\"tel\\"]:active,
+ *  'input[type=\\"text\\"]:active,
+ *  'input[type=\\"time\\"]:active,
+ *  'input[type=\\"url\\"]:active,
+ *  'input[type=\\"week\\"]:active,
+ *  input:not([type]):active,
+ *  textarea:active': {
+ *   'border': 'none'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 74,
+          },
+          "filename": "test-cases/polished/shorthands/textInputs.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 72,
+          },
+        },
+        "localName": "textInputs",
+        "params": Array [],
+        "restParam": Object {
+          "name": "states",
+          "type": Object {
+            "kind": "GenericApplicationType",
+            "params": Array [
+              Object {
+                "kind": "ReferenceType",
+                "name": "InputState",
+              },
+            ],
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Array",
+            },
+          },
+        },
+        "returnType": Object {
+          "kind": "StringType",
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "undefined": Array [],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "textInputs",
+    },
+  ],
+}
+`;
+
+exports[`parse ./shorthands/transitions.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "Array": Array [],
+    "transitions": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "BlockComment",
+            "value": "*
+ * The transitions shorthand accepts any number of transition values as parameters for creating a single transition statement..
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...transitions('opacity 1.0s ease-in 0s', 'width 2.0s ease-in 2s')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${...transitions('opacity 1.0s ease-in 0s', 'width 2.0s ease-in 2s')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'transition': 'opacity 1.0s ease-in 0s, width 2.0s ease-in 2s'
+ * }
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 27,
+          },
+          "filename": "test-cases/polished/shorthands/transitions.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 23,
+          },
+        },
+        "localName": "transitions",
+        "params": Array [],
+        "restParam": Object {
+          "name": "properties",
+          "type": Object {
+            "kind": "GenericApplicationType",
+            "params": Array [
+              Object {
+                "kind": "StringType",
+              },
+            ],
+            "type": Object {
+              "kind": "ReferenceType",
+              "name": "Array",
+            },
+          },
+        },
+        "returnType": Object {
+          "exact": false,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": "transition",
+              "optional": false,
+              "type": Object {
+                "kind": "StringType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "transitions",
+    },
+  ],
+}
+`;
+
+exports[`parse ./types/color.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "HslColor": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 8,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 8,
+                "line": 1,
+              },
+              "filename": "test-cases/polished/types/color.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 1,
+              },
+            },
+            "start": 0,
+            "type": "CommentLine",
+            "value": " @flow",
+          },
+          Object {
+            "end": 91,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 81,
+                "line": 3,
+              },
+              "filename": "test-cases/polished/types/color.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 3,
+              },
+            },
+            "start": 10,
+            "type": "CommentLine",
+            "value": " Note: we define properties with JSdoc since documentation.js doesn't recognize",
+          },
+          Object {
+            "end": 178,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 86,
+                "line": 4,
+              },
+              "filename": "test-cases/polished/types/color.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 4,
+              },
+            },
+            "start": 92,
+            "type": "CommentLine",
+            "value": " exported types yet. See https://github.com/documentationjs/documentation/issues/680",
+          },
+          Object {
+            "end": 281,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 3,
+                "line": 10,
+              },
+              "filename": "test-cases/polished/types/color.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 6,
+              },
+            },
+            "start": 180,
+            "type": "CommentBlock",
+            "value": "*
+ * @property {number}  hue
+ * @property {number}  saturation
+ * @property {number}  lightness
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 2,
+            "line": 15,
+          },
+          "filename": "test-cases/polished/types/color.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 11,
+          },
+        },
+        "localName": "HslColor",
+        "right": Object {
+          "exact": true,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": "hue",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "saturation",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "lightness",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "HslaColor": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 500,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 3,
+                "line": 22,
+              },
+              "filename": "test-cases/polished/types/color.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 17,
+              },
+            },
+            "start": 370,
+            "type": "CommentBlock",
+            "value": "*
+ * @property {number}  hue
+ * @property {number}  saturation
+ * @property {number}  lightness
+ * @property {number}  alpha
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 2,
+            "line": 28,
+          },
+          "filename": "test-cases/polished/types/color.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 23,
+          },
+        },
+        "localName": "HslaColor",
+        "right": Object {
+          "exact": true,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": "hue",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "saturation",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "lightness",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "alpha",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "RgbColor": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 698,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 3,
+                "line": 34,
+              },
+              "filename": "test-cases/polished/types/color.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 30,
+              },
+            },
+            "start": 607,
+            "type": "CommentBlock",
+            "value": "*
+ * @property {number}  red
+ * @property {number}  green
+ * @property {number}  blue
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 2,
+            "line": 39,
+          },
+          "filename": "test-cases/polished/types/color.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 35,
+          },
+        },
+        "localName": "RgbColor",
+        "right": Object {
+          "exact": true,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": "red",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "green",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "blue",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+    "RgbaColor": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 897,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 3,
+                "line": 46,
+              },
+              "filename": "test-cases/polished/types/color.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 41,
+              },
+            },
+            "start": 777,
+            "type": "CommentBlock",
+            "value": "*
+ * @property {number}  red
+ * @property {number}  green
+ * @property {number}  blue
+ * @property {number}  alpha
+ ",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 2,
+            "line": 52,
+          },
+          "filename": "test-cases/polished/types/color.js.flow",
+          "start": Position {
+            "column": 7,
+            "line": 47,
+          },
+        },
+        "localName": "RgbaColor",
+        "right": Object {
+          "exact": true,
+          "kind": "ObjectType",
+          "properties": Array [
+            Object {
+              "name": "red",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "green",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "blue",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+            Object {
+              "name": "alpha",
+              "optional": false,
+              "type": Object {
+                "kind": "NumberType",
+              },
+              "variance": "invariant",
+            },
+          ],
+        },
+        "typeParameters": Array [],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "exportedName": "HslColor",
+      "kind": "NamedExportStatement",
+      "localName": "HslColor",
+    },
+    Object {
+      "exportedName": "HslaColor",
+      "kind": "NamedExportStatement",
+      "localName": "HslaColor",
+    },
+    Object {
+      "exportedName": "RgbColor",
+      "kind": "NamedExportStatement",
+      "localName": "RgbColor",
+    },
+    Object {
+      "exportedName": "RgbaColor",
+      "kind": "NamedExportStatement",
+      "localName": "RgbaColor",
+    },
+  ],
+}
+`;

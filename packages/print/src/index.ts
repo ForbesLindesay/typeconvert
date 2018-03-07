@@ -1,9 +1,15 @@
 import {Mode, Module} from '@typeconvert/types';
-import Context from './Context';
+import Context, {Modules, Options} from './Context';
 import printExportStatement from './printExportStatement';
 
-export default function printModule(m: Module, mode: Mode) {
-  const ctx = new Context(m, mode);
+export {Mode, Modules, Module, Options};
+
+export default function printModule(
+  filename: string,
+  modules: Modules,
+  options: Options,
+) {
+  const ctx = new Context(filename, modules, options);
   ctx.exportStatements.forEach(exp => {
     printExportStatement(exp, ctx);
   });

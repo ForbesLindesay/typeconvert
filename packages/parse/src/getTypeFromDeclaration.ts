@@ -1,8 +1,17 @@
-import {Declaration, Type} from '@typeconvert/types';
+import {Declaration, Type, DeclarationKind, TypeKind} from '@typeconvert/types';
 import Context from './Context';
 
 function _getTypeFromDeclaration(declaration: Declaration, ctx: Context): Type {
   switch (declaration.kind) {
+    case DeclarationKind.TypeAlias:
+      if (declaration.typeParameters.length) {
+        return {
+          kind: TypeKind.Generic,
+          type: declaration.right,
+          typeParameters: declaration.typeParameters,
+        };
+      }
+      return declaration.right;
     default:
       return declaration;
   }

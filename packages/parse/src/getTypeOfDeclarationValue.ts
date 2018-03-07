@@ -1,4 +1,4 @@
-import {Declaration, Type} from '@typeconvert/types';
+import {Declaration, DeclarationKind, Type, TypeKind} from '@typeconvert/types';
 import Context from './Context';
 
 function _getTypeOfDeclarationValue(
@@ -6,6 +6,14 @@ function _getTypeOfDeclarationValue(
   ctx: Context,
 ): Type {
   switch (declaration.kind) {
+    case DeclarationKind.FunctionDeclaration:
+      return {
+        kind: TypeKind.Function,
+        params: declaration.params,
+        restParam: declaration.restParam,
+        returnType: declaration.returnType,
+        typeParameters: declaration.typeParameters,
+      };
     default:
       return declaration;
   }

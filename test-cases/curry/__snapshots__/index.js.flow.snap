@@ -1,0 +1,754 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parse ./index.js.flow 1`] = `
+Object {
+  "declarationsByName": Object {
+    "A": Array [],
+    "Array": Array [],
+    "B": Array [],
+    "C": Array [],
+    "CurriedFn2": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 10,
+          },
+          "filename": "test-cases/curry/index.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 8,
+          },
+        },
+        "localName": "CurriedFn2",
+        "right": Object {
+          "kind": "IntersectionType",
+          "types": Array [
+            Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "GenericApplicationType",
+                  "params": Array [
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "B",
+                    },
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "C",
+                    },
+                  ],
+                  "type": Object {
+                    "kind": "ReferenceType",
+                    "name": "Fn1",
+                  },
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn1",
+              },
+            },
+            Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "B",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "C",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn2",
+              },
+            },
+          ],
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "C",
+            "variance": "invariant",
+          },
+        ],
+      },
+    ],
+    "CurriedFn3": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 400,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 42,
+                "line": 11,
+              },
+              "filename": "test-cases/curry/index.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 11,
+              },
+            },
+            "start": 358,
+            "type": "CommentLine",
+            "value": " eslint-disable-next-line no-unused-vars",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 15,
+          },
+          "filename": "test-cases/curry/index.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 12,
+          },
+        },
+        "localName": "CurriedFn3",
+        "right": Object {
+          "kind": "IntersectionType",
+          "types": Array [
+            Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "GenericApplicationType",
+                  "params": Array [
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "B",
+                    },
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "C",
+                    },
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "D",
+                    },
+                  ],
+                  "type": Object {
+                    "kind": "ReferenceType",
+                    "name": "CurriedFn2",
+                  },
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn1",
+              },
+            },
+            Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "B",
+                },
+                Object {
+                  "kind": "GenericApplicationType",
+                  "params": Array [
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "C",
+                    },
+                    Object {
+                      "kind": "ReferenceType",
+                      "name": "D",
+                    },
+                  ],
+                  "type": Object {
+                    "kind": "ReferenceType",
+                    "name": "Fn1",
+                  },
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn2",
+              },
+            },
+            Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "B",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "C",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "D",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn3",
+              },
+            },
+          ],
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "C",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "D",
+            "variance": "invariant",
+          },
+        ],
+      },
+    ],
+    "D": Array [],
+    "Fn1": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [
+          Object {
+            "end": 8,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 8,
+                "line": 1,
+              },
+              "filename": "test-cases/curry/index.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 1,
+              },
+            },
+            "start": 0,
+            "type": "CommentLine",
+            "value": " @flow",
+          },
+          Object {
+            "end": 106,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 96,
+                "line": 3,
+              },
+              "filename": "test-cases/curry/index.js.flow",
+              "start": Position {
+                "column": 0,
+                "line": 3,
+              },
+            },
+            "start": 10,
+            "type": "CommentLine",
+            "value": " Type definitions taken from https://github.com/gcanti/flow-static-land/blob/master/src/Fun.js",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 51,
+            "line": 4,
+          },
+          "filename": "test-cases/curry/index.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 4,
+          },
+        },
+        "localName": "Fn1",
+        "right": Object {
+          "kind": "FunctionType",
+          "params": Array [
+            Object {
+              "name": "a",
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "A",
+              },
+            },
+          ],
+          "restParam": Object {
+            "name": "rest",
+            "type": Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "VoidType",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Array",
+              },
+            },
+          },
+          "returnType": Object {
+            "kind": "ReferenceType",
+            "name": "B",
+          },
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+        ],
+      },
+    ],
+    "Fn2": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 60,
+            "line": 5,
+          },
+          "filename": "test-cases/curry/index.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 5,
+          },
+        },
+        "localName": "Fn2",
+        "right": Object {
+          "kind": "FunctionType",
+          "params": Array [
+            Object {
+              "name": "a",
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "A",
+              },
+            },
+            Object {
+              "name": "b",
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "B",
+              },
+            },
+          ],
+          "restParam": Object {
+            "name": "rest",
+            "type": Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "VoidType",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Array",
+              },
+            },
+          },
+          "returnType": Object {
+            "kind": "ReferenceType",
+            "name": "C",
+          },
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "C",
+            "variance": "invariant",
+          },
+        ],
+      },
+    ],
+    "Fn3": Array [
+      Object {
+        "kind": "TypeAlias",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 69,
+            "line": 6,
+          },
+          "filename": "test-cases/curry/index.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 6,
+          },
+        },
+        "localName": "Fn3",
+        "right": Object {
+          "kind": "FunctionType",
+          "params": Array [
+            Object {
+              "name": "a",
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "A",
+              },
+            },
+            Object {
+              "name": "b",
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "B",
+              },
+            },
+            Object {
+              "name": "c",
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "C",
+              },
+            },
+          ],
+          "restParam": Object {
+            "name": "rest",
+            "type": Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "VoidType",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Array",
+              },
+            },
+          },
+          "returnType": Object {
+            "kind": "ReferenceType",
+            "name": "D",
+          },
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "C",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "D",
+            "variance": "invariant",
+          },
+        ],
+      },
+    ],
+    "add": Array [
+      Object {
+        "kind": "VariableDeclaration",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 33,
+          },
+          "filename": "test-cases/curry/index.js.flow",
+          "start": Position {
+            "column": 13,
+            "line": 33,
+          },
+        },
+        "localName": "add",
+        "mode": "const",
+        "typeAnnotation": Object {
+          "kind": "GenericApplicationType",
+          "params": Array [
+            Object {
+              "kind": "NumberType",
+            },
+            Object {
+              "kind": "NumberType",
+            },
+            Object {
+              "kind": "NumberType",
+            },
+          ],
+          "type": Object {
+            "kind": "ReferenceType",
+            "name": "CurriedFn2",
+          },
+        },
+      },
+    ],
+    "curry": Array [
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "LineComment",
+            "value": " eslint-disable-next-line no-unused-vars",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 70,
+            "line": 18,
+          },
+          "filename": "test-cases/curry/index.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 18,
+          },
+        },
+        "localName": "curry",
+        "params": Array [
+          Object {
+            "name": "f",
+            "type": Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "B",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "C",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn2",
+              },
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "GenericApplicationType",
+          "params": Array [
+            Object {
+              "kind": "ReferenceType",
+              "name": "A",
+            },
+            Object {
+              "kind": "ReferenceType",
+              "name": "B",
+            },
+            Object {
+              "kind": "ReferenceType",
+              "name": "C",
+            },
+          ],
+          "type": Object {
+            "kind": "ReferenceType",
+            "name": "CurriedFn2",
+          },
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "C",
+            "variance": "invariant",
+          },
+        ],
+      },
+      Object {
+        "kind": "FunctionDeclaration",
+        "leadingComments": Array [
+          Object {
+            "type": "LineComment",
+            "value": " eslint-disable-next-line no-redeclare",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 79,
+            "line": 20,
+          },
+          "filename": "test-cases/curry/index.js.flow",
+          "start": Position {
+            "column": 0,
+            "line": 20,
+          },
+        },
+        "localName": "curry",
+        "params": Array [
+          Object {
+            "name": "f",
+            "type": Object {
+              "kind": "GenericApplicationType",
+              "params": Array [
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "A",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "B",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "C",
+                },
+                Object {
+                  "kind": "ReferenceType",
+                  "name": "D",
+                },
+              ],
+              "type": Object {
+                "kind": "ReferenceType",
+                "name": "Fn3",
+              },
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "GenericApplicationType",
+          "params": Array [
+            Object {
+              "kind": "ReferenceType",
+              "name": "A",
+            },
+            Object {
+              "kind": "ReferenceType",
+              "name": "B",
+            },
+            Object {
+              "kind": "ReferenceType",
+              "name": "C",
+            },
+            Object {
+              "kind": "ReferenceType",
+              "name": "D",
+            },
+          ],
+          "type": Object {
+            "kind": "ReferenceType",
+            "name": "CurriedFn3",
+          },
+        },
+        "typeParameters": Array [
+          Object {
+            "name": "A",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "B",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "C",
+            "variance": "invariant",
+          },
+          Object {
+            "name": "D",
+            "variance": "invariant",
+          },
+        ],
+      },
+    ],
+  },
+  "exportStatements": Array [
+    Object {
+      "kind": "DefaultExportStatement",
+      "localName": "curry",
+    },
+    Object {
+      "exportedName": "add",
+      "kind": "NamedExportStatement",
+      "localName": "add",
+    },
+  ],
+}
+`;
+
+exports[`print ./index.d.ts 1`] = `
+"type Fn2<A, B, C> = (a: A, b: B, ...rest: Array<void>) => C;
+type Fn1<A, B> = (a: A, ...rest: Array<void>) => B;
+type CurriedFn2<A, B, C> = Fn1<A, Fn1<B, C>> & Fn2<A, B, C>;
+declare function curry<A, B, C>(f: Fn2<A, B, C>): CurriedFn2<A, B, C>;
+type Fn3<A, B, C, D> = (a: A, b: B, c: C, ...rest: Array<void>) => D;
+type CurriedFn3<A, B, C, D> = Fn1<A, CurriedFn2<B, C, D>> & Fn2<A, B, Fn1<C, D>> & Fn3<A, B, C, D>;
+declare function curry<A, B, C, D>(f: Fn3<A, B, C, D>): CurriedFn3<A, B, C, D>;
+declare const add: CurriedFn2<number, number, number>;
+export default curry;
+export {add};"
+`;
+
+exports[`print ./index.js.flow 1`] = `
+"// @flow
+
+type Fn2<A, B, C> = (a: A, b: B, ...rest: Array<void>) => C;
+type Fn1<A, B> = (a: A, ...rest: Array<void>) => B;
+type CurriedFn2<A, B, C> = Fn1<A, Fn1<B, C>> & Fn2<A, B, C>;
+declare function curry<A, B, C>(f: Fn2<A, B, C>): CurriedFn2<A, B, C>;
+type Fn3<A, B, C, D> = (a: A, b: B, c: C, ...rest: Array<void>) => D;
+type CurriedFn3<A, B, C, D> = Fn1<A, CurriedFn2<B, C, D>> & Fn2<A, B, Fn1<C, D>> & Fn3<A, B, C, D>;
+declare function curry<A, B, C, D>(f: Fn3<A, B, C, D>): CurriedFn3<A, B, C, D>;
+declare var add: CurriedFn2<number, number, number>;
+export default curry;
+export {add};"
+`;

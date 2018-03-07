@@ -1,3 +1,4 @@
+import FunctionParam from './FunctionParam';
 import SourceLocation from './SourceLocation';
 import Type from './Type';
 import Variance from './Variance';
@@ -63,10 +64,6 @@ export interface FunctionDeclaration extends DeclarationBase {
   restParam?: FunctionParam;
   returnType: Type;
   typeParameters: TypeParameter[];
-}
-export interface FunctionParam {
-  name?: string;
-  type: Type;
 }
 
 export interface TypeParameter {

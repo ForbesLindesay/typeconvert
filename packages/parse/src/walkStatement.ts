@@ -157,10 +157,7 @@ function walkDeclaration(
     case 'FunctionDeclaration':
     case 'TSDeclareFunction':
       if (!declaration.id) {
-        throw ctx.getError(
-          'You must provide an identifier for your ' + declaration.type,
-          declaration,
-        );
+        declaration.id = bt.identifier(ctx.getName('anonymous'));
       }
       ctx.declare(declaration.id, declaration);
       return [declaration.id];

@@ -7,6 +7,13 @@ import {
 } from '@typeconvert/types';
 import printDeclaration from './printDeclaration';
 
+export interface Modules {
+  [key: string]: Module | void;
+}
+export interface Options {
+  readonly mode: Mode;
+}
+
 export default class Context {
   readonly exportStatements: ExportStatement[];
   readonly mode: Mode;
@@ -17,10 +24,17 @@ export default class Context {
   private readonly outputDeclarations: string[] = [];
   private readonly outputExports: string[] = [];
 
-  constructor(m: Module, mode: Mode) {
+  private readonly modules: Modules;
+
+  constructor(filename: string, modules: Modules, options: Options) {
+    const m = modules[filename];
+    if (!m) {
+      throw new Error('Could not find the module ' + filename);
+    }
     this.exportStatements = m.exportStatements;
     this.declarationsByName = m.declarationsByName;
-    this.mode = mode;
+    this.modules = modules;
+    this.mode = options.mode;
   }
 
   read(name: string): Declaration[] {

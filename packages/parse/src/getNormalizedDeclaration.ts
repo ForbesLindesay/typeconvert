@@ -5,13 +5,13 @@ import {
   DeclarationKind,
   FunctionParam,
   SourceLocation,
-  TypeParameter,
-  Variance,
 } from '@typeconvert/types';
 import RawDeclaration from './RawDeclaration';
 import Context from './Context';
 import getTypeOfBabelType from './getTypeOfBabelType';
 import getTypeOfExpression from './getTypeOfExpression';
+import getTypeParameters from './getTypeParameters';
+import extractFunction from './extractFunction';
 
 function getCommentType(comment: bt.Comment, ctx: Context) {
   switch (comment.type as string) {
@@ -26,26 +26,27 @@ function getCommentType(comment: bt.Comment, ctx: Context) {
   }
 }
 
-function getTypeParameters(
-  typeParameters: bt.TypeParameterDeclaration | null,
-  ctx: Context,
-) {
-  return typeParameters
-    ? typeParameters.params.map((p): TypeParameter => {
-        if (!p.name) {
-          throw ctx.getError('Cannot have a type parameter without a name', p);
-        }
-        return {
-          name: p.name,
-          variance:
-            p.variance && p.variance.kind === 'plus'
-              ? Variance.covariant
-              : p.variance && p.variance.kind === 'minus'
-                ? Variance.contravariant
-                : Variance.invariant,
-        };
-      })
-    : [];
+export function getParam(param: bt.LVal, ctx: Context): FunctionParam {
+  if (bt.isAssignmentExpression(param)) {
+    return getParam(param.left, ctx);
+  }
+  if (bt.isAssignmentPattern(param)) {
+    return getParam(param.left, ctx);
+  }
+  const typeAnnotation = (param as any).typeAnnotation;
+  if (
+    !typeAnnotation ||
+    !(
+      bt.isTypeAnnotation(typeAnnotation) ||
+      bt.isTSTypeAnnotation(typeAnnotation)
+    )
+  ) {
+    throw ctx.getError('Expected type annotation', param);
+  }
+  return {
+    name: bt.isIdentifier(param) ? param.name : undefined,
+    type: getTypeOfBabelType(typeAnnotation.typeAnnotation, ctx),
+  };
 }
 function _getNormalizedDeclaration(
   declaration: RawDeclaration,
@@ -127,86 +128,20 @@ function _getNormalizedDeclaration(
           declaration,
         );
       }
-      function getParam(param: bt.LVal): FunctionParam {
-        if (bt.isAssignmentExpression(param)) {
-          return getParam(param.left);
-        }
-        const typeAnnotation = (param as any).typeAnnotation;
-        if (
-          !typeAnnotation ||
-          !(
-            bt.isTypeAnnotation(typeAnnotation) ||
-            bt.isTSTypeAnnotation(typeAnnotation)
-          )
-        ) {
-          throw ctx.getError('Expected type annotation', param);
-        }
-        return {
-          name: bt.isIdentifier(param) ? param.name : undefined,
-          type: getTypeOfBabelType(typeAnnotation.typeAnnotation, ctx),
-        };
-      }
-      let restParam = undefined;
-      const params = declaration.params
-        .map((param): FunctionParam => {
-          if (bt.isRestElement(param)) {
-            if (!param.typeAnnotation || bt.isNoop(param.typeAnnotation)) {
-              throw ctx.getError('Expected type annotation', param);
-            }
-            restParam = {
-              name: bt.isIdentifier(param.argument)
-                ? param.argument.name
-                : undefined,
-              type: getTypeOfBabelType(
-                param.typeAnnotation.typeAnnotation,
-                ctx,
-              ),
-            };
-            return null as any;
-          }
-          return getParam(param);
-        })
-        .filter(v => v != null);
-      // TypeParameterDeclaration | TSTypeParameterDeclaration
-      const typeParameters =
-        declaration.typeParameters &&
-        bt.isTypeParameterDeclaration(declaration.typeParameters)
-          ? getTypeParameters(declaration.typeParameters, ctx)
-          : declaration.typeParameters &&
-            bt.isTSTypeParameterDeclaration(declaration.typeParameters)
-            ? declaration.typeParameters.params.map(
-                (p: bt.TSTypeParameter): TypeParameter => {
-                  if (!p.name) {
-                    throw ctx.getError(
-                      'Cannot have a type parameter without a name',
-                      p,
-                    );
-                  }
-                  return {
-                    name: p.name,
-                    variance: Variance.invariant,
-                  };
-                },
-              )
-            : [];
-
-      if (declaration.returnType && !bt.isNoop(declaration.returnType)) {
-        const returnType = getTypeOfBabelType(
-          declaration.returnType.typeAnnotation,
-          ctx,
-        );
-        return {
-          kind: DeclarationKind.FunctionDeclaration,
-          leadingComments,
-          localName: id.name,
-          loc,
-          params,
-          restParam,
-          returnType,
-          typeParameters,
-        };
-      }
-      throw ctx.getError('Return type required', declaration);
+      const {typeParameters, params, restParam, returnType} = extractFunction(
+        declaration,
+        ctx,
+      );
+      return {
+        kind: DeclarationKind.FunctionDeclaration,
+        leadingComments,
+        localName: id.name,
+        loc,
+        params,
+        restParam,
+        returnType,
+        typeParameters,
+      };
     }
     case 'VariableDeclaration': {
       if (declaration.typeAnnotation) {

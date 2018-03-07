@@ -1,4 +1,5 @@
 import * as bt from '@babel/types';
+import ProgramContext from './ProgramContext';
 import RawDeclaration from './RawDeclaration';
 import {
   Declaration,
@@ -7,23 +8,13 @@ import {
   Module,
   Type,
   TypeKind,
+  FunctionParam,
+  TypeParameter,
 } from '@typeconvert/types';
 import getNormalizedDeclaration from './getNormalizedDeclaration';
 import getTypeFromDeclaration from './getTypeFromDeclaration';
 import getTypeOfDeclarationValue from './getTypeOfDeclarationValue';
 const {codeFrameColumns} = require('@babel/code-frame');
-
-// TODO: merge with output context, but also add notion of a "Function Context"
-//
-// Function Context should:
-//  1. Store a separate set of identifiers that are declared
-//  2. track `returnValues` instead of exports
-//  3. Resolve identifiers to their type or value type (depending on context)
-//     instead of just returning the identifier.
-//  4. Still return just the identifier if it resolves to a parent context
-//
-// We can then simply call `getTypeOfExpression` on the return arg with a mode
-// of function to get the return type of an un-annotated function
 
 export enum ContextType {
   File = 'File',
@@ -39,6 +30,7 @@ export interface ExportedName {
   context: Context;
 }
 export default class Context {
+  readonly programContext: ProgramContext;
   readonly filename: string;
   readonly src: string;
 
@@ -54,37 +46,49 @@ export default class Context {
   readonly mode: Mode;
   readonly type: ContextType;
   readonly parent: void | Context;
+  readonly params: FunctionParam[];
 
   constructor(
+    programContext: ProgramContext,
     filename: string,
     src: string,
     mode: Mode,
     type: ContextType = ContextType.File,
     parent?: Context,
+    params?: FunctionParam[],
   ) {
+    this.programContext = programContext;
     this.filename = filename;
     this.src = src;
     this.mode = mode;
     this.type = type;
     this.parent = parent;
+    this.params = params || [];
   }
-  getFunctionContext(): Context {
+  getFunctionContext(
+    params: FunctionParam[],
+    typeParams: TypeParameter[],
+  ): Context {
     return new Context(
+      this.programContext,
       this.filename,
       this.src,
       this.mode,
       ContextType.Function,
       this,
+      params,
     );
   }
 
   getBlockContext(): Context {
     return new Context(
+      this.programContext,
       this.filename,
       this.src,
       this.mode,
       ContextType.Block,
       this,
+      this.params,
     );
   }
 
@@ -183,21 +187,33 @@ export default class Context {
     this.exportAlls.push(relativePath);
   }
 
-  readonly outputDeclarationsByName: Map<string, Declaration[]> = new Map();
+  readonly outputDeclarationsByName: {[key: string]: Declaration[]} = {};
   readonly outputExportStatements: ExportStatement[] = [];
+  private getRawDeclarations(name: string) {
+    const rawDeclarations = this.declarations.get(name) || [];
+    if (
+      rawDeclarations.some(
+        d => d.type === 'DeclareFunction' || d.type === 'TSDeclareFunction',
+      )
+    ) {
+      return rawDeclarations.filter(d => d.type !== 'FunctionDeclaration');
+    }
+    return rawDeclarations;
+  }
   useIdentifierInExport(name: string) {
-    let cached = this.outputDeclarationsByName.get(name);
+    let cached = this.outputDeclarationsByName[name];
     // TODO: what if we're in a block/function (shouldn't really happen)
     if (cached) {
       return cached;
     }
-    const declarations = (this.declarations.get(name) || []).map(d =>
+    const rawDeclarations = this.getRawDeclarations(name);
+    const declarations = rawDeclarations.map(d =>
       getNormalizedDeclaration(d, this),
     );
-    if ((cached = this.outputDeclarationsByName.get(name))) {
+    if ((cached = this.outputDeclarationsByName[name])) {
       return cached;
     }
-    this.outputDeclarationsByName.set(name, declarations);
+    this.outputDeclarationsByName[name] = declarations;
     return declarations;
   }
   getTypeFromIdentifier(name: string): Type {
@@ -208,21 +224,41 @@ export default class Context {
         name,
       };
     }
-    const rawDeclarations = this.declarations.get(name);
-    if (!rawDeclarations) {
-      return this.parent!.getTypeFromIdentifier(name);
-    }
-    const types = rawDeclarations
-      .map(d => getNormalizedDeclaration(d, this))
-      .map(d => getTypeFromDeclaration(d, this));
+    const rawDeclarations = this.getRawDeclarations(name);
+    if (rawDeclarations && rawDeclarations.length) {
+      const types = rawDeclarations
+        .map(d => getNormalizedDeclaration(d, this))
+        .map(d => getTypeFromDeclaration(d, this));
 
-    if (types.length === 1) {
-      return types[0];
-    } else {
-      return {
-        kind: TypeKind.Intersection,
-        types,
-      };
+      if (types.length === 1) {
+        return types[0];
+      } else {
+        return {
+          kind: TypeKind.Intersection,
+          types,
+        };
+      }
+    }
+    return this.parent!.getTypeFromIdentifier(name);
+  }
+  getResolvedTypeFromIdentifier(name: string): Type | void {
+    const rawDeclarations = this.getRawDeclarations(name);
+    if (rawDeclarations && rawDeclarations.length) {
+      const types = rawDeclarations
+        .map(d => getNormalizedDeclaration(d, this))
+        .map(d => getTypeFromDeclaration(d, this));
+
+      if (types.length === 1) {
+        return types[0];
+      } else {
+        return {
+          kind: TypeKind.Intersection,
+          types,
+        };
+      }
+    }
+    if (this.parent) {
+      return this.parent.getResolvedTypeFromIdentifier(name);
     }
   }
   getTypeOfIdentifierValue(name: string): Type {
@@ -233,21 +269,55 @@ export default class Context {
         name,
       };
     }
-    const rawDeclarations = this.declarations.get(name);
-    if (!rawDeclarations) {
-      return this.parent!.getTypeOfIdentifierValue(name);
-    }
-    const types = rawDeclarations
-      .map(d => getNormalizedDeclaration(d, this))
-      .map(d => getTypeOfDeclarationValue(d, this));
+    const rawDeclarations = this.getRawDeclarations(name);
+    if (rawDeclarations && rawDeclarations.length) {
+      const types = rawDeclarations
+        .map(d => getNormalizedDeclaration(d, this))
+        .map(d => getTypeOfDeclarationValue(d, this));
 
-    if (types.length === 1) {
-      return types[0];
-    } else {
-      return {
-        kind: TypeKind.Intersection,
-        types,
-      };
+      if (types.length === 1) {
+        return types[0];
+      } else {
+        return {
+          kind: TypeKind.Intersection,
+          types,
+        };
+      }
+    }
+    if (this.params) {
+      for (const p of this.params) {
+        if (p.name && p.name === name) {
+          return p.type;
+        }
+      }
+    }
+    return this.parent!.getTypeOfIdentifierValue(name);
+  }
+  getResolvedTypeOfIdentifierValue(name: string): Type | void {
+    const rawDeclarations = this.getRawDeclarations(name);
+    if (rawDeclarations && rawDeclarations.length) {
+      const types = rawDeclarations
+        .map(d => getNormalizedDeclaration(d, this))
+        .map(d => getTypeOfDeclarationValue(d, this));
+
+      if (types.length === 1) {
+        return types[0];
+      } else {
+        return {
+          kind: TypeKind.Intersection,
+          types,
+        };
+      }
+    }
+    if (this.params) {
+      for (const p of this.params) {
+        if (p.name && p.name === name) {
+          return p.type;
+        }
+      }
+    }
+    if (this.parent) {
+      return this.parent.getResolvedTypeOfIdentifierValue(name);
     }
   }
 
@@ -256,12 +326,8 @@ export default class Context {
   }
 
   toJSON(): Module {
-    const declarationsByName: Module['declarationsByName'] = {};
-    this.outputDeclarationsByName.forEach((declarations, name) => {
-      declarationsByName[name] = declarations;
-    });
     return {
-      declarationsByName,
+      declarationsByName: this.outputDeclarationsByName,
       exportStatements: this.outputExportStatements,
     };
   }

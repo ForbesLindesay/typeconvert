@@ -38,6 +38,7 @@ Object {
         },
         "localName": "Optional",
         "right": Object {
+          "exact": false,
           "kind": "ObjectType",
           "properties": Array [
             Object {
