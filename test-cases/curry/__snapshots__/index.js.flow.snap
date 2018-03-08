@@ -25,55 +25,207 @@ Object {
         "localName": "CurriedFn2",
         "right": Object {
           "kind": "IntersectionType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 16,
+              "line": 10,
+            },
+            "filename": "test-cases/curry/index.js.flow",
+            "start": Position {
+              "column": 2,
+              "line": 9,
+            },
+          },
           "types": Array [
             Object {
               "kind": "GenericApplicationType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 21,
+                  "line": 9,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 4,
+                  "line": 9,
+                },
+              },
               "params": Array [
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 9,
+                      "line": 9,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 8,
+                      "line": 9,
+                    },
+                  },
                   "name": "A",
                 },
                 Object {
                   "kind": "GenericApplicationType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 20,
+                      "line": 9,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 11,
+                      "line": 9,
+                    },
+                  },
                   "params": Array [
                     Object {
+                      "filename": "test-cases/curry/index.js.flow",
                       "kind": "ReferenceType",
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 16,
+                          "line": 9,
+                        },
+                        "filename": "test-cases/curry/index.js.flow",
+                        "start": Position {
+                          "column": 15,
+                          "line": 9,
+                        },
+                      },
                       "name": "B",
                     },
                     Object {
+                      "filename": "test-cases/curry/index.js.flow",
                       "kind": "ReferenceType",
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 19,
+                          "line": 9,
+                        },
+                        "filename": "test-cases/curry/index.js.flow",
+                        "start": Position {
+                          "column": 18,
+                          "line": 9,
+                        },
+                      },
                       "name": "C",
                     },
                   ],
                   "type": Object {
+                    "filename": "test-cases/curry/index.js.flow",
                     "kind": "ReferenceType",
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 14,
+                        "line": 9,
+                      },
+                      "filename": "test-cases/curry/index.js.flow",
+                      "start": Position {
+                        "column": 11,
+                        "line": 9,
+                      },
+                    },
                     "name": "Fn1",
                   },
                 },
               ],
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 7,
+                    "line": 9,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 4,
+                    "line": 9,
+                  },
+                },
                 "name": "Fn1",
               },
             },
             Object {
               "kind": "GenericApplicationType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 16,
+                  "line": 10,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 4,
+                  "line": 10,
+                },
+              },
               "params": Array [
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 9,
+                      "line": 10,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 8,
+                      "line": 10,
+                    },
+                  },
                   "name": "A",
                 },
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 12,
+                      "line": 10,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 11,
+                      "line": 10,
+                    },
+                  },
                   "name": "B",
                 },
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 15,
+                      "line": 10,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 14,
+                      "line": 10,
+                    },
+                  },
                   "name": "C",
                 },
               ],
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 7,
+                    "line": 10,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 4,
+                    "line": 10,
+                  },
+                },
                 "name": "Fn2",
               },
             },
@@ -131,97 +283,367 @@ Object {
         "localName": "CurriedFn3",
         "right": Object {
           "kind": "IntersectionType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 19,
+              "line": 15,
+            },
+            "filename": "test-cases/curry/index.js.flow",
+            "start": Position {
+              "column": 2,
+              "line": 13,
+            },
+          },
           "types": Array [
             Object {
               "kind": "GenericApplicationType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 31,
+                  "line": 13,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 4,
+                  "line": 13,
+                },
+              },
               "params": Array [
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 9,
+                      "line": 13,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 8,
+                      "line": 13,
+                    },
+                  },
                   "name": "A",
                 },
                 Object {
                   "kind": "GenericApplicationType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 30,
+                      "line": 13,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 11,
+                      "line": 13,
+                    },
+                  },
                   "params": Array [
                     Object {
+                      "filename": "test-cases/curry/index.js.flow",
                       "kind": "ReferenceType",
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 23,
+                          "line": 13,
+                        },
+                        "filename": "test-cases/curry/index.js.flow",
+                        "start": Position {
+                          "column": 22,
+                          "line": 13,
+                        },
+                      },
                       "name": "B",
                     },
                     Object {
+                      "filename": "test-cases/curry/index.js.flow",
                       "kind": "ReferenceType",
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 26,
+                          "line": 13,
+                        },
+                        "filename": "test-cases/curry/index.js.flow",
+                        "start": Position {
+                          "column": 25,
+                          "line": 13,
+                        },
+                      },
                       "name": "C",
                     },
                     Object {
+                      "filename": "test-cases/curry/index.js.flow",
                       "kind": "ReferenceType",
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 29,
+                          "line": 13,
+                        },
+                        "filename": "test-cases/curry/index.js.flow",
+                        "start": Position {
+                          "column": 28,
+                          "line": 13,
+                        },
+                      },
                       "name": "D",
                     },
                   ],
                   "type": Object {
+                    "filename": "test-cases/curry/index.js.flow",
                     "kind": "ReferenceType",
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 21,
+                        "line": 13,
+                      },
+                      "filename": "test-cases/curry/index.js.flow",
+                      "start": Position {
+                        "column": 11,
+                        "line": 13,
+                      },
+                    },
                     "name": "CurriedFn2",
                   },
                 },
               ],
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 7,
+                    "line": 13,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 4,
+                    "line": 13,
+                  },
+                },
                 "name": "Fn1",
               },
             },
             Object {
               "kind": "GenericApplicationType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 24,
+                  "line": 14,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 4,
+                  "line": 14,
+                },
+              },
               "params": Array [
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 9,
+                      "line": 14,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 8,
+                      "line": 14,
+                    },
+                  },
                   "name": "A",
                 },
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 12,
+                      "line": 14,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 11,
+                      "line": 14,
+                    },
+                  },
                   "name": "B",
                 },
                 Object {
                   "kind": "GenericApplicationType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 23,
+                      "line": 14,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 14,
+                      "line": 14,
+                    },
+                  },
                   "params": Array [
                     Object {
+                      "filename": "test-cases/curry/index.js.flow",
                       "kind": "ReferenceType",
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 19,
+                          "line": 14,
+                        },
+                        "filename": "test-cases/curry/index.js.flow",
+                        "start": Position {
+                          "column": 18,
+                          "line": 14,
+                        },
+                      },
                       "name": "C",
                     },
                     Object {
+                      "filename": "test-cases/curry/index.js.flow",
                       "kind": "ReferenceType",
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 22,
+                          "line": 14,
+                        },
+                        "filename": "test-cases/curry/index.js.flow",
+                        "start": Position {
+                          "column": 21,
+                          "line": 14,
+                        },
+                      },
                       "name": "D",
                     },
                   ],
                   "type": Object {
+                    "filename": "test-cases/curry/index.js.flow",
                     "kind": "ReferenceType",
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 17,
+                        "line": 14,
+                      },
+                      "filename": "test-cases/curry/index.js.flow",
+                      "start": Position {
+                        "column": 14,
+                        "line": 14,
+                      },
+                    },
                     "name": "Fn1",
                   },
                 },
               ],
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 7,
+                    "line": 14,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 4,
+                    "line": 14,
+                  },
+                },
                 "name": "Fn2",
               },
             },
             Object {
               "kind": "GenericApplicationType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 19,
+                  "line": 15,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 4,
+                  "line": 15,
+                },
+              },
               "params": Array [
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 9,
+                      "line": 15,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 8,
+                      "line": 15,
+                    },
+                  },
                   "name": "A",
                 },
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 12,
+                      "line": 15,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 11,
+                      "line": 15,
+                    },
+                  },
                   "name": "B",
                 },
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 15,
+                      "line": 15,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 14,
+                      "line": 15,
+                    },
+                  },
                   "name": "C",
                 },
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 18,
+                      "line": 15,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 17,
+                      "line": 15,
+                    },
+                  },
                   "name": "D",
                 },
               ],
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 7,
+                    "line": 15,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 4,
+                    "line": 15,
+                  },
+                },
                 "name": "Fn3",
               },
             },
@@ -301,34 +723,106 @@ Object {
         "localName": "Fn1",
         "right": Object {
           "kind": "FunctionType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 50,
+              "line": 4,
+            },
+            "filename": "test-cases/curry/index.js.flow",
+            "start": Position {
+              "column": 17,
+              "line": 4,
+            },
+          },
           "params": Array [
             Object {
               "name": "a",
+              "optional": false,
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 22,
+                    "line": 4,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 21,
+                    "line": 4,
+                  },
+                },
                 "name": "A",
               },
             },
           ],
           "restParam": Object {
             "name": "rest",
+            "optional": false,
             "type": Object {
               "kind": "GenericApplicationType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 44,
+                  "line": 4,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 33,
+                  "line": 4,
+                },
+              },
               "params": Array [
                 Object {
                   "kind": "VoidType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 43,
+                      "line": 4,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 39,
+                      "line": 4,
+                    },
+                  },
                 },
               ],
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 38,
+                    "line": 4,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 33,
+                    "line": 4,
+                  },
+                },
                 "name": "Array",
               },
             },
           },
           "returnType": Object {
+            "filename": "test-cases/curry/index.js.flow",
             "kind": "ReferenceType",
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 50,
+                "line": 4,
+              },
+              "filename": "test-cases/curry/index.js.flow",
+              "start": Position {
+                "column": 49,
+                "line": 4,
+              },
+            },
             "name": "B",
           },
+          "typeParameters": Array [],
         },
         "typeParameters": Array [
           Object {
@@ -360,41 +854,126 @@ Object {
         "localName": "Fn2",
         "right": Object {
           "kind": "FunctionType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 59,
+              "line": 5,
+            },
+            "filename": "test-cases/curry/index.js.flow",
+            "start": Position {
+              "column": 20,
+              "line": 5,
+            },
+          },
           "params": Array [
             Object {
               "name": "a",
+              "optional": false,
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 25,
+                    "line": 5,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 24,
+                    "line": 5,
+                  },
+                },
                 "name": "A",
               },
             },
             Object {
               "name": "b",
+              "optional": false,
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 31,
+                    "line": 5,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 30,
+                    "line": 5,
+                  },
+                },
                 "name": "B",
               },
             },
           ],
           "restParam": Object {
             "name": "rest",
+            "optional": false,
             "type": Object {
               "kind": "GenericApplicationType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 53,
+                  "line": 5,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 42,
+                  "line": 5,
+                },
+              },
               "params": Array [
                 Object {
                   "kind": "VoidType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 52,
+                      "line": 5,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 48,
+                      "line": 5,
+                    },
+                  },
                 },
               ],
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 47,
+                    "line": 5,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 42,
+                    "line": 5,
+                  },
+                },
                 "name": "Array",
               },
             },
           },
           "returnType": Object {
+            "filename": "test-cases/curry/index.js.flow",
             "kind": "ReferenceType",
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 59,
+                "line": 5,
+              },
+              "filename": "test-cases/curry/index.js.flow",
+              "start": Position {
+                "column": 58,
+                "line": 5,
+              },
+            },
             "name": "C",
           },
+          "typeParameters": Array [],
         },
         "typeParameters": Array [
           Object {
@@ -430,48 +1009,146 @@ Object {
         "localName": "Fn3",
         "right": Object {
           "kind": "FunctionType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 68,
+              "line": 6,
+            },
+            "filename": "test-cases/curry/index.js.flow",
+            "start": Position {
+              "column": 23,
+              "line": 6,
+            },
+          },
           "params": Array [
             Object {
               "name": "a",
+              "optional": false,
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 28,
+                    "line": 6,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 27,
+                    "line": 6,
+                  },
+                },
                 "name": "A",
               },
             },
             Object {
               "name": "b",
+              "optional": false,
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 34,
+                    "line": 6,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 33,
+                    "line": 6,
+                  },
+                },
                 "name": "B",
               },
             },
             Object {
               "name": "c",
+              "optional": false,
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 40,
+                    "line": 6,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 39,
+                    "line": 6,
+                  },
+                },
                 "name": "C",
               },
             },
           ],
           "restParam": Object {
             "name": "rest",
+            "optional": false,
             "type": Object {
               "kind": "GenericApplicationType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 62,
+                  "line": 6,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 51,
+                  "line": 6,
+                },
+              },
               "params": Array [
                 Object {
                   "kind": "VoidType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 61,
+                      "line": 6,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 57,
+                      "line": 6,
+                    },
+                  },
                 },
               ],
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 56,
+                    "line": 6,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 51,
+                    "line": 6,
+                  },
+                },
                 "name": "Array",
               },
             },
           },
           "returnType": Object {
+            "filename": "test-cases/curry/index.js.flow",
             "kind": "ReferenceType",
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 68,
+                "line": 6,
+              },
+              "filename": "test-cases/curry/index.js.flow",
+              "start": Position {
+                "column": 67,
+                "line": 6,
+              },
+            },
             "name": "D",
           },
+          "typeParameters": Array [],
         },
         "typeParameters": Array [
           Object {
@@ -512,19 +1189,75 @@ Object {
         "mode": "const",
         "typeAnnotation": Object {
           "kind": "GenericApplicationType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 69,
+              "line": 18,
+            },
+            "filename": "test-cases/curry/index.js.flow",
+            "start": Position {
+              "column": 50,
+              "line": 18,
+            },
+          },
           "params": Array [
             Object {
               "kind": "NumberType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 35,
+                  "line": 33,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 29,
+                  "line": 33,
+                },
+              },
             },
             Object {
               "kind": "NumberType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 46,
+                  "line": 33,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 40,
+                  "line": 33,
+                },
+              },
             },
             Object {
               "kind": "NumberType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 55,
+                  "line": 33,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 49,
+                  "line": 33,
+                },
+              },
             },
           ],
           "type": Object {
+            "filename": "test-cases/curry/index.js.flow",
             "kind": "ReferenceType",
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 60,
+                "line": 18,
+              },
+              "filename": "test-cases/curry/index.js.flow",
+              "start": Position {
+                "column": 50,
+                "line": 18,
+              },
+            },
             "name": "CurriedFn2",
           },
         },
@@ -554,24 +1287,84 @@ Object {
         "params": Array [
           Object {
             "name": "f",
+            "optional": false,
             "type": Object {
               "kind": "GenericApplicationType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 47,
+                  "line": 18,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 35,
+                  "line": 18,
+                },
+              },
               "params": Array [
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 40,
+                      "line": 18,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 39,
+                      "line": 18,
+                    },
+                  },
                   "name": "A",
                 },
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 43,
+                      "line": 18,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 42,
+                      "line": 18,
+                    },
+                  },
                   "name": "B",
                 },
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 46,
+                      "line": 18,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 45,
+                      "line": 18,
+                    },
+                  },
                   "name": "C",
                 },
               ],
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 38,
+                    "line": 18,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 35,
+                    "line": 18,
+                  },
+                },
                 "name": "Fn2",
               },
             },
@@ -580,22 +1373,81 @@ Object {
         "restParam": undefined,
         "returnType": Object {
           "kind": "GenericApplicationType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 69,
+              "line": 18,
+            },
+            "filename": "test-cases/curry/index.js.flow",
+            "start": Position {
+              "column": 50,
+              "line": 18,
+            },
+          },
           "params": Array [
             Object {
+              "filename": "test-cases/curry/index.js.flow",
               "kind": "ReferenceType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 62,
+                  "line": 18,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 61,
+                  "line": 18,
+                },
+              },
               "name": "A",
             },
             Object {
+              "filename": "test-cases/curry/index.js.flow",
               "kind": "ReferenceType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 65,
+                  "line": 18,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 64,
+                  "line": 18,
+                },
+              },
               "name": "B",
             },
             Object {
+              "filename": "test-cases/curry/index.js.flow",
               "kind": "ReferenceType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 68,
+                  "line": 18,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 67,
+                  "line": 18,
+                },
+              },
               "name": "C",
             },
           ],
           "type": Object {
+            "filename": "test-cases/curry/index.js.flow",
             "kind": "ReferenceType",
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 60,
+                "line": 18,
+              },
+              "filename": "test-cases/curry/index.js.flow",
+              "start": Position {
+                "column": 50,
+                "line": 18,
+              },
+            },
             "name": "CurriedFn2",
           },
         },
@@ -637,28 +1489,100 @@ Object {
         "params": Array [
           Object {
             "name": "f",
+            "optional": false,
             "type": Object {
               "kind": "GenericApplicationType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 53,
+                  "line": 20,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 38,
+                  "line": 20,
+                },
+              },
               "params": Array [
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 43,
+                      "line": 20,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 42,
+                      "line": 20,
+                    },
+                  },
                   "name": "A",
                 },
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 46,
+                      "line": 20,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 45,
+                      "line": 20,
+                    },
+                  },
                   "name": "B",
                 },
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 49,
+                      "line": 20,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 48,
+                      "line": 20,
+                    },
+                  },
                   "name": "C",
                 },
                 Object {
+                  "filename": "test-cases/curry/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 52,
+                      "line": 20,
+                    },
+                    "filename": "test-cases/curry/index.js.flow",
+                    "start": Position {
+                      "column": 51,
+                      "line": 20,
+                    },
+                  },
                   "name": "D",
                 },
               ],
               "type": Object {
+                "filename": "test-cases/curry/index.js.flow",
                 "kind": "ReferenceType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 41,
+                    "line": 20,
+                  },
+                  "filename": "test-cases/curry/index.js.flow",
+                  "start": Position {
+                    "column": 38,
+                    "line": 20,
+                  },
+                },
                 "name": "Fn3",
               },
             },
@@ -667,26 +1591,97 @@ Object {
         "restParam": undefined,
         "returnType": Object {
           "kind": "GenericApplicationType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 78,
+              "line": 20,
+            },
+            "filename": "test-cases/curry/index.js.flow",
+            "start": Position {
+              "column": 56,
+              "line": 20,
+            },
+          },
           "params": Array [
             Object {
+              "filename": "test-cases/curry/index.js.flow",
               "kind": "ReferenceType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 68,
+                  "line": 20,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 67,
+                  "line": 20,
+                },
+              },
               "name": "A",
             },
             Object {
+              "filename": "test-cases/curry/index.js.flow",
               "kind": "ReferenceType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 71,
+                  "line": 20,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 70,
+                  "line": 20,
+                },
+              },
               "name": "B",
             },
             Object {
+              "filename": "test-cases/curry/index.js.flow",
               "kind": "ReferenceType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 74,
+                  "line": 20,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 73,
+                  "line": 20,
+                },
+              },
               "name": "C",
             },
             Object {
+              "filename": "test-cases/curry/index.js.flow",
               "kind": "ReferenceType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 77,
+                  "line": 20,
+                },
+                "filename": "test-cases/curry/index.js.flow",
+                "start": Position {
+                  "column": 76,
+                  "line": 20,
+                },
+              },
               "name": "D",
             },
           ],
           "type": Object {
+            "filename": "test-cases/curry/index.js.flow",
             "kind": "ReferenceType",
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 66,
+                "line": 20,
+              },
+              "filename": "test-cases/curry/index.js.flow",
+              "start": Position {
+                "column": 56,
+                "line": 20,
+              },
+            },
             "name": "CurriedFn3",
           },
         },

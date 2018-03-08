@@ -40,12 +40,45 @@ Object {
         "right": Object {
           "exact": false,
           "kind": "ObjectType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 1,
+              "line": 4,
+            },
+            "filename": "test-cases/optional/index.js.flow",
+            "start": Position {
+              "column": 16,
+              "line": 2,
+            },
+          },
           "properties": Array [
             Object {
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 1,
+                  "line": 4,
+                },
+                "filename": "test-cases/optional/index.js.flow",
+                "start": Position {
+                  "column": 16,
+                  "line": 2,
+                },
+              },
               "name": "foo",
               "optional": true,
               "type": Object {
                 "kind": "StringType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 14,
+                    "line": 3,
+                  },
+                  "filename": "test-cases/optional/index.js.flow",
+                  "start": Position {
+                    "column": 8,
+                    "line": 3,
+                  },
+                },
               },
               "variance": "invariant",
             },
@@ -72,7 +105,19 @@ Object {
         "localName": "a",
         "mode": "const",
         "typeAnnotation": Object {
+          "filename": "test-cases/optional/index.js.flow",
           "kind": "ReferenceType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 17,
+              "line": 6,
+            },
+            "filename": "test-cases/optional/index.js.flow",
+            "start": Position {
+              "column": 9,
+              "line": 6,
+            },
+          },
           "name": "Optional",
         },
       },

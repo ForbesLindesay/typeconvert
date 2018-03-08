@@ -14,22 +14,24 @@ export interface Modules {
 }
 export default class ProgramContext {
   public readonly parsedFiles: Modules = {};
+  public readonly fileContexts = new Map<string, Context>();
   public readonly mode: Mode;
   constructor(options: Options) {
     this.parsedFiles = {};
     this.mode = options.mode;
   }
-  parse(filename: string): Module {
+  parse(filename: string): Context {
     filename = realpathSync(filename);
-    if (this.parsedFiles[filename]) {
-      return this.parsedFiles[filename]!;
+    if (this.fileContexts.has(filename)) {
+      return this.fileContexts.get(filename)!;
     }
     const src = readFileSync(filename, 'utf8');
     const ctx = new Context(this, filename, src, this.mode);
-    const module = (this.parsedFiles[filename] = {
+    this.fileContexts.set(filename, ctx);
+    this.parsedFiles[filename] = {
       declarationsByName: ctx.outputDeclarationsByName,
       exportStatements: ctx.outputExportStatements,
-    });
+    };
     const ast = babylonParse(src, {filename, mode: ctx.mode});
     ast.program.body.forEach(statement => walkStatement(statement, ctx));
     if (ctx.commonJSExport) {
@@ -102,6 +104,6 @@ export default class ProgramContext {
         exportedName,
       });
     });
-    return module;
+    return ctx;
   }
 }

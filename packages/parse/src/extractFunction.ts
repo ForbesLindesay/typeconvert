@@ -1,5 +1,11 @@
 import * as bt from '@babel/types';
-import {TypeParameter, FunctionParam, Type, TypeKind} from '@typeconvert/types';
+import {
+  TypeParameter,
+  FunctionParam,
+  Type,
+  TypeKind,
+  SourceLocation,
+} from '@typeconvert/types';
 import Context from './Context';
 import getTypeOfBabelType from './getTypeOfBabelType';
 import {getParam} from './getNormalizedDeclaration';
@@ -26,6 +32,7 @@ export default function extractFunction(
           throw ctx.getError('Expected type annotation', param);
         }
         restParam = {
+          optional: false,
           name: bt.isIdentifier(param.argument)
             ? param.argument.name
             : undefined,
@@ -65,7 +72,10 @@ function getReturnType(
   const bodyContext = ctx.getFunctionContext(params);
   body.body.forEach(statement => walkStatement(statement, bodyContext));
   if (bodyContext.returnValues.length === 0) {
-    return {kind: TypeKind.Void};
+    return {
+      kind: TypeKind.Void,
+      loc: expression.loc && new SourceLocation(expression.loc),
+    };
   }
   if (bodyContext.returnValues.length === 1) {
     return getTypeOfExpression(
@@ -74,6 +84,7 @@ function getReturnType(
     );
   }
   return mergeTypes(
+    expression.loc && new SourceLocation(expression.loc),
     ...bodyContext.returnValues.map(v =>
       getTypeOfExpression(v.expression, v.context),
     ),

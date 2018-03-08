@@ -1,4 +1,7 @@
+import {dirname, relative} from 'path';
+import {realpathSync} from 'fs';
 import * as bt from '@babel/types';
+import {sync as resolve} from 'resolve';
 import ProgramContext from './ProgramContext';
 import RawDeclaration from './RawDeclaration';
 import {
@@ -9,7 +12,9 @@ import {
   Type,
   TypeKind,
   FunctionParam,
-  TypeParameter,
+  SourceLocation,
+  ReferenceType,
+  TypeOfType,
 } from '@typeconvert/types';
 import getNormalizedDeclaration from './getNormalizedDeclaration';
 import getTypeFromDeclaration from './getTypeFromDeclaration';
@@ -65,10 +70,8 @@ export default class Context {
     this.parent = parent;
     this.params = params || [];
   }
-  getFunctionContext(
-    params: FunctionParam[],
-    typeParams: TypeParameter[],
-  ): Context {
+  getImport(relativePath: string) {}
+  getFunctionContext(params: FunctionParam[]): Context {
     return new Context(
       this.programContext,
       this.filename,
@@ -216,12 +219,16 @@ export default class Context {
     this.outputDeclarationsByName[name] = declarations;
     return declarations;
   }
-  getTypeFromIdentifier(name: string): Type {
+  getTypeFromIdentifier(identifier: bt.Identifier): Type {
+    const name = identifier.name;
+    const loc = identifier.loc && new SourceLocation(identifier.loc);
     if (this.type === ContextType.File) {
       this.useIdentifierInExport(name);
       return {
         kind: TypeKind.Reference,
         name,
+        loc,
+        filename: this.filename,
       };
     }
     const rawDeclarations = this.getRawDeclarations(name);
@@ -236,12 +243,20 @@ export default class Context {
         return {
           kind: TypeKind.Intersection,
           types,
+          loc,
         };
       }
     }
-    return this.parent!.getTypeFromIdentifier(name);
+    return this.parent!.getTypeFromIdentifier(identifier);
   }
-  getResolvedTypeFromIdentifier(name: string): Type | void {
+  getResolvedTypeFromIdentifier(identifier: ReferenceType): Type | void {
+    if (identifier.filename !== this.filename) {
+      return this.programContext
+        .parse(identifier.filename)
+        .getResolvedTypeFromIdentifier(identifier);
+    }
+    const name = identifier.name;
+    const loc = identifier.loc;
     const rawDeclarations = this.getRawDeclarations(name);
     if (rawDeclarations && rawDeclarations.length) {
       const types = rawDeclarations
@@ -254,19 +269,24 @@ export default class Context {
         return {
           kind: TypeKind.Intersection,
           types,
+          loc,
         };
       }
     }
     if (this.parent) {
-      return this.parent.getResolvedTypeFromIdentifier(name);
+      return this.parent.getResolvedTypeFromIdentifier(identifier);
     }
   }
-  getTypeOfIdentifierValue(name: string): Type {
+  getTypeOfIdentifierValue(identifier: bt.Identifier): Type {
+    const name = identifier.name;
+    const loc = identifier.loc && new SourceLocation(identifier.loc);
     if (this.type === ContextType.File) {
       this.useIdentifierInExport(name);
       return {
         kind: TypeKind.TypeOf,
         name,
+        loc,
+        filename: this.filename,
       };
     }
     const rawDeclarations = this.getRawDeclarations(name);
@@ -281,6 +301,7 @@ export default class Context {
         return {
           kind: TypeKind.Intersection,
           types,
+          loc,
         };
       }
     }
@@ -291,9 +312,16 @@ export default class Context {
         }
       }
     }
-    return this.parent!.getTypeOfIdentifierValue(name);
+    return this.parent!.getTypeOfIdentifierValue(identifier);
   }
-  getResolvedTypeOfIdentifierValue(name: string): Type | void {
+  getResolvedTypeOfIdentifierValue(identifier: TypeOfType): Type | void {
+    if (identifier.filename !== this.filename) {
+      return this.programContext
+        .parse(identifier.filename)
+        .getResolvedTypeOfIdentifierValue(identifier);
+    }
+    const name = identifier.name;
+    const loc = identifier.loc;
     const rawDeclarations = this.getRawDeclarations(name);
     if (rawDeclarations && rawDeclarations.length) {
       const types = rawDeclarations
@@ -306,6 +334,7 @@ export default class Context {
         return {
           kind: TypeKind.Intersection,
           types,
+          loc,
         };
       }
     }
@@ -317,7 +346,7 @@ export default class Context {
       }
     }
     if (this.parent) {
-      return this.parent.getResolvedTypeOfIdentifierValue(name);
+      return this.parent.getResolvedTypeOfIdentifierValue(identifier);
     }
   }
 
@@ -330,5 +359,62 @@ export default class Context {
       declarationsByName: this.outputDeclarationsByName,
       exportStatements: this.outputExportStatements,
     };
+  }
+
+  private _tryResolve(relativePath: string): string | null {
+    const basedir = dirname(this.filename);
+
+    // TODO: builtins?
+
+    if (this.mode === Mode.typescript) {
+      const packageFilter = (pkg: any) => {
+        if (pkg.types) {
+          pkg.main = pkg.types;
+        }
+        return pkg;
+      };
+      try {
+        let filename = resolve(relativePath, {
+          basedir,
+          extensions: ['.d.ts', '.ts'],
+          packageFilter,
+        });
+        if (/\.js$/.test(filename)) {
+          filename = filename.replace(/\.js$/, '.d.ts');
+        }
+        return realpathSync(filename);
+      } catch (ex) {
+        if (relativePath[0] !== '.') {
+          try {
+            const filename = resolve('@types/' + relativePath, {
+              basedir,
+              extensions: ['.d.ts', '.ts'],
+            });
+            return realpathSync(filename);
+          } catch (ex) {}
+        }
+      }
+      return null;
+    }
+
+    try {
+      const filename = resolve(relativePath, {
+        basedir,
+        extensions: ['.js.flow', '.js'],
+      });
+      return realpathSync(filename);
+    } catch (ex) {}
+
+    return null;
+  }
+  private _resolveCache: {
+    [relativePath: string]: string | null | undefined;
+  } = {};
+  tryResolve(relativePath: string): string | null {
+    const cached = this._resolveCache[relativePath];
+    if (cached !== undefined) {
+      return cached;
+    }
+    return (this._resolveCache[relativePath] = this._tryResolve(relativePath));
   }
 }

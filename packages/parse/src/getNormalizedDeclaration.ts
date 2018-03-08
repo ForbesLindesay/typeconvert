@@ -46,6 +46,8 @@ export function getParam(param: bt.LVal, ctx: Context): FunctionParam {
   return {
     name: bt.isIdentifier(param) ? param.name : undefined,
     type: getTypeOfBabelType(typeAnnotation.typeAnnotation, ctx),
+    // TODO: param.optional?
+    optional: false,
   };
 }
 function _getNormalizedDeclaration(
@@ -80,12 +82,14 @@ function _getNormalizedDeclaration(
         return {
           name: param.name ? param.name.name : undefined,
           type: getTypeOfBabelType(param.typeAnnotation, ctx),
+          optional: param.optional || false,
         };
       });
       const restParam = t.rest
         ? {
             name: t.rest.name ? t.rest.name.name : undefined,
             type: getTypeOfBabelType(t.rest.typeAnnotation, ctx),
+            optional: false,
           }
         : undefined;
       const returnType = getTypeOfBabelType(t.returnType, ctx);
@@ -102,14 +106,23 @@ function _getNormalizedDeclaration(
         typeParameters,
       };
     }
-    case 'ImportDefault':
+    case 'ImportDefault': {
+      const filename = ctx.tryResolve(declaration.relativePath);
+      if (!filename) {
+        throw ctx.getError(
+          `Unable to resolve "${declaration.relativePath}"`,
+          declaration,
+        );
+      }
       return {
         kind: DeclarationKind.ImportDefault,
         localName: declaration.localName,
         loc: declaration.loc && new SourceLocation(declaration.loc),
         leadingComments: (declaration.leadingComments || []).slice(),
         relativePath: declaration.relativePath,
+        filename,
       };
+    }
     case 'TypeAlias':
       return {
         kind: DeclarationKind.TypeAlias,
@@ -175,7 +188,7 @@ export default function getNormalizedDeclaration(
 ): Declaration {
   const result = _getNormalizedDeclaration(declaration, ctx);
   if ((result as any) === declaration) {
-    throw new Error('Unsupported type ' + declaration.type);
+    throw ctx.getError('Unsupported type ' + declaration.type, declaration);
   }
   return result;
 }

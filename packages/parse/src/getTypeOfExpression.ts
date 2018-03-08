@@ -6,12 +6,14 @@ import {
   ObjectProperty,
   Variance,
   TypeParameter,
+  SourceLocation,
 } from '@typeconvert/types';
 import Context from './Context';
 import extractFunction from './extractFunction';
 import mergeTypes from './mergeTypes';
 
 function _getTypeOfExpression(expression: bt.Expression, ctx: Context): Type {
+  const loc = expression.loc && new SourceLocation(expression.loc);
   switch (expression.type) {
     case 'ArrowFunctionExpression': {
       const {typeParameters, params, restParam, returnType} = extractFunction(
@@ -24,17 +26,19 @@ function _getTypeOfExpression(expression: bt.Expression, ctx: Context): Type {
         returnType,
         restParam,
         typeParameters,
+        loc,
       };
     }
     case 'BooleanLiteral':
       return {
         kind: TypeKind.BooleanLiteral,
         value: expression.value,
+        loc,
       };
     case 'CallExpression':
       let type = getTypeOfExpression(expression.callee, ctx);
       if (type.kind === TypeKind.TypeOf) {
-        const t = ctx.getResolvedTypeOfIdentifierValue(type.name);
+        const t = ctx.getResolvedTypeOfIdentifierValue(type);
         if (!t) {
           throw ctx.getError(
             'Could not resolve callee type',
@@ -51,30 +55,39 @@ function _getTypeOfExpression(expression: bt.Expression, ctx: Context): Type {
                 (t): t is FunctionType => t.kind === TypeKind.Function,
               )
             : [];
-      const args = expression.arguments.map(e =>
-        getTypeOfExpression(e as bt.Expression, ctx),
-      );
+      const args = expression.arguments
+        .map(e => getTypeOfExpression(e as bt.Expression, ctx))
+        .map(arg => {
+          if (arg.kind === TypeKind.TypeOf) {
+            return ctx.getResolvedTypeOfIdentifierValue(arg);
+          } else {
+            return arg;
+          }
+        });
       for (const type of types) {
         const assignment = fnMatches(args, type, ctx);
         if (assignment) {
           return applyTypeParameterAssignment(type.returnType, assignment);
         }
       }
+      console.log(args);
       throw ctx.getError(
         'Unable to infer result of call expression',
         expression,
       );
     case 'ConditionalExpression':
       return mergeTypes(
+        loc,
         getTypeOfExpression(expression.consequent, ctx),
         getTypeOfExpression(expression.alternate, ctx),
       );
     case 'Identifier':
-      return ctx.getTypeOfIdentifierValue(expression.name);
+      return ctx.getTypeOfIdentifierValue(expression);
     case 'NumericLiteral':
       return {
         kind: TypeKind.NumericLiteral,
         value: expression.value,
+        loc,
       };
     case 'ObjectExpression':
       const properties: ObjectProperty[] = [];
@@ -90,6 +103,7 @@ function _getTypeOfExpression(expression: bt.Expression, ctx: Context): Type {
             optional: false,
             type: getTypeOfExpression(prop.value as bt.Expression, ctx),
             variance: Variance.invariant,
+            loc: prop.loc && new SourceLocation(prop.loc),
           });
         }
       }
@@ -97,10 +111,11 @@ function _getTypeOfExpression(expression: bt.Expression, ctx: Context): Type {
         kind: TypeKind.Object,
         exact: true,
         properties,
+        loc,
       };
     case 'TemplateLiteral':
       if (expression.expressions.length || expression.quasis.length !== 1) {
-        return {kind: TypeKind.String};
+        return {kind: TypeKind.String, loc};
       }
       if (typeof expression.quasis[0].value.cooked !== 'string') {
         throw ctx.getError(
@@ -111,6 +126,7 @@ function _getTypeOfExpression(expression: bt.Expression, ctx: Context): Type {
       return {
         kind: TypeKind.StringLiteral,
         value: expression.quasis[0].value.cooked,
+        loc,
       };
     default:
       return expression;
@@ -164,9 +180,9 @@ class TypeParameterAssignment {
   }
   getType(): Type {
     if (this.types.length === 0) {
-      return {kind: TypeKind.Any};
+      return {kind: TypeKind.Any, loc: null};
     }
-    return mergeTypes(...this.types);
+    return mergeTypes(this.types[0].loc, ...this.types);
   }
 }
 // TODO: explicit assignments
@@ -298,9 +314,7 @@ function isSubType(
       if (parent.type.kind !== TypeKind.Reference) {
         return false;
       }
-      const parentResolved = ctx.getResolvedTypeFromIdentifier(
-        parent.type.name,
-      );
+      const parentResolved = ctx.getResolvedTypeFromIdentifier(parent.type);
       if (!parentResolved) {
         return false;
       }
@@ -344,7 +358,7 @@ function isSubType(
       ) {
         return true;
       }
-      const parentResolved = ctx.getResolvedTypeFromIdentifier(parent.name);
+      const parentResolved = ctx.getResolvedTypeFromIdentifier(parent);
       if (!parentResolved) {
         return false;
       }
@@ -364,7 +378,7 @@ function isSubType(
     case TypeKind.Void:
       return child.kind === TypeKind.Void;
     default:
-      throw new Error('Unsupported type ' + parent.kind);
+      throw ctx.getError('Unsupported type ' + parent.kind, parent);
       return parent;
   }
 }
@@ -398,6 +412,7 @@ function applyTypeParameterAssignment(
         },
         returnType: applyTypeParameterAssignment(type.returnType, assignments),
         typeParameters: type.typeParameters,
+        loc: type.loc,
       };
     case TypeKind.Generic:
       return type;
@@ -408,6 +423,7 @@ function applyTypeParameterAssignment(
         params: type.params.map(t =>
           applyTypeParameterAssignment(t, assignments),
         ),
+        loc: type.loc,
       };
     case TypeKind.Intersection:
       return {
@@ -415,6 +431,7 @@ function applyTypeParameterAssignment(
         types: type.types.map(t =>
           applyTypeParameterAssignment(t, assignments),
         ),
+        loc: type.loc,
       };
     case TypeKind.Object:
       return {
@@ -424,6 +441,7 @@ function applyTypeParameterAssignment(
           ...p,
           type: applyTypeParameterAssignment(p.type, assignments),
         })),
+        loc: type.loc,
       };
     case TypeKind.Reference:
       return assignments.getType(type.name) || type;
@@ -433,9 +451,11 @@ function applyTypeParameterAssignment(
         types: type.types.map(t =>
           applyTypeParameterAssignment(t, assignments),
         ),
+        loc: type.loc,
       };
     case TypeKind.Union:
       return mergeTypes(
+        type.loc,
         ...type.types.map(t => applyTypeParameterAssignment(t, assignments)),
       );
   }

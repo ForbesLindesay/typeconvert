@@ -10,14 +10,20 @@ import {SpawnSyncReturns} from 'child_process';
 const flowconfig = readFileSync(__dirname + '/../.flowconfig', 'utf8');
 
 expect.addSnapshotSerializer({
-  print(val, serialize, indent) {
-    return serialize(
-      new SourceLocation({
-        start: val.start,
-        end: val.end,
-        filename: relative(process.cwd(), val.filename),
-      } as any),
-    );
+  print(val: any, serialize, indent) {
+    if (val.constructor.name === 'SourceLocation') {
+      return serialize(
+        new SourceLocation({
+          start: val.start,
+          end: val.end,
+          filename: relative(process.cwd(), val.filename),
+        } as any),
+      );
+    }
+    return serialize({
+      ...val,
+      filename: relative(process.cwd(), val.filename),
+    });
   },
 
   test(val) {

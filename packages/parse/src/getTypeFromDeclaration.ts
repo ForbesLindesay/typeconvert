@@ -9,6 +9,7 @@ function _getTypeFromDeclaration(declaration: Declaration, ctx: Context): Type {
           kind: TypeKind.Generic,
           type: declaration.right,
           typeParameters: declaration.typeParameters,
+          loc: declaration.loc,
         };
       }
       return declaration.right;

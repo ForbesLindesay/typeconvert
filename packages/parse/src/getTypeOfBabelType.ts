@@ -5,19 +5,22 @@ import {
   Type,
   TypeKind,
   Variance,
+  SourceLocation,
 } from '@typeconvert/types';
 import Context from './Context';
 import mergeTypes from './mergeTypes';
+import getTypeParameters from './getTypeParameters';
 
 function _getTypeOfBabelType(
   babelType: bt.FlowType | bt.TSType,
   ctx: Context,
 ): Type {
+  const loc = babelType.loc && new SourceLocation(babelType.loc);
   switch (babelType.type) {
     case 'AnyTypeAnnotation':
-      return {kind: TypeKind.Any};
+      return {kind: TypeKind.Any, loc};
     case 'BooleanTypeAnnotation':
-      return {kind: TypeKind.Boolean};
+      return {kind: TypeKind.Boolean, loc};
     case 'FunctionTypeAnnotation':
       return {
         kind: TypeKind.Function,
@@ -25,19 +28,23 @@ function _getTypeOfBabelType(
           return {
             name: param.name ? param.name.name : undefined,
             type: getTypeOfBabelType(param.typeAnnotation, ctx),
+            optional: param.optional || false,
           };
         }),
+        typeParameters: getTypeParameters(babelType.typeParameters, ctx),
         restParam: babelType.rest
           ? {
               name: babelType.rest.name ? babelType.rest.name.name : undefined,
               type: getTypeOfBabelType(babelType.rest.typeAnnotation, ctx),
+              optional: false,
             }
           : undefined,
         returnType: getTypeOfBabelType(babelType.returnType, ctx),
+        loc,
       };
     case 'GenericTypeAnnotation': {
       ctx.useIdentifierInExport(babelType.id.name);
-      const reference: Type = ctx.getTypeFromIdentifier(babelType.id.name);
+      const reference: Type = ctx.getTypeFromIdentifier(babelType.id);
       if (babelType.typeParameters) {
         return {
           kind: TypeKind.GenericApplication,
@@ -45,6 +52,7 @@ function _getTypeOfBabelType(
           params: babelType.typeParameters.params.map(p =>
             getTypeOfBabelType(p, ctx),
           ),
+          loc,
         };
       }
       return reference;
@@ -53,19 +61,21 @@ function _getTypeOfBabelType(
       return {
         kind: TypeKind.Intersection,
         types: babelType.types.map(bt => getTypeOfBabelType(bt, ctx)),
+        loc,
       };
     case 'NullableTypeAnnotation': {
       return mergeTypes(
-        {kind: TypeKind.Null},
-        {kind: TypeKind.Void},
+        loc,
+        {kind: TypeKind.Null, loc},
+        {kind: TypeKind.Void, loc},
         getTypeOfBabelType(babelType.typeAnnotation, ctx),
       );
     }
     case 'NullLiteralTypeAnnotation':
-      return {kind: TypeKind.Null};
+      return {kind: TypeKind.Null, loc};
     case 'TSNumberKeyword':
     case 'NumberTypeAnnotation':
-      return {kind: TypeKind.Number};
+      return {kind: TypeKind.Number, loc};
     case 'ObjectTypeAnnotation':
       if (
         (babelType.indexers && babelType.indexers.length) ||
@@ -88,6 +98,7 @@ function _getTypeOfBabelType(
                 : prop.variance && prop.variance.kind === 'plus'
                   ? Variance.covariant
                   : Variance.invariant,
+            loc,
           });
         }
       }
@@ -95,6 +106,7 @@ function _getTypeOfBabelType(
         kind: TypeKind.Object,
         exact: babelType.exact || false,
         properties,
+        loc,
       };
     case 'StringLiteralTypeAnnotation':
       if (babelType.value == null) {
@@ -103,22 +115,24 @@ function _getTypeOfBabelType(
           babelType,
         );
       }
-      return {kind: TypeKind.StringLiteral, value: babelType.value};
+      return {kind: TypeKind.StringLiteral, value: babelType.value, loc};
     case 'StringTypeAnnotation':
-      return {kind: TypeKind.String};
+      return {kind: TypeKind.String, loc};
     case 'TupleTypeAnnotation':
       return {
         kind: TypeKind.Tuple,
         types: babelType.types.map(bt => getTypeOfBabelType(bt, ctx)),
+        loc,
       };
     case 'TypeofTypeAnnotation':
       return getTypeOfBabelType(babelType.argument, ctx);
     case 'UnionTypeAnnotation':
       return mergeTypes(
+        loc,
         ...babelType.types.map(bt => getTypeOfBabelType(bt, ctx)),
       );
     case 'VoidTypeAnnotation':
-      return {kind: TypeKind.Void};
+      return {kind: TypeKind.Void, loc};
     default:
       return babelType;
   }

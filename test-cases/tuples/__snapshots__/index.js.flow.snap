@@ -50,38 +50,140 @@ Object {
         "params": Array [],
         "restParam": Object {
           "name": "properties",
+          "optional": false,
           "type": Object {
             "kind": "UnionType",
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 75,
+                "line": 26,
+              },
+              "filename": "test-cases/tuples/index.js.flow",
+              "start": Position {
+                "column": 36,
+                "line": 26,
+              },
+            },
             "types": Array [
               Object {
                 "kind": "GenericApplicationType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 49,
+                    "line": 26,
+                  },
+                  "filename": "test-cases/tuples/index.js.flow",
+                  "start": Position {
+                    "column": 36,
+                    "line": 26,
+                  },
+                },
                 "params": Array [
                   Object {
                     "kind": "StringType",
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 48,
+                        "line": 26,
+                      },
+                      "filename": "test-cases/tuples/index.js.flow",
+                      "start": Position {
+                        "column": 42,
+                        "line": 26,
+                      },
+                    },
                   },
                 ],
                 "type": Object {
+                  "filename": "test-cases/tuples/index.js.flow",
                   "kind": "ReferenceType",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 41,
+                      "line": 26,
+                    },
+                    "filename": "test-cases/tuples/index.js.flow",
+                    "start": Position {
+                      "column": 36,
+                      "line": 26,
+                    },
+                  },
                   "name": "Array",
                 },
               },
               Object {
                 "kind": "TupleType",
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 75,
+                    "line": 26,
+                  },
+                  "filename": "test-cases/tuples/index.js.flow",
+                  "start": Position {
+                    "column": 52,
+                    "line": 26,
+                  },
+                },
                 "types": Array [
                   Object {
                     "kind": "GenericApplicationType",
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 66,
+                        "line": 26,
+                      },
+                      "filename": "test-cases/tuples/index.js.flow",
+                      "start": Position {
+                        "column": 53,
+                        "line": 26,
+                      },
+                    },
                     "params": Array [
                       Object {
                         "kind": "StringType",
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 65,
+                            "line": 26,
+                          },
+                          "filename": "test-cases/tuples/index.js.flow",
+                          "start": Position {
+                            "column": 59,
+                            "line": 26,
+                          },
+                        },
                       },
                     ],
                     "type": Object {
+                      "filename": "test-cases/tuples/index.js.flow",
                       "kind": "ReferenceType",
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 58,
+                          "line": 26,
+                        },
+                        "filename": "test-cases/tuples/index.js.flow",
+                        "start": Position {
+                          "column": 53,
+                          "line": 26,
+                        },
+                      },
                       "name": "Array",
                     },
                   },
                   Object {
                     "kind": "StringType",
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 74,
+                        "line": 26,
+                      },
+                      "filename": "test-cases/tuples/index.js.flow",
+                      "start": Position {
+                        "column": 68,
+                        "line": 26,
+                      },
+                    },
                   },
                 ],
               },
@@ -89,7 +191,19 @@ Object {
           },
         },
         "returnType": Object {
+          "filename": "test-cases/tuples/index.js.flow",
           "kind": "ReferenceType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 84,
+              "line": 26,
+            },
+            "filename": "test-cases/tuples/index.js.flow",
+            "start": Position {
+              "column": 78,
+              "line": 26,
+            },
+          },
           "name": "Object",
         },
         "typeParameters": Array [],

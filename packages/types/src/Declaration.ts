@@ -28,22 +28,26 @@ export interface DeclarationBase {
 export interface ImportDefaultDeclaration extends DeclarationBase {
   kind: DeclarationKind.ImportDefault;
   relativePath: string;
+  filename: string;
 }
 
 export interface ImportNamedDeclaration extends DeclarationBase {
   kind: DeclarationKind.ImportNamed;
   importName: string;
   relativePath: string;
+  filename: string;
 }
 
 export interface ImportNamespaceDeclaration extends DeclarationBase {
   kind: DeclarationKind.ImportNamespace;
   relativePath: string;
+  filename: string;
 }
 
 export interface ImportCommonJSDeclaration extends DeclarationBase {
   kind: DeclarationKind.ImportCommonJS;
   relativePath: string;
+  filename: string;
 }
 
 export enum VariableDeclarationMode {
@@ -79,14 +83,14 @@ export interface TypeAliasDeclaration extends DeclarationBase {
   right: Type;
 }
 
-export interface InterfaceDeclaration extends Node {
+export interface InterfaceDeclaration extends DeclarationBase {
   kind: DeclarationKind.Interface;
   typeParameters: TypeParameter[];
   extends: Type[];
   // TODO: body
 }
 
-// export interface ClassDeclaration extends Node {
+// export interface ClassDeclaration extends DeclarationBase {
 //   type: 'ClassDeclaration';
 //   id: Identifier;
 //   superClass: Expression;

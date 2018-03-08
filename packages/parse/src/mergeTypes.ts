@@ -1,4 +1,4 @@
-import {Type, TypeKind, FunctionType} from '@typeconvert/types';
+import {Type, TypeKind, FunctionType, SourceLocation} from '@typeconvert/types';
 
 function flatten(types: Type[]) {
   const result: Type[] = [];
@@ -11,10 +11,15 @@ function flatten(types: Type[]) {
   }
   return result;
 }
-export default function mergeTypes(...types: Type[]): Type {
+export default function mergeTypes(
+  loc: SourceLocation | null,
+  ...types: Type[]
+): Type {
   types = flatten(types);
-  if (types.some(t => t.kind === TypeKind.Any)) {
-    return {kind: TypeKind.Any};
+  for (const type of types) {
+    if (type.kind === TypeKind.Any) {
+      return type;
+    }
   }
   if (types.some(t => t.kind === TypeKind.String)) {
     types = types.filter(t => t.kind !== TypeKind.StringLiteral);
@@ -25,7 +30,7 @@ export default function mergeTypes(...types: Type[]): Type {
   ) {
     types = types
       .filter(t => t.kind !== TypeKind.BooleanLiteral)
-      .concat([{kind: TypeKind.Boolean}]);
+      .concat([{kind: TypeKind.Boolean, loc}]);
   }
   if (types.some(t => t.kind === TypeKind.Boolean)) {
     types = types.filter(t => t.kind !== TypeKind.BooleanLiteral);
@@ -43,6 +48,7 @@ export default function mergeTypes(...types: Type[]): Type {
   return {
     kind: TypeKind.Union,
     types,
+    loc,
   };
 }
 enum CompareResult {

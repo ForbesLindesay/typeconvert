@@ -22,20 +22,55 @@ Object {
         "params": Array [
           Object {
             "name": "value",
+            "optional": false,
             "type": Object {
               "kind": "AnyType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 44,
+                  "line": 2,
+                },
+                "filename": "test-cases/any-type/index.js.flow",
+                "start": Position {
+                  "column": 41,
+                  "line": 2,
+                },
+              },
             },
           },
           Object {
             "name": "type",
+            "optional": false,
             "type": Object {
               "kind": "StringType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 58,
+                  "line": 2,
+                },
+                "filename": "test-cases/any-type/index.js.flow",
+                "start": Position {
+                  "column": 52,
+                  "line": 2,
+                },
+              },
             },
           },
         ],
         "restParam": undefined,
         "returnType": Object {
           "kind": "VoidType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 65,
+              "line": 2,
+            },
+            "filename": "test-cases/any-type/index.js.flow",
+            "start": Position {
+              "column": 61,
+              "line": 2,
+            },
+          },
         },
         "typeParameters": Array [],
       },

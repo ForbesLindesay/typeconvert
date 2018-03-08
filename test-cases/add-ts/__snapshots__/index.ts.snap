@@ -32,20 +32,55 @@ Object {
         "params": Array [
           Object {
             "name": "a",
+            "optional": false,
             "type": Object {
               "kind": "NumberType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 30,
+                  "line": 7,
+                },
+                "filename": "test-cases/add-ts/add-a.d.ts",
+                "start": Position {
+                  "column": 24,
+                  "line": 7,
+                },
+              },
             },
           },
           Object {
             "name": "b",
+            "optional": false,
             "type": Object {
               "kind": "NumberType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 41,
+                  "line": 7,
+                },
+                "filename": "test-cases/add-ts/add-a.d.ts",
+                "start": Position {
+                  "column": 35,
+                  "line": 7,
+                },
+              },
             },
           },
         ],
         "restParam": undefined,
         "returnType": Object {
           "kind": "NumberType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 50,
+              "line": 7,
+            },
+            "filename": "test-cases/add-ts/add-a.d.ts",
+            "start": Position {
+              "column": 44,
+              "line": 7,
+            },
+          },
         },
         "typeParameters": Array [],
       },
@@ -92,20 +127,55 @@ Object {
         "params": Array [
           Object {
             "name": "a",
+            "optional": false,
             "type": Object {
               "kind": "NumberType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 37,
+                  "line": 7,
+                },
+                "filename": "test-cases/add-ts/add-b.ts",
+                "start": Position {
+                  "column": 31,
+                  "line": 7,
+                },
+              },
             },
           },
           Object {
             "name": "b",
+            "optional": false,
             "type": Object {
               "kind": "NumberType",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 48,
+                  "line": 7,
+                },
+                "filename": "test-cases/add-ts/add-b.ts",
+                "start": Position {
+                  "column": 42,
+                  "line": 7,
+                },
+              },
             },
           },
         ],
         "restParam": undefined,
         "returnType": Object {
           "kind": "NumberType",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 57,
+              "line": 7,
+            },
+            "filename": "test-cases/add-ts/add-b.ts",
+            "start": Position {
+              "column": 51,
+              "line": 7,
+            },
+          },
         },
         "typeParameters": Array [],
       },
@@ -125,6 +195,7 @@ Object {
   "declarationsByName": Object {
     "addA": Array [
       Object {
+        "filename": "test-cases/add-ts/add-a.d.ts",
         "kind": "ImportDefault",
         "leadingComments": Array [],
         "loc": SourceLocation {
@@ -144,6 +215,7 @@ Object {
     ],
     "addB": Array [
       Object {
+        "filename": "test-cases/add-ts/add-b.ts",
         "kind": "ImportDefault",
         "leadingComments": Array [],
         "loc": SourceLocation {
