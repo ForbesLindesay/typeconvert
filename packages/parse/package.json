@@ -5,16 +5,21 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "dependencies": {
-    "@babel/code-frame": "^7.0.0-beta.40",
-    "@babel/types": "^7.0.0-beta.40",
+    "@babel/code-frame": "^7.0.0",
+    "@babel/types": "^7.4.0",
+    "@typeconvert/file-context": "^0.0.0",
     "@typeconvert/types": "^0.0.0",
+    "@types/babylon": "^6.16.5",
+    "@types/immutable": "^3.8.7",
     "@types/node": "^8.0.33",
-    "@types/resolve": "^0.0.7",
-    "babylon": "^7.0.0-beta.40",
-    "resolve": "^1.5.0"
+    "@types/resolve": "^0.0.8",
+    "babylon": "^6.18.0",
+    "immutable": "^4.0.0-rc.12",
+    "resolve": "^1.10.0",
+    "type-assertions": "^1.0.0"
   },
   "scripts": {
-    "prepublish": "tsc -p tsconfig.build.json && node ../../scripts/prepare parse"
+    "build": "tsc -p tsconfig.build.json && node ../../scripts/prepare parse"
   },
   "repository": "https://github.com/ForbesLindesay/typeconvert/tree/master/packages/parse",
   "license": "MIT",
@@ -22,6 +27,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "typescript": "^2.5.3"
+    "typescript": "^3.3.4000"
   }
 }

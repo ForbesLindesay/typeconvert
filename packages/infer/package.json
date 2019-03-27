@@ -1,0 +1,29 @@
+{
+  "name": "@typeconvert/infer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "dependencies": {
+    "@babel/code-frame": "^7.0.0",
+    "@babel/types": "^7.4.0",
+    "@typeconvert/types": "^0.0.0",
+    "@types/immutable": "^3.8.7",
+    "@types/node": "^8.0.33",
+    "@types/resolve": "^0.0.8",
+    "babylon": "^6.18.0",
+    "immutable": "^4.0.0-rc.12",
+    "resolve": "^1.10.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node ../../scripts/prepare infer"
+  },
+  "repository": "https://github.com/ForbesLindesay/typeconvert/tree/master/packages/infer",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.4000"
+  }
+}

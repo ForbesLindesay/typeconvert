@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`waitable.getValue() -> cyclic dependency error 1`] = `
+"Unable to resolve cyclic dependency
+
+> 1 | import {readFileSync} from 'fs';
+    | ^^^^^^^^^^
+  2 | import {Mode} from '@typeconvert/types';
+  3 | import Waitable from './Waitable';
+  4 | import FileContext from '../FileContext';
+
+  1 | import {readFileSync} from 'fs';
+  2 | import {Mode} from '@typeconvert/types';
+> 3 | import Waitable from './Waitable';
+    | ^^^^^^^^^^
+  4 | import FileContext from '../FileContext';
+  5 | 
+  6 | test('Waitable.resolveDeep - circular', () => {
+
+  1 | import {readFileSync} from 'fs';
+> 2 | import {Mode} from '@typeconvert/types';
+    | ^^^^^^^^^^
+  3 | import Waitable from './Waitable';
+  4 | import FileContext from '../FileContext';
+  5 | "
+`;
+
+exports[`waitable.getValue() -> cyclic dependency error 2`] = `
+"Unable to resolve cyclic dependency
+
+> 1 | import {readFileSync} from 'fs';
+    | ^^^^^^^^^^
+  2 | import {Mode} from '@typeconvert/types';
+  3 | import Waitable from './Waitable';
+  4 | import FileContext from '../FileContext';
+
+  1 | import {readFileSync} from 'fs';
+  2 | import {Mode} from '@typeconvert/types';
+> 3 | import Waitable from './Waitable';
+    | ^^^^^^^^^^
+  4 | import FileContext from '../FileContext';
+  5 | 
+  6 | test('Waitable.resolveDeep - circular', () => {
+
+  1 | import {readFileSync} from 'fs';
+> 2 | import {Mode} from '@typeconvert/types';
+    | ^^^^^^^^^^
+  3 | import Waitable from './Waitable';
+  4 | import FileContext from '../FileContext';
+  5 | "
+`;

@@ -9,10 +9,10 @@
     "@types/node": "^8.0.33"
   },
   "devDependencies": {
-    "typescript": "^2.5.3"
+    "typescript": "^3.3.4000"
   },
   "scripts": {
-    "prepublish": "tsc -p tsconfig.build.json && node ../../scripts/prepare print"
+    "build": "tsc -p tsconfig.build.json && node ../../scripts/prepare print"
   },
   "repository": "https://github.com/ForbesLindesay/typeconvert/tree/master/packages/print",
   "license": "MIT",

@@ -1,9 +1,8 @@
-import {dirname, relative} from 'path';
+import {dirname} from 'path';
 import {realpathSync} from 'fs';
 import * as bt from '@babel/types';
 import {sync as resolve} from 'resolve';
 import ProgramContext from './ProgramContext';
-import RawDeclaration from './RawDeclaration';
 import {
   Declaration,
   ExportStatement,
@@ -19,6 +18,7 @@ import {
 import getNormalizedDeclaration from './getNormalizedDeclaration';
 import getTypeFromDeclaration from './getTypeFromDeclaration';
 import getTypeOfDeclarationValue from './getTypeOfDeclarationValue';
+import {RawDeclaration} from './walk/RawDeclaration';
 const {codeFrameColumns} = require('@babel/code-frame');
 
 export enum ContextType {
@@ -34,6 +34,7 @@ export interface ExportedName {
   localName: string;
   context: Context;
 }
+
 export default class Context {
   readonly programContext: ProgramContext;
   readonly filename: string;

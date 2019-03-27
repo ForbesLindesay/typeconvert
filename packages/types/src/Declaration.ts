@@ -1,6 +1,6 @@
 import FunctionParam from './FunctionParam';
 import SourceLocation from './SourceLocation';
-import Type from './Type';
+import TypeReference from './TypeReference';
 import Variance from './Variance';
 
 export enum DeclarationKind {
@@ -59,34 +59,35 @@ export enum VariableDeclarationMode {
 export interface VariableDeclaration extends DeclarationBase {
   kind: DeclarationKind.VariableDeclaration;
   mode: VariableDeclarationMode;
-  typeAnnotation: Type;
+  typeAnnotation: TypeReference;
 }
 
 export interface FunctionDeclaration extends DeclarationBase {
   kind: DeclarationKind.FunctionDeclaration;
   params: FunctionParam[];
   restParam?: FunctionParam;
-  returnType: Type;
+  returnType: TypeReference;
   typeParameters: TypeParameter[];
 }
 
 export interface TypeParameter {
   name: string;
   variance: Variance;
-  extends?: Type;
-  default?: Type;
+  extends?: TypeReference;
+  default?: TypeReference;
+  loc: SourceLocation | null;
 }
 
 export interface TypeAliasDeclaration extends DeclarationBase {
   kind: DeclarationKind.TypeAlias;
   typeParameters: TypeParameter[];
-  right: Type;
+  right: TypeReference;
 }
 
 export interface InterfaceDeclaration extends DeclarationBase {
   kind: DeclarationKind.Interface;
   typeParameters: TypeParameter[];
-  extends: Type[];
+  extends: TypeReference[];
   // TODO: body
 }
 

@@ -1,8 +1,8 @@
-import Type from './Type';
+import TypeReference from './TypeReference';
 
 export interface FunctionParam {
   name?: string;
-  type: Type;
+  type: TypeReference;
   optional: boolean;
 }
 export default FunctionParam;

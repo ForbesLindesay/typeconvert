@@ -1,0 +1,42 @@
+import {Mode} from '@typeconvert/types';
+import {File} from '@babel/types';
+const {parse} = require('babylon');
+
+export interface Options {
+  allowImportExportEverywhere?: boolean;
+  allowReturnOutsideFunction?: boolean;
+  allowSuperOutsideMethod?: boolean;
+  filename?: string;
+  sourceType?: 'module' | 'script' | 'unambiguous';
+  mode: Mode;
+}
+export default function parseSource(src: string, options: Options): File {
+  return parse(src, {
+    allowImportExportEverywhere: options.allowImportExportEverywhere,
+    allowReturnOutsideFunction: options.allowReturnOutsideFunction,
+    allowSuperOutsideMethod: options.allowSuperOutsideMethod,
+    sourceType: options.sourceType || 'module',
+    sourceFilename: options.filename,
+    plugins: [
+      'jsx',
+      options.mode === Mode.flow ? 'flow' : 'typescript',
+      'doExpressions',
+      'objectRestSpread',
+      'classProperties',
+      'classPrivateProperties',
+      'classPrivateMethods',
+      'exportDefaultFrom',
+      'exportNamespaceFrom',
+      'asyncGenerators',
+      'functionBind',
+      'dynamicImport',
+      'numericSeparator',
+      'optionalChaining',
+      'bigInt',
+      'optionalCatchBinding',
+      'throwExpressions',
+      'pipelineOperator',
+      'nullishCoalescingOperator',
+    ],
+  });
+}

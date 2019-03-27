@@ -2,6 +2,7 @@ import FunctionParam from './FunctionParam';
 import Variance from './Variance';
 import {TypeParameter} from './Declaration';
 import SourceLocation from './SourceLocation';
+import TypeReference from './TypeReference';
 
 export interface TypeBase {
   loc: SourceLocation | null;
@@ -21,9 +22,9 @@ export enum TypeKind {
   Object = 'ObjectType',
   StringLiteral = 'StringLiteralType',
   String = 'StringType',
-  Reference = 'ReferenceType',
   Tuple = 'TupleType',
   TypeOf = 'TypeOfType',
+  TypeParameterReference = 'TypeParameterReferenceType',
   Union = 'UnionType',
   Void = 'VoidType',
 }
@@ -41,12 +42,12 @@ export interface BooleanLiteralType extends TypeBase {
 export interface GenericType extends TypeBase {
   kind: TypeKind.Generic;
   typeParameters: TypeParameter[];
-  type: Type;
+  type: TypeReference;
 }
 export interface GenericApplicationType extends TypeBase {
   kind: TypeKind.GenericApplication;
-  type: Type;
-  params: Type[];
+  type: TypeReference;
+  params: TypeReference[];
 }
 export interface NullType extends TypeBase {
   kind: TypeKind.Null;
@@ -55,17 +56,13 @@ export interface ObjectType extends TypeBase {
   kind: TypeKind.Object;
   exact: boolean;
   properties: ObjectProperty[];
+  callProperties: FunctionType[];
 }
 export interface ObjectProperty extends TypeBase {
   name: string;
   optional: boolean;
-  type: Type;
+  type: TypeReference;
   variance: Variance;
-}
-export interface ReferenceType extends TypeBase {
-  kind: TypeKind.Reference;
-  name: string;
-  filename: string;
 }
 export interface StringLiteralType extends TypeBase {
   kind: TypeKind.StringLiteral;
@@ -73,28 +70,23 @@ export interface StringLiteralType extends TypeBase {
 }
 export interface TupleType extends TypeBase {
   kind: TypeKind.Tuple;
-  types: Type[];
-}
-export interface TypeOfType extends TypeBase {
-  kind: TypeKind.TypeOf;
-  name: string;
-  filename: string;
+  types: TypeReference[];
 }
 export interface UnionType extends TypeBase {
   kind: TypeKind.Union;
-  types: Type[];
+  types: TypeReference[];
 }
 
 export interface FunctionType extends TypeBase {
   kind: TypeKind.Function;
   params: FunctionParam[];
   restParam?: FunctionParam;
-  returnType: Type;
+  returnType: TypeReference;
   typeParameters: TypeParameter[];
 }
 export interface IntersectionType extends TypeBase {
   kind: TypeKind.Intersection;
-  types: Type[];
+  types: TypeReference[];
 }
 export interface NumberType extends TypeBase {
   kind: TypeKind.Number;
@@ -105,6 +97,10 @@ export interface NumericLiteralType extends TypeBase {
 }
 export interface StringType extends TypeBase {
   kind: TypeKind.String;
+}
+export interface TypeParameterReferenceType extends TypeBase {
+  kind: TypeKind.TypeParameterReference;
+  param: TypeParameter;
 }
 export interface VoidType extends TypeBase {
   kind: TypeKind.Void;
@@ -121,11 +117,10 @@ export type Type =
   | NumberType
   | NumericLiteralType
   | ObjectType
-  | ReferenceType
   | StringLiteralType
   | StringType
   | TupleType
-  | TypeOfType
+  | TypeParameterReferenceType
   | UnionType
   | VoidType;
 

@@ -8,11 +8,14 @@ import {
   TypeParameter,
   SourceLocation,
 } from '@typeconvert/types';
-import Context from './Context';
-import extractFunction from './extractFunction';
-import mergeTypes from './mergeTypes';
+import {InferScopeContext} from './InferContext';
+import extractFunction from '../extractFunction';
+import unionTypes from './mergeTypes';
 
-function _getTypeOfExpression(expression: bt.Expression, ctx: Context): Type {
+export default function getTypeOfExpressionUncached(
+  expression: bt.Expression,
+  ctx: InferScopeContext,
+): Type {
   const loc = expression.loc && new SourceLocation(expression.loc);
   switch (expression.type) {
     case 'ArrowFunctionExpression': {
@@ -76,7 +79,7 @@ function _getTypeOfExpression(expression: bt.Expression, ctx: Context): Type {
         expression,
       );
     case 'ConditionalExpression':
-      return mergeTypes(
+      return unionTypes(
         loc,
         getTypeOfExpression(expression.consequent, ctx),
         getTypeOfExpression(expression.alternate, ctx),
@@ -129,22 +132,11 @@ function _getTypeOfExpression(expression: bt.Expression, ctx: Context): Type {
         loc,
       };
     default:
-      return expression;
+      return ctx.assertNever(
+        'Unsupported expression type ' + expression.type,
+        expression,
+      );
   }
-}
-
-export default function getTypeOfExpression(
-  expression: bt.Expression,
-  ctx: Context,
-): Type {
-  const result = _getTypeOfExpression(expression, ctx);
-  if ((result as any) === expression) {
-    throw ctx.getError(
-      'Unsupported expression type ' + expression.type,
-      expression,
-    );
-  }
-  return result;
 }
 
 interface TypeParameterAssignmentParent {
@@ -182,10 +174,9 @@ class TypeParameterAssignment {
     if (this.types.length === 0) {
       return {kind: TypeKind.Any, loc: null};
     }
-    return mergeTypes(this.types[0].loc, ...this.types);
+    return unionTypes(this.types[0].loc, ...this.types);
   }
 }
-// TODO: explicit assignments
 class TypeParameterAssignments {
   private _assignments: Map<string, TypeParameterAssignment> = new Map();
   constructor(
@@ -454,7 +445,7 @@ function applyTypeParameterAssignment(
         loc: type.loc,
       };
     case TypeKind.Union:
-      return mergeTypes(
+      return unionTypes(
         type.loc,
         ...type.types.map(t => applyTypeParameterAssignment(t, assignments)),
       );

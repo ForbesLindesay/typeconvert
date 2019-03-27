@@ -1,11 +1,14 @@
 import * as bt from '@babel/types';
 import {Mode} from '@typeconvert/types';
-import Context from './Context';
-import {DeclarationType, VariableDeclarationMode} from './RawDeclaration';
+import WalkContext from './WalkContext';
+import Declaration, {DeclarationKind} from './types/Declaration';
+import {ImportSetKind} from './types/DeclarationTypes/ImportDeclaration';
+import getComments, {Comment} from './getComments';
+import normalizeTypeAnnotation from './normalizeTypeAnnotation';
 
 export default function walkStatement(
   statement: bt.Statement,
-  ctx: Context,
+  ctx: WalkContext,
 ): void {
   switch (statement.type) {
     case 'BlockStatement':
@@ -39,7 +42,7 @@ export default function walkStatement(
             bt.isIdentifier(expression.left.object, {name: 'module'})
           ) {
             if (ctx.mode === Mode.flow) {
-              ctx.setCommonJSExport(expression.right);
+              ctx.addCommonJSExport(expression.right);
             }
           }
           break;
@@ -47,7 +50,7 @@ export default function walkStatement(
       break;
     }
     case 'TSExportAssignment':
-      ctx.setCommonJSExport(statement.expression);
+      ctx.addCommonJSExport(statement.expression);
       break;
     case 'TSImportEqualsDeclaration':
       if (
@@ -60,9 +63,10 @@ export default function walkStatement(
           statement.moduleReference,
         );
       }
-      ctx.declare(statement.id, {
-        type: DeclarationType.ImportCommonJS,
-        leadingComments: statement.leadingComments,
+      ctx.addDeclaration(statement.id, {
+        kind: DeclarationKind.ImportDeclaration,
+        leadingComments: getComments(statement, ctx),
+        set: {kind: ImportSetKind.ImportCommonJS},
         localName: statement.id.name,
         loc: statement.loc,
         relativePath: statement.moduleReference.expression.value,
@@ -80,7 +84,7 @@ export default function walkStatement(
       }
       break;
     case 'ReturnStatement':
-      ctx.setReturnValue(statement.argument || bt.identifier('undefined'));
+      ctx.addReturn(statement);
       break;
     case 'SwitchStatement':
       statement.cases.forEach(c => {
@@ -125,13 +129,14 @@ export default function walkStatement(
       walkDeclaration(statement, ctx);
       break;
     default:
-      return statement;
+      return ctx.assertNever('Unsupported statement kind', statement);
   }
 }
+
 function walkDeclaration(
   declaration: bt.Declaration,
-  ctx: Context,
-): bt.Identifier[] {
+  ctx: WalkContext,
+): Declaration[] {
   switch (declaration.type) {
     case 'DeclareExportDeclaration':
     case 'DeclareExportAllDeclaration':
@@ -156,33 +161,33 @@ function walkDeclaration(
     case 'ClassDeclaration':
     case 'FunctionDeclaration':
     case 'TSDeclareFunction':
-      if (!declaration.id) {
-        declaration.id = bt.identifier(ctx.getName('anonymous'));
+      if (declaration.id) {
+        ctx.addDeclaration(declaration.id, declaration);
       }
-      ctx.declare(declaration.id, declaration);
-      return [declaration.id];
+      return [declaration];
     case 'DeclareVariable':
-      ctx.declare(declaration.id, {
-        type: DeclarationType.VariableDeclaration,
-        mode: VariableDeclarationMode.const,
-        leadingComments: declaration.leadingComments,
-        localName: declaration.id.name,
-        loc: declaration.loc,
-        typeAnnotation: normalize(declaration.id.typeAnnotation),
-      });
-      return [declaration.id];
+      return [
+        ctx.addDeclaration(declaration.id, {
+          kind: DeclarationKind.LocalDeclaration,
+          leadingComments: getComments(declaration, ctx),
+          localName: declaration.id.name,
+          loc: declaration.loc,
+          valueType: normalizeTypeAnnotation(
+            declaration.id.typeAnnotation,
+            ctx,
+          ),
+        }),
+      ];
     case 'VariableDeclaration':
       return walkVariableDeclaration(declaration, ctx);
     case 'ExportNamedDeclaration': {
-      const localIdentifiers: bt.Identifier[] = [];
       if (declaration.declaration) {
         declaration.declaration.leadingComments = (
           declaration.leadingComments || []
         ).concat(declaration.declaration.leadingComments || []);
-        const ids = walkDeclaration(declaration.declaration, ctx);
-        localIdentifiers.push(...ids);
-        ids.forEach(id => {
-          ctx.addNamedExport(id.name, id.name);
+        const declarations = walkDeclaration(declaration.declaration, ctx);
+        declarations.forEach(declaration => {
+          ctx.addNamedExport(declaration);
         });
       }
       declaration.specifiers.forEach((specifier): void => {
@@ -194,17 +199,16 @@ function walkDeclaration(
               specifier,
             );
           case 'ExportSpecifier':
-            localIdentifiers.push(specifier.local);
-            ctx.addNamedExport(specifier.exported.name, specifier.local.name);
+            ctx.addNamedExport(specifier);
             break;
           default:
             return specifier;
         }
       });
-      return localIdentifiers;
+      return [];
     }
     case 'ExportAllDeclaration':
-      ctx.addExportAll(declaration.source.value);
+      ctx.addExportAll(declaration);
       return [];
     case 'ExportDefaultDeclaration': {
       const arg = declaration.declaration;
@@ -214,22 +218,17 @@ function walkDeclaration(
         d.leadingComments = (declaration.leadingComments || []).concat(
           d.leadingComments || [],
         );
-        const identifiers = walkDeclaration(d, ctx);
-        if (identifiers.length !== 1) {
-          throw ctx.getError(
-            'Expected exactly one declaration for the default export but got ' +
-              identifiers.length,
-            d,
-          );
-        }
-        ctx.setDefaultExport(identifiers[0]);
-        return identifiers;
+        const rawDeclarations = walkDeclaration(d, ctx);
+        rawDeclarations.forEach(declaration => {
+          ctx.addDefaultExport(declaration);
+        });
+        return rawDeclarations;
       } else {
         const e = arg as bt.Expression;
         e.leadingComments = (declaration.leadingComments || []).concat(
           e.leadingComments || [],
         );
-        ctx.setDefaultExport(e);
+        ctx.addDefaultExport(e);
         return [];
       }
     }
@@ -241,35 +240,49 @@ function walkDeclaration(
 }
 function walkVariableDeclaration(
   node: bt.VariableDeclaration,
-  ctx: Context,
-): bt.Identifier[] {
-  const result: bt.Identifier[] = [];
-  const mode = node.kind as VariableDeclarationMode;
+  ctx: WalkContext,
+): Declaration[] {
+  const result: Declaration[] = [];
   function recurse(
     id: bt.LVal,
     init: bt.Expression | undefined,
     typeAnnotation: bt.TypeAnnotation | bt.TSTypeAnnotation | undefined,
-    leadingComments: ReadonlyArray<bt.Comment>,
+    leadingComments: ReadonlyArray<Comment>,
   ): void {
     switch (id.type) {
       case 'Identifier':
-        result.push(id);
-        ctx.declare(id, {
-          type: DeclarationType.VariableDeclaration,
-          mode,
-          leadingComments,
-          localName: id.name,
-          loc: id.loc,
-          init,
-          typeAnnotation: normalize(id.typeAnnotation || typeAnnotation),
-        });
+        result.push(
+          ctx.addDeclaration(id, {
+            kind: DeclarationKind.LocalDeclaration,
+            valueInit: init,
+            valueType: normalizeTypeAnnotation(
+              id.typeAnnotation || typeAnnotation,
+              ctx,
+            ),
+            leadingComments,
+            localName: id.name,
+            loc: id.loc,
+          }),
+        );
+        //   result.push(
+
+        //     ctx.addDeclaration(id, {
+        //       type: DeclarationKind.VariableDeclaration,
+        //       mode,
+        //       leadingComments,
+        //       localName: id.name,
+        //       loc: id.loc,
+        //       init,
+        //       typeAnnotation: normalize(id.typeAnnotation || typeAnnotation),
+        //     }),
+        //   );
         break;
       case 'RestElement':
         recurse(
           id.argument,
           init,
           typeAnnotation,
-          leadingComments.concat(id.leadingComments || []),
+          leadingComments.concat(getComments(id, ctx)),
         );
         break;
       case 'MemberExpression':
@@ -294,7 +307,7 @@ function walkVariableDeclaration(
         break;
       case 'ArrayPattern':
         (id.elements as any[]).forEach((element: bt.LVal, index) => {
-          if (bt.isLVal(element)) {
+          if (!bt.isLVal(element)) {
             throw ctx.getError('Expected LVal', element);
           }
           if (element.type === 'RestElement') {
@@ -302,7 +315,7 @@ function walkVariableDeclaration(
               element,
               init,
               typeAnnotation,
-              leadingComments.concat(element.leadingComments || []),
+              leadingComments.concat(getComments(element, ctx)),
             );
           } else {
             recurse(
@@ -311,7 +324,7 @@ function walkVariableDeclaration(
                 ? bt.memberExpression(init, bt.numericLiteral(index), true)
                 : undefined,
               typeAnnotation ? indexIntoType(typeAnnotation, index) : undefined,
-              leadingComments.concat(element.leadingComments || []),
+              leadingComments.concat(getComments(element, ctx)),
             );
           }
         });
@@ -340,7 +353,7 @@ function walkVariableDeclaration(
                   ? indexIntoType(typeAnnotation, prop.key.name)
                   : undefined,
 
-                leadingComments.concat(prop.leadingComments || []),
+                leadingComments.concat(getComments(prop, ctx)),
               );
               break;
             case 'RestElement':
@@ -362,7 +375,7 @@ function walkVariableDeclaration(
       declaration.id,
       normalize(declaration.init),
       bt.isTypeAnnotation(ta) ? ta : undefined,
-      (node.leadingComments || []).concat(declaration.leadingComments || []),
+      getComments(node, ctx).concat(getComments(declaration, ctx)),
     );
   });
   return result;
@@ -400,50 +413,43 @@ function indexIntoType(
 
 function walkImportDeclaration(
   declaration: bt.ImportDeclaration,
-  ctx: Context,
-): bt.Identifier[] {
-  return declaration.specifiers.map((specifier): bt.Identifier => {
+  ctx: WalkContext,
+): Declaration[] {
+  return declaration.specifiers.map((specifier): Declaration => {
     const leadingComments = (declaration.leadingComments || []).concat(
       specifier.leadingComments || [],
     );
     switch (specifier.type) {
       case 'ImportSpecifier':
-        ctx.declare(specifier.local, {
-          type: DeclarationType.ImportNamed,
+        return ctx.addDeclaration(specifier.local, {
+          type: DeclarationKind.ImportNamed,
           importName: specifier.imported.name,
           relativePath: declaration.source.value,
           leadingComments,
           localName: specifier.local.name,
           loc: specifier.loc,
         });
-        return specifier.local;
       case 'ImportDefaultSpecifier':
-        ctx.declare(specifier.local, {
-          type: DeclarationType.ImportDefault,
+        return ctx.addDeclaration(specifier.local, {
+          type: DeclarationKind.ImportDefault,
           relativePath: declaration.source.value,
           leadingComments,
           localName: specifier.local.name,
           loc: specifier.loc,
         });
-        return specifier.local;
       case 'ImportNamespaceSpecifier':
-        ctx.declare(specifier.local, {
-          type: DeclarationType.ImportNamespace,
+        return ctx.addDeclaration(specifier.local, {
+          type: DeclarationKind.ImportNamespace,
           relativePath: declaration.source.value,
           leadingComments,
           localName: specifier.local.name,
           loc: specifier.loc,
         });
-        return specifier.local;
       default:
-        return specifier;
+        return ctx.assertNever(
+          'Unsupported import declatration kind',
+          specifier,
+        );
     }
   });
-}
-
-function normalize<T extends bt.Node>(
-  value: T | bt.Noop | null | undefined,
-): T | undefined {
-  if (!value) return undefined;
-  return bt.isNoop(value) ? undefined : value;
 }

@@ -1,6 +1,6 @@
 import * as bt from '@babel/types';
 import {TypeParameter, Variance} from '@typeconvert/types';
-import Context from './Context';
+import {InferScopeContext} from './InferContext';
 
 export default function getTypeParameters(
   typeParameters:
@@ -8,7 +8,7 @@ export default function getTypeParameters(
     | bt.TSTypeParameterDeclaration
     | bt.Noop
     | null,
-  ctx: Context,
+  ctx: InferScopeContext,
 ) {
   if (!typeParameters || bt.isNoop(typeParameters)) {
     return [];
