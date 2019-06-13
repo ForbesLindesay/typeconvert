@@ -1,6 +1,6 @@
 import {Mode} from '@typeconvert/types';
 import {File} from '@babel/types';
-const {parse} = require('babylon');
+import {parse} from '@babel/parser';
 
 export interface Options {
   allowImportExportEverywhere?: boolean;
@@ -35,7 +35,6 @@ export default function parseSource(src: string, options: Options): File {
       'bigInt',
       'optionalCatchBinding',
       'throwExpressions',
-      'pipelineOperator',
       'nullishCoalescingOperator',
     ],
   });

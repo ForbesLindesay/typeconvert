@@ -1,38 +1,51 @@
 {
+  "name": "typeconvert-monorepo",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "bolt": {
+    "workspaces": [
+      "packages/*"
+    ]
+  },
   "scripts": {
     "postinstall": "node ./scripts/postinstall",
-    "bootstrap": "lerna bootstrap",
-    "build": "git add . && lerna run prepublish --since master",
-    "build:all": "lerna run prepublish",
-    "prerelease": "yarn build:all",
+    "build": "bolt ws run build",
+    "build:all": "yarn build",
     "prettier": "prettier --write \"packages/*/src/**/*.{ts,tsx}\"",
-    "release": "lerna publish",
     "test": "jest",
     "clean": "rimraf packages/*/lib && rimraf packages/*/build && rimraf packages/*/node_modules && rimraf node_modules"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@babel/code-frame": "^7.0.0",
+    "@babel/parser": "^7.4.2",
+    "@babel/types": "^7.4.0",
     "@moped/babel-preset": "*",
+    "@types/babel__code-frame": "^7.0.1",
+    "@types/babylon": "^6.16.5",
     "@types/cross-spawn": "^6.0.0",
-    "@types/jest": "^21.1.5",
+    "@types/immutable": "^3.8.7",
+    "@types/jest": "^22.2.0",
     "@types/mkdirp": "^0.5.1",
     "@types/node": "^8.0.33",
     "@types/react": "*",
     "@types/react-dom": "*",
+    "@types/resolve": "^0.0.8",
     "@types/rimraf": "^2.0.2",
+    "add": "^2.0.6",
     "babel-core": "^6.26.0",
+    "babylon": "^6.18.0",
+    "bolt": "^0.22.6",
     "cross-spawn": "^6.0.5",
     "flow-bin": "^0.66.0",
+    "immutable": "^4.0.0-rc.12",
     "jest": "^21.2.1",
-    "lerna": "^2.4.0",
     "lsr": "^2.0.0",
     "prettier": "^1.10.2",
+    "resolve": "^1.10.0",
     "rimraf": "^2.6.2",
-    "ts-jest": "^21.1.4",
-    "typescript": "^2.5.3"
+    "ts-jest": "^22.4.1",
+    "type-assertions": "^1.0.0",
+    "typescript": "^3.3.4000",
+    "w": "^1.1.0"
   },
   "jest": {
     "transformIgnorePatterns": [
@@ -42,7 +55,7 @@
       "/test-cases/.+\\.(js|js\\.flow|d\\.ts|ts|tsx)$": "./scripts/test-transform.js",
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "/test-cases/.+/index\\.(js|js\\.flow|d\\.ts|ts|tsx)$",
+    "testRegex": "/test-cases/.+/index\\.(js|js\\.flow|d\\.ts|ts|tsx)$|(\\.|/)(test|spec)\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "flow",
       "ts",
