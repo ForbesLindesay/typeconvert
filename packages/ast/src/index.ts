@@ -9,6 +9,8 @@ import AssignmentExpression from './nodes/AssignmentExpression';
 import BooleanTypeAnnotation from './nodes/BooleanTypeAnnotation';
 import EmptyTypeAnnotation from './nodes/EmptyTypeAnnotation';
 import ExistsTypeAnnotation from './nodes/ExistsTypeAnnotation';
+import ExportDefault from './nodes/ExportDefault';
+import ExportNamed from './nodes/ExportNamed';
 import ExpressionStatement from './nodes/ExpressionStatement';
 import File from './nodes/File';
 import FunctionParameter from './nodes/FunctionParameter';
@@ -41,6 +43,7 @@ import Expression from './aliases/Expression';
 import Statement from './aliases/Statement';
 import LVal from './aliases/LVal';
 import ObjectTypeElement from './aliases/ObjectTypeElement';
+import Declaration from './aliases/Declaration';
 import TypeDeclaration from './aliases/TypeDeclaration';
 import Comment, {CommentKind} from './Comment';
 import NodeBase from './NodeBase';
@@ -55,6 +58,8 @@ export {AssignmentExpression};
 export {BooleanTypeAnnotation};
 export {EmptyTypeAnnotation};
 export {ExistsTypeAnnotation};
+export {ExportDefault};
+export {ExportNamed};
 export {ExpressionStatement};
 export {File};
 export {FunctionParameter};
@@ -87,6 +92,7 @@ export {Expression};
 export {Statement};
 export {LVal};
 export {ObjectTypeElement};
+export {Declaration};
 export {TypeDeclaration};
 export {Comment, CommentKind}
 export {NodeBase};
@@ -114,6 +120,12 @@ export function createEmptyTypeAnnotation(props: Omit<EmptyTypeAnnotation, 'kind
 }
 export function createExistsTypeAnnotation(props: Omit<ExistsTypeAnnotation, 'kind'>): ExistsTypeAnnotation {
   return {...props, kind: NodeKind.ExistsTypeAnnotation};
+}
+export function createExportDefault(props: Omit<ExportDefault, 'kind'>): ExportDefault {
+  return {...props, kind: NodeKind.ExportDefault};
+}
+export function createExportNamed(props: Omit<ExportNamed, 'kind'>): ExportNamed {
+  return {...props, kind: NodeKind.ExportNamed};
 }
 export function createExpressionStatement(props: Omit<ExpressionStatement, 'kind'>): ExpressionStatement {
   return {...props, kind: NodeKind.ExpressionStatement};
@@ -215,6 +227,12 @@ export function isEmptyTypeAnnotation(node: Node): node is EmptyTypeAnnotation {
 export function isExistsTypeAnnotation(node: Node): node is ExistsTypeAnnotation {
   return node.kind === NodeKind.ExistsTypeAnnotation;
 }
+export function isExportDefault(node: Node): node is ExportDefault {
+  return node.kind === NodeKind.ExportDefault;
+}
+export function isExportNamed(node: Node): node is ExportNamed {
+  return node.kind === NodeKind.ExportNamed;
+}
 export function isExpressionStatement(node: Node): node is ExpressionStatement {
   return node.kind === NodeKind.ExpressionStatement;
 }
@@ -294,7 +312,7 @@ export function isUnknownTypeAnnotation(node: Node): node is UnknownTypeAnnotati
   return node.kind === NodeKind.UnknownTypeAnnotation;
 }
 export function isNode(node: Node): node is Node {
-  return (node.kind === NodeKind.AnyTypeAnnotation || node.kind === NodeKind.ArrayExpression || node.kind === NodeKind.ArrayTypeAnnotation || node.kind === NodeKind.AssignmentExpression || node.kind === NodeKind.BooleanTypeAnnotation || node.kind === NodeKind.EmptyTypeAnnotation || node.kind === NodeKind.ExistsTypeAnnotation || node.kind === NodeKind.ExpressionStatement || node.kind === NodeKind.File || node.kind === NodeKind.FunctionParameter || node.kind === NodeKind.FunctionTypeAnnotation || node.kind === NodeKind.Identifier || node.kind === NodeKind.ImportTypeAnnotation || node.kind === NodeKind.InferTypeAnnotation || node.kind === NodeKind.IntersectionTypeAnnotation || node.kind === NodeKind.LiteralTypeAnnotation || node.kind === NodeKind.NumberTypeAnnotation || node.kind === NodeKind.ObjectTypeAnnotation || node.kind === NodeKind.ObjectTypeIndexer || node.kind === NodeKind.ObjectTypeProperty || node.kind === NodeKind.ObjectTypeSpreadProperty || node.kind === NodeKind.QualifiedTypeIdentifier || node.kind === NodeKind.SpreadElement || node.kind === NodeKind.StringTypeAnnotation || node.kind === NodeKind.SymbolTypeAnnotation || node.kind === NodeKind.ThisTypeAnnotation || node.kind === NodeKind.TupleTypeAnnotation || node.kind === NodeKind.TypeAliasDeclaration || node.kind === NodeKind.TypeParameter || node.kind === NodeKind.TypeReferenceAnnotation || node.kind === NodeKind.TypeofTypeAnnotation || node.kind === NodeKind.UnionTypeAnnotation || node.kind === NodeKind.UnknownTypeAnnotation);
+  return (node.kind === NodeKind.AnyTypeAnnotation || node.kind === NodeKind.ArrayExpression || node.kind === NodeKind.ArrayTypeAnnotation || node.kind === NodeKind.AssignmentExpression || node.kind === NodeKind.BooleanTypeAnnotation || node.kind === NodeKind.EmptyTypeAnnotation || node.kind === NodeKind.ExistsTypeAnnotation || node.kind === NodeKind.ExportDefault || node.kind === NodeKind.ExportNamed || node.kind === NodeKind.ExpressionStatement || node.kind === NodeKind.File || node.kind === NodeKind.FunctionParameter || node.kind === NodeKind.FunctionTypeAnnotation || node.kind === NodeKind.Identifier || node.kind === NodeKind.ImportTypeAnnotation || node.kind === NodeKind.InferTypeAnnotation || node.kind === NodeKind.IntersectionTypeAnnotation || node.kind === NodeKind.LiteralTypeAnnotation || node.kind === NodeKind.NumberTypeAnnotation || node.kind === NodeKind.ObjectTypeAnnotation || node.kind === NodeKind.ObjectTypeIndexer || node.kind === NodeKind.ObjectTypeProperty || node.kind === NodeKind.ObjectTypeSpreadProperty || node.kind === NodeKind.QualifiedTypeIdentifier || node.kind === NodeKind.SpreadElement || node.kind === NodeKind.StringTypeAnnotation || node.kind === NodeKind.SymbolTypeAnnotation || node.kind === NodeKind.ThisTypeAnnotation || node.kind === NodeKind.TupleTypeAnnotation || node.kind === NodeKind.TypeAliasDeclaration || node.kind === NodeKind.TypeParameter || node.kind === NodeKind.TypeReferenceAnnotation || node.kind === NodeKind.TypeofTypeAnnotation || node.kind === NodeKind.UnionTypeAnnotation || node.kind === NodeKind.UnknownTypeAnnotation);
 }
 export function isTypeAnnotation(node: Node): node is TypeAnnotation {
   return (node.kind === NodeKind.AnyTypeAnnotation || node.kind === NodeKind.ArrayTypeAnnotation || node.kind === NodeKind.BooleanTypeAnnotation || node.kind === NodeKind.EmptyTypeAnnotation || node.kind === NodeKind.ExistsTypeAnnotation || node.kind === NodeKind.FunctionTypeAnnotation || node.kind === NodeKind.ImportTypeAnnotation || node.kind === NodeKind.InferTypeAnnotation || node.kind === NodeKind.IntersectionTypeAnnotation || node.kind === NodeKind.LiteralTypeAnnotation || node.kind === NodeKind.NumberTypeAnnotation || node.kind === NodeKind.ObjectTypeAnnotation || node.kind === NodeKind.StringTypeAnnotation || node.kind === NodeKind.SymbolTypeAnnotation || node.kind === NodeKind.ThisTypeAnnotation || node.kind === NodeKind.TupleTypeAnnotation || node.kind === NodeKind.TypeReferenceAnnotation || node.kind === NodeKind.TypeofTypeAnnotation || node.kind === NodeKind.UnionTypeAnnotation || node.kind === NodeKind.UnknownTypeAnnotation);
@@ -303,13 +321,16 @@ export function isExpression(node: Node): node is Expression {
   return (node.kind === NodeKind.ArrayExpression || node.kind === NodeKind.AssignmentExpression || node.kind === NodeKind.Identifier);
 }
 export function isStatement(node: Node): node is Statement {
-  return (node.kind === NodeKind.ExpressionStatement || node.kind === NodeKind.TypeAliasDeclaration);
+  return (node.kind === NodeKind.ExportDefault || node.kind === NodeKind.ExportNamed || node.kind === NodeKind.ExpressionStatement || node.kind === NodeKind.TypeAliasDeclaration);
 }
 export function isLVal(node: Node): node is LVal {
   return (node.kind === NodeKind.Identifier);
 }
 export function isObjectTypeElement(node: Node): node is ObjectTypeElement {
   return (node.kind === NodeKind.ObjectTypeIndexer || node.kind === NodeKind.ObjectTypeProperty || node.kind === NodeKind.ObjectTypeSpreadProperty);
+}
+export function isDeclaration(node: Node): node is Declaration {
+  return (node.kind === NodeKind.TypeAliasDeclaration);
 }
 export function isTypeDeclaration(node: Node): node is TypeDeclaration {
   return (node.kind === NodeKind.TypeAliasDeclaration);

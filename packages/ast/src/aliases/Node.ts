@@ -9,6 +9,8 @@ import AssignmentExpression from '../nodes/AssignmentExpression';
 import BooleanTypeAnnotation from '../nodes/BooleanTypeAnnotation';
 import EmptyTypeAnnotation from '../nodes/EmptyTypeAnnotation';
 import ExistsTypeAnnotation from '../nodes/ExistsTypeAnnotation';
+import ExportDefault from '../nodes/ExportDefault';
+import ExportNamed from '../nodes/ExportNamed';
 import ExpressionStatement from '../nodes/ExpressionStatement';
 import File from '../nodes/File';
 import FunctionParameter from '../nodes/FunctionParameter';
@@ -44,6 +46,8 @@ type Node =
   | BooleanTypeAnnotation
   | EmptyTypeAnnotation
   | ExistsTypeAnnotation
+  | ExportDefault
+  | ExportNamed
   | ExpressionStatement
   | File
   | FunctionParameter

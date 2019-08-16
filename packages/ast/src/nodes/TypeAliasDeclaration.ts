@@ -6,6 +6,7 @@ import TypeParameter from './TypeParameter';
 
 /**
  * @alias Statement
+ * @alias Declaration
  * @alias TypeDeclaration
  */
 export default interface TypeAliasDeclaration extends NodeBase {

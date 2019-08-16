@@ -6,6 +6,8 @@ enum NodeKind {
   BooleanTypeAnnotation = 'BooleanTypeAnnotation',
   EmptyTypeAnnotation = 'EmptyTypeAnnotation',
   ExistsTypeAnnotation = 'ExistsTypeAnnotation',
+  ExportDefault = 'ExportDefault',
+  ExportNamed = 'ExportNamed',
   ExpressionStatement = 'ExpressionStatement',
   File = 'File',
   FunctionParameter = 'FunctionParameter',
