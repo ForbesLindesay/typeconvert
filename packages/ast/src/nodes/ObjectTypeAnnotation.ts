@@ -9,17 +9,11 @@ import NodeBase from '../NodeBase';
 import TypeIdentifier from './Identifier';
 import ObjectTypeElement from '../aliases/ObjectTypeElement';
 
-export enum ObjectTypeElementKind {
-  ObjectTypeProperty = 'ObjectTypeProperty',
-  ObjectTypeSpreadProperty = 'ObjectTypeSpreadProperty',
-  ObjectTypeIndexer = 'ObjectTypeIndexer',
-}
-
 /**
  * @alias ObjectTypeElement
  */
 export interface ObjectTypeProperty extends NodeBase {
-  readonly kind: ObjectTypeElementKind.ObjectTypeProperty;
+  readonly kind: NodeKind.ObjectTypeProperty;
 
   readonly key: // | Identifier
   TypeIdentifier | QualifiedTypeIdentifier | LiteralTypeAnnotation;
@@ -82,7 +76,7 @@ export interface ObjectTypeProperty extends NodeBase {
  * @alias ObjectTypeElement
  */
 export interface ObjectTypeIndexer extends NodeBase {
-  readonly kind: ObjectTypeElementKind.ObjectTypeIndexer;
+  readonly kind: NodeKind.ObjectTypeIndexer;
   readonly id: TypeIdentifier | undefined;
   readonly keyType: TypeAnnotation;
   readonly valueType: TypeAnnotation;
@@ -106,7 +100,7 @@ export interface ObjectTypeIndexer extends NodeBase {
  * @alias ObjectTypeElement
  */
 export interface ObjectTypeSpreadProperty extends NodeBase {
-  readonly kind: ObjectTypeElementKind.ObjectTypeSpreadProperty;
+  readonly kind: NodeKind.ObjectTypeSpreadProperty;
   readonly argument: TypeAnnotation;
 }
 
@@ -154,4 +148,4 @@ export default interface ObjectTypeAnnotation extends NodeBase {
    * object is inexact.
    */
   readonly inexact: boolean;
-};
+}

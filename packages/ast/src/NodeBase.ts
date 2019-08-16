@@ -1,8 +1,7 @@
-import {SourceLocation} from '@typeconvert/file-context';
+import Comment from './Comment';
+import SourceLocation from './SourceLocation';
 
 export default interface NodeBase {
   readonly loc: SourceLocation | null;
   readonly leadingComments: ReadonlyArray<Comment>;
-  readonly trailingComments: ReadonlyArray<Comment>;
-  readonly innnerComments: ReadonlyArray<Comment>;
-};
+}

@@ -9,6 +9,9 @@ import AssignmentExpression from '../nodes/AssignmentExpression';
 import BooleanTypeAnnotation from '../nodes/BooleanTypeAnnotation';
 import EmptyTypeAnnotation from '../nodes/EmptyTypeAnnotation';
 import ExistsTypeAnnotation from '../nodes/ExistsTypeAnnotation';
+import ExpressionStatement from '../nodes/ExpressionStatement';
+import File from '../nodes/File';
+import FunctionParameter from '../nodes/FunctionParameter';
 import FunctionTypeAnnotation from '../nodes/FunctionTypeAnnotation';
 import Identifier from '../nodes/Identifier';
 import ImportTypeAnnotation from '../nodes/ImportTypeAnnotation';
@@ -26,6 +29,8 @@ import StringTypeAnnotation from '../nodes/StringTypeAnnotation';
 import SymbolTypeAnnotation from '../nodes/SymbolTypeAnnotation';
 import ThisTypeAnnotation from '../nodes/ThisTypeAnnotation';
 import TupleTypeAnnotation from '../nodes/TupleTypeAnnotation';
+import TypeAliasDeclaration from '../nodes/TypeAliasDeclaration';
+import TypeParameter from '../nodes/TypeParameter';
 import TypeReferenceAnnotation from '../nodes/TypeReferenceAnnotation';
 import TypeofTypeAnnotation from '../nodes/TypeofTypeAnnotation';
 import UnionTypeAnnotation from '../nodes/UnionTypeAnnotation';
@@ -39,6 +44,9 @@ type Node =
   | BooleanTypeAnnotation
   | EmptyTypeAnnotation
   | ExistsTypeAnnotation
+  | ExpressionStatement
+  | File
+  | FunctionParameter
   | FunctionTypeAnnotation
   | Identifier
   | ImportTypeAnnotation
@@ -56,6 +64,8 @@ type Node =
   | SymbolTypeAnnotation
   | ThisTypeAnnotation
   | TupleTypeAnnotation
+  | TypeAliasDeclaration
+  | TypeParameter
   | TypeReferenceAnnotation
   | TypeofTypeAnnotation
   | UnionTypeAnnotation

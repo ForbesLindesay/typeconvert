@@ -1,6 +1,6 @@
 import NodeKind from '../NodeKind';
-import FunctionParam from '../FunctionParam';
-import TypeParameter from '../TypeParameter';
+import FunctionParameter from './FunctionParameter';
+import TypeParameter from './TypeParameter';
 import TypeAnnotation from '../aliases/TypeAnnotation';
 import NodeBase from '../NodeBase';
 
@@ -13,8 +13,8 @@ import NodeBase from '../NodeBase';
  */
 export default interface FunctionTypeAnnotation extends NodeBase {
   readonly kind: NodeKind.FunctionTypeAnnotation;
-  readonly params: ReadonlyArray<FunctionParam>;
-  readonly restParam: FunctionParam | undefined;
+  readonly params: ReadonlyArray<FunctionParameter>;
+  readonly restParam: FunctionParameter | undefined;
   readonly typeParams: ReadonlyArray<TypeParameter>;
   readonly returnType: TypeAnnotation | undefined;
   readonly isConstructor: boolean;

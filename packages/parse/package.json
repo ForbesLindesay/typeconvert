@@ -5,13 +5,10 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "dependencies": {
-    "@babel/code-frame": "^7.0.0-beta.40",
-    "@babel/types": "^7.0.0-beta.40",
-    "@typeconvert/types": "^0.0.0",
-    "@types/node": "^8.0.33",
-    "@types/resolve": "^0.0.7",
-    "babylon": "^7.0.0-beta.40",
-    "resolve": "^1.5.0"
+    "@babel/code-frame": "^7.0.0",
+    "@babel/types": "^7.4.0",
+    "@typeconvert/ast": "0.0.0",
+    "babylon": "^6.18.0"
   },
   "scripts": {
     "prepublish": "tsc -p tsconfig.build.json && node ../../scripts/prepare parse"
@@ -22,6 +19,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "typescript": "^2.5.3"
+    "typescript": "^3.5.3"
   }
 }

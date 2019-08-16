@@ -1,9 +1,22 @@
-import {Mode, Module} from '@typeconvert/types';
-import ProgramContext, {Modules, Options} from './ProgramContext';
+import * as ast from '@typeconvert/ast';
+import Mode from './Mode';
+import parseSource, {Options} from './babylon';
+import normalizeStatement from './normalize/normalizeStatement';
+import normalizeComments from './normalize/normalizeComments';
+import ParseContext from './ParseContext';
 
-export {Mode, Module, Modules, Options, ProgramContext};
-export default function parse(filenames: string[], options: Options): Modules {
-  const ctx = new ProgramContext(options);
-  filenames.forEach(filename => ctx.parse(filename));
-  return ctx.parsedFiles;
+export {Options, Mode};
+export default function parse(src: string, options: Options): ast.File {
+  const babylonAST = parseSource(src, options);
+  const ctx = new ParseContext(src);
+  return ast.createFile({
+    statements: babylonAST.program.body
+      .map(statement => normalizeStatement(statement, ctx))
+      .reduce((a, b) => [...a, ...b], []),
+    loc: babylonAST.loc,
+    leadingComments: normalizeComments(
+      babylonAST.leadingComments,
+      babylonAST.program.leadingComments,
+    ),
+  });
 }

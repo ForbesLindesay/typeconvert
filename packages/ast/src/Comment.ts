@@ -1,4 +1,4 @@
-import {SourceLocation} from '@typeconvert/file-context';
+import SourceLocation from './SourceLocation';
 
 export enum CommentKind {
   CommentBlock = 'CommentBlock',

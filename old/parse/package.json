@@ -1,0 +1,27 @@
+{
+  "name": "@typeconvert/old-parse",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "dependencies": {
+    "@babel/code-frame": "^7.0.0-beta.40",
+    "@babel/types": "^7.0.0-beta.40",
+    "@typeconvert/types": "^0.0.0",
+    "@types/node": "^8.0.33",
+    "@types/resolve": "^0.0.7",
+    "babylon": "^7.0.0-beta.40",
+    "resolve": "^1.5.0"
+  },
+  "scripts": {
+    "prepublish": "tsc -p tsconfig.build.json && node ../../scripts/prepare old-parse"
+  },
+  "repository": "https://github.com/ForbesLindesay/typeconvert/tree/master/packages/old-parse",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
+}

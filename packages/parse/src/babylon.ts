@@ -1,6 +1,6 @@
-import {Mode} from '@typeconvert/types';
 import {File} from '@babel/types';
 import {parse} from '@babel/parser';
+import Mode from './Mode';
 
 export interface Options {
   allowImportExportEverywhere?: boolean;
@@ -19,7 +19,7 @@ export default function parseSource(src: string, options: Options): File {
     sourceFilename: options.filename,
     plugins: [
       'jsx',
-      options.mode === Mode.flow ? 'flow' : 'typescript',
+      options.mode === Mode.Flow ? 'flow' : 'typescript',
       'doExpressions',
       'objectRestSpread',
       'classProperties',

@@ -1,5 +1,4 @@
-import ExpressionBase from '../types/ExpressionBase';
-import Expression from '../../../parse/src/types/Expression';
+import Expression from '../aliases/Expression';
 import NodeBase from '../NodeBase';
 import NodeKind from '../NodeKind';
 

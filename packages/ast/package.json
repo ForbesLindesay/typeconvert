@@ -1,0 +1,19 @@
+{
+  "name": "@typeconvert/ast",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "prepublish": "tsc -p tsconfig.build.json && node ../../scripts/prepare ast"
+  },
+  "repository": "https://github.com/ForbesLindesay/typeconvert/tree/master/packages/ast",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
