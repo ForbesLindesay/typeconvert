@@ -24,10 +24,22 @@ export default class ParseContext {
           (input.loc.end.column === undefined ||
             typeof input.loc.end.column === 'number')))
     ) {
+      const location: any = {
+        start: {line: input.loc.start.line},
+      };
+      if (typeof input.loc.start.column === 'number') {
+        location.start.column = input.loc.start.column + 1;
+      }
+      if (typeof input.loc.end) {
+        location.end = {line: input.loc.end.line};
+        if (typeof input.loc.end.column === 'number') {
+          location.end.column = input.loc.end.column + 1;
+        }
+      }
       throw new Error(
         inspect(input, {colors: true}) +
           '\n\n' +
-          codeFrameColumns(this.src, input.loc, {
+          codeFrameColumns(this.src, location, {
             highlightCode: true,
             message,
           }),

@@ -9,7 +9,7 @@
   "scripts": {
     "preinstall": "node ./scripts/preinstall",
     "prebuild": "node packages/ast/scripts/prepare",
-    "build": "bolt ws run build",
+    "build": "bolt ws run prepublish",
     "build:all": "yarn build",
     "prettier": "prettier --write \"packages/*/src/**/*.{ts,tsx}\"",
     "test": "jest",

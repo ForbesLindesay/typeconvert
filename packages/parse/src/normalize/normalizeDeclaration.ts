@@ -3,10 +3,9 @@ import * as ast from '@typeconvert/ast';
 import normalizeComments from './normalizeComments';
 import ParseContext from '../ParseContext';
 import normalizeIdentifier from './normalizeIdentifier';
-import normalizeFlowType from './normalizeFlowType';
-import normalizeTSType from './normalizeTSType';
+import normalizeType from './normalizeType';
 import normalizeTypeParameterDeclaration from './normalizeTypeParameterDeclaration';
-import normalizeTSTypeParameterDeclaration from './normalizeTSTypeParameterDeclaration';
+import normalizeFunctionDeclaration from './normalizeFunctionDeclaration';
 
 export default function normalizeDeclaration(
   input: bt.Declaration,
@@ -19,7 +18,7 @@ export default function normalizeDeclaration(
           loc: input.loc,
           leadingComments: normalizeComments(input.leadingComments),
           id: normalizeIdentifier(input.id, ctx),
-          type: normalizeFlowType(input.right, ctx),
+          type: normalizeType(input.right, ctx),
           typeParameters: normalizeTypeParameterDeclaration(
             input.typeParameters,
             ctx,
@@ -32,8 +31,36 @@ export default function normalizeDeclaration(
           loc: input.loc,
           leadingComments: normalizeComments(input.leadingComments),
           id: normalizeIdentifier(input.id, ctx),
-          type: normalizeTSType(input.typeAnnotation, ctx),
-          typeParameters: normalizeTSTypeParameterDeclaration(
+          type: normalizeType(input.typeAnnotation, ctx),
+          typeParameters: normalizeTypeParameterDeclaration(
+            input.typeParameters,
+            ctx,
+          ),
+        }),
+      ];
+    case 'FunctionDeclaration':
+      return [normalizeFunctionDeclaration(input, ctx)];
+    case 'TypeAlias':
+      return [
+        ast.createTypeAliasDeclaration({
+          loc: input.loc,
+          leadingComments: normalizeComments(input.leadingComments),
+          id: normalizeIdentifier(input.id, ctx),
+          type: normalizeType(input.right, ctx),
+          typeParameters: normalizeTypeParameterDeclaration(
+            input.typeParameters,
+            ctx,
+          ),
+        }),
+      ];
+    case 'TSTypeAliasDeclaration':
+      return [
+        ast.createTypeAliasDeclaration({
+          loc: input.loc,
+          leadingComments: normalizeComments(input.leadingComments),
+          id: normalizeIdentifier(input.id, ctx),
+          type: normalizeType(input.typeAnnotation, ctx),
+          typeParameters: normalizeTypeParameterDeclaration(
             input.typeParameters,
             ctx,
           ),

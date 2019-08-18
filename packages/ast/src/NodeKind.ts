@@ -1,8 +1,11 @@
 enum NodeKind {
+  AnyObjectTypeAnnotation = 'AnyObjectTypeAnnotation',
   AnyTypeAnnotation = 'AnyTypeAnnotation',
   ArrayExpression = 'ArrayExpression',
+  ArrayPattern = 'ArrayPattern',
   ArrayTypeAnnotation = 'ArrayTypeAnnotation',
   AssignmentExpression = 'AssignmentExpression',
+  AssignmentPattern = 'AssignmentPattern',
   BooleanTypeAnnotation = 'BooleanTypeAnnotation',
   EmptyTypeAnnotation = 'EmptyTypeAnnotation',
   ExistsTypeAnnotation = 'ExistsTypeAnnotation',
@@ -10,6 +13,7 @@ enum NodeKind {
   ExportNamed = 'ExportNamed',
   ExpressionStatement = 'ExpressionStatement',
   File = 'File',
+  FunctionDeclaration = 'FunctionDeclaration',
   FunctionParameter = 'FunctionParameter',
   FunctionTypeAnnotation = 'FunctionTypeAnnotation',
   Identifier = 'Identifier',
@@ -22,6 +26,7 @@ enum NodeKind {
   ObjectTypeProperty = 'ObjectTypeProperty',
   ObjectTypeSpreadProperty = 'ObjectTypeSpreadProperty',
   ObjectTypeIndexer = 'ObjectTypeIndexer',
+  ObjectPattern = 'ObjectPattern',
   QualifiedTypeIdentifier = 'QualifiedTypeIdentifier',
   SpreadElement = 'SpreadElement',
   StringTypeAnnotation = 'StringTypeAnnotation',
@@ -34,5 +39,6 @@ enum NodeKind {
   TypeReferenceAnnotation = 'TypeReferenceAnnotation',
   UnionTypeAnnotation = 'UnionTypeAnnotation',
   UnknownTypeAnnotation = 'UnknownTypeAnnotation',
+  VoidTypeAnnotation = 'VoidTypeAnnotation',
 }
 export default NodeKind;

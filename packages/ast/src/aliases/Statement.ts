@@ -5,12 +5,14 @@
 import ExportDefault from '../nodes/ExportDefault';
 import ExportNamed from '../nodes/ExportNamed';
 import ExpressionStatement from '../nodes/ExpressionStatement';
+import FunctionDeclaration from '../nodes/FunctionDeclaration';
 import TypeAliasDeclaration from '../nodes/TypeAliasDeclaration';
 
 type Statement = 
   | ExportDefault
   | ExportNamed
   | ExpressionStatement
+  | FunctionDeclaration
   | TypeAliasDeclaration;
 
 export default Statement;

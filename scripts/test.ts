@@ -1,5 +1,5 @@
 import {resolve, relative, dirname} from 'path';
-import {mkdirSync, readFileSync, writeFileSync, realpathSync} from 'fs';
+import {mkdirSync, readFileSync, writeFileSync} from 'fs';
 import {lsrSync} from 'lsr';
 import parse, {Mode} from '../packages/parse/src';
 // import spawn = require('cross-spawn');
@@ -99,7 +99,7 @@ export default (filename: string) => {
       test('parse', () => {
         expect(parse(readFileSync(entry.fullPath, 'utf8'), {
           mode
-        })).toMatchSnapshot('ast');
+        })).toMatchSnapshot(entry.path + ' ast');
       });
     });
   }

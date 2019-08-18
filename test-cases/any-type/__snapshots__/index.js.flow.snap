@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`./index.js.flow ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 1,
+      "line": 3,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "body": Array [],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 33,
+            "line": 2,
+          },
+          "identifierName": "forceType",
+          "start": Position {
+            "column": 24,
+            "line": 2,
+          },
+        },
+        "name": "forceType",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 8,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 1,
+            },
+          },
+          "value": " @flow",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 3,
+        },
+        "start": Position {
+          "column": 15,
+          "line": 2,
+        },
+      },
+      "params": Array [
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 44,
+              "line": 2,
+            },
+            "identifierName": "value",
+            "start": Position {
+              "column": 34,
+              "line": 2,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 44,
+                "line": 2,
+              },
+              "identifierName": "value",
+              "start": Position {
+                "column": 34,
+                "line": 2,
+              },
+            },
+            "name": "value",
+          },
+          "type": Object {
+            "kind": "AnyTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 44,
+                "line": 2,
+              },
+              "start": Position {
+                "column": 41,
+                "line": 2,
+              },
+            },
+          },
+        },
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 58,
+              "line": 2,
+            },
+            "identifierName": "type",
+            "start": Position {
+              "column": 46,
+              "line": 2,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 58,
+                "line": 2,
+              },
+              "identifierName": "type",
+              "start": Position {
+                "column": 46,
+                "line": 2,
+              },
+            },
+            "name": "type",
+          },
+          "type": Object {
+            "kind": "StringTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 58,
+                "line": 2,
+              },
+              "start": Position {
+                "column": 52,
+                "line": 2,
+              },
+            },
+          },
+        },
+      ],
+      "restParam": undefined,
+      "returnType": Object {
+        "kind": "VoidTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 65,
+            "line": 2,
+          },
+          "start": Position {
+            "column": 61,
+            "line": 2,
+          },
+        },
+      },
+      "typeParams": Array [],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 33,
+            "line": 2,
+          },
+          "identifierName": "forceType",
+          "start": Position {
+            "column": 24,
+            "line": 2,
+          },
+        },
+        "name": "forceType",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 3,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 2,
+        },
+      },
+    },
+  ],
+}
+`;

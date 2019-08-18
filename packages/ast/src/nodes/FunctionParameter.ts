@@ -1,7 +1,7 @@
 import NodeKind from '../NodeKind';
 import TypeAnnotation from '../aliases/TypeAnnotation';
 import NodeBase from '../NodeBase';
-import LVal from '../aliases/LVal';
+import Pattern from '../aliases/Pattern';
 
 /**
  * Example:
@@ -10,6 +10,6 @@ import LVal from '../aliases/LVal';
  */
 export default interface FunctionParameter extends NodeBase {
   readonly kind: NodeKind.FunctionParameter;
-  readonly name?: LVal;
-  readonly type?: TypeAnnotation;
-};
+  readonly name: Pattern | undefined;
+  readonly type: TypeAnnotation | undefined;
+}

@@ -7,10 +7,10 @@ import AssignmentPattern from '../nodes/AssignmentPattern';
 import Identifier from '../nodes/Identifier';
 import ObjectPattern from '../nodes/ObjectPattern';
 
-type LVal = 
+type Pattern = 
   | ArrayPattern
   | AssignmentPattern
   | Identifier
   | ObjectPattern;
 
-export default LVal;
+export default Pattern;
