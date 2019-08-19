@@ -3,10 +3,12 @@
  */
 
 import FunctionDeclaration from '../nodes/FunctionDeclaration';
+import ImportStatement from '../nodes/ImportStatement';
 import TypeAliasDeclaration from '../nodes/TypeAliasDeclaration';
 
 type Declaration = 
   | FunctionDeclaration
+  | ImportStatement
   | TypeAliasDeclaration;
 
 export default Declaration;

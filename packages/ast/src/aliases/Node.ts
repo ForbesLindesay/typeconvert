@@ -11,7 +11,9 @@ import AssignmentExpression from '../nodes/AssignmentExpression';
 import AssignmentPattern from '../nodes/AssignmentPattern';
 import BinaryExpression from '../nodes/BinaryExpression';
 import BooleanTypeAnnotation from '../nodes/BooleanTypeAnnotation';
+import {CommonJSImportSource} from '../nodes/ImportStatement';
 import EmptyTypeAnnotation from '../nodes/EmptyTypeAnnotation';
+import {EsImportSource} from '../nodes/ImportStatement';
 import ExistsTypeAnnotation from '../nodes/ExistsTypeAnnotation';
 import ExportDefault from '../nodes/ExportDefault';
 import ExportNamed from '../nodes/ExportNamed';
@@ -22,11 +24,13 @@ import FunctionParameter from '../nodes/FunctionParameter';
 import FunctionTypeAnnotation from '../nodes/FunctionTypeAnnotation';
 import Identifier from '../nodes/Identifier';
 import IfStatement from '../nodes/IfStatement';
+import ImportStatement from '../nodes/ImportStatement';
 import ImportTypeAnnotation from '../nodes/ImportTypeAnnotation';
 import InferTypeAnnotation from '../nodes/InferTypeAnnotation';
 import IntersectionTypeAnnotation from '../nodes/IntersectionTypeAnnotation';
 import LiteralTypeAnnotation from '../nodes/LiteralTypeAnnotation';
 import LogicalExpression from '../nodes/LogicalExpression';
+import {NamespaceImportSource} from '../nodes/ImportStatement';
 import NumberTypeAnnotation from '../nodes/NumberTypeAnnotation';
 import ObjectPattern from '../nodes/ObjectPattern';
 import ObjectTypeAnnotation from '../nodes/ObjectTypeAnnotation';
@@ -58,7 +62,9 @@ type Node =
   | AssignmentPattern
   | BinaryExpression
   | BooleanTypeAnnotation
+  | CommonJSImportSource
   | EmptyTypeAnnotation
+  | EsImportSource
   | ExistsTypeAnnotation
   | ExportDefault
   | ExportNamed
@@ -69,11 +75,13 @@ type Node =
   | FunctionTypeAnnotation
   | Identifier
   | IfStatement
+  | ImportStatement
   | ImportTypeAnnotation
   | InferTypeAnnotation
   | IntersectionTypeAnnotation
   | LiteralTypeAnnotation
   | LogicalExpression
+  | NamespaceImportSource
   | NumberTypeAnnotation
   | ObjectPattern
   | ObjectTypeAnnotation

@@ -1,0 +1,5979 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`./index.js.flow ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 122,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 3,
+          },
+          "identifierName": "directionalProperty",
+          "start": Position {
+            "column": 7,
+            "line": 3,
+          },
+        },
+        "name": "directionalProperty",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 8,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 1,
+            },
+          },
+          "value": " @flow",
+        },
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 10,
+              "line": 2,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 2,
+            },
+          },
+          "value": " Helpers",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 63,
+          "line": 3,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 3,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 26,
+              "line": 3,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 3,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 3,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 3,
+          },
+        },
+        "relativePath": "./helpers/directionalProperty",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 9,
+            "line": 4,
+          },
+          "identifierName": "em",
+          "start": Position {
+            "column": 7,
+            "line": 4,
+          },
+        },
+        "name": "em",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 29,
+          "line": 4,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 4,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 9,
+              "line": 4,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 4,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 9,
+            "line": 4,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 4,
+          },
+        },
+        "relativePath": "./helpers/em",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 19,
+            "line": 5,
+          },
+          "identifierName": "modularScale",
+          "start": Position {
+            "column": 7,
+            "line": 5,
+          },
+        },
+        "name": "modularScale",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 49,
+          "line": 5,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 5,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 19,
+              "line": 5,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 5,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 19,
+            "line": 5,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 5,
+          },
+        },
+        "relativePath": "./helpers/modularScale",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 6,
+          },
+          "identifierName": "rem",
+          "start": Position {
+            "column": 7,
+            "line": 6,
+          },
+        },
+        "name": "rem",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 31,
+          "line": 6,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 6,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 10,
+              "line": 6,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 6,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 6,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 6,
+          },
+        },
+        "relativePath": "./helpers/rem",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 7,
+          },
+          "identifierName": "stripUnit",
+          "start": Position {
+            "column": 7,
+            "line": 7,
+          },
+        },
+        "name": "stripUnit",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 43,
+          "line": 7,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 7,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 16,
+              "line": 7,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 7,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 7,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 7,
+          },
+        },
+        "relativePath": "./helpers/stripUnit",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 10,
+          },
+          "identifierName": "clearFix",
+          "start": Position {
+            "column": 7,
+            "line": 10,
+          },
+        },
+        "name": "clearFix",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 9,
+              "line": 9,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 9,
+            },
+          },
+          "value": " Mixins",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 40,
+          "line": 10,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 10,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 15,
+              "line": 10,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 10,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 10,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 10,
+          },
+        },
+        "relativePath": "./mixins/clearFix",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 11,
+          },
+          "identifierName": "ellipsis",
+          "start": Position {
+            "column": 7,
+            "line": 11,
+          },
+        },
+        "name": "ellipsis",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 40,
+          "line": 11,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 11,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 15,
+              "line": 11,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 11,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 11,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 11,
+          },
+        },
+        "relativePath": "./mixins/ellipsis",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 12,
+          },
+          "identifierName": "fontFace",
+          "start": Position {
+            "column": 7,
+            "line": 12,
+          },
+        },
+        "name": "fontFace",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 40,
+          "line": 12,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 12,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 15,
+              "line": 12,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 12,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 12,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 12,
+          },
+        },
+        "relativePath": "./mixins/fontFace",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 13,
+          },
+          "identifierName": "hideText",
+          "start": Position {
+            "column": 7,
+            "line": 13,
+          },
+        },
+        "name": "hideText",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 40,
+          "line": 13,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 13,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 15,
+              "line": 13,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 13,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 13,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 13,
+          },
+        },
+        "relativePath": "./mixins/hideText",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 14,
+          },
+          "identifierName": "hiDPI",
+          "start": Position {
+            "column": 7,
+            "line": 14,
+          },
+        },
+        "name": "hiDPI",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 34,
+          "line": 14,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 14,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 12,
+              "line": 14,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 14,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 14,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 14,
+          },
+        },
+        "relativePath": "./mixins/hiDPI",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 15,
+          },
+          "identifierName": "normalize",
+          "start": Position {
+            "column": 7,
+            "line": 15,
+          },
+        },
+        "name": "normalize",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 42,
+          "line": 15,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 15,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 16,
+              "line": 15,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 15,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 15,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 15,
+          },
+        },
+        "relativePath": "./mixins/normalize",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 16,
+          },
+          "identifierName": "placeholder",
+          "start": Position {
+            "column": 7,
+            "line": 16,
+          },
+        },
+        "name": "placeholder",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 46,
+          "line": 16,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 16,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 18,
+              "line": 16,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 16,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 16,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 16,
+          },
+        },
+        "relativePath": "./mixins/placeholder",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 21,
+            "line": 17,
+          },
+          "identifierName": "radialGradient",
+          "start": Position {
+            "column": 7,
+            "line": 17,
+          },
+        },
+        "name": "radialGradient",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 52,
+          "line": 17,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 17,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 21,
+              "line": 17,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 17,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 21,
+            "line": 17,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 17,
+          },
+        },
+        "relativePath": "./mixins/radialGradient",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 18,
+          },
+          "identifierName": "retinaImage",
+          "start": Position {
+            "column": 7,
+            "line": 18,
+          },
+        },
+        "name": "retinaImage",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 46,
+          "line": 18,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 18,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 18,
+              "line": 18,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 18,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 18,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 18,
+          },
+        },
+        "relativePath": "./mixins/retinaImage",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 19,
+          },
+          "identifierName": "selection",
+          "start": Position {
+            "column": 7,
+            "line": 19,
+          },
+        },
+        "name": "selection",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 42,
+          "line": 19,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 19,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 16,
+              "line": 19,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 19,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 19,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 19,
+          },
+        },
+        "relativePath": "./mixins/selection",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 22,
+            "line": 20,
+          },
+          "identifierName": "timingFunctions",
+          "start": Position {
+            "column": 7,
+            "line": 20,
+          },
+        },
+        "name": "timingFunctions",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 54,
+          "line": 20,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 20,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 22,
+              "line": 20,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 20,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 22,
+            "line": 20,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 20,
+          },
+        },
+        "relativePath": "./mixins/timingFunctions",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 21,
+          },
+          "identifierName": "triangle",
+          "start": Position {
+            "column": 7,
+            "line": 21,
+          },
+        },
+        "name": "triangle",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 40,
+          "line": 21,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 21,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 15,
+              "line": 21,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 21,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 21,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 21,
+          },
+        },
+        "relativePath": "./mixins/triangle",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 22,
+          },
+          "identifierName": "wordWrap",
+          "start": Position {
+            "column": 7,
+            "line": 22,
+          },
+        },
+        "name": "wordWrap",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 40,
+          "line": 22,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 22,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 15,
+              "line": 22,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 22,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 22,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 22,
+          },
+        },
+        "relativePath": "./mixins/wordWrap",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 25,
+          },
+          "identifierName": "adjustHue",
+          "start": Position {
+            "column": 7,
+            "line": 25,
+          },
+        },
+        "name": "adjustHue",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 8,
+              "line": 24,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 24,
+            },
+          },
+          "value": " Color",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 41,
+          "line": 25,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 25,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 16,
+              "line": 25,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 25,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 25,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 25,
+          },
+        },
+        "relativePath": "./color/adjustHue",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 26,
+          },
+          "identifierName": "complement",
+          "start": Position {
+            "column": 7,
+            "line": 26,
+          },
+        },
+        "name": "complement",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 43,
+          "line": 26,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 26,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 17,
+              "line": 26,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 26,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 26,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 26,
+          },
+        },
+        "relativePath": "./color/complement",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 27,
+          },
+          "identifierName": "darken",
+          "start": Position {
+            "column": 7,
+            "line": 27,
+          },
+        },
+        "name": "darken",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 35,
+          "line": 27,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 27,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 13,
+              "line": 27,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 27,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 27,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 27,
+          },
+        },
+        "relativePath": "./color/darken",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 28,
+          },
+          "identifierName": "desaturate",
+          "start": Position {
+            "column": 7,
+            "line": 28,
+          },
+        },
+        "name": "desaturate",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 43,
+          "line": 28,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 28,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 17,
+              "line": 28,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 28,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 28,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 28,
+          },
+        },
+        "relativePath": "./color/desaturate",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 29,
+          },
+          "identifierName": "grayscale",
+          "start": Position {
+            "column": 7,
+            "line": 29,
+          },
+        },
+        "name": "grayscale",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 41,
+          "line": 29,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 29,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 16,
+              "line": 29,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 29,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 29,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 29,
+          },
+        },
+        "relativePath": "./color/grayscale",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 30,
+          },
+          "identifierName": "hsl",
+          "start": Position {
+            "column": 7,
+            "line": 30,
+          },
+        },
+        "name": "hsl",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 29,
+          "line": 30,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 30,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 10,
+              "line": 30,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 30,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 30,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 30,
+          },
+        },
+        "relativePath": "./color/hsl",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 31,
+          },
+          "identifierName": "hsla",
+          "start": Position {
+            "column": 7,
+            "line": 31,
+          },
+        },
+        "name": "hsla",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 31,
+          "line": 31,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 31,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 11,
+              "line": 31,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 31,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 31,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 31,
+          },
+        },
+        "relativePath": "./color/hsla",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 32,
+          },
+          "identifierName": "invert",
+          "start": Position {
+            "column": 7,
+            "line": 32,
+          },
+        },
+        "name": "invert",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 35,
+          "line": 32,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 32,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 13,
+              "line": 32,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 32,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 32,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 32,
+          },
+        },
+        "relativePath": "./color/invert",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 33,
+          },
+          "identifierName": "lighten",
+          "start": Position {
+            "column": 7,
+            "line": 33,
+          },
+        },
+        "name": "lighten",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 37,
+          "line": 33,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 33,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 14,
+              "line": 33,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 33,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 33,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 33,
+          },
+        },
+        "relativePath": "./color/lighten",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 34,
+          },
+          "identifierName": "mix",
+          "start": Position {
+            "column": 7,
+            "line": 34,
+          },
+        },
+        "name": "mix",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 29,
+          "line": 34,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 34,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 10,
+              "line": 34,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 34,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 34,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 34,
+          },
+        },
+        "relativePath": "./color/mix",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 35,
+          },
+          "identifierName": "opacify",
+          "start": Position {
+            "column": 7,
+            "line": 35,
+          },
+        },
+        "name": "opacify",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 37,
+          "line": 35,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 35,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 14,
+              "line": 35,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 35,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 35,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 35,
+          },
+        },
+        "relativePath": "./color/opacify",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 36,
+          },
+          "identifierName": "parseToHsl",
+          "start": Position {
+            "column": 7,
+            "line": 36,
+          },
+        },
+        "name": "parseToHsl",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 43,
+          "line": 36,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 36,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 17,
+              "line": 36,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 36,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 36,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 36,
+          },
+        },
+        "relativePath": "./color/parseToHsl",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 37,
+          },
+          "identifierName": "parseToRgb",
+          "start": Position {
+            "column": 7,
+            "line": 37,
+          },
+        },
+        "name": "parseToRgb",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 43,
+          "line": 37,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 37,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 17,
+              "line": 37,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 37,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 37,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 37,
+          },
+        },
+        "relativePath": "./color/parseToRgb",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 38,
+          },
+          "identifierName": "rgb",
+          "start": Position {
+            "column": 7,
+            "line": 38,
+          },
+        },
+        "name": "rgb",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 29,
+          "line": 38,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 38,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 10,
+              "line": 38,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 38,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 38,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 38,
+          },
+        },
+        "relativePath": "./color/rgb",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 39,
+          },
+          "identifierName": "rgba",
+          "start": Position {
+            "column": 7,
+            "line": 39,
+          },
+        },
+        "name": "rgba",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 31,
+          "line": 39,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 39,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 11,
+              "line": 39,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 39,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 39,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 39,
+          },
+        },
+        "relativePath": "./color/rgba",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 40,
+          },
+          "identifierName": "saturate",
+          "start": Position {
+            "column": 7,
+            "line": 40,
+          },
+        },
+        "name": "saturate",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 39,
+          "line": 40,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 40,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 15,
+              "line": 40,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 40,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 40,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 40,
+          },
+        },
+        "relativePath": "./color/saturate",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 41,
+          },
+          "identifierName": "setHue",
+          "start": Position {
+            "column": 7,
+            "line": 41,
+          },
+        },
+        "name": "setHue",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 35,
+          "line": 41,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 41,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 13,
+              "line": 41,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 41,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 41,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 41,
+          },
+        },
+        "relativePath": "./color/setHue",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 19,
+            "line": 42,
+          },
+          "identifierName": "setLightness",
+          "start": Position {
+            "column": 7,
+            "line": 42,
+          },
+        },
+        "name": "setLightness",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 47,
+          "line": 42,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 42,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 19,
+              "line": 42,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 42,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 19,
+            "line": 42,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 42,
+          },
+        },
+        "relativePath": "./color/setLightness",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 43,
+          },
+          "identifierName": "setSaturation",
+          "start": Position {
+            "column": 7,
+            "line": 43,
+          },
+        },
+        "name": "setSaturation",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 49,
+          "line": 43,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 43,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 20,
+              "line": 43,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 43,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 43,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 43,
+          },
+        },
+        "relativePath": "./color/setSaturation",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 44,
+          },
+          "identifierName": "shade",
+          "start": Position {
+            "column": 7,
+            "line": 44,
+          },
+        },
+        "name": "shade",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 33,
+          "line": 44,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 44,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 12,
+              "line": 44,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 44,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 44,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 44,
+          },
+        },
+        "relativePath": "./color/shade",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 45,
+          },
+          "identifierName": "tint",
+          "start": Position {
+            "column": 7,
+            "line": 45,
+          },
+        },
+        "name": "tint",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 31,
+          "line": 45,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 45,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 11,
+              "line": 45,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 45,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 45,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 45,
+          },
+        },
+        "relativePath": "./color/tint",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 46,
+          },
+          "identifierName": "toColorString",
+          "start": Position {
+            "column": 7,
+            "line": 46,
+          },
+        },
+        "name": "toColorString",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 49,
+          "line": 46,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 46,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 20,
+              "line": 46,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 46,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 46,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 46,
+          },
+        },
+        "relativePath": "./color/toColorString",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 21,
+            "line": 47,
+          },
+          "identifierName": "transparentize",
+          "start": Position {
+            "column": 7,
+            "line": 47,
+          },
+        },
+        "name": "transparentize",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 51,
+          "line": 47,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 47,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 21,
+              "line": 47,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 47,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 21,
+            "line": 47,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 47,
+          },
+        },
+        "relativePath": "./color/transparentize",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 50,
+          },
+          "identifierName": "animation",
+          "start": Position {
+            "column": 7,
+            "line": 50,
+          },
+        },
+        "name": "animation",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 13,
+              "line": 49,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 49,
+            },
+          },
+          "value": " Shorthands",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 46,
+          "line": 50,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 50,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 16,
+              "line": 50,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 50,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 50,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 50,
+          },
+        },
+        "relativePath": "./shorthands/animation",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 23,
+            "line": 51,
+          },
+          "identifierName": "backgroundImages",
+          "start": Position {
+            "column": 7,
+            "line": 51,
+          },
+        },
+        "name": "backgroundImages",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 60,
+          "line": 51,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 51,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 23,
+              "line": 51,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 51,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 23,
+            "line": 51,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 51,
+          },
+        },
+        "relativePath": "./shorthands/backgroundImages",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 52,
+          },
+          "identifierName": "backgrounds",
+          "start": Position {
+            "column": 7,
+            "line": 52,
+          },
+        },
+        "name": "backgrounds",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 50,
+          "line": 52,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 52,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 18,
+              "line": 52,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 52,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 52,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 52,
+          },
+        },
+        "relativePath": "./shorthands/backgrounds",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 53,
+          },
+          "identifierName": "borderColor",
+          "start": Position {
+            "column": 7,
+            "line": 53,
+          },
+        },
+        "name": "borderColor",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 50,
+          "line": 53,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 53,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 18,
+              "line": 53,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 53,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 53,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 53,
+          },
+        },
+        "relativePath": "./shorthands/borderColor",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 19,
+            "line": 54,
+          },
+          "identifierName": "borderRadius",
+          "start": Position {
+            "column": 7,
+            "line": 54,
+          },
+        },
+        "name": "borderRadius",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 52,
+          "line": 54,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 54,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 19,
+              "line": 54,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 54,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 19,
+            "line": 54,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 54,
+          },
+        },
+        "relativePath": "./shorthands/borderRadius",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 55,
+          },
+          "identifierName": "borderStyle",
+          "start": Position {
+            "column": 7,
+            "line": 55,
+          },
+        },
+        "name": "borderStyle",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 50,
+          "line": 55,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 55,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 18,
+              "line": 55,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 55,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 55,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 55,
+          },
+        },
+        "relativePath": "./shorthands/borderStyle",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 56,
+          },
+          "identifierName": "borderWidth",
+          "start": Position {
+            "column": 7,
+            "line": 56,
+          },
+        },
+        "name": "borderWidth",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 50,
+          "line": 56,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 56,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 18,
+              "line": 56,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 56,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 56,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 56,
+          },
+        },
+        "relativePath": "./shorthands/borderWidth",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 57,
+          },
+          "identifierName": "buttons",
+          "start": Position {
+            "column": 7,
+            "line": 57,
+          },
+        },
+        "name": "buttons",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 42,
+          "line": 57,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 57,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 14,
+              "line": 57,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 57,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 57,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 57,
+          },
+        },
+        "relativePath": "./shorthands/buttons",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 58,
+          },
+          "identifierName": "margin",
+          "start": Position {
+            "column": 7,
+            "line": 58,
+          },
+        },
+        "name": "margin",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 40,
+          "line": 58,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 58,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 13,
+              "line": 58,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 58,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 58,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 58,
+          },
+        },
+        "relativePath": "./shorthands/margin",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 59,
+          },
+          "identifierName": "padding",
+          "start": Position {
+            "column": 7,
+            "line": 59,
+          },
+        },
+        "name": "padding",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 42,
+          "line": 59,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 59,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 14,
+              "line": 59,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 59,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 59,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 59,
+          },
+        },
+        "relativePath": "./shorthands/padding",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 60,
+          },
+          "identifierName": "position",
+          "start": Position {
+            "column": 7,
+            "line": 60,
+          },
+        },
+        "name": "position",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 44,
+          "line": 60,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 60,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 15,
+              "line": 60,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 60,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 60,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 60,
+          },
+        },
+        "relativePath": "./shorthands/position",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 61,
+          },
+          "identifierName": "size",
+          "start": Position {
+            "column": 7,
+            "line": 61,
+          },
+        },
+        "name": "size",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 36,
+          "line": 61,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 61,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 11,
+              "line": 61,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 61,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 61,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 61,
+          },
+        },
+        "relativePath": "./shorthands/size",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 62,
+          },
+          "identifierName": "textInputs",
+          "start": Position {
+            "column": 7,
+            "line": 62,
+          },
+        },
+        "name": "textInputs",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 48,
+          "line": 62,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 62,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 17,
+              "line": 62,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 62,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 62,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 62,
+          },
+        },
+        "relativePath": "./shorthands/textInputs",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 63,
+          },
+          "identifierName": "transitions",
+          "start": Position {
+            "column": 7,
+            "line": 63,
+          },
+        },
+        "name": "transitions",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 50,
+          "line": 63,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 63,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 18,
+              "line": 63,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 63,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 63,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 63,
+          },
+        },
+        "relativePath": "./shorthands/transitions",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 66,
+          },
+          "identifierName": "adjustHue",
+          "start": Position {
+            "column": 2,
+            "line": 66,
+          },
+        },
+        "name": "adjustHue",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 11,
+          "line": 66,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 66,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 66,
+          },
+          "identifierName": "adjustHue",
+          "start": Position {
+            "column": 2,
+            "line": 66,
+          },
+        },
+        "name": "adjustHue",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 67,
+          },
+          "identifierName": "animation",
+          "start": Position {
+            "column": 2,
+            "line": 67,
+          },
+        },
+        "name": "animation",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 11,
+          "line": 67,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 67,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 67,
+          },
+          "identifierName": "animation",
+          "start": Position {
+            "column": 2,
+            "line": 67,
+          },
+        },
+        "name": "animation",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 68,
+          },
+          "identifierName": "backgroundImages",
+          "start": Position {
+            "column": 2,
+            "line": 68,
+          },
+        },
+        "name": "backgroundImages",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 18,
+          "line": 68,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 68,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 68,
+          },
+          "identifierName": "backgroundImages",
+          "start": Position {
+            "column": 2,
+            "line": 68,
+          },
+        },
+        "name": "backgroundImages",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 69,
+          },
+          "identifierName": "backgrounds",
+          "start": Position {
+            "column": 2,
+            "line": 69,
+          },
+        },
+        "name": "backgrounds",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 13,
+          "line": 69,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 69,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 69,
+          },
+          "identifierName": "backgrounds",
+          "start": Position {
+            "column": 2,
+            "line": 69,
+          },
+        },
+        "name": "backgrounds",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 70,
+          },
+          "identifierName": "borderColor",
+          "start": Position {
+            "column": 2,
+            "line": 70,
+          },
+        },
+        "name": "borderColor",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 13,
+          "line": 70,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 70,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 70,
+          },
+          "identifierName": "borderColor",
+          "start": Position {
+            "column": 2,
+            "line": 70,
+          },
+        },
+        "name": "borderColor",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 71,
+          },
+          "identifierName": "borderRadius",
+          "start": Position {
+            "column": 2,
+            "line": 71,
+          },
+        },
+        "name": "borderRadius",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 14,
+          "line": 71,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 71,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 71,
+          },
+          "identifierName": "borderRadius",
+          "start": Position {
+            "column": 2,
+            "line": 71,
+          },
+        },
+        "name": "borderRadius",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 72,
+          },
+          "identifierName": "borderStyle",
+          "start": Position {
+            "column": 2,
+            "line": 72,
+          },
+        },
+        "name": "borderStyle",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 13,
+          "line": 72,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 72,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 72,
+          },
+          "identifierName": "borderStyle",
+          "start": Position {
+            "column": 2,
+            "line": 72,
+          },
+        },
+        "name": "borderStyle",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 73,
+          },
+          "identifierName": "borderWidth",
+          "start": Position {
+            "column": 2,
+            "line": 73,
+          },
+        },
+        "name": "borderWidth",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 13,
+          "line": 73,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 73,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 73,
+          },
+          "identifierName": "borderWidth",
+          "start": Position {
+            "column": 2,
+            "line": 73,
+          },
+        },
+        "name": "borderWidth",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 9,
+            "line": 74,
+          },
+          "identifierName": "buttons",
+          "start": Position {
+            "column": 2,
+            "line": 74,
+          },
+        },
+        "name": "buttons",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 9,
+          "line": 74,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 74,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 9,
+            "line": 74,
+          },
+          "identifierName": "buttons",
+          "start": Position {
+            "column": 2,
+            "line": 74,
+          },
+        },
+        "name": "buttons",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 75,
+          },
+          "identifierName": "clearFix",
+          "start": Position {
+            "column": 2,
+            "line": 75,
+          },
+        },
+        "name": "clearFix",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 10,
+          "line": 75,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 75,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 75,
+          },
+          "identifierName": "clearFix",
+          "start": Position {
+            "column": 2,
+            "line": 75,
+          },
+        },
+        "name": "clearFix",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 76,
+          },
+          "identifierName": "complement",
+          "start": Position {
+            "column": 2,
+            "line": 76,
+          },
+        },
+        "name": "complement",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 12,
+          "line": 76,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 76,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 76,
+          },
+          "identifierName": "complement",
+          "start": Position {
+            "column": 2,
+            "line": 76,
+          },
+        },
+        "name": "complement",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 8,
+            "line": 77,
+          },
+          "identifierName": "darken",
+          "start": Position {
+            "column": 2,
+            "line": 77,
+          },
+        },
+        "name": "darken",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 8,
+          "line": 77,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 77,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 8,
+            "line": 77,
+          },
+          "identifierName": "darken",
+          "start": Position {
+            "column": 2,
+            "line": 77,
+          },
+        },
+        "name": "darken",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 78,
+          },
+          "identifierName": "desaturate",
+          "start": Position {
+            "column": 2,
+            "line": 78,
+          },
+        },
+        "name": "desaturate",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 12,
+          "line": 78,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 78,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 78,
+          },
+          "identifierName": "desaturate",
+          "start": Position {
+            "column": 2,
+            "line": 78,
+          },
+        },
+        "name": "desaturate",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 21,
+            "line": 79,
+          },
+          "identifierName": "directionalProperty",
+          "start": Position {
+            "column": 2,
+            "line": 79,
+          },
+        },
+        "name": "directionalProperty",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 21,
+          "line": 79,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 79,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 21,
+            "line": 79,
+          },
+          "identifierName": "directionalProperty",
+          "start": Position {
+            "column": 2,
+            "line": 79,
+          },
+        },
+        "name": "directionalProperty",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 80,
+          },
+          "identifierName": "ellipsis",
+          "start": Position {
+            "column": 2,
+            "line": 80,
+          },
+        },
+        "name": "ellipsis",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 10,
+          "line": 80,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 80,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 80,
+          },
+          "identifierName": "ellipsis",
+          "start": Position {
+            "column": 2,
+            "line": 80,
+          },
+        },
+        "name": "ellipsis",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 4,
+            "line": 81,
+          },
+          "identifierName": "em",
+          "start": Position {
+            "column": 2,
+            "line": 81,
+          },
+        },
+        "name": "em",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 4,
+          "line": 81,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 81,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 4,
+            "line": 81,
+          },
+          "identifierName": "em",
+          "start": Position {
+            "column": 2,
+            "line": 81,
+          },
+        },
+        "name": "em",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 82,
+          },
+          "identifierName": "fontFace",
+          "start": Position {
+            "column": 2,
+            "line": 82,
+          },
+        },
+        "name": "fontFace",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 10,
+          "line": 82,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 82,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 82,
+          },
+          "identifierName": "fontFace",
+          "start": Position {
+            "column": 2,
+            "line": 82,
+          },
+        },
+        "name": "fontFace",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 83,
+          },
+          "identifierName": "grayscale",
+          "start": Position {
+            "column": 2,
+            "line": 83,
+          },
+        },
+        "name": "grayscale",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 11,
+          "line": 83,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 83,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 83,
+          },
+          "identifierName": "grayscale",
+          "start": Position {
+            "column": 2,
+            "line": 83,
+          },
+        },
+        "name": "grayscale",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 8,
+            "line": 84,
+          },
+          "identifierName": "invert",
+          "start": Position {
+            "column": 2,
+            "line": 84,
+          },
+        },
+        "name": "invert",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 8,
+          "line": 84,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 84,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 8,
+            "line": 84,
+          },
+          "identifierName": "invert",
+          "start": Position {
+            "column": 2,
+            "line": 84,
+          },
+        },
+        "name": "invert",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 85,
+          },
+          "identifierName": "hideText",
+          "start": Position {
+            "column": 2,
+            "line": 85,
+          },
+        },
+        "name": "hideText",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 10,
+          "line": 85,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 85,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 85,
+          },
+          "identifierName": "hideText",
+          "start": Position {
+            "column": 2,
+            "line": 85,
+          },
+        },
+        "name": "hideText",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 7,
+            "line": 86,
+          },
+          "identifierName": "hiDPI",
+          "start": Position {
+            "column": 2,
+            "line": 86,
+          },
+        },
+        "name": "hiDPI",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 7,
+          "line": 86,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 86,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 7,
+            "line": 86,
+          },
+          "identifierName": "hiDPI",
+          "start": Position {
+            "column": 2,
+            "line": 86,
+          },
+        },
+        "name": "hiDPI",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 5,
+            "line": 87,
+          },
+          "identifierName": "hsl",
+          "start": Position {
+            "column": 2,
+            "line": 87,
+          },
+        },
+        "name": "hsl",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 5,
+          "line": 87,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 87,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 5,
+            "line": 87,
+          },
+          "identifierName": "hsl",
+          "start": Position {
+            "column": 2,
+            "line": 87,
+          },
+        },
+        "name": "hsl",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 6,
+            "line": 88,
+          },
+          "identifierName": "hsla",
+          "start": Position {
+            "column": 2,
+            "line": 88,
+          },
+        },
+        "name": "hsla",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 6,
+          "line": 88,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 88,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 6,
+            "line": 88,
+          },
+          "identifierName": "hsla",
+          "start": Position {
+            "column": 2,
+            "line": 88,
+          },
+        },
+        "name": "hsla",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 9,
+            "line": 89,
+          },
+          "identifierName": "lighten",
+          "start": Position {
+            "column": 2,
+            "line": 89,
+          },
+        },
+        "name": "lighten",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 9,
+          "line": 89,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 89,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 9,
+            "line": 89,
+          },
+          "identifierName": "lighten",
+          "start": Position {
+            "column": 2,
+            "line": 89,
+          },
+        },
+        "name": "lighten",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 8,
+            "line": 90,
+          },
+          "identifierName": "margin",
+          "start": Position {
+            "column": 2,
+            "line": 90,
+          },
+        },
+        "name": "margin",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 8,
+          "line": 90,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 90,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 8,
+            "line": 90,
+          },
+          "identifierName": "margin",
+          "start": Position {
+            "column": 2,
+            "line": 90,
+          },
+        },
+        "name": "margin",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 5,
+            "line": 91,
+          },
+          "identifierName": "mix",
+          "start": Position {
+            "column": 2,
+            "line": 91,
+          },
+        },
+        "name": "mix",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 5,
+          "line": 91,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 91,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 5,
+            "line": 91,
+          },
+          "identifierName": "mix",
+          "start": Position {
+            "column": 2,
+            "line": 91,
+          },
+        },
+        "name": "mix",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 92,
+          },
+          "identifierName": "modularScale",
+          "start": Position {
+            "column": 2,
+            "line": 92,
+          },
+        },
+        "name": "modularScale",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 14,
+          "line": 92,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 92,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 92,
+          },
+          "identifierName": "modularScale",
+          "start": Position {
+            "column": 2,
+            "line": 92,
+          },
+        },
+        "name": "modularScale",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 93,
+          },
+          "identifierName": "normalize",
+          "start": Position {
+            "column": 2,
+            "line": 93,
+          },
+        },
+        "name": "normalize",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 11,
+          "line": 93,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 93,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 93,
+          },
+          "identifierName": "normalize",
+          "start": Position {
+            "column": 2,
+            "line": 93,
+          },
+        },
+        "name": "normalize",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 9,
+            "line": 94,
+          },
+          "identifierName": "opacify",
+          "start": Position {
+            "column": 2,
+            "line": 94,
+          },
+        },
+        "name": "opacify",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 9,
+          "line": 94,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 94,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 9,
+            "line": 94,
+          },
+          "identifierName": "opacify",
+          "start": Position {
+            "column": 2,
+            "line": 94,
+          },
+        },
+        "name": "opacify",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 9,
+            "line": 95,
+          },
+          "identifierName": "padding",
+          "start": Position {
+            "column": 2,
+            "line": 95,
+          },
+        },
+        "name": "padding",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 9,
+          "line": 95,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 95,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 9,
+            "line": 95,
+          },
+          "identifierName": "padding",
+          "start": Position {
+            "column": 2,
+            "line": 95,
+          },
+        },
+        "name": "padding",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 96,
+          },
+          "identifierName": "parseToHsl",
+          "start": Position {
+            "column": 2,
+            "line": 96,
+          },
+        },
+        "name": "parseToHsl",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 12,
+          "line": 96,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 96,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 96,
+          },
+          "identifierName": "parseToHsl",
+          "start": Position {
+            "column": 2,
+            "line": 96,
+          },
+        },
+        "name": "parseToHsl",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 97,
+          },
+          "identifierName": "parseToRgb",
+          "start": Position {
+            "column": 2,
+            "line": 97,
+          },
+        },
+        "name": "parseToRgb",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 12,
+          "line": 97,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 97,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 97,
+          },
+          "identifierName": "parseToRgb",
+          "start": Position {
+            "column": 2,
+            "line": 97,
+          },
+        },
+        "name": "parseToRgb",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 98,
+          },
+          "identifierName": "placeholder",
+          "start": Position {
+            "column": 2,
+            "line": 98,
+          },
+        },
+        "name": "placeholder",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 13,
+          "line": 98,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 98,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 98,
+          },
+          "identifierName": "placeholder",
+          "start": Position {
+            "column": 2,
+            "line": 98,
+          },
+        },
+        "name": "placeholder",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 99,
+          },
+          "identifierName": "position",
+          "start": Position {
+            "column": 2,
+            "line": 99,
+          },
+        },
+        "name": "position",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 10,
+          "line": 99,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 99,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 99,
+          },
+          "identifierName": "position",
+          "start": Position {
+            "column": 2,
+            "line": 99,
+          },
+        },
+        "name": "position",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 100,
+          },
+          "identifierName": "radialGradient",
+          "start": Position {
+            "column": 2,
+            "line": 100,
+          },
+        },
+        "name": "radialGradient",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 16,
+          "line": 100,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 100,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 100,
+          },
+          "identifierName": "radialGradient",
+          "start": Position {
+            "column": 2,
+            "line": 100,
+          },
+        },
+        "name": "radialGradient",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 5,
+            "line": 101,
+          },
+          "identifierName": "rem",
+          "start": Position {
+            "column": 2,
+            "line": 101,
+          },
+        },
+        "name": "rem",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 5,
+          "line": 101,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 101,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 5,
+            "line": 101,
+          },
+          "identifierName": "rem",
+          "start": Position {
+            "column": 2,
+            "line": 101,
+          },
+        },
+        "name": "rem",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 102,
+          },
+          "identifierName": "retinaImage",
+          "start": Position {
+            "column": 2,
+            "line": 102,
+          },
+        },
+        "name": "retinaImage",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 13,
+          "line": 102,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 102,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 102,
+          },
+          "identifierName": "retinaImage",
+          "start": Position {
+            "column": 2,
+            "line": 102,
+          },
+        },
+        "name": "retinaImage",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 5,
+            "line": 103,
+          },
+          "identifierName": "rgb",
+          "start": Position {
+            "column": 2,
+            "line": 103,
+          },
+        },
+        "name": "rgb",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 5,
+          "line": 103,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 103,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 5,
+            "line": 103,
+          },
+          "identifierName": "rgb",
+          "start": Position {
+            "column": 2,
+            "line": 103,
+          },
+        },
+        "name": "rgb",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 6,
+            "line": 104,
+          },
+          "identifierName": "rgba",
+          "start": Position {
+            "column": 2,
+            "line": 104,
+          },
+        },
+        "name": "rgba",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 6,
+          "line": 104,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 104,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 6,
+            "line": 104,
+          },
+          "identifierName": "rgba",
+          "start": Position {
+            "column": 2,
+            "line": 104,
+          },
+        },
+        "name": "rgba",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 105,
+          },
+          "identifierName": "saturate",
+          "start": Position {
+            "column": 2,
+            "line": 105,
+          },
+        },
+        "name": "saturate",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 10,
+          "line": 105,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 105,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 105,
+          },
+          "identifierName": "saturate",
+          "start": Position {
+            "column": 2,
+            "line": 105,
+          },
+        },
+        "name": "saturate",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 106,
+          },
+          "identifierName": "selection",
+          "start": Position {
+            "column": 2,
+            "line": 106,
+          },
+        },
+        "name": "selection",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 11,
+          "line": 106,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 106,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 106,
+          },
+          "identifierName": "selection",
+          "start": Position {
+            "column": 2,
+            "line": 106,
+          },
+        },
+        "name": "selection",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 8,
+            "line": 107,
+          },
+          "identifierName": "setHue",
+          "start": Position {
+            "column": 2,
+            "line": 107,
+          },
+        },
+        "name": "setHue",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 8,
+          "line": 107,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 107,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 8,
+            "line": 107,
+          },
+          "identifierName": "setHue",
+          "start": Position {
+            "column": 2,
+            "line": 107,
+          },
+        },
+        "name": "setHue",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 108,
+          },
+          "identifierName": "setLightness",
+          "start": Position {
+            "column": 2,
+            "line": 108,
+          },
+        },
+        "name": "setLightness",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 14,
+          "line": 108,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 108,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 108,
+          },
+          "identifierName": "setLightness",
+          "start": Position {
+            "column": 2,
+            "line": 108,
+          },
+        },
+        "name": "setLightness",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 109,
+          },
+          "identifierName": "setSaturation",
+          "start": Position {
+            "column": 2,
+            "line": 109,
+          },
+        },
+        "name": "setSaturation",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 15,
+          "line": 109,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 109,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 109,
+          },
+          "identifierName": "setSaturation",
+          "start": Position {
+            "column": 2,
+            "line": 109,
+          },
+        },
+        "name": "setSaturation",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 7,
+            "line": 110,
+          },
+          "identifierName": "shade",
+          "start": Position {
+            "column": 2,
+            "line": 110,
+          },
+        },
+        "name": "shade",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 7,
+          "line": 110,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 110,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 7,
+            "line": 110,
+          },
+          "identifierName": "shade",
+          "start": Position {
+            "column": 2,
+            "line": 110,
+          },
+        },
+        "name": "shade",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 6,
+            "line": 111,
+          },
+          "identifierName": "size",
+          "start": Position {
+            "column": 2,
+            "line": 111,
+          },
+        },
+        "name": "size",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 6,
+          "line": 111,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 111,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 6,
+            "line": 111,
+          },
+          "identifierName": "size",
+          "start": Position {
+            "column": 2,
+            "line": 111,
+          },
+        },
+        "name": "size",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 112,
+          },
+          "identifierName": "stripUnit",
+          "start": Position {
+            "column": 2,
+            "line": 112,
+          },
+        },
+        "name": "stripUnit",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 11,
+          "line": 112,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 112,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 112,
+          },
+          "identifierName": "stripUnit",
+          "start": Position {
+            "column": 2,
+            "line": 112,
+          },
+        },
+        "name": "stripUnit",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 113,
+          },
+          "identifierName": "textInputs",
+          "start": Position {
+            "column": 2,
+            "line": 113,
+          },
+        },
+        "name": "textInputs",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 12,
+          "line": 113,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 113,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 113,
+          },
+          "identifierName": "textInputs",
+          "start": Position {
+            "column": 2,
+            "line": 113,
+          },
+        },
+        "name": "textInputs",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 114,
+          },
+          "identifierName": "timingFunctions",
+          "start": Position {
+            "column": 2,
+            "line": 114,
+          },
+        },
+        "name": "timingFunctions",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 17,
+          "line": 114,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 114,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 114,
+          },
+          "identifierName": "timingFunctions",
+          "start": Position {
+            "column": 2,
+            "line": 114,
+          },
+        },
+        "name": "timingFunctions",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 6,
+            "line": 115,
+          },
+          "identifierName": "tint",
+          "start": Position {
+            "column": 2,
+            "line": 115,
+          },
+        },
+        "name": "tint",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 6,
+          "line": 115,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 115,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 6,
+            "line": 115,
+          },
+          "identifierName": "tint",
+          "start": Position {
+            "column": 2,
+            "line": 115,
+          },
+        },
+        "name": "tint",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 116,
+          },
+          "identifierName": "toColorString",
+          "start": Position {
+            "column": 2,
+            "line": 116,
+          },
+        },
+        "name": "toColorString",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 15,
+          "line": 116,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 116,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 116,
+          },
+          "identifierName": "toColorString",
+          "start": Position {
+            "column": 2,
+            "line": 116,
+          },
+        },
+        "name": "toColorString",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 117,
+          },
+          "identifierName": "transitions",
+          "start": Position {
+            "column": 2,
+            "line": 117,
+          },
+        },
+        "name": "transitions",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 13,
+          "line": 117,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 117,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 117,
+          },
+          "identifierName": "transitions",
+          "start": Position {
+            "column": 2,
+            "line": 117,
+          },
+        },
+        "name": "transitions",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 118,
+          },
+          "identifierName": "transparentize",
+          "start": Position {
+            "column": 2,
+            "line": 118,
+          },
+        },
+        "name": "transparentize",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 16,
+          "line": 118,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 118,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 118,
+          },
+          "identifierName": "transparentize",
+          "start": Position {
+            "column": 2,
+            "line": 118,
+          },
+        },
+        "name": "transparentize",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 119,
+          },
+          "identifierName": "triangle",
+          "start": Position {
+            "column": 2,
+            "line": 119,
+          },
+        },
+        "name": "triangle",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 10,
+          "line": 119,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 119,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 119,
+          },
+          "identifierName": "triangle",
+          "start": Position {
+            "column": 2,
+            "line": 119,
+          },
+        },
+        "name": "triangle",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 120,
+          },
+          "identifierName": "wordWrap",
+          "start": Position {
+            "column": 2,
+            "line": 120,
+          },
+        },
+        "name": "wordWrap",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 10,
+          "line": 120,
+        },
+        "start": Position {
+          "column": 2,
+          "line": 120,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 10,
+            "line": 120,
+          },
+          "identifierName": "wordWrap",
+          "start": Position {
+            "column": 2,
+            "line": 120,
+          },
+        },
+        "name": "wordWrap",
+      },
+    },
+  ],
+}
+`;

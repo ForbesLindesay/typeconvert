@@ -1,5 +1,215 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`./add-a.d.ts ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 9,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "body": undefined,
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 7,
+          },
+          "identifierName": "add",
+          "start": Position {
+            "column": 17,
+            "line": 7,
+          },
+        },
+        "name": "add",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentBlock",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 3,
+              "line": 6,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 1,
+            },
+          },
+          "value": "*
+ * Adds two numbers together
+ *
+ * @param a The first number
+ * @param b The second number
+ ",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 51,
+          "line": 7,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 7,
+        },
+      },
+      "params": Array [
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 30,
+              "line": 7,
+            },
+            "identifierName": "a",
+            "start": Position {
+              "column": 21,
+              "line": 7,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 30,
+                "line": 7,
+              },
+              "identifierName": "a",
+              "start": Position {
+                "column": 21,
+                "line": 7,
+              },
+            },
+            "name": "a",
+          },
+          "optional": false,
+          "type": Object {
+            "kind": "StringTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 30,
+                "line": 7,
+              },
+              "start": Position {
+                "column": 24,
+                "line": 7,
+              },
+            },
+          },
+        },
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 41,
+              "line": 7,
+            },
+            "identifierName": "b",
+            "start": Position {
+              "column": 32,
+              "line": 7,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 41,
+                "line": 7,
+              },
+              "identifierName": "b",
+              "start": Position {
+                "column": 32,
+                "line": 7,
+              },
+            },
+            "name": "b",
+          },
+          "optional": false,
+          "type": Object {
+            "kind": "StringTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 41,
+                "line": 7,
+              },
+              "start": Position {
+                "column": 35,
+                "line": 7,
+              },
+            },
+          },
+        },
+      ],
+      "restParam": undefined,
+      "returnType": Object {
+        "kind": "StringTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 50,
+            "line": 7,
+          },
+          "start": Position {
+            "column": 44,
+            "line": 7,
+          },
+        },
+      },
+      "typeParams": Array [],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 8,
+          },
+          "identifierName": "add",
+          "start": Position {
+            "column": 15,
+            "line": 8,
+          },
+        },
+        "name": "add",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 19,
+          "line": 8,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 8,
+        },
+      },
+    },
+  ],
+}
+`;
+
 exports[`./add-b.ts ast 1`] = `
 Object {
   "kind": "File",
@@ -266,6 +476,239 @@ Object {
           "column": 0,
           "line": 7,
         },
+      },
+    },
+  ],
+}
+`;
+
+exports[`./index.ts ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 5,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 1,
+          },
+          "identifierName": "addA",
+          "start": Position {
+            "column": 7,
+            "line": 1,
+          },
+        },
+        "name": "addA",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 27,
+          "line": 1,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 1,
+        },
+      },
+      "mode": undefined,
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 11,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 1,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 1,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 1,
+          },
+        },
+        "relativePath": "./add-a",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 2,
+          },
+          "identifierName": "addB",
+          "start": Position {
+            "column": 7,
+            "line": 2,
+          },
+        },
+        "name": "addB",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 27,
+          "line": 2,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 2,
+        },
+      },
+      "mode": undefined,
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 11,
+              "line": 2,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 2,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 11,
+            "line": 2,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 2,
+          },
+        },
+        "relativePath": "./add-b",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 4,
+          },
+          "identifierName": "addA",
+          "start": Position {
+            "column": 8,
+            "line": 4,
+          },
+        },
+        "name": "addA",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 12,
+          "line": 4,
+        },
+        "start": Position {
+          "column": 8,
+          "line": 4,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 12,
+            "line": 4,
+          },
+          "identifierName": "addA",
+          "start": Position {
+            "column": 8,
+            "line": 4,
+          },
+        },
+        "name": "addA",
+      },
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 4,
+          },
+          "identifierName": "addB",
+          "start": Position {
+            "column": 14,
+            "line": 4,
+          },
+        },
+        "name": "addB",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 18,
+          "line": 4,
+        },
+        "start": Position {
+          "column": 14,
+          "line": 4,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 18,
+            "line": 4,
+          },
+          "identifierName": "addB",
+          "start": Position {
+            "column": 14,
+            "line": 4,
+          },
+        },
+        "name": "addB",
       },
     },
   ],

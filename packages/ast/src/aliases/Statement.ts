@@ -7,6 +7,7 @@ import ExportNamed from '../nodes/ExportNamed';
 import ExpressionStatement from '../nodes/ExpressionStatement';
 import FunctionDeclaration from '../nodes/FunctionDeclaration';
 import IfStatement from '../nodes/IfStatement';
+import ImportStatement from '../nodes/ImportStatement';
 import ReturnStatement from '../nodes/ReturnStatement';
 import TypeAliasDeclaration from '../nodes/TypeAliasDeclaration';
 
@@ -16,6 +17,7 @@ type Statement =
   | ExpressionStatement
   | FunctionDeclaration
   | IfStatement
+  | ImportStatement
   | ReturnStatement
   | TypeAliasDeclaration;
 

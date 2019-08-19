@@ -22,6 +22,10 @@ import FunctionParameter from './nodes/FunctionParameter';
 import FunctionTypeAnnotation from './nodes/FunctionTypeAnnotation';
 import Identifier from './nodes/Identifier';
 import IfStatement from './nodes/IfStatement';
+import {EsImportSource} from './nodes/ImportStatement';
+import {CommonJSImportSource} from './nodes/ImportStatement';
+import {NamespaceImportSource} from './nodes/ImportStatement';
+import ImportStatement from './nodes/ImportStatement';
 import ImportTypeAnnotation from './nodes/ImportTypeAnnotation';
 import InferTypeAnnotation from './nodes/InferTypeAnnotation';
 import IntersectionTypeAnnotation from './nodes/IntersectionTypeAnnotation';
@@ -55,6 +59,7 @@ import Pattern from './aliases/Pattern';
 import Statement from './aliases/Statement';
 import Declaration from './aliases/Declaration';
 import ValueDeclaration from './aliases/ValueDeclaration';
+import ImportSource from './aliases/ImportSource';
 import ObjectTypeElement from './aliases/ObjectTypeElement';
 import TypeDeclaration from './aliases/TypeDeclaration';
 import Comment, {CommentKind} from './Comment';
@@ -83,6 +88,10 @@ export {FunctionParameter};
 export {FunctionTypeAnnotation};
 export {Identifier};
 export {IfStatement};
+export {EsImportSource};
+export {CommonJSImportSource};
+export {NamespaceImportSource};
+export {ImportStatement};
 export {ImportTypeAnnotation};
 export {InferTypeAnnotation};
 export {IntersectionTypeAnnotation};
@@ -116,6 +125,7 @@ export {Pattern};
 export {Statement};
 export {Declaration};
 export {ValueDeclaration};
+export {ImportSource};
 export {ObjectTypeElement};
 export {TypeDeclaration};
 export {Comment, CommentKind}
@@ -183,6 +193,18 @@ export function createIdentifier(props: Omit<Identifier, 'kind'>): Identifier {
 }
 export function createIfStatement(props: Omit<IfStatement, 'kind'>): IfStatement {
   return {...props, kind: NodeKind.IfStatement};
+}
+export function createEsImportSource(props: Omit<EsImportSource, 'kind'>): EsImportSource {
+  return {...props, kind: NodeKind.EsImportSource};
+}
+export function createCommonJSImportSource(props: Omit<CommonJSImportSource, 'kind'>): CommonJSImportSource {
+  return {...props, kind: NodeKind.CommonJSImportSource};
+}
+export function createNamespaceImportSource(props: Omit<NamespaceImportSource, 'kind'>): NamespaceImportSource {
+  return {...props, kind: NodeKind.NamespaceImportSource};
+}
+export function createImportStatement(props: Omit<ImportStatement, 'kind'>): ImportStatement {
+  return {...props, kind: NodeKind.ImportStatement};
 }
 export function createImportTypeAnnotation(props: Omit<ImportTypeAnnotation, 'kind'>): ImportTypeAnnotation {
   return {...props, kind: NodeKind.ImportTypeAnnotation};
@@ -320,6 +342,18 @@ export function isIdentifier(node: Node): node is Identifier {
 export function isIfStatement(node: Node): node is IfStatement {
   return node.kind === NodeKind.IfStatement;
 }
+export function isEsImportSource(node: Node): node is EsImportSource {
+  return node.kind === NodeKind.EsImportSource;
+}
+export function isCommonJSImportSource(node: Node): node is CommonJSImportSource {
+  return node.kind === NodeKind.CommonJSImportSource;
+}
+export function isNamespaceImportSource(node: Node): node is NamespaceImportSource {
+  return node.kind === NodeKind.NamespaceImportSource;
+}
+export function isImportStatement(node: Node): node is ImportStatement {
+  return node.kind === NodeKind.ImportStatement;
+}
 export function isImportTypeAnnotation(node: Node): node is ImportTypeAnnotation {
   return node.kind === NodeKind.ImportTypeAnnotation;
 }
@@ -396,7 +430,7 @@ export function isVoidTypeAnnotation(node: Node): node is VoidTypeAnnotation {
   return node.kind === NodeKind.VoidTypeAnnotation;
 }
 export function isNode(node: Node): node is Node {
-  return (node.kind === NodeKind.AnyObjectTypeAnnotation || node.kind === NodeKind.AnyTypeAnnotation || node.kind === NodeKind.ArrayExpression || node.kind === NodeKind.ArrayPattern || node.kind === NodeKind.ArrayTypeAnnotation || node.kind === NodeKind.AssignmentExpression || node.kind === NodeKind.AssignmentPattern || node.kind === NodeKind.BinaryExpression || node.kind === NodeKind.BooleanTypeAnnotation || node.kind === NodeKind.EmptyTypeAnnotation || node.kind === NodeKind.ExistsTypeAnnotation || node.kind === NodeKind.ExportDefault || node.kind === NodeKind.ExportNamed || node.kind === NodeKind.ExpressionStatement || node.kind === NodeKind.File || node.kind === NodeKind.FunctionDeclaration || node.kind === NodeKind.FunctionParameter || node.kind === NodeKind.FunctionTypeAnnotation || node.kind === NodeKind.Identifier || node.kind === NodeKind.IfStatement || node.kind === NodeKind.ImportTypeAnnotation || node.kind === NodeKind.InferTypeAnnotation || node.kind === NodeKind.IntersectionTypeAnnotation || node.kind === NodeKind.LiteralTypeAnnotation || node.kind === NodeKind.LogicalExpression || node.kind === NodeKind.NumberTypeAnnotation || node.kind === NodeKind.ObjectPattern || node.kind === NodeKind.ObjectTypeAnnotation || node.kind === NodeKind.ObjectTypeIndexer || node.kind === NodeKind.ObjectTypeProperty || node.kind === NodeKind.ObjectTypeSpreadProperty || node.kind === NodeKind.QualifiedTypeIdentifier || node.kind === NodeKind.ReturnStatement || node.kind === NodeKind.SpreadElement || node.kind === NodeKind.StringTypeAnnotation || node.kind === NodeKind.SymbolTypeAnnotation || node.kind === NodeKind.ThisTypeAnnotation || node.kind === NodeKind.TupleTypeAnnotation || node.kind === NodeKind.TypeAliasDeclaration || node.kind === NodeKind.TypeParameter || node.kind === NodeKind.TypeReferenceAnnotation || node.kind === NodeKind.TypeofTypeAnnotation || node.kind === NodeKind.UnionTypeAnnotation || node.kind === NodeKind.UnknownTypeAnnotation || node.kind === NodeKind.VoidTypeAnnotation);
+  return (node.kind === NodeKind.AnyObjectTypeAnnotation || node.kind === NodeKind.AnyTypeAnnotation || node.kind === NodeKind.ArrayExpression || node.kind === NodeKind.ArrayPattern || node.kind === NodeKind.ArrayTypeAnnotation || node.kind === NodeKind.AssignmentExpression || node.kind === NodeKind.AssignmentPattern || node.kind === NodeKind.BinaryExpression || node.kind === NodeKind.BooleanTypeAnnotation || node.kind === NodeKind.CommonJSImportSource || node.kind === NodeKind.EmptyTypeAnnotation || node.kind === NodeKind.EsImportSource || node.kind === NodeKind.ExistsTypeAnnotation || node.kind === NodeKind.ExportDefault || node.kind === NodeKind.ExportNamed || node.kind === NodeKind.ExpressionStatement || node.kind === NodeKind.File || node.kind === NodeKind.FunctionDeclaration || node.kind === NodeKind.FunctionParameter || node.kind === NodeKind.FunctionTypeAnnotation || node.kind === NodeKind.Identifier || node.kind === NodeKind.IfStatement || node.kind === NodeKind.ImportStatement || node.kind === NodeKind.ImportTypeAnnotation || node.kind === NodeKind.InferTypeAnnotation || node.kind === NodeKind.IntersectionTypeAnnotation || node.kind === NodeKind.LiteralTypeAnnotation || node.kind === NodeKind.LogicalExpression || node.kind === NodeKind.NamespaceImportSource || node.kind === NodeKind.NumberTypeAnnotation || node.kind === NodeKind.ObjectPattern || node.kind === NodeKind.ObjectTypeAnnotation || node.kind === NodeKind.ObjectTypeIndexer || node.kind === NodeKind.ObjectTypeProperty || node.kind === NodeKind.ObjectTypeSpreadProperty || node.kind === NodeKind.QualifiedTypeIdentifier || node.kind === NodeKind.ReturnStatement || node.kind === NodeKind.SpreadElement || node.kind === NodeKind.StringTypeAnnotation || node.kind === NodeKind.SymbolTypeAnnotation || node.kind === NodeKind.ThisTypeAnnotation || node.kind === NodeKind.TupleTypeAnnotation || node.kind === NodeKind.TypeAliasDeclaration || node.kind === NodeKind.TypeParameter || node.kind === NodeKind.TypeReferenceAnnotation || node.kind === NodeKind.TypeofTypeAnnotation || node.kind === NodeKind.UnionTypeAnnotation || node.kind === NodeKind.UnknownTypeAnnotation || node.kind === NodeKind.VoidTypeAnnotation);
 }
 export function isTypeAnnotation(node: Node): node is TypeAnnotation {
   return (node.kind === NodeKind.AnyObjectTypeAnnotation || node.kind === NodeKind.AnyTypeAnnotation || node.kind === NodeKind.ArrayTypeAnnotation || node.kind === NodeKind.BooleanTypeAnnotation || node.kind === NodeKind.EmptyTypeAnnotation || node.kind === NodeKind.ExistsTypeAnnotation || node.kind === NodeKind.FunctionTypeAnnotation || node.kind === NodeKind.Identifier || node.kind === NodeKind.ImportTypeAnnotation || node.kind === NodeKind.InferTypeAnnotation || node.kind === NodeKind.IntersectionTypeAnnotation || node.kind === NodeKind.LiteralTypeAnnotation || node.kind === NodeKind.NumberTypeAnnotation || node.kind === NodeKind.ObjectTypeAnnotation || node.kind === NodeKind.QualifiedTypeIdentifier || node.kind === NodeKind.StringTypeAnnotation || node.kind === NodeKind.SymbolTypeAnnotation || node.kind === NodeKind.ThisTypeAnnotation || node.kind === NodeKind.TupleTypeAnnotation || node.kind === NodeKind.TypeReferenceAnnotation || node.kind === NodeKind.TypeofTypeAnnotation || node.kind === NodeKind.UnionTypeAnnotation || node.kind === NodeKind.UnknownTypeAnnotation || node.kind === NodeKind.VoidTypeAnnotation);
@@ -411,13 +445,16 @@ export function isPattern(node: Node): node is Pattern {
   return (node.kind === NodeKind.ArrayPattern || node.kind === NodeKind.AssignmentPattern || node.kind === NodeKind.Identifier || node.kind === NodeKind.ObjectPattern);
 }
 export function isStatement(node: Node): node is Statement {
-  return (node.kind === NodeKind.ExportDefault || node.kind === NodeKind.ExportNamed || node.kind === NodeKind.ExpressionStatement || node.kind === NodeKind.FunctionDeclaration || node.kind === NodeKind.IfStatement || node.kind === NodeKind.ReturnStatement || node.kind === NodeKind.TypeAliasDeclaration);
+  return (node.kind === NodeKind.ExportDefault || node.kind === NodeKind.ExportNamed || node.kind === NodeKind.ExpressionStatement || node.kind === NodeKind.FunctionDeclaration || node.kind === NodeKind.IfStatement || node.kind === NodeKind.ImportStatement || node.kind === NodeKind.ReturnStatement || node.kind === NodeKind.TypeAliasDeclaration);
 }
 export function isDeclaration(node: Node): node is Declaration {
-  return (node.kind === NodeKind.FunctionDeclaration || node.kind === NodeKind.TypeAliasDeclaration);
+  return (node.kind === NodeKind.FunctionDeclaration || node.kind === NodeKind.ImportStatement || node.kind === NodeKind.TypeAliasDeclaration);
 }
 export function isValueDeclaration(node: Node): node is ValueDeclaration {
   return (node.kind === NodeKind.FunctionDeclaration);
+}
+export function isImportSource(node: Node): node is ImportSource {
+  return (node.kind === NodeKind.CommonJSImportSource || node.kind === NodeKind.EsImportSource || node.kind === NodeKind.NamespaceImportSource);
 }
 export function isObjectTypeElement(node: Node): node is ObjectTypeElement {
   return (node.kind === NodeKind.ObjectTypeIndexer || node.kind === NodeKind.ObjectTypeProperty || node.kind === NodeKind.ObjectTypeSpreadProperty);

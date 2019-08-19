@@ -6,12 +6,71 @@ import normalizeIdentifier from './normalizeIdentifier';
 import normalizeType from './normalizeType';
 import normalizeTypeParameterDeclaration from './normalizeTypeParameterDeclaration';
 import normalizeFunctionDeclaration from './normalizeFunctionDeclaration';
+import normalizeDeclareFunction from './normalizeDeclareFunction';
+import normalizeTSDeclareFunction from './normalizeTSDeclareFunction';
 
 export default function normalizeDeclaration(
   input: bt.Declaration,
   ctx: ParseContext,
 ): ast.Declaration[] {
   switch (input.type) {
+    case 'ImportDeclaration':
+      //       specifiers: Array<
+      //   ImportSpecifier | ImportDefaultSpecifier | ImportNamespaceSpecifier
+      // >;
+      // source: StringLiteral;
+      // importKind: 'type' | 'typeof' | 'value' | null;
+      return input.specifiers.map(
+        (s): ast.ImportStatement => {
+          switch (s.type) {
+            case 'ImportSpecifier':
+              return ast.createImportStatement({
+                source: ast.createEsImportSource({
+                  relativePath: input.source.value,
+                  id: normalizeIdentifier(s.imported, ctx),
+                  loc: s.loc,
+                  leadingComments: normalizeComments(s.leadingComments),
+                }),
+                id: normalizeIdentifier(s.local, ctx),
+                mode: s.importKind || input.importKind || undefined,
+                loc: input.loc,
+                leadingComments: normalizeComments(input.leadingComments),
+              });
+            case 'ImportDefaultSpecifier':
+              return ast.createImportStatement({
+                source: ast.createEsImportSource({
+                  relativePath: input.source.value,
+                  id: ast.createIdentifier({
+                    name: 'default',
+                    leadingComments: [],
+                    loc: s.loc,
+                  }),
+                  loc: s.loc,
+                  leadingComments: normalizeComments(s.leadingComments),
+                }),
+                id: normalizeIdentifier(s.local, ctx),
+                mode: input.importKind || undefined,
+                loc: input.loc,
+                leadingComments: normalizeComments(input.leadingComments),
+              });
+            case 'ImportNamespaceSpecifier':
+              return ast.createImportStatement({
+                source: ast.createNamespaceImportSource({
+                  relativePath: input.source.value,
+                  loc: s.loc,
+                  leadingComments: normalizeComments(s.leadingComments),
+                }),
+                id: normalizeIdentifier(s.local, ctx),
+                mode: input.importKind || undefined,
+                loc: input.loc,
+                leadingComments: normalizeComments(input.leadingComments),
+              });
+            default:
+              return ctx.assertNever(s as never);
+          }
+        },
+      );
+      break;
     case 'TypeAlias':
       return [
         ast.createTypeAliasDeclaration({
@@ -40,6 +99,10 @@ export default function normalizeDeclaration(
       ];
     case 'FunctionDeclaration':
       return [normalizeFunctionDeclaration(input, ctx)];
+    case 'DeclareFunction':
+      return [normalizeDeclareFunction(input, ctx)];
+    case 'TSDeclareFunction':
+      return [normalizeTSDeclareFunction(input, ctx)];
     case 'TypeAlias':
       return [
         ast.createTypeAliasDeclaration({

@@ -18,5 +18,5 @@ export default interface FunctionDeclaration extends NodeBase {
   readonly restParam: FunctionParameter | undefined;
   readonly typeParams: readonly TypeParameter[];
   readonly returnType: TypeAnnotation | undefined;
-  readonly body: readonly Statement[];
+  readonly body: undefined | readonly Statement[];
 }
