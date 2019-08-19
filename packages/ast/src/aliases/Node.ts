@@ -31,6 +31,7 @@ import IntersectionTypeAnnotation from '../nodes/IntersectionTypeAnnotation';
 import LiteralTypeAnnotation from '../nodes/LiteralTypeAnnotation';
 import LogicalExpression from '../nodes/LogicalExpression';
 import {NamespaceImportSource} from '../nodes/ImportStatement';
+import NullLiteralTypeAnnotation from '../nodes/NullLiteralTypeAnnotation';
 import NumberTypeAnnotation from '../nodes/NumberTypeAnnotation';
 import ObjectPattern from '../nodes/ObjectPattern';
 import ObjectTypeAnnotation from '../nodes/ObjectTypeAnnotation';
@@ -82,6 +83,7 @@ type Node =
   | LiteralTypeAnnotation
   | LogicalExpression
   | NamespaceImportSource
+  | NullLiteralTypeAnnotation
   | NumberTypeAnnotation
   | ObjectPattern
   | ObjectTypeAnnotation

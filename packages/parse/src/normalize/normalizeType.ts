@@ -18,6 +18,28 @@ function normalizeTypeCore(
       });
     case 'GenericTypeAnnotation':
       return normalizeGenericTypeAnnotation(input, ctx);
+    case 'NullableTypeAnnotation':
+      return ast.createUnionTypeAnnotation({
+        types: [
+          normalizeType(input.typeAnnotation, ctx),
+          ast.createIdentifier({
+            name: 'undefined',
+            loc: input.loc,
+            leadingComments: [],
+          }),
+          ast.createNullLiteralTypeAnnotation({
+            loc: input.loc,
+            leadingComments: [],
+          }),
+        ],
+        leadingComments: normalizeComments(input.leadingComments),
+        loc: input.loc,
+      });
+    case 'NullLiteralTypeAnnotation':
+      return ast.createNullLiteralTypeAnnotation({
+        leadingComments: normalizeComments(input.leadingComments),
+        loc: input.loc,
+      });
     case 'NumberTypeAnnotation':
     case 'TSNumberKeyword':
       return ast.createStringTypeAnnotation({

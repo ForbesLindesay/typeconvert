@@ -28,6 +28,7 @@ enum NodeKind {
   LiteralTypeAnnotation = 'LiteralTypeAnnotation',
   LogicalExpression = 'LogicalExpression',
   NamespaceImportSource = 'NamespaceImportSource',
+  NullLiteralTypeAnnotation = 'NullLiteralTypeAnnotation',
   NumberTypeAnnotation = 'NumberTypeAnnotation',
   ObjectTypeAnnotation = 'ObjectTypeAnnotation',
   ObjectTypeProperty = 'ObjectTypeProperty',
