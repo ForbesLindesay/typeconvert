@@ -9,12 +9,14 @@ import BooleanTypeAnnotation from '../nodes/BooleanTypeAnnotation';
 import EmptyTypeAnnotation from '../nodes/EmptyTypeAnnotation';
 import ExistsTypeAnnotation from '../nodes/ExistsTypeAnnotation';
 import FunctionTypeAnnotation from '../nodes/FunctionTypeAnnotation';
+import Identifier from '../nodes/Identifier';
 import ImportTypeAnnotation from '../nodes/ImportTypeAnnotation';
 import InferTypeAnnotation from '../nodes/InferTypeAnnotation';
 import IntersectionTypeAnnotation from '../nodes/IntersectionTypeAnnotation';
 import LiteralTypeAnnotation from '../nodes/LiteralTypeAnnotation';
 import NumberTypeAnnotation from '../nodes/NumberTypeAnnotation';
 import ObjectTypeAnnotation from '../nodes/ObjectTypeAnnotation';
+import QualifiedTypeIdentifier from '../nodes/QualifiedTypeIdentifier';
 import StringTypeAnnotation from '../nodes/StringTypeAnnotation';
 import SymbolTypeAnnotation from '../nodes/SymbolTypeAnnotation';
 import ThisTypeAnnotation from '../nodes/ThisTypeAnnotation';
@@ -33,12 +35,14 @@ type TypeAnnotation =
   | EmptyTypeAnnotation
   | ExistsTypeAnnotation
   | FunctionTypeAnnotation
+  | Identifier
   | ImportTypeAnnotation
   | InferTypeAnnotation
   | IntersectionTypeAnnotation
   | LiteralTypeAnnotation
   | NumberTypeAnnotation
   | ObjectTypeAnnotation
+  | QualifiedTypeIdentifier
   | StringTypeAnnotation
   | SymbolTypeAnnotation
   | ThisTypeAnnotation

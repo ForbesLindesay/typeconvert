@@ -15,8 +15,6 @@ export default function normalizeFunctionDeclaration(
   if (!input.id) {
     return ctx.throw(input, 'Expected FunctionDeclaration to have an ID');
   }
-  // Identifier | Pattern | RestElement | TSParameterProperty
-  // input.params;
   let restParam: ast.FunctionParameter | undefined = undefined;
   const params = [...input.params];
   if (params.length && bt.isRestElement(params[params.length - 1])) {

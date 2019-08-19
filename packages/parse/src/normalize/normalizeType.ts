@@ -3,6 +3,7 @@ import * as ast from '@typeconvert/ast';
 import ParseContext from '../ParseContext';
 import normalizeComments from './normalizeComments';
 import normalizeGenericTypeAnnotation from './normalizeGenericTypeAnnotation';
+import normalizeFunctionTypeAnnotation from './normalizeFunctionTypeAnnotation';
 
 function normalizeTypeCore(
   input: bt.FlowType | bt.TSType,
@@ -52,6 +53,18 @@ function normalizeTypeCore(
         loc: input.loc,
       });
     }
+    case 'IntersectionTypeAnnotation':
+      return ast.createIntersectionTypeAnnotation({
+        types: input.types.map(t => normalizeType(t, ctx)),
+        leadingComments: normalizeComments(input.leadingComments),
+        loc: input.loc,
+      });
+    case 'TSIntersectionType':
+      return ast.createIntersectionTypeAnnotation({
+        types: input.types.map(t => normalizeType(t, ctx)),
+        leadingComments: normalizeComments(input.leadingComments),
+        loc: input.loc,
+      });
     case 'UnionTypeAnnotation':
       return ast.createUnionTypeAnnotation({
         types: input.types.map(t => normalizeType(t, ctx)),
@@ -70,6 +83,10 @@ function normalizeTypeCore(
         leadingComments: normalizeComments(input.leadingComments),
         loc: input.loc,
       });
+    case 'FunctionTypeAnnotation':
+      return normalizeFunctionTypeAnnotation(input, ctx);
+    case 'TSFunctionType':
+      return normalizeFunctionTypeAnnotation(input, ctx);
     default:
       return ctx.assertNever(input as never);
   }

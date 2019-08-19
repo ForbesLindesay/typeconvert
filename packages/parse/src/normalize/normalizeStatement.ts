@@ -88,6 +88,36 @@ export default function normalizeStatement(
           expression: normalizeExpression(input.expression, ctx),
         }),
       ];
+    case 'IfStatement':
+      return [
+        ast.createIfStatement({
+          test: normalizeExpression(input.test, ctx),
+          consequent: normalizeStatement(input.consequent, ctx),
+          alternate: input.alternate
+            ? normalizeStatement(input.alternate, ctx)
+            : [],
+          loc: input.loc,
+          leadingComments: normalizeComments(input.leadingComments),
+        }),
+      ];
+    case 'ReturnStatement':
+      return [
+        ast.createReturnStatement({
+          argument: input.argument
+            ? normalizeExpression(input.argument, ctx)
+            : ast.createIdentifier({
+                name: 'undefined',
+                loc: input.loc,
+                leadingComments: [],
+              }),
+          loc: input.loc,
+          leadingComments: normalizeComments(input.leadingComments),
+        }),
+      ];
+    case 'BlockStatement':
+      return input.body
+        .map(s => normalizeStatement(s, ctx))
+        .reduce((a, b) => [...a, ...b], []);
     default:
       if (bt.isDeclaration(input)) {
         return normalizeDeclaration(input, ctx);

@@ -9,6 +9,7 @@ import ArrayPattern from '../nodes/ArrayPattern';
 import ArrayTypeAnnotation from '../nodes/ArrayTypeAnnotation';
 import AssignmentExpression from '../nodes/AssignmentExpression';
 import AssignmentPattern from '../nodes/AssignmentPattern';
+import BinaryExpression from '../nodes/BinaryExpression';
 import BooleanTypeAnnotation from '../nodes/BooleanTypeAnnotation';
 import EmptyTypeAnnotation from '../nodes/EmptyTypeAnnotation';
 import ExistsTypeAnnotation from '../nodes/ExistsTypeAnnotation';
@@ -20,10 +21,12 @@ import FunctionDeclaration from '../nodes/FunctionDeclaration';
 import FunctionParameter from '../nodes/FunctionParameter';
 import FunctionTypeAnnotation from '../nodes/FunctionTypeAnnotation';
 import Identifier from '../nodes/Identifier';
+import IfStatement from '../nodes/IfStatement';
 import ImportTypeAnnotation from '../nodes/ImportTypeAnnotation';
 import InferTypeAnnotation from '../nodes/InferTypeAnnotation';
 import IntersectionTypeAnnotation from '../nodes/IntersectionTypeAnnotation';
 import LiteralTypeAnnotation from '../nodes/LiteralTypeAnnotation';
+import LogicalExpression from '../nodes/LogicalExpression';
 import NumberTypeAnnotation from '../nodes/NumberTypeAnnotation';
 import ObjectPattern from '../nodes/ObjectPattern';
 import ObjectTypeAnnotation from '../nodes/ObjectTypeAnnotation';
@@ -31,6 +34,7 @@ import {ObjectTypeIndexer} from '../nodes/ObjectTypeAnnotation';
 import {ObjectTypeProperty} from '../nodes/ObjectTypeAnnotation';
 import {ObjectTypeSpreadProperty} from '../nodes/ObjectTypeAnnotation';
 import QualifiedTypeIdentifier from '../nodes/QualifiedTypeIdentifier';
+import ReturnStatement from '../nodes/ReturnStatement';
 import SpreadElement from '../nodes/SpreadElement';
 import StringTypeAnnotation from '../nodes/StringTypeAnnotation';
 import SymbolTypeAnnotation from '../nodes/SymbolTypeAnnotation';
@@ -52,6 +56,7 @@ type Node =
   | ArrayTypeAnnotation
   | AssignmentExpression
   | AssignmentPattern
+  | BinaryExpression
   | BooleanTypeAnnotation
   | EmptyTypeAnnotation
   | ExistsTypeAnnotation
@@ -63,10 +68,12 @@ type Node =
   | FunctionParameter
   | FunctionTypeAnnotation
   | Identifier
+  | IfStatement
   | ImportTypeAnnotation
   | InferTypeAnnotation
   | IntersectionTypeAnnotation
   | LiteralTypeAnnotation
+  | LogicalExpression
   | NumberTypeAnnotation
   | ObjectPattern
   | ObjectTypeAnnotation
@@ -74,6 +81,7 @@ type Node =
   | ObjectTypeProperty
   | ObjectTypeSpreadProperty
   | QualifiedTypeIdentifier
+  | ReturnStatement
   | SpreadElement
   | StringTypeAnnotation
   | SymbolTypeAnnotation

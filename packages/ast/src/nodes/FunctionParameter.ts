@@ -12,4 +12,5 @@ export default interface FunctionParameter extends NodeBase {
   readonly kind: NodeKind.FunctionParameter;
   readonly name: Pattern | undefined;
   readonly type: TypeAnnotation | undefined;
+  readonly optional: boolean;
 }

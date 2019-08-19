@@ -21,6 +21,8 @@ export default function normalizeFunctionParam(
       (bt.isAssignmentPattern(input)
         ? normalizeType(input.left.typeAnnotation, ctx)
         : undefined),
+    // TODO: handle optional TS Parameter Properties
+    optional: bt.isIdentifier(input) ? input.optional || false : false,
     loc: input.loc,
     leadingComments: normalizeComments(input.leadingComments),
   });

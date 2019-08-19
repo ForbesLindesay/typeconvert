@@ -3,6 +3,7 @@ import * as ast from '@typeconvert/ast';
 import ParseContext from '../ParseContext';
 import normalizeComments from './normalizeComments';
 import normalizeType from './normalizeType';
+import normalizeIdentifier from './normalizeIdentifier';
 
 export default function normalizeGenericTypeAnnotation(
   input: bt.GenericTypeAnnotation,
@@ -30,6 +31,9 @@ export default function normalizeGenericTypeAnnotation(
           });
         }
         break;
+    }
+    if (typeParameters.length === 0) {
+      return normalizeIdentifier(input.id, ctx);
     }
   }
   return ctx.assertNever(input as never);

@@ -4,11 +4,15 @@
 
 import ArrayExpression from '../nodes/ArrayExpresison';
 import AssignmentExpression from '../nodes/AssignmentExpression';
+import BinaryExpression from '../nodes/BinaryExpression';
 import Identifier from '../nodes/Identifier';
+import LogicalExpression from '../nodes/LogicalExpression';
 
 type Expression = 
   | ArrayExpression
   | AssignmentExpression
-  | Identifier;
+  | BinaryExpression
+  | Identifier
+  | LogicalExpression;
 
 export default Expression;

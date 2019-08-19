@@ -9,6 +9,7 @@ import ArrayPattern from './nodes/ArrayPattern';
 import ArrayTypeAnnotation from './nodes/ArrayTypeAnnotation';
 import AssignmentExpression from './nodes/AssignmentExpression';
 import AssignmentPattern from './nodes/AssignmentPattern';
+import BinaryExpression from './nodes/BinaryExpression';
 import BooleanTypeAnnotation from './nodes/BooleanTypeAnnotation';
 import EmptyTypeAnnotation from './nodes/EmptyTypeAnnotation';
 import ExistsTypeAnnotation from './nodes/ExistsTypeAnnotation';
@@ -20,10 +21,12 @@ import FunctionDeclaration from './nodes/FunctionDeclaration';
 import FunctionParameter from './nodes/FunctionParameter';
 import FunctionTypeAnnotation from './nodes/FunctionTypeAnnotation';
 import Identifier from './nodes/Identifier';
+import IfStatement from './nodes/IfStatement';
 import ImportTypeAnnotation from './nodes/ImportTypeAnnotation';
 import InferTypeAnnotation from './nodes/InferTypeAnnotation';
 import IntersectionTypeAnnotation from './nodes/IntersectionTypeAnnotation';
 import LiteralTypeAnnotation from './nodes/LiteralTypeAnnotation';
+import LogicalExpression from './nodes/LogicalExpression';
 import NumberTypeAnnotation from './nodes/NumberTypeAnnotation';
 import ObjectPattern from './nodes/ObjectPattern';
 import {ObjectTypeProperty} from './nodes/ObjectTypeAnnotation';
@@ -31,6 +34,7 @@ import {ObjectTypeIndexer} from './nodes/ObjectTypeAnnotation';
 import {ObjectTypeSpreadProperty} from './nodes/ObjectTypeAnnotation';
 import ObjectTypeAnnotation from './nodes/ObjectTypeAnnotation';
 import QualifiedTypeIdentifier from './nodes/QualifiedTypeIdentifier';
+import ReturnStatement from './nodes/ReturnStatement';
 import SpreadElement from './nodes/SpreadElement';
 import StringTypeAnnotation from './nodes/StringTypeAnnotation';
 import SymbolTypeAnnotation from './nodes/SymbolTypeAnnotation';
@@ -66,6 +70,7 @@ export {ArrayPattern};
 export {ArrayTypeAnnotation};
 export {AssignmentExpression};
 export {AssignmentPattern};
+export {BinaryExpression};
 export {BooleanTypeAnnotation};
 export {EmptyTypeAnnotation};
 export {ExistsTypeAnnotation};
@@ -77,10 +82,12 @@ export {FunctionDeclaration};
 export {FunctionParameter};
 export {FunctionTypeAnnotation};
 export {Identifier};
+export {IfStatement};
 export {ImportTypeAnnotation};
 export {InferTypeAnnotation};
 export {IntersectionTypeAnnotation};
 export {LiteralTypeAnnotation};
+export {LogicalExpression};
 export {NumberTypeAnnotation};
 export {ObjectPattern};
 export {ObjectTypeProperty};
@@ -88,6 +95,7 @@ export {ObjectTypeIndexer};
 export {ObjectTypeSpreadProperty};
 export {ObjectTypeAnnotation};
 export {QualifiedTypeIdentifier};
+export {ReturnStatement};
 export {SpreadElement};
 export {StringTypeAnnotation};
 export {SymbolTypeAnnotation};
@@ -137,6 +145,9 @@ export function createAssignmentExpression(props: Omit<AssignmentExpression, 'ki
 export function createAssignmentPattern(props: Omit<AssignmentPattern, 'kind'>): AssignmentPattern {
   return {...props, kind: NodeKind.AssignmentPattern};
 }
+export function createBinaryExpression(props: Omit<BinaryExpression, 'kind'>): BinaryExpression {
+  return {...props, kind: NodeKind.BinaryExpression};
+}
 export function createBooleanTypeAnnotation(props: Omit<BooleanTypeAnnotation, 'kind'>): BooleanTypeAnnotation {
   return {...props, kind: NodeKind.BooleanTypeAnnotation};
 }
@@ -170,6 +181,9 @@ export function createFunctionTypeAnnotation(props: Omit<FunctionTypeAnnotation,
 export function createIdentifier(props: Omit<Identifier, 'kind'>): Identifier {
   return {...props, kind: NodeKind.Identifier};
 }
+export function createIfStatement(props: Omit<IfStatement, 'kind'>): IfStatement {
+  return {...props, kind: NodeKind.IfStatement};
+}
 export function createImportTypeAnnotation(props: Omit<ImportTypeAnnotation, 'kind'>): ImportTypeAnnotation {
   return {...props, kind: NodeKind.ImportTypeAnnotation};
 }
@@ -181,6 +195,9 @@ export function createIntersectionTypeAnnotation(props: Omit<IntersectionTypeAnn
 }
 export function createLiteralTypeAnnotation(props: Omit<LiteralTypeAnnotation, 'kind'>): LiteralTypeAnnotation {
   return {...props, kind: NodeKind.LiteralTypeAnnotation};
+}
+export function createLogicalExpression(props: Omit<LogicalExpression, 'kind'>): LogicalExpression {
+  return {...props, kind: NodeKind.LogicalExpression};
 }
 export function createNumberTypeAnnotation(props: Omit<NumberTypeAnnotation, 'kind'>): NumberTypeAnnotation {
   return {...props, kind: NodeKind.NumberTypeAnnotation};
@@ -202,6 +219,9 @@ export function createObjectTypeAnnotation(props: Omit<ObjectTypeAnnotation, 'ki
 }
 export function createQualifiedTypeIdentifier(props: Omit<QualifiedTypeIdentifier, 'kind'>): QualifiedTypeIdentifier {
   return {...props, kind: NodeKind.QualifiedTypeIdentifier};
+}
+export function createReturnStatement(props: Omit<ReturnStatement, 'kind'>): ReturnStatement {
+  return {...props, kind: NodeKind.ReturnStatement};
 }
 export function createSpreadElement(props: Omit<SpreadElement, 'kind'>): SpreadElement {
   return {...props, kind: NodeKind.SpreadElement};
@@ -261,6 +281,9 @@ export function isAssignmentExpression(node: Node): node is AssignmentExpression
 export function isAssignmentPattern(node: Node): node is AssignmentPattern {
   return node.kind === NodeKind.AssignmentPattern;
 }
+export function isBinaryExpression(node: Node): node is BinaryExpression {
+  return node.kind === NodeKind.BinaryExpression;
+}
 export function isBooleanTypeAnnotation(node: Node): node is BooleanTypeAnnotation {
   return node.kind === NodeKind.BooleanTypeAnnotation;
 }
@@ -294,6 +317,9 @@ export function isFunctionTypeAnnotation(node: Node): node is FunctionTypeAnnota
 export function isIdentifier(node: Node): node is Identifier {
   return node.kind === NodeKind.Identifier;
 }
+export function isIfStatement(node: Node): node is IfStatement {
+  return node.kind === NodeKind.IfStatement;
+}
 export function isImportTypeAnnotation(node: Node): node is ImportTypeAnnotation {
   return node.kind === NodeKind.ImportTypeAnnotation;
 }
@@ -305,6 +331,9 @@ export function isIntersectionTypeAnnotation(node: Node): node is IntersectionTy
 }
 export function isLiteralTypeAnnotation(node: Node): node is LiteralTypeAnnotation {
   return node.kind === NodeKind.LiteralTypeAnnotation;
+}
+export function isLogicalExpression(node: Node): node is LogicalExpression {
+  return node.kind === NodeKind.LogicalExpression;
 }
 export function isNumberTypeAnnotation(node: Node): node is NumberTypeAnnotation {
   return node.kind === NodeKind.NumberTypeAnnotation;
@@ -326,6 +355,9 @@ export function isObjectTypeAnnotation(node: Node): node is ObjectTypeAnnotation
 }
 export function isQualifiedTypeIdentifier(node: Node): node is QualifiedTypeIdentifier {
   return node.kind === NodeKind.QualifiedTypeIdentifier;
+}
+export function isReturnStatement(node: Node): node is ReturnStatement {
+  return node.kind === NodeKind.ReturnStatement;
 }
 export function isSpreadElement(node: Node): node is SpreadElement {
   return node.kind === NodeKind.SpreadElement;
@@ -364,13 +396,13 @@ export function isVoidTypeAnnotation(node: Node): node is VoidTypeAnnotation {
   return node.kind === NodeKind.VoidTypeAnnotation;
 }
 export function isNode(node: Node): node is Node {
-  return (node.kind === NodeKind.AnyObjectTypeAnnotation || node.kind === NodeKind.AnyTypeAnnotation || node.kind === NodeKind.ArrayExpression || node.kind === NodeKind.ArrayPattern || node.kind === NodeKind.ArrayTypeAnnotation || node.kind === NodeKind.AssignmentExpression || node.kind === NodeKind.AssignmentPattern || node.kind === NodeKind.BooleanTypeAnnotation || node.kind === NodeKind.EmptyTypeAnnotation || node.kind === NodeKind.ExistsTypeAnnotation || node.kind === NodeKind.ExportDefault || node.kind === NodeKind.ExportNamed || node.kind === NodeKind.ExpressionStatement || node.kind === NodeKind.File || node.kind === NodeKind.FunctionDeclaration || node.kind === NodeKind.FunctionParameter || node.kind === NodeKind.FunctionTypeAnnotation || node.kind === NodeKind.Identifier || node.kind === NodeKind.ImportTypeAnnotation || node.kind === NodeKind.InferTypeAnnotation || node.kind === NodeKind.IntersectionTypeAnnotation || node.kind === NodeKind.LiteralTypeAnnotation || node.kind === NodeKind.NumberTypeAnnotation || node.kind === NodeKind.ObjectPattern || node.kind === NodeKind.ObjectTypeAnnotation || node.kind === NodeKind.ObjectTypeIndexer || node.kind === NodeKind.ObjectTypeProperty || node.kind === NodeKind.ObjectTypeSpreadProperty || node.kind === NodeKind.QualifiedTypeIdentifier || node.kind === NodeKind.SpreadElement || node.kind === NodeKind.StringTypeAnnotation || node.kind === NodeKind.SymbolTypeAnnotation || node.kind === NodeKind.ThisTypeAnnotation || node.kind === NodeKind.TupleTypeAnnotation || node.kind === NodeKind.TypeAliasDeclaration || node.kind === NodeKind.TypeParameter || node.kind === NodeKind.TypeReferenceAnnotation || node.kind === NodeKind.TypeofTypeAnnotation || node.kind === NodeKind.UnionTypeAnnotation || node.kind === NodeKind.UnknownTypeAnnotation || node.kind === NodeKind.VoidTypeAnnotation);
+  return (node.kind === NodeKind.AnyObjectTypeAnnotation || node.kind === NodeKind.AnyTypeAnnotation || node.kind === NodeKind.ArrayExpression || node.kind === NodeKind.ArrayPattern || node.kind === NodeKind.ArrayTypeAnnotation || node.kind === NodeKind.AssignmentExpression || node.kind === NodeKind.AssignmentPattern || node.kind === NodeKind.BinaryExpression || node.kind === NodeKind.BooleanTypeAnnotation || node.kind === NodeKind.EmptyTypeAnnotation || node.kind === NodeKind.ExistsTypeAnnotation || node.kind === NodeKind.ExportDefault || node.kind === NodeKind.ExportNamed || node.kind === NodeKind.ExpressionStatement || node.kind === NodeKind.File || node.kind === NodeKind.FunctionDeclaration || node.kind === NodeKind.FunctionParameter || node.kind === NodeKind.FunctionTypeAnnotation || node.kind === NodeKind.Identifier || node.kind === NodeKind.IfStatement || node.kind === NodeKind.ImportTypeAnnotation || node.kind === NodeKind.InferTypeAnnotation || node.kind === NodeKind.IntersectionTypeAnnotation || node.kind === NodeKind.LiteralTypeAnnotation || node.kind === NodeKind.LogicalExpression || node.kind === NodeKind.NumberTypeAnnotation || node.kind === NodeKind.ObjectPattern || node.kind === NodeKind.ObjectTypeAnnotation || node.kind === NodeKind.ObjectTypeIndexer || node.kind === NodeKind.ObjectTypeProperty || node.kind === NodeKind.ObjectTypeSpreadProperty || node.kind === NodeKind.QualifiedTypeIdentifier || node.kind === NodeKind.ReturnStatement || node.kind === NodeKind.SpreadElement || node.kind === NodeKind.StringTypeAnnotation || node.kind === NodeKind.SymbolTypeAnnotation || node.kind === NodeKind.ThisTypeAnnotation || node.kind === NodeKind.TupleTypeAnnotation || node.kind === NodeKind.TypeAliasDeclaration || node.kind === NodeKind.TypeParameter || node.kind === NodeKind.TypeReferenceAnnotation || node.kind === NodeKind.TypeofTypeAnnotation || node.kind === NodeKind.UnionTypeAnnotation || node.kind === NodeKind.UnknownTypeAnnotation || node.kind === NodeKind.VoidTypeAnnotation);
 }
 export function isTypeAnnotation(node: Node): node is TypeAnnotation {
-  return (node.kind === NodeKind.AnyObjectTypeAnnotation || node.kind === NodeKind.AnyTypeAnnotation || node.kind === NodeKind.ArrayTypeAnnotation || node.kind === NodeKind.BooleanTypeAnnotation || node.kind === NodeKind.EmptyTypeAnnotation || node.kind === NodeKind.ExistsTypeAnnotation || node.kind === NodeKind.FunctionTypeAnnotation || node.kind === NodeKind.ImportTypeAnnotation || node.kind === NodeKind.InferTypeAnnotation || node.kind === NodeKind.IntersectionTypeAnnotation || node.kind === NodeKind.LiteralTypeAnnotation || node.kind === NodeKind.NumberTypeAnnotation || node.kind === NodeKind.ObjectTypeAnnotation || node.kind === NodeKind.StringTypeAnnotation || node.kind === NodeKind.SymbolTypeAnnotation || node.kind === NodeKind.ThisTypeAnnotation || node.kind === NodeKind.TupleTypeAnnotation || node.kind === NodeKind.TypeReferenceAnnotation || node.kind === NodeKind.TypeofTypeAnnotation || node.kind === NodeKind.UnionTypeAnnotation || node.kind === NodeKind.UnknownTypeAnnotation || node.kind === NodeKind.VoidTypeAnnotation);
+  return (node.kind === NodeKind.AnyObjectTypeAnnotation || node.kind === NodeKind.AnyTypeAnnotation || node.kind === NodeKind.ArrayTypeAnnotation || node.kind === NodeKind.BooleanTypeAnnotation || node.kind === NodeKind.EmptyTypeAnnotation || node.kind === NodeKind.ExistsTypeAnnotation || node.kind === NodeKind.FunctionTypeAnnotation || node.kind === NodeKind.Identifier || node.kind === NodeKind.ImportTypeAnnotation || node.kind === NodeKind.InferTypeAnnotation || node.kind === NodeKind.IntersectionTypeAnnotation || node.kind === NodeKind.LiteralTypeAnnotation || node.kind === NodeKind.NumberTypeAnnotation || node.kind === NodeKind.ObjectTypeAnnotation || node.kind === NodeKind.QualifiedTypeIdentifier || node.kind === NodeKind.StringTypeAnnotation || node.kind === NodeKind.SymbolTypeAnnotation || node.kind === NodeKind.ThisTypeAnnotation || node.kind === NodeKind.TupleTypeAnnotation || node.kind === NodeKind.TypeReferenceAnnotation || node.kind === NodeKind.TypeofTypeAnnotation || node.kind === NodeKind.UnionTypeAnnotation || node.kind === NodeKind.UnknownTypeAnnotation || node.kind === NodeKind.VoidTypeAnnotation);
 }
 export function isExpression(node: Node): node is Expression {
-  return (node.kind === NodeKind.ArrayExpression || node.kind === NodeKind.AssignmentExpression || node.kind === NodeKind.Identifier);
+  return (node.kind === NodeKind.ArrayExpression || node.kind === NodeKind.AssignmentExpression || node.kind === NodeKind.BinaryExpression || node.kind === NodeKind.Identifier || node.kind === NodeKind.LogicalExpression);
 }
 export function isLVal(node: Node): node is LVal {
   return (node.kind === NodeKind.ArrayPattern || node.kind === NodeKind.AssignmentPattern || node.kind === NodeKind.Identifier || node.kind === NodeKind.ObjectPattern);
@@ -379,7 +411,7 @@ export function isPattern(node: Node): node is Pattern {
   return (node.kind === NodeKind.ArrayPattern || node.kind === NodeKind.AssignmentPattern || node.kind === NodeKind.Identifier || node.kind === NodeKind.ObjectPattern);
 }
 export function isStatement(node: Node): node is Statement {
-  return (node.kind === NodeKind.ExportDefault || node.kind === NodeKind.ExportNamed || node.kind === NodeKind.ExpressionStatement || node.kind === NodeKind.FunctionDeclaration || node.kind === NodeKind.TypeAliasDeclaration);
+  return (node.kind === NodeKind.ExportDefault || node.kind === NodeKind.ExportNamed || node.kind === NodeKind.ExpressionStatement || node.kind === NodeKind.FunctionDeclaration || node.kind === NodeKind.IfStatement || node.kind === NodeKind.ReturnStatement || node.kind === NodeKind.TypeAliasDeclaration);
 }
 export function isDeclaration(node: Node): node is Declaration {
   return (node.kind === NodeKind.FunctionDeclaration || node.kind === NodeKind.TypeAliasDeclaration);

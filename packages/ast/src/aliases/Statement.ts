@@ -6,6 +6,8 @@ import ExportDefault from '../nodes/ExportDefault';
 import ExportNamed from '../nodes/ExportNamed';
 import ExpressionStatement from '../nodes/ExpressionStatement';
 import FunctionDeclaration from '../nodes/FunctionDeclaration';
+import IfStatement from '../nodes/IfStatement';
+import ReturnStatement from '../nodes/ReturnStatement';
 import TypeAliasDeclaration from '../nodes/TypeAliasDeclaration';
 
 type Statement = 
@@ -13,6 +15,8 @@ type Statement =
   | ExportNamed
   | ExpressionStatement
   | FunctionDeclaration
+  | IfStatement
+  | ReturnStatement
   | TypeAliasDeclaration;
 
 export default Statement;
