@@ -11,6 +11,7 @@ import AssignmentExpression from '../nodes/AssignmentExpression';
 import AssignmentPattern from '../nodes/AssignmentPattern';
 import BinaryExpression from '../nodes/BinaryExpression';
 import BooleanTypeAnnotation from '../nodes/BooleanTypeAnnotation';
+import CallExpression from '../nodes/CallExpression';
 import {CommonJSImportSource} from '../nodes/ImportStatement';
 import EmptyTypeAnnotation from '../nodes/EmptyTypeAnnotation';
 import {EsImportSource} from '../nodes/ImportStatement';
@@ -30,9 +31,12 @@ import InferTypeAnnotation from '../nodes/InferTypeAnnotation';
 import IntersectionTypeAnnotation from '../nodes/IntersectionTypeAnnotation';
 import LiteralTypeAnnotation from '../nodes/LiteralTypeAnnotation';
 import LogicalExpression from '../nodes/LogicalExpression';
+import MemberExpression from '../nodes/MemberExpression';
+import MemberExpressionComputed from '../nodes/MemberExpressionComputed';
 import {NamespaceImportSource} from '../nodes/ImportStatement';
 import NullLiteralTypeAnnotation from '../nodes/NullLiteralTypeAnnotation';
 import NumberTypeAnnotation from '../nodes/NumberTypeAnnotation';
+import NumericLiteral from '../nodes/NumericLiteral';
 import ObjectPattern from '../nodes/ObjectPattern';
 import ObjectTypeAnnotation from '../nodes/ObjectTypeAnnotation';
 import {ObjectTypeIndexer} from '../nodes/ObjectTypeAnnotation';
@@ -41,6 +45,7 @@ import {ObjectTypeSpreadProperty} from '../nodes/ObjectTypeAnnotation';
 import QualifiedTypeIdentifier from '../nodes/QualifiedTypeIdentifier';
 import ReturnStatement from '../nodes/ReturnStatement';
 import SpreadElement from '../nodes/SpreadElement';
+import StringLiteral from '../nodes/StringLiteral';
 import StringTypeAnnotation from '../nodes/StringTypeAnnotation';
 import SymbolTypeAnnotation from '../nodes/SymbolTypeAnnotation';
 import ThisTypeAnnotation from '../nodes/ThisTypeAnnotation';
@@ -63,6 +68,7 @@ type Node =
   | AssignmentPattern
   | BinaryExpression
   | BooleanTypeAnnotation
+  | CallExpression
   | CommonJSImportSource
   | EmptyTypeAnnotation
   | EsImportSource
@@ -82,9 +88,12 @@ type Node =
   | IntersectionTypeAnnotation
   | LiteralTypeAnnotation
   | LogicalExpression
+  | MemberExpression
+  | MemberExpressionComputed
   | NamespaceImportSource
   | NullLiteralTypeAnnotation
   | NumberTypeAnnotation
+  | NumericLiteral
   | ObjectPattern
   | ObjectTypeAnnotation
   | ObjectTypeIndexer
@@ -93,6 +102,7 @@ type Node =
   | QualifiedTypeIdentifier
   | ReturnStatement
   | SpreadElement
+  | StringLiteral
   | StringTypeAnnotation
   | SymbolTypeAnnotation
   | ThisTypeAnnotation

@@ -1,5 +1,595 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`./color/parseToHsl.js.flow ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 25,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 3,
+          },
+          "identifierName": "parseToRgb",
+          "start": Position {
+            "column": 7,
+            "line": 3,
+          },
+        },
+        "name": "parseToRgb",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 8,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 1,
+            },
+          },
+          "value": " @flow",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 37,
+          "line": 3,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 3,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 17,
+              "line": 3,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 3,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 3,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 3,
+          },
+        },
+        "relativePath": "./parseToRgb",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 4,
+          },
+          "identifierName": "rgbToHsl",
+          "start": Position {
+            "column": 7,
+            "line": 4,
+          },
+        },
+        "name": "rgbToHsl",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 51,
+          "line": 4,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 4,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 15,
+              "line": 4,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 4,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 4,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 4,
+          },
+        },
+        "relativePath": "../internalHelpers/_rgbToHsl",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 22,
+            "line": 5,
+          },
+          "identifierName": "HslColor",
+          "start": Position {
+            "column": 14,
+            "line": 5,
+          },
+        },
+        "name": "HslColor",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 57,
+          "line": 5,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 5,
+        },
+      },
+      "mode": "type",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 22,
+              "line": 5,
+            },
+            "identifierName": "HslColor",
+            "start": Position {
+              "column": 14,
+              "line": 5,
+            },
+          },
+          "name": "HslColor",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 22,
+            "line": 5,
+          },
+          "start": Position {
+            "column": 14,
+            "line": 5,
+          },
+        },
+        "relativePath": "../types/color",
+      },
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 33,
+            "line": 5,
+          },
+          "identifierName": "HslaColor",
+          "start": Position {
+            "column": 24,
+            "line": 5,
+          },
+        },
+        "name": "HslaColor",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 57,
+          "line": 5,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 5,
+        },
+      },
+      "mode": "type",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 33,
+              "line": 5,
+            },
+            "identifierName": "HslaColor",
+            "start": Position {
+              "column": 24,
+              "line": 5,
+            },
+          },
+          "name": "HslaColor",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 33,
+            "line": 5,
+          },
+          "start": Position {
+            "column": 24,
+            "line": 5,
+          },
+        },
+        "relativePath": "../types/color",
+      },
+    },
+    Object {
+      "body": Array [
+        Object {
+          "argument": Object {
+            "arguments": Array [
+              Object {
+                "arguments": Array [
+                  Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 34,
+                        "line": 21,
+                      },
+                      "identifierName": "color",
+                      "start": Position {
+                        "column": 29,
+                        "line": 21,
+                      },
+                    },
+                    "name": "color",
+                  },
+                ],
+                "callee": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 28,
+                      "line": 21,
+                    },
+                    "identifierName": "parseToRgb",
+                    "start": Position {
+                      "column": 18,
+                      "line": 21,
+                    },
+                  },
+                  "name": "parseToRgb",
+                },
+                "kind": "CallExpression",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 35,
+                    "line": 21,
+                  },
+                  "start": Position {
+                    "column": 18,
+                    "line": 21,
+                  },
+                },
+                "typeArguments": Array [],
+              },
+            ],
+            "callee": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 17,
+                  "line": 21,
+                },
+                "identifierName": "rgbToHsl",
+                "start": Position {
+                  "column": 9,
+                  "line": 21,
+                },
+              },
+              "name": "rgbToHsl",
+            },
+            "kind": "CallExpression",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 36,
+                "line": 21,
+              },
+              "start": Position {
+                "column": 9,
+                "line": 21,
+              },
+            },
+            "typeArguments": Array [],
+          },
+          "kind": "ReturnStatement",
+          "leadingComments": Array [
+            Object {
+              "kind": "CommentLine",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 76,
+                  "line": 19,
+                },
+                "start": Position {
+                  "column": 2,
+                  "line": 19,
+                },
+              },
+              "value": " Note: At a later stage we can optimize this function as right now a hsl",
+            },
+            Object {
+              "kind": "CommentLine",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 77,
+                  "line": 20,
+                },
+                "start": Position {
+                  "column": 2,
+                  "line": 20,
+                },
+              },
+              "value": " color would be parsed converted to rgb values and converted back to hsl.",
+            },
+          ],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 36,
+              "line": 21,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 21,
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 19,
+            "line": 18,
+          },
+          "identifierName": "parseToHsl",
+          "start": Position {
+            "column": 9,
+            "line": 18,
+          },
+        },
+        "name": "parseToHsl",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentBlock",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 3,
+              "line": 17,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 7,
+            },
+          },
+          "value": "*
+ * Returns an HslColor or HslaColor object. This utility function is only useful
+ * if want to extract a color component. With the color util \`toColorString\` you
+ * can convert a HslColor or HslaColor object back to a string.
+ *
+ * @example
+ * // Assigns \`{ red: 255, green: 0, blue: 0 }\` to color1
+ * const color1 = 'rgb(255, 0, 0)';
+ * // Assigns \`{ red: 92, green: 102, blue: 112, alpha: 0.75 }\` to color2
+ * const color2 = 'hsla(210, 10%, 40%, 0.75)';
+ ",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 22,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 18,
+        },
+      },
+      "params": Array [
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 33,
+              "line": 18,
+            },
+            "identifierName": "color",
+            "start": Position {
+              "column": 20,
+              "line": 18,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 33,
+                "line": 18,
+              },
+              "identifierName": "color",
+              "start": Position {
+                "column": 20,
+                "line": 18,
+              },
+            },
+            "name": "color",
+          },
+          "optional": false,
+          "type": Object {
+            "kind": "StringTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 33,
+                "line": 18,
+              },
+              "start": Position {
+                "column": 27,
+                "line": 18,
+              },
+            },
+          },
+        },
+      ],
+      "restParam": undefined,
+      "returnType": Object {
+        "kind": "UnionTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 56,
+            "line": 18,
+          },
+          "start": Position {
+            "column": 36,
+            "line": 18,
+          },
+        },
+        "types": Array [
+          Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 44,
+                "line": 18,
+              },
+              "identifierName": "HslColor",
+              "start": Position {
+                "column": 36,
+                "line": 18,
+              },
+            },
+            "name": "HslColor",
+          },
+          Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 56,
+                "line": 18,
+              },
+              "identifierName": "HslaColor",
+              "start": Position {
+                "column": 47,
+                "line": 18,
+              },
+            },
+            "name": "HslaColor",
+          },
+        ],
+      },
+      "typeParams": Array [],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 25,
+            "line": 24,
+          },
+          "identifierName": "parseToHsl",
+          "start": Position {
+            "column": 15,
+            "line": 24,
+          },
+        },
+        "name": "parseToHsl",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 25,
+          "line": 24,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 24,
+        },
+      },
+    },
+  ],
+}
+`;
+
 exports[`./index.js.flow ast 1`] = `
 Object {
   "kind": "File",
@@ -5972,6 +6562,3540 @@ Object {
           },
         },
         "name": "wordWrap",
+      },
+    },
+  ],
+}
+`;
+
+exports[`./internalHelpers/_guard.js.flow ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 8,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "body": Array [
+        Object {
+          "argument": Object {
+            "arguments": Array [
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 31,
+                    "line": 4,
+                  },
+                  "identifierName": "lowerBoundary",
+                  "start": Position {
+                    "column": 18,
+                    "line": 4,
+                  },
+                },
+                "name": "lowerBoundary",
+              },
+              Object {
+                "arguments": Array [
+                  Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 55,
+                        "line": 4,
+                      },
+                      "identifierName": "upperBoundary",
+                      "start": Position {
+                        "column": 42,
+                        "line": 4,
+                      },
+                    },
+                    "name": "upperBoundary",
+                  },
+                  Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 62,
+                        "line": 4,
+                      },
+                      "identifierName": "value",
+                      "start": Position {
+                        "column": 57,
+                        "line": 4,
+                      },
+                    },
+                    "name": "value",
+                  },
+                ],
+                "callee": Object {
+                  "kind": "MemberExpression",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 41,
+                      "line": 4,
+                    },
+                    "start": Position {
+                      "column": 33,
+                      "line": 4,
+                    },
+                  },
+                  "object": Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 37,
+                        "line": 4,
+                      },
+                      "identifierName": "Math",
+                      "start": Position {
+                        "column": 33,
+                        "line": 4,
+                      },
+                    },
+                    "name": "Math",
+                  },
+                  "property": Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 41,
+                        "line": 4,
+                      },
+                      "identifierName": "min",
+                      "start": Position {
+                        "column": 38,
+                        "line": 4,
+                      },
+                    },
+                    "name": "min",
+                  },
+                },
+                "kind": "CallExpression",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 63,
+                    "line": 4,
+                  },
+                  "start": Position {
+                    "column": 33,
+                    "line": 4,
+                  },
+                },
+                "typeArguments": Array [],
+              },
+            ],
+            "callee": Object {
+              "kind": "MemberExpression",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 17,
+                  "line": 4,
+                },
+                "start": Position {
+                  "column": 9,
+                  "line": 4,
+                },
+              },
+              "object": Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 13,
+                    "line": 4,
+                  },
+                  "identifierName": "Math",
+                  "start": Position {
+                    "column": 9,
+                    "line": 4,
+                  },
+                },
+                "name": "Math",
+              },
+              "property": Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 17,
+                    "line": 4,
+                  },
+                  "identifierName": "max",
+                  "start": Position {
+                    "column": 14,
+                    "line": 4,
+                  },
+                },
+                "name": "max",
+              },
+            },
+            "kind": "CallExpression",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 64,
+                "line": 4,
+              },
+              "start": Position {
+                "column": 9,
+                "line": 4,
+              },
+            },
+            "typeArguments": Array [],
+          },
+          "kind": "ReturnStatement",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 64,
+              "line": 4,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 4,
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 3,
+          },
+          "identifierName": "guard",
+          "start": Position {
+            "column": 9,
+            "line": 3,
+          },
+        },
+        "name": "guard",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 8,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 1,
+            },
+          },
+          "value": " @flow",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 5,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 3,
+        },
+      },
+      "params": Array [
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 36,
+              "line": 3,
+            },
+            "identifierName": "lowerBoundary",
+            "start": Position {
+              "column": 15,
+              "line": 3,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 36,
+                "line": 3,
+              },
+              "identifierName": "lowerBoundary",
+              "start": Position {
+                "column": 15,
+                "line": 3,
+              },
+            },
+            "name": "lowerBoundary",
+          },
+          "optional": false,
+          "type": Object {
+            "kind": "StringTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 36,
+                "line": 3,
+              },
+              "start": Position {
+                "column": 30,
+                "line": 3,
+              },
+            },
+          },
+        },
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 59,
+              "line": 3,
+            },
+            "identifierName": "upperBoundary",
+            "start": Position {
+              "column": 38,
+              "line": 3,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 59,
+                "line": 3,
+              },
+              "identifierName": "upperBoundary",
+              "start": Position {
+                "column": 38,
+                "line": 3,
+              },
+            },
+            "name": "upperBoundary",
+          },
+          "optional": false,
+          "type": Object {
+            "kind": "StringTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 59,
+                "line": 3,
+              },
+              "start": Position {
+                "column": 53,
+                "line": 3,
+              },
+            },
+          },
+        },
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 74,
+              "line": 3,
+            },
+            "identifierName": "value",
+            "start": Position {
+              "column": 61,
+              "line": 3,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 74,
+                "line": 3,
+              },
+              "identifierName": "value",
+              "start": Position {
+                "column": 61,
+                "line": 3,
+              },
+            },
+            "name": "value",
+          },
+          "optional": false,
+          "type": Object {
+            "kind": "StringTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 74,
+                "line": 3,
+              },
+              "start": Position {
+                "column": 68,
+                "line": 3,
+              },
+            },
+          },
+        },
+      ],
+      "restParam": undefined,
+      "returnType": Object {
+        "kind": "StringTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 83,
+            "line": 3,
+          },
+          "start": Position {
+            "column": 77,
+            "line": 3,
+          },
+        },
+      },
+      "typeParams": Array [],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 7,
+          },
+          "identifierName": "guard",
+          "start": Position {
+            "column": 15,
+            "line": 7,
+          },
+        },
+        "name": "guard",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 20,
+          "line": 7,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 7,
+        },
+      },
+    },
+  ],
+}
+`;
+
+exports[`./internalHelpers/_polishedLogs.js.flow ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 23,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "body": Array [
+        Object {
+          "expression": Object {
+            "arguments": Array [
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 23,
+                    "line": 3,
+                  },
+                  "identifierName": "message",
+                  "start": Position {
+                    "column": 16,
+                    "line": 3,
+                  },
+                },
+                "name": "message",
+              },
+            ],
+            "callee": Object {
+              "kind": "MemberExpression",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 15,
+                  "line": 3,
+                },
+                "start": Position {
+                  "column": 2,
+                  "line": 3,
+                },
+              },
+              "object": Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 9,
+                    "line": 3,
+                  },
+                  "identifierName": "console",
+                  "start": Position {
+                    "column": 2,
+                    "line": 3,
+                  },
+                },
+                "name": "console",
+              },
+              "property": Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 15,
+                    "line": 3,
+                  },
+                  "identifierName": "error",
+                  "start": Position {
+                    "column": 10,
+                    "line": 3,
+                  },
+                },
+                "name": "error",
+              },
+            },
+            "kind": "CallExpression",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 24,
+                "line": 3,
+              },
+              "start": Position {
+                "column": 2,
+                "line": 3,
+              },
+            },
+            "typeArguments": Array [],
+          },
+          "kind": "ExpressionStatement",
+          "leadingComments": Array [
+            Object {
+              "kind": "CommentLine",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 40,
+                  "line": 2,
+                },
+                "start": Position {
+                  "column": 2,
+                  "line": 2,
+                },
+              },
+              "value": " eslint-disable-next-line no-console",
+            },
+          ],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 24,
+              "line": 3,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 3,
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 1,
+          },
+          "identifierName": "logError",
+          "start": Position {
+            "column": 9,
+            "line": 1,
+          },
+        },
+        "name": "logError",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 4,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 1,
+        },
+      },
+      "params": Array [
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 25,
+              "line": 1,
+            },
+            "identifierName": "message",
+            "start": Position {
+              "column": 18,
+              "line": 1,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 25,
+                "line": 1,
+              },
+              "identifierName": "message",
+              "start": Position {
+                "column": 18,
+                "line": 1,
+              },
+            },
+            "name": "message",
+          },
+          "optional": false,
+          "type": undefined,
+        },
+      ],
+      "restParam": undefined,
+      "returnType": undefined,
+      "typeParams": Array [],
+    },
+    Object {
+      "body": Array [
+        Object {
+          "expression": Object {
+            "arguments": Array [
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 22,
+                    "line": 8,
+                  },
+                  "identifierName": "message",
+                  "start": Position {
+                    "column": 15,
+                    "line": 8,
+                  },
+                },
+                "name": "message",
+              },
+            ],
+            "callee": Object {
+              "kind": "MemberExpression",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 14,
+                  "line": 8,
+                },
+                "start": Position {
+                  "column": 2,
+                  "line": 8,
+                },
+              },
+              "object": Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 9,
+                    "line": 8,
+                  },
+                  "identifierName": "console",
+                  "start": Position {
+                    "column": 2,
+                    "line": 8,
+                  },
+                },
+                "name": "console",
+              },
+              "property": Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 14,
+                    "line": 8,
+                  },
+                  "identifierName": "info",
+                  "start": Position {
+                    "column": 10,
+                    "line": 8,
+                  },
+                },
+                "name": "info",
+              },
+            },
+            "kind": "CallExpression",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 23,
+                "line": 8,
+              },
+              "start": Position {
+                "column": 2,
+                "line": 8,
+              },
+            },
+            "typeArguments": Array [],
+          },
+          "kind": "ExpressionStatement",
+          "leadingComments": Array [
+            Object {
+              "kind": "CommentLine",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 40,
+                  "line": 7,
+                },
+                "start": Position {
+                  "column": 2,
+                  "line": 7,
+                },
+              },
+              "value": " eslint-disable-next-line no-console",
+            },
+          ],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 23,
+              "line": 8,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 8,
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 6,
+          },
+          "identifierName": "logInfo",
+          "start": Position {
+            "column": 9,
+            "line": 6,
+          },
+        },
+        "name": "logInfo",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 9,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 6,
+        },
+      },
+      "params": Array [
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 24,
+              "line": 6,
+            },
+            "identifierName": "message",
+            "start": Position {
+              "column": 17,
+              "line": 6,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 24,
+                "line": 6,
+              },
+              "identifierName": "message",
+              "start": Position {
+                "column": 17,
+                "line": 6,
+              },
+            },
+            "name": "message",
+          },
+          "optional": false,
+          "type": undefined,
+        },
+      ],
+      "restParam": undefined,
+      "returnType": undefined,
+      "typeParams": Array [],
+    },
+    Object {
+      "body": Array [
+        Object {
+          "expression": Object {
+            "arguments": Array [
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 25,
+                    "line": 13,
+                  },
+                  "identifierName": "message",
+                  "start": Position {
+                    "column": 18,
+                    "line": 13,
+                  },
+                },
+                "name": "message",
+              },
+            ],
+            "callee": Object {
+              "kind": "MemberExpression",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 17,
+                  "line": 13,
+                },
+                "start": Position {
+                  "column": 2,
+                  "line": 13,
+                },
+              },
+              "object": Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 9,
+                    "line": 13,
+                  },
+                  "identifierName": "console",
+                  "start": Position {
+                    "column": 2,
+                    "line": 13,
+                  },
+                },
+                "name": "console",
+              },
+              "property": Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 17,
+                    "line": 13,
+                  },
+                  "identifierName": "warning",
+                  "start": Position {
+                    "column": 10,
+                    "line": 13,
+                  },
+                },
+                "name": "warning",
+              },
+            },
+            "kind": "CallExpression",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 26,
+                "line": 13,
+              },
+              "start": Position {
+                "column": 2,
+                "line": 13,
+              },
+            },
+            "typeArguments": Array [],
+          },
+          "kind": "ExpressionStatement",
+          "leadingComments": Array [
+            Object {
+              "kind": "CommentLine",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 40,
+                  "line": 12,
+                },
+                "start": Position {
+                  "column": 2,
+                  "line": 12,
+                },
+              },
+              "value": " eslint-disable-next-line no-console",
+            },
+          ],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 26,
+              "line": 13,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 13,
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 19,
+            "line": 11,
+          },
+          "identifierName": "logWarning",
+          "start": Position {
+            "column": 9,
+            "line": 11,
+          },
+        },
+        "name": "logWarning",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 14,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 11,
+        },
+      },
+      "params": Array [
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 27,
+              "line": 11,
+            },
+            "identifierName": "message",
+            "start": Position {
+              "column": 20,
+              "line": 11,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 27,
+                "line": 11,
+              },
+              "identifierName": "message",
+              "start": Position {
+                "column": 20,
+                "line": 11,
+              },
+            },
+            "name": "message",
+          },
+          "optional": false,
+          "type": undefined,
+        },
+      ],
+      "restParam": undefined,
+      "returnType": undefined,
+      "typeParams": Array [],
+    },
+    Object {
+      "body": Array [
+        Object {
+          "alternate": Array [],
+          "consequent": Array [
+            Object {
+              "expression": Object {
+                "arguments": Array [
+                  Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 40,
+                        "line": 17,
+                      },
+                      "identifierName": "message",
+                      "start": Position {
+                        "column": 33,
+                        "line": 17,
+                      },
+                    },
+                    "name": "message",
+                  },
+                ],
+                "callee": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 32,
+                      "line": 17,
+                    },
+                    "identifierName": "logError",
+                    "start": Position {
+                      "column": 24,
+                      "line": 17,
+                    },
+                  },
+                  "name": "logError",
+                },
+                "kind": "CallExpression",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 41,
+                    "line": 17,
+                  },
+                  "start": Position {
+                    "column": 24,
+                    "line": 17,
+                  },
+                },
+                "typeArguments": Array [],
+              },
+              "kind": "ExpressionStatement",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 41,
+                  "line": 17,
+                },
+                "start": Position {
+                  "column": 24,
+                  "line": 17,
+                },
+              },
+            },
+          ],
+          "kind": "IfStatement",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 41,
+              "line": 17,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 17,
+            },
+          },
+          "test": Object {
+            "kind": "BinaryExpression",
+            "leadingComments": Array [],
+            "left": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 10,
+                  "line": 17,
+                },
+                "identifierName": "type",
+                "start": Position {
+                  "column": 6,
+                  "line": 17,
+                },
+              },
+              "name": "type",
+            },
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 22,
+                "line": 17,
+              },
+              "start": Position {
+                "column": 6,
+                "line": 17,
+              },
+            },
+            "operator": "===",
+            "right": Object {
+              "kind": "StringLiteral",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 22,
+                  "line": 17,
+                },
+                "start": Position {
+                  "column": 15,
+                  "line": 17,
+                },
+              },
+              "value": "error",
+            },
+          },
+        },
+        Object {
+          "alternate": Array [],
+          "consequent": Array [
+            Object {
+              "expression": Object {
+                "arguments": Array [
+                  Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 38,
+                        "line": 18,
+                      },
+                      "identifierName": "message",
+                      "start": Position {
+                        "column": 31,
+                        "line": 18,
+                      },
+                    },
+                    "name": "message",
+                  },
+                ],
+                "callee": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 30,
+                      "line": 18,
+                    },
+                    "identifierName": "logInfo",
+                    "start": Position {
+                      "column": 23,
+                      "line": 18,
+                    },
+                  },
+                  "name": "logInfo",
+                },
+                "kind": "CallExpression",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 39,
+                    "line": 18,
+                  },
+                  "start": Position {
+                    "column": 23,
+                    "line": 18,
+                  },
+                },
+                "typeArguments": Array [],
+              },
+              "kind": "ExpressionStatement",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 39,
+                  "line": 18,
+                },
+                "start": Position {
+                  "column": 23,
+                  "line": 18,
+                },
+              },
+            },
+          ],
+          "kind": "IfStatement",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 39,
+              "line": 18,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 18,
+            },
+          },
+          "test": Object {
+            "kind": "BinaryExpression",
+            "leadingComments": Array [],
+            "left": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 10,
+                  "line": 18,
+                },
+                "identifierName": "type",
+                "start": Position {
+                  "column": 6,
+                  "line": 18,
+                },
+              },
+              "name": "type",
+            },
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 21,
+                "line": 18,
+              },
+              "start": Position {
+                "column": 6,
+                "line": 18,
+              },
+            },
+            "operator": "===",
+            "right": Object {
+              "kind": "StringLiteral",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 21,
+                  "line": 18,
+                },
+                "start": Position {
+                  "column": 15,
+                  "line": 18,
+                },
+              },
+              "value": "info",
+            },
+          },
+        },
+        Object {
+          "alternate": Array [],
+          "consequent": Array [
+            Object {
+              "expression": Object {
+                "arguments": Array [
+                  Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 44,
+                        "line": 19,
+                      },
+                      "identifierName": "message",
+                      "start": Position {
+                        "column": 37,
+                        "line": 19,
+                      },
+                    },
+                    "name": "message",
+                  },
+                ],
+                "callee": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 36,
+                      "line": 19,
+                    },
+                    "identifierName": "logWarning",
+                    "start": Position {
+                      "column": 26,
+                      "line": 19,
+                    },
+                  },
+                  "name": "logWarning",
+                },
+                "kind": "CallExpression",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 45,
+                    "line": 19,
+                  },
+                  "start": Position {
+                    "column": 26,
+                    "line": 19,
+                  },
+                },
+                "typeArguments": Array [],
+              },
+              "kind": "ExpressionStatement",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 45,
+                  "line": 19,
+                },
+                "start": Position {
+                  "column": 26,
+                  "line": 19,
+                },
+              },
+            },
+          ],
+          "kind": "IfStatement",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 45,
+              "line": 19,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 19,
+            },
+          },
+          "test": Object {
+            "kind": "BinaryExpression",
+            "leadingComments": Array [],
+            "left": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 10,
+                  "line": 19,
+                },
+                "identifierName": "type",
+                "start": Position {
+                  "column": 6,
+                  "line": 19,
+                },
+              },
+              "name": "type",
+            },
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 24,
+                "line": 19,
+              },
+              "start": Position {
+                "column": 6,
+                "line": 19,
+              },
+            },
+            "operator": "===",
+            "right": Object {
+              "kind": "StringLiteral",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 24,
+                  "line": 19,
+                },
+                "start": Position {
+                  "column": 15,
+                  "line": 19,
+                },
+              },
+              "value": "warning",
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 25,
+            "line": 16,
+          },
+          "identifierName": "determineLogType",
+          "start": Position {
+            "column": 9,
+            "line": 16,
+          },
+        },
+        "name": "determineLogType",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 20,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 16,
+        },
+      },
+      "params": Array [
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 30,
+              "line": 16,
+            },
+            "identifierName": "type",
+            "start": Position {
+              "column": 26,
+              "line": 16,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 30,
+                "line": 16,
+              },
+              "identifierName": "type",
+              "start": Position {
+                "column": 26,
+                "line": 16,
+              },
+            },
+            "name": "type",
+          },
+          "optional": false,
+          "type": undefined,
+        },
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 39,
+              "line": 16,
+            },
+            "identifierName": "message",
+            "start": Position {
+              "column": 32,
+              "line": 16,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 39,
+                "line": 16,
+              },
+              "identifierName": "message",
+              "start": Position {
+                "column": 32,
+                "line": 16,
+              },
+            },
+            "name": "message",
+          },
+          "optional": false,
+          "type": undefined,
+        },
+      ],
+      "restParam": undefined,
+      "returnType": undefined,
+      "typeParams": Array [],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 31,
+            "line": 22,
+          },
+          "identifierName": "determineLogType",
+          "start": Position {
+            "column": 15,
+            "line": 22,
+          },
+        },
+        "name": "determineLogType",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 31,
+          "line": 22,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 22,
+        },
+      },
+    },
+  ],
+}
+`;
+
+exports[`./shorthands/borderColor.js.flow ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 32,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 2,
+          },
+          "identifierName": "directionalProperty",
+          "start": Position {
+            "column": 7,
+            "line": 2,
+          },
+        },
+        "name": "directionalProperty",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 8,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 1,
+            },
+          },
+          "value": " @flow",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 64,
+          "line": 2,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 2,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 26,
+              "line": 2,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 2,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 2,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 2,
+          },
+        },
+        "relativePath": "../helpers/directionalProperty",
+      },
+    },
+    Object {
+      "body": Array [
+        Object {
+          "argument": Object {
+            "arguments": Array [
+              Object {
+                "kind": "StringLiteral",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 43,
+                    "line": 28,
+                  },
+                  "start": Position {
+                    "column": 29,
+                    "line": 28,
+                  },
+                },
+                "value": "border-color",
+              },
+              Object {
+                "argument": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 54,
+                      "line": 28,
+                    },
+                    "identifierName": "values",
+                    "start": Position {
+                      "column": 48,
+                      "line": 28,
+                    },
+                  },
+                  "name": "values",
+                },
+                "kind": "SpreadElement",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 54,
+                    "line": 28,
+                  },
+                  "start": Position {
+                    "column": 45,
+                    "line": 28,
+                  },
+                },
+              },
+            ],
+            "callee": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 28,
+                  "line": 28,
+                },
+                "identifierName": "directionalProperty",
+                "start": Position {
+                  "column": 9,
+                  "line": 28,
+                },
+              },
+              "name": "directionalProperty",
+            },
+            "kind": "CallExpression",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 55,
+                "line": 28,
+              },
+              "start": Position {
+                "column": 9,
+                "line": 28,
+              },
+            },
+            "typeArguments": Array [],
+          },
+          "kind": "ReturnStatement",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 55,
+              "line": 28,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 28,
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 27,
+          },
+          "identifierName": "borderColor",
+          "start": Position {
+            "column": 9,
+            "line": 27,
+          },
+        },
+        "name": "borderColor",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentBlock",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 3,
+              "line": 25,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 4,
+            },
+          },
+          "value": "*
+ * The border-color shorthand accepts up to four values, including null to skip a value, and uses the directional-property mixin to map them to their respective directions.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...borderColor('red', 'green', 'blue', 'yellow')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${borderColor('red', 'green', 'blue', 'yellow')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'border-top-color': 'red',
+ *   'border-right-color': 'green',
+ *   'border-bottom-color': 'blue',
+ *   'border-left-color': 'yellow'
+ * }
+ ",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 29,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 27,
+        },
+      },
+      "params": Array [],
+      "restParam": Object {
+        "kind": "FunctionParameter",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 30,
+            "line": 27,
+          },
+          "identifierName": "values",
+          "start": Position {
+            "column": 24,
+            "line": 27,
+          },
+        },
+        "name": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 30,
+              "line": 27,
+            },
+            "identifierName": "values",
+            "start": Position {
+              "column": 24,
+              "line": 27,
+            },
+          },
+          "name": "values",
+        },
+        "optional": false,
+        "type": Object {
+          "elementType": Object {
+            "kind": "UnionTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 45,
+                "line": 27,
+              },
+              "start": Position {
+                "column": 38,
+                "line": 27,
+              },
+            },
+            "types": Array [
+              Object {
+                "kind": "StringTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 45,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 39,
+                    "line": 27,
+                  },
+                },
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 45,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 38,
+                    "line": 27,
+                  },
+                },
+                "name": "undefined",
+              },
+              Object {
+                "kind": "NullLiteralTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 45,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 38,
+                    "line": 27,
+                  },
+                },
+              },
+            ],
+          },
+          "kind": "ArrayTypeAnnotation",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 46,
+              "line": 27,
+            },
+            "start": Position {
+              "column": 32,
+              "line": 27,
+            },
+          },
+        },
+      },
+      "returnType": Object {
+        "kind": "AnyObjectTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 55,
+            "line": 27,
+          },
+          "start": Position {
+            "column": 49,
+            "line": 27,
+          },
+        },
+      },
+      "typeParams": Array [],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 31,
+          },
+          "identifierName": "borderColor",
+          "start": Position {
+            "column": 15,
+            "line": 31,
+          },
+        },
+        "name": "borderColor",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 26,
+          "line": 31,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 31,
+        },
+      },
+    },
+  ],
+}
+`;
+
+exports[`./shorthands/borderStyle.js.flow ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 32,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 2,
+          },
+          "identifierName": "directionalProperty",
+          "start": Position {
+            "column": 7,
+            "line": 2,
+          },
+        },
+        "name": "directionalProperty",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 8,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 1,
+            },
+          },
+          "value": " @flow",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 64,
+          "line": 2,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 2,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 26,
+              "line": 2,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 2,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 2,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 2,
+          },
+        },
+        "relativePath": "../helpers/directionalProperty",
+      },
+    },
+    Object {
+      "body": Array [
+        Object {
+          "argument": Object {
+            "arguments": Array [
+              Object {
+                "kind": "StringLiteral",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 43,
+                    "line": 28,
+                  },
+                  "start": Position {
+                    "column": 29,
+                    "line": 28,
+                  },
+                },
+                "value": "border-style",
+              },
+              Object {
+                "argument": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 54,
+                      "line": 28,
+                    },
+                    "identifierName": "values",
+                    "start": Position {
+                      "column": 48,
+                      "line": 28,
+                    },
+                  },
+                  "name": "values",
+                },
+                "kind": "SpreadElement",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 54,
+                    "line": 28,
+                  },
+                  "start": Position {
+                    "column": 45,
+                    "line": 28,
+                  },
+                },
+              },
+            ],
+            "callee": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 28,
+                  "line": 28,
+                },
+                "identifierName": "directionalProperty",
+                "start": Position {
+                  "column": 9,
+                  "line": 28,
+                },
+              },
+              "name": "directionalProperty",
+            },
+            "kind": "CallExpression",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 55,
+                "line": 28,
+              },
+              "start": Position {
+                "column": 9,
+                "line": 28,
+              },
+            },
+            "typeArguments": Array [],
+          },
+          "kind": "ReturnStatement",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 55,
+              "line": 28,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 28,
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 27,
+          },
+          "identifierName": "borderStyle",
+          "start": Position {
+            "column": 9,
+            "line": 27,
+          },
+        },
+        "name": "borderStyle",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentBlock",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 3,
+              "line": 25,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 4,
+            },
+          },
+          "value": "*
+ * The border-style shorthand accepts up to four values, including null to skip a value, and uses the directional-property mixin to map them to their respective directions.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...borderStyle('solid', 'dashed', 'dotted', 'double')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${borderStyle('solid', 'dashed', 'dotted', 'double')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'border-top-style': 'solid',
+ *   'border-right-style': 'dashed',
+ *   'border-bottom-style': 'dotted',
+ *   'border-left-style': 'double'
+ * }
+ ",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 29,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 27,
+        },
+      },
+      "params": Array [],
+      "restParam": Object {
+        "kind": "FunctionParameter",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 30,
+            "line": 27,
+          },
+          "identifierName": "values",
+          "start": Position {
+            "column": 24,
+            "line": 27,
+          },
+        },
+        "name": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 30,
+              "line": 27,
+            },
+            "identifierName": "values",
+            "start": Position {
+              "column": 24,
+              "line": 27,
+            },
+          },
+          "name": "values",
+        },
+        "optional": false,
+        "type": Object {
+          "elementType": Object {
+            "kind": "UnionTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 45,
+                "line": 27,
+              },
+              "start": Position {
+                "column": 38,
+                "line": 27,
+              },
+            },
+            "types": Array [
+              Object {
+                "kind": "StringTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 45,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 39,
+                    "line": 27,
+                  },
+                },
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 45,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 38,
+                    "line": 27,
+                  },
+                },
+                "name": "undefined",
+              },
+              Object {
+                "kind": "NullLiteralTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 45,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 38,
+                    "line": 27,
+                  },
+                },
+              },
+            ],
+          },
+          "kind": "ArrayTypeAnnotation",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 46,
+              "line": 27,
+            },
+            "start": Position {
+              "column": 32,
+              "line": 27,
+            },
+          },
+        },
+      },
+      "returnType": Object {
+        "kind": "AnyObjectTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 55,
+            "line": 27,
+          },
+          "start": Position {
+            "column": 49,
+            "line": 27,
+          },
+        },
+      },
+      "typeParams": Array [],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 31,
+          },
+          "identifierName": "borderStyle",
+          "start": Position {
+            "column": 15,
+            "line": 31,
+          },
+        },
+        "name": "borderStyle",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 26,
+          "line": 31,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 31,
+        },
+      },
+    },
+  ],
+}
+`;
+
+exports[`./shorthands/borderWidth.js.flow ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 32,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 2,
+          },
+          "identifierName": "directionalProperty",
+          "start": Position {
+            "column": 7,
+            "line": 2,
+          },
+        },
+        "name": "directionalProperty",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 8,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 1,
+            },
+          },
+          "value": " @flow",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 64,
+          "line": 2,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 2,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 26,
+              "line": 2,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 2,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 2,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 2,
+          },
+        },
+        "relativePath": "../helpers/directionalProperty",
+      },
+    },
+    Object {
+      "body": Array [
+        Object {
+          "argument": Object {
+            "arguments": Array [
+              Object {
+                "kind": "StringLiteral",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 43,
+                    "line": 28,
+                  },
+                  "start": Position {
+                    "column": 29,
+                    "line": 28,
+                  },
+                },
+                "value": "border-width",
+              },
+              Object {
+                "argument": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 54,
+                      "line": 28,
+                    },
+                    "identifierName": "values",
+                    "start": Position {
+                      "column": 48,
+                      "line": 28,
+                    },
+                  },
+                  "name": "values",
+                },
+                "kind": "SpreadElement",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 54,
+                    "line": 28,
+                  },
+                  "start": Position {
+                    "column": 45,
+                    "line": 28,
+                  },
+                },
+              },
+            ],
+            "callee": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 28,
+                  "line": 28,
+                },
+                "identifierName": "directionalProperty",
+                "start": Position {
+                  "column": 9,
+                  "line": 28,
+                },
+              },
+              "name": "directionalProperty",
+            },
+            "kind": "CallExpression",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 55,
+                "line": 28,
+              },
+              "start": Position {
+                "column": 9,
+                "line": 28,
+              },
+            },
+            "typeArguments": Array [],
+          },
+          "kind": "ReturnStatement",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 55,
+              "line": 28,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 28,
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 27,
+          },
+          "identifierName": "borderWidth",
+          "start": Position {
+            "column": 9,
+            "line": 27,
+          },
+        },
+        "name": "borderWidth",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentBlock",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 3,
+              "line": 25,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 4,
+            },
+          },
+          "value": "*
+ * The border-width shorthand accepts up to four values, including null to skip a value, and uses the directional-property mixin to map them to their respective directions.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...borderWidth('12px', '24px', '36px', '48px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${borderWidth('12px', '24px', '36px', '48px')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'border-top-width': '12px',
+ *   'border-right-width': '24px',
+ *   'border-bottom-width': '36px',
+ *   'border-left-width': '48px'
+ * }
+ ",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 29,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 27,
+        },
+      },
+      "params": Array [],
+      "restParam": Object {
+        "kind": "FunctionParameter",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 30,
+            "line": 27,
+          },
+          "identifierName": "values",
+          "start": Position {
+            "column": 24,
+            "line": 27,
+          },
+        },
+        "name": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 30,
+              "line": 27,
+            },
+            "identifierName": "values",
+            "start": Position {
+              "column": 24,
+              "line": 27,
+            },
+          },
+          "name": "values",
+        },
+        "optional": false,
+        "type": Object {
+          "elementType": Object {
+            "kind": "UnionTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 45,
+                "line": 27,
+              },
+              "start": Position {
+                "column": 38,
+                "line": 27,
+              },
+            },
+            "types": Array [
+              Object {
+                "kind": "StringTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 45,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 39,
+                    "line": 27,
+                  },
+                },
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 45,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 38,
+                    "line": 27,
+                  },
+                },
+                "name": "undefined",
+              },
+              Object {
+                "kind": "NullLiteralTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 45,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 38,
+                    "line": 27,
+                  },
+                },
+              },
+            ],
+          },
+          "kind": "ArrayTypeAnnotation",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 46,
+              "line": 27,
+            },
+            "start": Position {
+              "column": 32,
+              "line": 27,
+            },
+          },
+        },
+      },
+      "returnType": Object {
+        "kind": "AnyObjectTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 55,
+            "line": 27,
+          },
+          "start": Position {
+            "column": 49,
+            "line": 27,
+          },
+        },
+      },
+      "typeParams": Array [],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 31,
+          },
+          "identifierName": "borderWidth",
+          "start": Position {
+            "column": 15,
+            "line": 31,
+          },
+        },
+        "name": "borderWidth",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 26,
+          "line": 31,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 31,
+        },
+      },
+    },
+  ],
+}
+`;
+
+exports[`./shorthands/margin.js.flow ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 32,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 2,
+          },
+          "identifierName": "directionalProperty",
+          "start": Position {
+            "column": 7,
+            "line": 2,
+          },
+        },
+        "name": "directionalProperty",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 8,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 1,
+            },
+          },
+          "value": " @flow",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 64,
+          "line": 2,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 2,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 26,
+              "line": 2,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 2,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 2,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 2,
+          },
+        },
+        "relativePath": "../helpers/directionalProperty",
+      },
+    },
+    Object {
+      "body": Array [
+        Object {
+          "argument": Object {
+            "arguments": Array [
+              Object {
+                "kind": "StringLiteral",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 37,
+                    "line": 28,
+                  },
+                  "start": Position {
+                    "column": 29,
+                    "line": 28,
+                  },
+                },
+                "value": "margin",
+              },
+              Object {
+                "argument": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 48,
+                      "line": 28,
+                    },
+                    "identifierName": "values",
+                    "start": Position {
+                      "column": 42,
+                      "line": 28,
+                    },
+                  },
+                  "name": "values",
+                },
+                "kind": "SpreadElement",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 48,
+                    "line": 28,
+                  },
+                  "start": Position {
+                    "column": 39,
+                    "line": 28,
+                  },
+                },
+              },
+            ],
+            "callee": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 28,
+                  "line": 28,
+                },
+                "identifierName": "directionalProperty",
+                "start": Position {
+                  "column": 9,
+                  "line": 28,
+                },
+              },
+              "name": "directionalProperty",
+            },
+            "kind": "CallExpression",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 49,
+                "line": 28,
+              },
+              "start": Position {
+                "column": 9,
+                "line": 28,
+              },
+            },
+            "typeArguments": Array [],
+          },
+          "kind": "ReturnStatement",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 49,
+              "line": 28,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 28,
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 27,
+          },
+          "identifierName": "margin",
+          "start": Position {
+            "column": 9,
+            "line": 27,
+          },
+        },
+        "name": "margin",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentBlock",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 3,
+              "line": 25,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 4,
+            },
+          },
+          "value": "*
+ * The margin shorthand accepts up to four values, including null to skip a value, and uses the directional-property mixin to map them to their respective directions.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...margin('12px', '24px', '36px', '48px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${margin('12px', '24px', '36px', '48px')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'margin-top': '12px',
+ *   'margin-right': '24px',
+ *   'margin-bottom': '36px',
+ *   'margin-left': '48px'
+ * }
+ ",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 29,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 27,
+        },
+      },
+      "params": Array [],
+      "restParam": Object {
+        "kind": "FunctionParameter",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 25,
+            "line": 27,
+          },
+          "identifierName": "values",
+          "start": Position {
+            "column": 19,
+            "line": 27,
+          },
+        },
+        "name": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 25,
+              "line": 27,
+            },
+            "identifierName": "values",
+            "start": Position {
+              "column": 19,
+              "line": 27,
+            },
+          },
+          "name": "values",
+        },
+        "optional": false,
+        "type": Object {
+          "elementType": Object {
+            "kind": "UnionTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 40,
+                "line": 27,
+              },
+              "start": Position {
+                "column": 33,
+                "line": 27,
+              },
+            },
+            "types": Array [
+              Object {
+                "kind": "StringTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 40,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 34,
+                    "line": 27,
+                  },
+                },
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 40,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 33,
+                    "line": 27,
+                  },
+                },
+                "name": "undefined",
+              },
+              Object {
+                "kind": "NullLiteralTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 40,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 33,
+                    "line": 27,
+                  },
+                },
+              },
+            ],
+          },
+          "kind": "ArrayTypeAnnotation",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 41,
+              "line": 27,
+            },
+            "start": Position {
+              "column": 27,
+              "line": 27,
+            },
+          },
+        },
+      },
+      "returnType": Object {
+        "kind": "AnyObjectTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 50,
+            "line": 27,
+          },
+          "start": Position {
+            "column": 44,
+            "line": 27,
+          },
+        },
+      },
+      "typeParams": Array [],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 21,
+            "line": 31,
+          },
+          "identifierName": "margin",
+          "start": Position {
+            "column": 15,
+            "line": 31,
+          },
+        },
+        "name": "margin",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 21,
+          "line": 31,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 31,
+        },
+      },
+    },
+  ],
+}
+`;
+
+exports[`./shorthands/padding.js.flow ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 32,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 2,
+          },
+          "identifierName": "directionalProperty",
+          "start": Position {
+            "column": 7,
+            "line": 2,
+          },
+        },
+        "name": "directionalProperty",
+      },
+      "kind": "ImportStatement",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 8,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 1,
+            },
+          },
+          "value": " @flow",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 64,
+          "line": 2,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 2,
+        },
+      },
+      "mode": "value",
+      "source": Object {
+        "id": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 26,
+              "line": 2,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 2,
+            },
+          },
+          "name": "default",
+        },
+        "kind": "EsImportSource",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 2,
+          },
+          "start": Position {
+            "column": 7,
+            "line": 2,
+          },
+        },
+        "relativePath": "../helpers/directionalProperty",
+      },
+    },
+    Object {
+      "body": Array [
+        Object {
+          "argument": Object {
+            "arguments": Array [
+              Object {
+                "kind": "StringLiteral",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 38,
+                    "line": 28,
+                  },
+                  "start": Position {
+                    "column": 29,
+                    "line": 28,
+                  },
+                },
+                "value": "padding",
+              },
+              Object {
+                "argument": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 49,
+                      "line": 28,
+                    },
+                    "identifierName": "values",
+                    "start": Position {
+                      "column": 43,
+                      "line": 28,
+                    },
+                  },
+                  "name": "values",
+                },
+                "kind": "SpreadElement",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 49,
+                    "line": 28,
+                  },
+                  "start": Position {
+                    "column": 40,
+                    "line": 28,
+                  },
+                },
+              },
+            ],
+            "callee": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 28,
+                  "line": 28,
+                },
+                "identifierName": "directionalProperty",
+                "start": Position {
+                  "column": 9,
+                  "line": 28,
+                },
+              },
+              "name": "directionalProperty",
+            },
+            "kind": "CallExpression",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 50,
+                "line": 28,
+              },
+              "start": Position {
+                "column": 9,
+                "line": 28,
+              },
+            },
+            "typeArguments": Array [],
+          },
+          "kind": "ReturnStatement",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 50,
+              "line": 28,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 28,
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 27,
+          },
+          "identifierName": "padding",
+          "start": Position {
+            "column": 9,
+            "line": 27,
+          },
+        },
+        "name": "padding",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentBlock",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 3,
+              "line": 25,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 4,
+            },
+          },
+          "value": "*
+ * The padding shorthand accepts up to four values, including null to skip a value, and uses the directional-property mixin to map them to their respective directions.
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...padding('12px', '24px', '36px', '48px')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${padding('12px', '24px', '36px', '48px')}
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'padding-top': '12px',
+ *   'padding-right': '24px',
+ *   'padding-bottom': '36px',
+ *   'padding-left': '48px'
+ * }
+ ",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 29,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 27,
+        },
+      },
+      "params": Array [],
+      "restParam": Object {
+        "kind": "FunctionParameter",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 27,
+          },
+          "identifierName": "values",
+          "start": Position {
+            "column": 20,
+            "line": 27,
+          },
+        },
+        "name": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 26,
+              "line": 27,
+            },
+            "identifierName": "values",
+            "start": Position {
+              "column": 20,
+              "line": 27,
+            },
+          },
+          "name": "values",
+        },
+        "optional": false,
+        "type": Object {
+          "elementType": Object {
+            "kind": "UnionTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 41,
+                "line": 27,
+              },
+              "start": Position {
+                "column": 34,
+                "line": 27,
+              },
+            },
+            "types": Array [
+              Object {
+                "kind": "StringTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 41,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 35,
+                    "line": 27,
+                  },
+                },
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 41,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 34,
+                    "line": 27,
+                  },
+                },
+                "name": "undefined",
+              },
+              Object {
+                "kind": "NullLiteralTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 41,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 34,
+                    "line": 27,
+                  },
+                },
+              },
+            ],
+          },
+          "kind": "ArrayTypeAnnotation",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 42,
+              "line": 27,
+            },
+            "start": Position {
+              "column": 28,
+              "line": 27,
+            },
+          },
+        },
+      },
+      "returnType": Object {
+        "kind": "AnyObjectTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 51,
+            "line": 27,
+          },
+          "start": Position {
+            "column": 45,
+            "line": 27,
+          },
+        },
+      },
+      "typeParams": Array [],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 22,
+            "line": 31,
+          },
+          "identifierName": "padding",
+          "start": Position {
+            "column": 15,
+            "line": 31,
+          },
+        },
+        "name": "padding",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 22,
+          "line": 31,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 31,
+        },
       },
     },
   ],

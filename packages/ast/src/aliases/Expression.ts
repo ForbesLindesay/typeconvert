@@ -5,14 +5,24 @@
 import ArrayExpression from '../nodes/ArrayExpresison';
 import AssignmentExpression from '../nodes/AssignmentExpression';
 import BinaryExpression from '../nodes/BinaryExpression';
+import CallExpression from '../nodes/CallExpression';
 import Identifier from '../nodes/Identifier';
 import LogicalExpression from '../nodes/LogicalExpression';
+import MemberExpression from '../nodes/MemberExpression';
+import MemberExpressionComputed from '../nodes/MemberExpressionComputed';
+import NumericLiteral from '../nodes/NumericLiteral';
+import StringLiteral from '../nodes/StringLiteral';
 
 type Expression = 
   | ArrayExpression
   | AssignmentExpression
   | BinaryExpression
+  | CallExpression
   | Identifier
-  | LogicalExpression;
+  | LogicalExpression
+  | MemberExpression
+  | MemberExpressionComputed
+  | NumericLiteral
+  | StringLiteral;
 
 export default Expression;
