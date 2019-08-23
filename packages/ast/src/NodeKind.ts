@@ -10,6 +10,7 @@ enum NodeKind {
   BooleanTypeAnnotation = 'BooleanTypeAnnotation',
   CallExpression = 'CallExpression',
   ConditionalExpression = 'ConditionalExpression',
+  ConditionalType = 'ConditionalType',
   CommonJSImportSource = 'CommonJSImportSource',
   EmptyTypeAnnotation = 'EmptyTypeAnnotation',
   EsImportSource = 'EsImportSource',

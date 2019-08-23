@@ -14,6 +14,7 @@ import BooleanTypeAnnotation from '../nodes/BooleanTypeAnnotation';
 import CallExpression from '../nodes/CallExpression';
 import {CommonJSImportSource} from '../nodes/ImportStatement';
 import ConditionalExpression from '../nodes/ConditionalExpression';
+import ConditionalType from '../nodes/ConditionalType';
 import EmptyTypeAnnotation from '../nodes/EmptyTypeAnnotation';
 import {EsImportSource} from '../nodes/ImportStatement';
 import ExistsTypeAnnotation from '../nodes/ExistsTypeAnnotation';
@@ -83,6 +84,7 @@ type Node =
   | CallExpression
   | CommonJSImportSource
   | ConditionalExpression
+  | ConditionalType
   | EmptyTypeAnnotation
   | EsImportSource
   | ExistsTypeAnnotation

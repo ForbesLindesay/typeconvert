@@ -6,6 +6,7 @@ import AnyObjectTypeAnnotation from '../nodes/AnyObjectTypeAnnotation';
 import AnyTypeAnnotation from '../nodes/AnyTypeAnnotation';
 import ArrayTypeAnnotation from '../nodes/ArrayTypeAnnotation';
 import BooleanTypeAnnotation from '../nodes/BooleanTypeAnnotation';
+import ConditionalType from '../nodes/ConditionalType';
 import EmptyTypeAnnotation from '../nodes/EmptyTypeAnnotation';
 import ExistsTypeAnnotation from '../nodes/ExistsTypeAnnotation';
 import FunctionTypeAnnotation from '../nodes/FunctionTypeAnnotation';
@@ -33,6 +34,7 @@ type TypeAnnotation =
   | AnyTypeAnnotation
   | ArrayTypeAnnotation
   | BooleanTypeAnnotation
+  | ConditionalType
   | EmptyTypeAnnotation
   | ExistsTypeAnnotation
   | FunctionTypeAnnotation
