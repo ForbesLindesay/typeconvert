@@ -1,10 +1,12 @@
 import * as bt from '@babel/types';
 import * as ast from '@typeconvert/ast';
+import extractDeclaredIdentifiers from './extractDeclaredIdentifiers';
 import normalizeComments from './normalizeComments';
 import normalizeExpression from './normalizeExpression';
 import ParseContext from '../ParseContext';
 import normalizeIdentifier from './normalizeIdentifier';
 import normalizeDeclaration from './normalizeDeclaration';
+import normalizeVariableDeclaration from './normalizeVariableDeclaration';
 
 export default function normalizeStatement(
   input: bt.Statement,
@@ -25,6 +27,10 @@ export default function normalizeStatement(
         if (declarations.length !== 1) {
           return ctx.throw(input, 'Expected exactly one declaration');
         }
+        const id = declarations[0].id;
+        if (id.kind !== ast.NodeKind.Identifier) {
+          return ctx.throw(id, 'Expected an Identifier');
+        }
         return [
           {
             ...declarations[0],
@@ -33,7 +39,7 @@ export default function normalizeStatement(
             ),
           },
           ast.createExportDefault({
-            expression: declarations[0].id,
+            expression: id,
             loc: input.loc,
             leadingComments: [],
           }),
@@ -51,12 +57,14 @@ export default function normalizeStatement(
             ),
           });
           result.push(
-            ast.createExportNamed({
-              localName: d.id,
-              exportedName: d.id,
-              loc: input.loc,
-              leadingComments: [],
-            }),
+            ...extractDeclaredIdentifiers(d.id, ctx).map(id =>
+              ast.createExportNamed({
+                localName: id,
+                exportedName: id,
+                loc: input.loc,
+                leadingComments: [],
+              }),
+            ),
           );
         }
       }
@@ -118,6 +126,8 @@ export default function normalizeStatement(
       return input.body
         .map(s => normalizeStatement(s, ctx))
         .reduce((a, b) => [...a, ...b], []);
+    case 'VariableDeclaration':
+      return normalizeVariableDeclaration(input, ctx);
     default:
       if (bt.isDeclaration(input)) {
         return normalizeDeclaration(input, ctx);

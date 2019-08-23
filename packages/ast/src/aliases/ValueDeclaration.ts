@@ -3,8 +3,10 @@
  */
 
 import FunctionDeclaration from '../nodes/FunctionDeclaration';
+import VariableDeclaration from '../nodes/VariableDeclaration';
 
 type ValueDeclaration = 
-  | FunctionDeclaration;
+  | FunctionDeclaration
+  | VariableDeclaration;
 
 export default ValueDeclaration;

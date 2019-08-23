@@ -7,7 +7,7 @@ import normalizeType from './normalizeType';
 import normalizeTypeParameterDeclaration from './normalizeTypeParameterDeclaration';
 import normalizeFunctionParam from './normalizeFunctionParam';
 
-export default function normalizeTSDeclareFunction(
+export default function normalizeDeclareFunctionTS(
   input: bt.TSDeclareFunction,
   ctx: ParseContext,
 ): ast.FunctionDeclaration {

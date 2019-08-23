@@ -1,0 +1,1125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`./index.js.flow ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 26,
+      "line": 41,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "body": Array [
+        Object {
+          "alternate": Array [
+            Object {
+              "argument": Object {
+                "kind": "ObjectExpression",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 5,
+                    "line": 37,
+                  },
+                  "start": Position {
+                    "column": 11,
+                    "line": 35,
+                  },
+                },
+                "properties": Array [
+                  Object {
+                    "key": Object {
+                      "kind": "Identifier",
+                      "leadingComments": Array [],
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 16,
+                          "line": 36,
+                        },
+                        "identifierName": "transition",
+                        "start": Position {
+                          "column": 6,
+                          "line": 36,
+                        },
+                      },
+                      "name": "transition",
+                    },
+                    "kind": "ObjectExpressionProperty",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 39,
+                        "line": 36,
+                      },
+                      "start": Position {
+                        "column": 6,
+                        "line": 36,
+                      },
+                    },
+                    "value": Object {
+                      "arguments": Array [
+                        Object {
+                          "kind": "StringLiteral",
+                          "leadingComments": Array [],
+                          "loc": SourceLocation {
+                            "end": Position {
+                              "column": 38,
+                              "line": 36,
+                            },
+                            "start": Position {
+                              "column": 34,
+                              "line": 36,
+                            },
+                          },
+                          "value": ", ",
+                        },
+                      ],
+                      "callee": Object {
+                        "kind": "MemberExpression",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 33,
+                            "line": 36,
+                          },
+                          "start": Position {
+                            "column": 18,
+                            "line": 36,
+                          },
+                        },
+                        "object": Object {
+                          "kind": "Identifier",
+                          "leadingComments": Array [],
+                          "loc": SourceLocation {
+                            "end": Position {
+                              "column": 28,
+                              "line": 36,
+                            },
+                            "identifierName": "properties",
+                            "start": Position {
+                              "column": 18,
+                              "line": 36,
+                            },
+                          },
+                          "name": "properties",
+                        },
+                        "property": Object {
+                          "kind": "Identifier",
+                          "leadingComments": Array [],
+                          "loc": SourceLocation {
+                            "end": Position {
+                              "column": 33,
+                              "line": 36,
+                            },
+                            "identifierName": "join",
+                            "start": Position {
+                              "column": 29,
+                              "line": 36,
+                            },
+                          },
+                          "name": "join",
+                        },
+                      },
+                      "kind": "CallExpression",
+                      "leadingComments": Array [],
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 39,
+                          "line": 36,
+                        },
+                        "start": Position {
+                          "column": 18,
+                          "line": 36,
+                        },
+                      },
+                      "typeArguments": Array [],
+                    },
+                  },
+                ],
+              },
+              "kind": "ReturnStatement",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 5,
+                  "line": 37,
+                },
+                "start": Position {
+                  "column": 4,
+                  "line": 35,
+                },
+              },
+            },
+          ],
+          "consequent": Array [
+            Object {
+              "declare": false,
+              "definite": false,
+              "id": Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 27,
+                    "line": 28,
+                  },
+                  "identifierName": "transitionsString",
+                  "start": Position {
+                    "column": 10,
+                    "line": 28,
+                  },
+                },
+                "name": "transitionsString",
+              },
+              "init": Object {
+                "arguments": Array [
+                  Object {
+                    "kind": "StringLiteral",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 16,
+                        "line": 30,
+                      },
+                      "start": Position {
+                        "column": 12,
+                        "line": 30,
+                      },
+                    },
+                    "value": ", ",
+                  },
+                ],
+                "callee": Object {
+                  "kind": "MemberExpression",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 11,
+                      "line": 30,
+                    },
+                    "start": Position {
+                      "column": 30,
+                      "line": 28,
+                    },
+                  },
+                  "object": Object {
+                    "arguments": Array [
+                      Object {
+                        "body": Array [
+                          Object {
+                            "argument": Object {
+                              "expressions": Array [
+                                Object {
+                                  "kind": "Identifier",
+                                  "leadingComments": Array [],
+                                  "loc": SourceLocation {
+                                    "end": Position {
+                                      "column": 52,
+                                      "line": 29,
+                                    },
+                                    "identifierName": "property",
+                                    "start": Position {
+                                      "column": 44,
+                                      "line": 29,
+                                    },
+                                  },
+                                  "name": "property",
+                                },
+                                Object {
+                                  "kind": "MemberExpressionComputed",
+                                  "leadingComments": Array [],
+                                  "loc": SourceLocation {
+                                    "end": Position {
+                                      "column": 69,
+                                      "line": 29,
+                                    },
+                                    "start": Position {
+                                      "column": 56,
+                                      "line": 29,
+                                    },
+                                  },
+                                  "object": Object {
+                                    "kind": "Identifier",
+                                    "leadingComments": Array [],
+                                    "loc": SourceLocation {
+                                      "end": Position {
+                                        "column": 66,
+                                        "line": 29,
+                                      },
+                                      "identifierName": "properties",
+                                      "start": Position {
+                                        "column": 56,
+                                        "line": 29,
+                                      },
+                                    },
+                                    "name": "properties",
+                                  },
+                                  "property": Object {
+                                    "kind": "NumericLiteral",
+                                    "leadingComments": Array [],
+                                    "loc": SourceLocation {
+                                      "end": Position {
+                                        "column": 68,
+                                        "line": 29,
+                                      },
+                                      "start": Position {
+                                        "column": 67,
+                                        "line": 29,
+                                      },
+                                    },
+                                    "value": 1,
+                                  },
+                                },
+                              ],
+                              "kind": "TemplateLiteral",
+                              "leadingComments": Array [],
+                              "loc": SourceLocation {
+                                "end": Position {
+                                  "column": 71,
+                                  "line": 29,
+                                },
+                                "start": Position {
+                                  "column": 41,
+                                  "line": 29,
+                                },
+                              },
+                              "quasis": Array [
+                                Object {
+                                  "cookedValue": "",
+                                  "kind": "TemplateElement",
+                                  "leadingComments": Array [],
+                                  "loc": SourceLocation {
+                                    "end": Position {
+                                      "column": 71,
+                                      "line": 29,
+                                    },
+                                    "start": Position {
+                                      "column": 41,
+                                      "line": 29,
+                                    },
+                                  },
+                                  "rawValue": "",
+                                },
+                                Object {
+                                  "cookedValue": " ",
+                                  "kind": "TemplateElement",
+                                  "leadingComments": Array [],
+                                  "loc": SourceLocation {
+                                    "end": Position {
+                                      "column": 71,
+                                      "line": 29,
+                                    },
+                                    "start": Position {
+                                      "column": 41,
+                                      "line": 29,
+                                    },
+                                  },
+                                  "rawValue": " ",
+                                },
+                                Object {
+                                  "cookedValue": "",
+                                  "kind": "TemplateElement",
+                                  "leadingComments": Array [],
+                                  "loc": SourceLocation {
+                                    "end": Position {
+                                      "column": 71,
+                                      "line": 29,
+                                    },
+                                    "start": Position {
+                                      "column": 41,
+                                      "line": 29,
+                                    },
+                                  },
+                                  "rawValue": "",
+                                },
+                              ],
+                            },
+                            "kind": "ReturnStatement",
+                            "leadingComments": Array [],
+                            "loc": SourceLocation {
+                              "end": Position {
+                                "column": 71,
+                                "line": 29,
+                              },
+                              "start": Position {
+                                "column": 41,
+                                "line": 29,
+                              },
+                            },
+                          },
+                        ],
+                        "id": undefined,
+                        "isArrowFunction": true,
+                        "kind": "FunctionExpression",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 71,
+                            "line": 29,
+                          },
+                          "start": Position {
+                            "column": 11,
+                            "line": 29,
+                          },
+                        },
+                        "params": Array [
+                          Object {
+                            "kind": "FunctionParameter",
+                            "leadingComments": Array [],
+                            "loc": SourceLocation {
+                              "end": Position {
+                                "column": 28,
+                                "line": 29,
+                              },
+                              "identifierName": "property",
+                              "start": Position {
+                                "column": 12,
+                                "line": 29,
+                              },
+                            },
+                            "name": Object {
+                              "kind": "Identifier",
+                              "leadingComments": Array [],
+                              "loc": SourceLocation {
+                                "end": Position {
+                                  "column": 28,
+                                  "line": 29,
+                                },
+                                "identifierName": "property",
+                                "start": Position {
+                                  "column": 12,
+                                  "line": 29,
+                                },
+                              },
+                              "name": "property",
+                            },
+                            "optional": false,
+                            "type": Object {
+                              "kind": "StringTypeAnnotation",
+                              "leadingComments": Array [],
+                              "loc": SourceLocation {
+                                "end": Position {
+                                  "column": 28,
+                                  "line": 29,
+                                },
+                                "start": Position {
+                                  "column": 22,
+                                  "line": 29,
+                                },
+                              },
+                            },
+                          },
+                        ],
+                        "restParam": undefined,
+                        "returnType": Object {
+                          "kind": "StringTypeAnnotation",
+                          "leadingComments": Array [],
+                          "loc": SourceLocation {
+                            "end": Position {
+                              "column": 37,
+                              "line": 29,
+                            },
+                            "start": Position {
+                              "column": 31,
+                              "line": 29,
+                            },
+                          },
+                        },
+                        "typeParams": Array [],
+                      },
+                    ],
+                    "callee": Object {
+                      "kind": "MemberExpression",
+                      "leadingComments": Array [],
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 10,
+                          "line": 29,
+                        },
+                        "start": Position {
+                          "column": 30,
+                          "line": 28,
+                        },
+                      },
+                      "object": Object {
+                        "kind": "MemberExpressionComputed",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 43,
+                            "line": 28,
+                          },
+                          "start": Position {
+                            "column": 30,
+                            "line": 28,
+                          },
+                        },
+                        "object": Object {
+                          "kind": "Identifier",
+                          "leadingComments": Array [],
+                          "loc": SourceLocation {
+                            "end": Position {
+                              "column": 40,
+                              "line": 28,
+                            },
+                            "identifierName": "properties",
+                            "start": Position {
+                              "column": 30,
+                              "line": 28,
+                            },
+                          },
+                          "name": "properties",
+                        },
+                        "property": Object {
+                          "kind": "NumericLiteral",
+                          "leadingComments": Array [],
+                          "loc": SourceLocation {
+                            "end": Position {
+                              "column": 42,
+                              "line": 28,
+                            },
+                            "start": Position {
+                              "column": 41,
+                              "line": 28,
+                            },
+                          },
+                          "value": 0,
+                        },
+                      },
+                      "property": Object {
+                        "kind": "Identifier",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 10,
+                            "line": 29,
+                          },
+                          "identifierName": "map",
+                          "start": Position {
+                            "column": 7,
+                            "line": 29,
+                          },
+                        },
+                        "name": "map",
+                      },
+                    },
+                    "kind": "CallExpression",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 72,
+                        "line": 29,
+                      },
+                      "start": Position {
+                        "column": 30,
+                        "line": 28,
+                      },
+                    },
+                    "typeArguments": Array [],
+                  },
+                  "property": Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 11,
+                        "line": 30,
+                      },
+                      "identifierName": "join",
+                      "start": Position {
+                        "column": 7,
+                        "line": 30,
+                      },
+                    },
+                    "name": "join",
+                  },
+                },
+                "kind": "CallExpression",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 17,
+                    "line": 30,
+                  },
+                  "start": Position {
+                    "column": 30,
+                    "line": 28,
+                  },
+                },
+                "typeArguments": Array [],
+              },
+              "kind": "VariableDeclaration",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 17,
+                  "line": 30,
+                },
+                "start": Position {
+                  "column": 4,
+                  "line": 28,
+                },
+              },
+              "mode": "const",
+              "type": undefined,
+            },
+            Object {
+              "argument": Object {
+                "kind": "ObjectExpression",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 5,
+                    "line": 33,
+                  },
+                  "start": Position {
+                    "column": 11,
+                    "line": 31,
+                  },
+                },
+                "properties": Array [
+                  Object {
+                    "key": Object {
+                      "kind": "Identifier",
+                      "leadingComments": Array [],
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 16,
+                          "line": 32,
+                        },
+                        "identifierName": "transition",
+                        "start": Position {
+                          "column": 6,
+                          "line": 32,
+                        },
+                      },
+                      "name": "transition",
+                    },
+                    "kind": "ObjectExpressionProperty",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 35,
+                        "line": 32,
+                      },
+                      "start": Position {
+                        "column": 6,
+                        "line": 32,
+                      },
+                    },
+                    "value": Object {
+                      "kind": "Identifier",
+                      "leadingComments": Array [],
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 35,
+                          "line": 32,
+                        },
+                        "identifierName": "transitionsString",
+                        "start": Position {
+                          "column": 18,
+                          "line": 32,
+                        },
+                      },
+                      "name": "transitionsString",
+                    },
+                  },
+                ],
+              },
+              "kind": "ReturnStatement",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 5,
+                  "line": 33,
+                },
+                "start": Position {
+                  "column": 4,
+                  "line": 31,
+                },
+              },
+            },
+          ],
+          "kind": "IfStatement",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 3,
+              "line": 38,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 27,
+            },
+          },
+          "test": Object {
+            "kind": "LogicalExpression",
+            "leadingComments": Array [],
+            "left": Object {
+              "arguments": Array [
+                Object {
+                  "kind": "MemberExpressionComputed",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 33,
+                      "line": 27,
+                    },
+                    "start": Position {
+                      "column": 20,
+                      "line": 27,
+                    },
+                  },
+                  "object": Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 30,
+                        "line": 27,
+                      },
+                      "identifierName": "properties",
+                      "start": Position {
+                        "column": 20,
+                        "line": 27,
+                      },
+                    },
+                    "name": "properties",
+                  },
+                  "property": Object {
+                    "kind": "NumericLiteral",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 32,
+                        "line": 27,
+                      },
+                      "start": Position {
+                        "column": 31,
+                        "line": 27,
+                      },
+                    },
+                    "value": 0,
+                  },
+                },
+              ],
+              "callee": Object {
+                "kind": "MemberExpression",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 19,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 6,
+                    "line": 27,
+                  },
+                },
+                "object": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 11,
+                      "line": 27,
+                    },
+                    "identifierName": "Array",
+                    "start": Position {
+                      "column": 6,
+                      "line": 27,
+                    },
+                  },
+                  "name": "Array",
+                },
+                "property": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 19,
+                      "line": 27,
+                    },
+                    "identifierName": "isArray",
+                    "start": Position {
+                      "column": 12,
+                      "line": 27,
+                    },
+                  },
+                  "name": "isArray",
+                },
+              },
+              "kind": "CallExpression",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 34,
+                  "line": 27,
+                },
+                "start": Position {
+                  "column": 6,
+                  "line": 27,
+                },
+              },
+              "typeArguments": Array [],
+            },
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 61,
+                "line": 27,
+              },
+              "start": Position {
+                "column": 6,
+                "line": 27,
+              },
+            },
+            "operator": "&&",
+            "right": Object {
+              "kind": "BinaryExpression",
+              "leadingComments": Array [],
+              "left": Object {
+                "kind": "MemberExpression",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 55,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 38,
+                    "line": 27,
+                  },
+                },
+                "object": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 48,
+                      "line": 27,
+                    },
+                    "identifierName": "properties",
+                    "start": Position {
+                      "column": 38,
+                      "line": 27,
+                    },
+                  },
+                  "name": "properties",
+                },
+                "property": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 55,
+                      "line": 27,
+                    },
+                    "identifierName": "length",
+                    "start": Position {
+                      "column": 49,
+                      "line": 27,
+                    },
+                  },
+                  "name": "length",
+                },
+              },
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 61,
+                  "line": 27,
+                },
+                "start": Position {
+                  "column": 38,
+                  "line": 27,
+                },
+              },
+              "operator": "===",
+              "right": Object {
+                "kind": "NumericLiteral",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 61,
+                    "line": 27,
+                  },
+                  "start": Position {
+                    "column": 60,
+                    "line": 27,
+                  },
+                },
+                "value": 2,
+              },
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 20,
+            "line": 26,
+          },
+          "identifierName": "transitions",
+          "start": Position {
+            "column": 9,
+            "line": 26,
+          },
+        },
+        "name": "transitions",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 8,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 1,
+            },
+          },
+          "value": " @flow",
+        },
+        Object {
+          "kind": "CommentBlock",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 3,
+              "line": 24,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 3,
+            },
+          },
+          "value": "*
+ * Shorthand that accepts any number of transition values as parameters for creating a single transition statement. You may also pass an array of properties as the first parameter that you would like to apply the same tranisition values to (second parameter).
+ * @example
+ * // Styles as object usage
+ * const styles = {
+ *   ...transitions('opacity 1.0s ease-in 0s', 'width 2.0s ease-in 2s'),
+ *   ...transitions(['color', 'background-color'], '2.0s ease-in 2s')
+ * }
+ *
+ * // styled-components usage
+ * const div = styled.div\`
+ *   \${transitions('opacity 1.0s ease-in 0s', 'width 2.0s ease-in 2s')};
+ *   \${transitions(['color', 'background-color'], '2.0s ease-in 2s'),};
+ * \`
+ *
+ * // CSS as JS Output
+ *
+ * div {
+ *   'transition': 'opacity 1.0s ease-in 0s, width 2.0s ease-in 2s'
+ *   'transition': 'color 2.0s ease-in 2s, background-color 2.0s ease-in 2s',
+ * }
+ ",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 39,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 26,
+        },
+      },
+      "params": Array [],
+      "restParam": Object {
+        "kind": "FunctionParameter",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 34,
+            "line": 26,
+          },
+          "identifierName": "properties",
+          "start": Position {
+            "column": 24,
+            "line": 26,
+          },
+        },
+        "name": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 34,
+              "line": 26,
+            },
+            "identifierName": "properties",
+            "start": Position {
+              "column": 24,
+              "line": 26,
+            },
+          },
+          "name": "properties",
+        },
+        "optional": false,
+        "type": Object {
+          "kind": "UnionTypeAnnotation",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 75,
+              "line": 26,
+            },
+            "start": Position {
+              "column": 36,
+              "line": 26,
+            },
+          },
+          "types": Array [
+            Object {
+              "elementType": Object {
+                "kind": "StringTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 48,
+                    "line": 26,
+                  },
+                  "start": Position {
+                    "column": 42,
+                    "line": 26,
+                  },
+                },
+              },
+              "kind": "ArrayTypeAnnotation",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 49,
+                  "line": 26,
+                },
+                "start": Position {
+                  "column": 36,
+                  "line": 26,
+                },
+              },
+            },
+            Object {
+              "elements": Array [
+                Object {
+                  "elementType": Object {
+                    "kind": "StringTypeAnnotation",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 65,
+                        "line": 26,
+                      },
+                      "start": Position {
+                        "column": 59,
+                        "line": 26,
+                      },
+                    },
+                  },
+                  "kind": "ArrayTypeAnnotation",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 66,
+                      "line": 26,
+                    },
+                    "start": Position {
+                      "column": 53,
+                      "line": 26,
+                    },
+                  },
+                },
+                Object {
+                  "kind": "StringTypeAnnotation",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 74,
+                      "line": 26,
+                    },
+                    "start": Position {
+                      "column": 68,
+                      "line": 26,
+                    },
+                  },
+                },
+              ],
+              "kind": "TupleTypeAnnotation",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 75,
+                  "line": 26,
+                },
+                "start": Position {
+                  "column": 52,
+                  "line": 26,
+                },
+              },
+              "restElement": undefined,
+            },
+          ],
+        },
+      },
+      "returnType": Object {
+        "kind": "AnyObjectTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 84,
+            "line": 26,
+          },
+          "start": Position {
+            "column": 78,
+            "line": 26,
+          },
+        },
+      },
+      "typeParams": Array [],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 41,
+          },
+          "identifierName": "transitions",
+          "start": Position {
+            "column": 15,
+            "line": 41,
+          },
+        },
+        "name": "transitions",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 26,
+          "line": 41,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 41,
+        },
+      },
+    },
+  ],
+}
+`;

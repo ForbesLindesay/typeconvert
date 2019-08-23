@@ -138,6 +138,7 @@ writeFileSync(
     `import Comment, {CommentKind} from './Comment';`,
     `import NodeBase from './NodeBase';`,
     `import NodeKind from './NodeKind';`,
+    `import ObjectExactness from './ObjectExactness';`,
     `import SourceLocation from './SourceLocation';`,
     `import Variance from './Variance';`,
     '',
@@ -145,9 +146,10 @@ writeFileSync(
     ...[...Aliases.keys()].map(aliasName => {
       return `export {${aliasName}};`;
     }),
-    `export {Comment, CommentKind}`,
+    `export {Comment, CommentKind};`,
     `export {NodeBase};`,
     `export {NodeKind};`,
+    `export {ObjectExactness};`,
     `export {SourceLocation};`,
     `export {Variance};`,
     '',

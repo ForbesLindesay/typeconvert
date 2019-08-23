@@ -14,7 +14,6 @@ import ImportTypeAnnotation from '../nodes/ImportTypeAnnotation';
 import InferTypeAnnotation from '../nodes/InferTypeAnnotation';
 import IntersectionTypeAnnotation from '../nodes/IntersectionTypeAnnotation';
 import LiteralTypeAnnotation from '../nodes/LiteralTypeAnnotation';
-import NullLiteralTypeAnnotation from '../nodes/NullLiteralTypeAnnotation';
 import NumberTypeAnnotation from '../nodes/NumberTypeAnnotation';
 import ObjectTypeAnnotation from '../nodes/ObjectTypeAnnotation';
 import QualifiedTypeIdentifier from '../nodes/QualifiedTypeIdentifier';
@@ -41,7 +40,6 @@ type TypeAnnotation =
   | InferTypeAnnotation
   | IntersectionTypeAnnotation
   | LiteralTypeAnnotation
-  | NullLiteralTypeAnnotation
   | NumberTypeAnnotation
   | ObjectTypeAnnotation
   | QualifiedTypeIdentifier

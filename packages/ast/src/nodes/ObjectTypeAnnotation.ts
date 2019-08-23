@@ -1,13 +1,13 @@
 import NodeKind from '../NodeKind';
 import FunctionTypeAnnotation from './FunctionTypeAnnotation';
 import TypeAnnotation from '../aliases/TypeAnnotation';
-// import Identifier from '../ExpressionTypes/Identifier';
 import LiteralTypeAnnotation from './LiteralTypeAnnotation';
 import QualifiedTypeIdentifier from './QualifiedTypeIdentifier';
 import Variance from '../Variance';
 import NodeBase from '../NodeBase';
-import TypeIdentifier from './Identifier';
+import Identifier from './Identifier';
 import ObjectTypeElement from '../aliases/ObjectTypeElement';
+import ObjectExactness from '../ObjectExactness';
 
 /**
  * @alias ObjectTypeElement
@@ -15,8 +15,7 @@ import ObjectTypeElement from '../aliases/ObjectTypeElement';
 export interface ObjectTypeProperty extends NodeBase {
   readonly kind: NodeKind.ObjectTypeProperty;
 
-  readonly key: // | Identifier
-  TypeIdentifier | QualifiedTypeIdentifier | LiteralTypeAnnotation;
+  readonly key: Identifier | QualifiedTypeIdentifier | LiteralTypeAnnotation;
   /**
    * Example:
    *     declare const X: 'hello world';
@@ -77,7 +76,7 @@ export interface ObjectTypeProperty extends NodeBase {
  */
 export interface ObjectTypeIndexer extends NodeBase {
   readonly kind: NodeKind.ObjectTypeIndexer;
-  readonly id: TypeIdentifier | undefined;
+  readonly id: Identifier | undefined;
   readonly keyType: TypeAnnotation;
   readonly valueType: TypeAnnotation;
   readonly variance: Variance;
@@ -124,28 +123,6 @@ export default interface ObjectTypeAnnotation extends NodeBase {
    *     type Value = () => number && (x: string) => string && { y: string; }
    */
   readonly callProperties: ReadonlyArray<FunctionTypeAnnotation>;
-  /**
-   * Example:
-   *
-   *     {|x: number, y: number|}
-   *
-   * N.B. this may eventually be the default for flow:
-   * https://medium.com/flow-type/on-the-roadmap-exact-objects-by-default-16b72933c5cf
-   *
-   * TypeScript is always exact for the first type an object
-   * literal is passed to, but inexact after that. It has no
-   * explicit syntax for exact/inexact.
-   */
-  readonly exact: boolean;
-  /**
-   * Example:
-   *
-   *     {x: number, y: number, ...}
-   *
-   * This is `false` unless the object has been explicitly
-   * marked as inexact. Once flow becomes exact by default,
-   * this will be needed if you wish to specify that an
-   * object is inexact.
-   */
-  readonly inexact: boolean;
+
+  readonly exactness: ObjectExactness;
 }

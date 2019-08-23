@@ -10,6 +10,7 @@ import IfStatement from '../nodes/IfStatement';
 import ImportStatement from '../nodes/ImportStatement';
 import ReturnStatement from '../nodes/ReturnStatement';
 import TypeAliasDeclaration from '../nodes/TypeAliasDeclaration';
+import VariableDeclaration from '../nodes/VariableDeclaration';
 
 type Statement = 
   | ExportDefault
@@ -19,6 +20,7 @@ type Statement =
   | IfStatement
   | ImportStatement
   | ReturnStatement
-  | TypeAliasDeclaration;
+  | TypeAliasDeclaration
+  | VariableDeclaration;
 
 export default Statement;

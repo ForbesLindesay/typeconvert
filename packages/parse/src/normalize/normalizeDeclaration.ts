@@ -7,7 +7,7 @@ import normalizeType from './normalizeType';
 import normalizeTypeParameterDeclaration from './normalizeTypeParameterDeclaration';
 import normalizeFunctionDeclaration from './normalizeFunctionDeclaration';
 import normalizeDeclareFunction from './normalizeDeclareFunction';
-import normalizeTSDeclareFunction from './normalizeTSDeclareFunction';
+import normalizeDeclareFunctionTS from './normalizeDeclareFunctionTS';
 
 export default function normalizeDeclaration(
   input: bt.Declaration,
@@ -102,7 +102,7 @@ export default function normalizeDeclaration(
     case 'DeclareFunction':
       return [normalizeDeclareFunction(input, ctx)];
     case 'TSDeclareFunction':
-      return [normalizeTSDeclareFunction(input, ctx)];
+      return [normalizeDeclareFunctionTS(input, ctx)];
     case 'TypeAlias':
       return [
         ast.createTypeAliasDeclaration({

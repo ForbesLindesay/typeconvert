@@ -5,17 +5,17 @@ import ParseContext from '../ParseContext';
 import normalizeIdentifier from './normalizeIdentifier';
 import normalizeFunctionParts from './normalizeFunctionParts';
 
-export default function normalizeFunctionDeclaration(
-  input: bt.FunctionDeclaration,
+export default function normalizeFunctionExpression(
+  input: bt.FunctionExpression | bt.ArrowFunctionExpression,
   ctx: ParseContext,
-): ast.FunctionDeclaration {
-  if (!input.id) {
-    return ctx.throw(input, 'Expected FunctionDeclaration to have an ID');
-  }
-
-  return ast.createFunctionDeclaration({
+): ast.FunctionExpression {
+  return ast.createFunctionExpression({
     ...normalizeFunctionParts(input, ctx),
-    id: normalizeIdentifier(input.id, ctx),
+    id:
+      bt.isFunctionExpression(input) && input.id
+        ? normalizeIdentifier(input.id, ctx)
+        : undefined,
+    isArrowFunction: bt.isArrowFunctionExpression(input),
     loc: input.loc,
     leadingComments: normalizeComments(input.leadingComments),
   });

@@ -1,0 +1,274 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`./index.js.flow ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 17,
+      "line": 8,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 13,
+            "line": 2,
+          },
+          "identifierName": "Optional",
+          "start": Position {
+            "column": 5,
+            "line": 2,
+          },
+        },
+        "name": "Optional",
+      },
+      "kind": "TypeAliasDeclaration",
+      "leadingComments": Array [
+        Object {
+          "kind": "CommentLine",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 8,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 1,
+            },
+          },
+          "value": " @flow",
+        },
+      ],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 4,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 2,
+        },
+      },
+      "type": Object {
+        "callProperties": Array [],
+        "exactness": "flexible",
+        "kind": "ObjectTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 1,
+            "line": 4,
+          },
+          "start": Position {
+            "column": 16,
+            "line": 2,
+          },
+        },
+        "properties": Array [
+          Object {
+            "computed": false,
+            "key": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 5,
+                  "line": 3,
+                },
+                "identifierName": "foo",
+                "start": Position {
+                  "column": 2,
+                  "line": 3,
+                },
+              },
+              "name": "foo",
+            },
+            "kind": "ObjectTypeProperty",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 14,
+                "line": 3,
+              },
+              "start": Position {
+                "column": 2,
+                "line": 3,
+              },
+            },
+            "mode": "normal",
+            "optional": true,
+            "proto": false,
+            "static": false,
+            "valueType": Object {
+              "kind": "StringTypeAnnotation",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 14,
+                  "line": 3,
+                },
+                "start": Position {
+                  "column": 8,
+                  "line": 3,
+                },
+              },
+            },
+            "variance": "ReadWrite",
+          },
+        ],
+      },
+      "typeParameters": Array [],
+    },
+    Object {
+      "declare": false,
+      "definite": false,
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 6,
+          },
+          "identifierName": "a",
+          "start": Position {
+            "column": 6,
+            "line": 6,
+          },
+        },
+        "name": "a",
+      },
+      "init": Object {
+        "kind": "ObjectExpression",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 32,
+            "line": 6,
+          },
+          "start": Position {
+            "column": 20,
+            "line": 6,
+          },
+        },
+        "properties": Array [
+          Object {
+            "key": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 25,
+                  "line": 6,
+                },
+                "identifierName": "foo",
+                "start": Position {
+                  "column": 22,
+                  "line": 6,
+                },
+              },
+              "name": "foo",
+            },
+            "kind": "ObjectExpressionProperty",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 30,
+                "line": 6,
+              },
+              "start": Position {
+                "column": 22,
+                "line": 6,
+              },
+            },
+            "value": Object {
+              "kind": "StringLiteral",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 30,
+                  "line": 6,
+                },
+                "start": Position {
+                  "column": 27,
+                  "line": 6,
+                },
+              },
+              "value": "a",
+            },
+          },
+        ],
+      },
+      "kind": "VariableDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 33,
+          "line": 6,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 6,
+        },
+      },
+      "mode": "const",
+      "type": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 17,
+            "line": 6,
+          },
+          "identifierName": "Optional",
+          "start": Position {
+            "column": 9,
+            "line": 6,
+          },
+        },
+        "name": "Optional",
+      },
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 8,
+          },
+          "identifierName": "a",
+          "start": Position {
+            "column": 15,
+            "line": 8,
+          },
+        },
+        "name": "a",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 17,
+          "line": 8,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 8,
+        },
+      },
+    },
+  ],
+}
+`;

@@ -4,6 +4,7 @@ import ParseContext from '../ParseContext';
 import normalizeComments from './normalizeComments';
 import normalizeGenericTypeAnnotation from './normalizeGenericTypeAnnotation';
 import normalizeFunctionTypeAnnotation from './normalizeFunctionTypeAnnotation';
+import normalizeObjectTypeAnnotation from './normalizeObjectTypeAnnotation';
 
 function normalizeTypeCore(
   input: bt.FlowType | bt.TSType,
@@ -27,7 +28,8 @@ function normalizeTypeCore(
             loc: input.loc,
             leadingComments: [],
           }),
-          ast.createNullLiteralTypeAnnotation({
+          ast.createLiteralTypeAnnotation({
+            value: null,
             loc: input.loc,
             leadingComments: [],
           }),
@@ -36,7 +38,8 @@ function normalizeTypeCore(
         loc: input.loc,
       });
     case 'NullLiteralTypeAnnotation':
-      return ast.createNullLiteralTypeAnnotation({
+      return ast.createLiteralTypeAnnotation({
+        value: null,
         leadingComments: normalizeComments(input.leadingComments),
         loc: input.loc,
       });
@@ -49,6 +52,14 @@ function normalizeTypeCore(
     case 'StringTypeAnnotation':
     case 'TSStringKeyword':
       return ast.createStringTypeAnnotation({
+        leadingComments: normalizeComments(input.leadingComments),
+        loc: input.loc,
+      });
+    case 'BooleanLiteralTypeAnnotation':
+    case 'NumberLiteralTypeAnnotation':
+    case 'StringLiteralTypeAnnotation':
+      return ast.createLiteralTypeAnnotation({
+        value: input.value,
         leadingComments: normalizeComments(input.leadingComments),
         loc: input.loc,
       });
@@ -109,6 +120,8 @@ function normalizeTypeCore(
       return normalizeFunctionTypeAnnotation(input, ctx);
     case 'TSFunctionType':
       return normalizeFunctionTypeAnnotation(input, ctx);
+    case 'ObjectTypeAnnotation':
+      return normalizeObjectTypeAnnotation(input, ctx);
     default:
       return ctx.assertNever(input as never);
   }

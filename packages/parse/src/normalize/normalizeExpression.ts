@@ -6,12 +6,19 @@ import ParseContext from '../ParseContext';
 import normalizeComments from './normalizeComments';
 import normalizeSpreadElement from './normalizeSpreadElement';
 import normalizeTypeParameterInstantiation from './normalizeTypeParameterInstantiation';
+import normalizeObjectExpression from './normalizeObjectExpression';
+import normalizeFunctionExpression from './normalizeFunctionExpression';
+import normalizeUnaryExpression from './normalizeUnaryExpression';
+import normalizeTemplateLiteral from './normalizeTemplateLiteral';
 
 export default function normalizeExpression(
   input: bt.Expression,
   ctx: ParseContext,
 ): ast.Expression {
   switch (input.type) {
+    case 'ArrowFunctionExpression':
+    case 'FunctionExpression':
+      return normalizeFunctionExpression(input, ctx);
     case 'ArrayExpression':
       return normalizeArrayExpression(input, ctx);
     case 'CallExpression':
@@ -80,6 +87,38 @@ export default function normalizeExpression(
         loc: input.loc,
         leadingComments: normalizeComments(input.leadingComments),
       });
+
+    case 'ObjectExpression':
+      return normalizeObjectExpression(input, ctx);
+
+    case 'NullLiteral':
+      return ast.createNullLiteral({
+        value: null,
+        loc: input.loc,
+        leadingComments: normalizeComments(input.leadingComments),
+      });
+
+    case 'ConditionalExpression':
+      return ast.createConditionalExpression({
+        test: normalizeExpression(input.test, ctx),
+        consequent: normalizeExpression(input.consequent, ctx),
+        alternate: normalizeExpression(input.alternate, ctx),
+        loc: input.loc,
+        leadingComments: normalizeComments(input.leadingComments),
+      });
+
+    case 'UnaryExpression':
+      return normalizeUnaryExpression(input, ctx);
+
+    case 'TemplateLiteral':
+      if (input.expressions.length === 0 && input.quasis.length === 1) {
+        return ast.createStringLiteral({
+          value: input.quasis[0].value.cooked,
+          loc: input.loc,
+          leadingComments: normalizeComments(input.leadingComments),
+        });
+      }
+      return normalizeTemplateLiteral(input, ctx);
     default:
       return ctx.assertNever(input as never);
   }

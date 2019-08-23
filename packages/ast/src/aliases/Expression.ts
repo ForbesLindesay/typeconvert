@@ -6,23 +6,35 @@ import ArrayExpression from '../nodes/ArrayExpresison';
 import AssignmentExpression from '../nodes/AssignmentExpression';
 import BinaryExpression from '../nodes/BinaryExpression';
 import CallExpression from '../nodes/CallExpression';
+import ConditionalExpression from '../nodes/ConditionalExpression';
+import FunctionExpression from '../nodes/FunctionExpression';
 import Identifier from '../nodes/Identifier';
 import LogicalExpression from '../nodes/LogicalExpression';
 import MemberExpression from '../nodes/MemberExpression';
 import MemberExpressionComputed from '../nodes/MemberExpressionComputed';
+import NullLiteral from '../nodes/NullLiteral';
 import NumericLiteral from '../nodes/NumericLiteral';
+import ObjectExpression from '../nodes/ObjectExpression';
 import StringLiteral from '../nodes/StringLiteral';
+import TemplateLiteral from '../nodes/TemplateLiteral';
+import UnaryExpression from '../nodes/UnaryExpression';
 
 type Expression = 
   | ArrayExpression
   | AssignmentExpression
   | BinaryExpression
   | CallExpression
+  | ConditionalExpression
+  | FunctionExpression
   | Identifier
   | LogicalExpression
   | MemberExpression
   | MemberExpressionComputed
+  | NullLiteral
   | NumericLiteral
-  | StringLiteral;
+  | ObjectExpression
+  | StringLiteral
+  | TemplateLiteral
+  | UnaryExpression;
 
 export default Expression;
