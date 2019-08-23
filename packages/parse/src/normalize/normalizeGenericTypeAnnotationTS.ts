@@ -5,15 +5,16 @@ import normalizeComments from './normalizeComments';
 import normalizeType from './normalizeType';
 import normalizeTypeIdentifier from './normalizeTypeIdentifier';
 
-export default function normalizeGenericTypeAnnotation(
-  input: bt.GenericTypeAnnotation,
+export default function normalizeGenericTypeAnnotationTS(
+  input: bt.TSTypeReference,
   ctx: ParseContext,
 ): ast.TypeAnnotation {
   const typeParameters = input.typeParameters
     ? input.typeParameters.params
     : [];
-  if (bt.isIdentifier(input.id)) {
-    switch (input.id.name) {
+
+  if (bt.isIdentifier(input.typeName)) {
+    switch (input.typeName.name) {
       case 'Array':
         if (typeParameters.length === 1) {
           return ast.createArrayTypeAnnotation({
@@ -34,7 +35,7 @@ export default function normalizeGenericTypeAnnotation(
     }
   }
   if (typeParameters.length === 0) {
-    const result = normalizeTypeIdentifier(input.id, ctx);
+    const result = normalizeTypeIdentifier(input.typeName, ctx);
     return {
       ...result,
       leadingComments: normalizeComments(input.leadingComments).concat(
@@ -43,7 +44,7 @@ export default function normalizeGenericTypeAnnotation(
     };
   } else {
     return ast.createGenericTypeAnnotation({
-      type: normalizeTypeIdentifier(input.id, ctx),
+      type: normalizeTypeIdentifier(input.typeName, ctx),
       typeArguments: typeParameters.map(t => normalizeType(t, ctx)),
       loc: input.loc,
       leadingComments: normalizeComments(input.leadingComments),

@@ -1,0 +1,4108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`./index.ts ast 1`] = `
+Object {
+  "kind": "File",
+  "leadingComments": Array [],
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 32,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "statements": Array [
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 8,
+            "line": 1,
+          },
+          "identifierName": "Fn1",
+          "start": Position {
+            "column": 5,
+            "line": 1,
+          },
+        },
+        "name": "Fn1",
+      },
+      "kind": "TypeAliasDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 39,
+          "line": 1,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 1,
+        },
+      },
+      "type": Object {
+        "isConstructor": false,
+        "kind": "FunctionTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 38,
+            "line": 1,
+          },
+          "start": Position {
+            "column": 22,
+            "line": 1,
+          },
+        },
+        "params": Array [
+          Object {
+            "kind": "FunctionParameter",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 27,
+                "line": 1,
+              },
+              "identifierName": "a",
+              "start": Position {
+                "column": 23,
+                "line": 1,
+              },
+            },
+            "name": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 27,
+                  "line": 1,
+                },
+                "identifierName": "a",
+                "start": Position {
+                  "column": 23,
+                  "line": 1,
+                },
+              },
+              "name": "a",
+            },
+            "optional": false,
+            "type": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 27,
+                  "line": 1,
+                },
+                "identifierName": "A",
+                "start": Position {
+                  "column": 26,
+                  "line": 1,
+                },
+              },
+              "name": "A",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 38,
+              "line": 1,
+            },
+            "identifierName": "Result",
+            "start": Position {
+              "column": 32,
+              "line": 1,
+            },
+          },
+          "name": "Result",
+        },
+        "typeParams": Array [],
+      },
+      "typeParameters": Array [
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 10,
+                "line": 1,
+              },
+              "start": Position {
+                "column": 9,
+                "line": 1,
+              },
+            },
+            "name": "A",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 10,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 9,
+              "line": 1,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 18,
+                "line": 1,
+              },
+              "start": Position {
+                "column": 12,
+                "line": 1,
+              },
+            },
+            "name": "Result",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 18,
+              "line": 1,
+            },
+            "start": Position {
+              "column": 12,
+              "line": 1,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+      ],
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 8,
+            "line": 2,
+          },
+          "identifierName": "Fn2",
+          "start": Position {
+            "column": 5,
+            "line": 2,
+          },
+        },
+        "name": "Fn2",
+      },
+      "kind": "TypeAliasDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 48,
+          "line": 2,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 2,
+        },
+      },
+      "type": Object {
+        "isConstructor": false,
+        "kind": "FunctionTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 47,
+            "line": 2,
+          },
+          "start": Position {
+            "column": 25,
+            "line": 2,
+          },
+        },
+        "params": Array [
+          Object {
+            "kind": "FunctionParameter",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 30,
+                "line": 2,
+              },
+              "identifierName": "a",
+              "start": Position {
+                "column": 26,
+                "line": 2,
+              },
+            },
+            "name": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 30,
+                  "line": 2,
+                },
+                "identifierName": "a",
+                "start": Position {
+                  "column": 26,
+                  "line": 2,
+                },
+              },
+              "name": "a",
+            },
+            "optional": false,
+            "type": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 30,
+                  "line": 2,
+                },
+                "identifierName": "A",
+                "start": Position {
+                  "column": 29,
+                  "line": 2,
+                },
+              },
+              "name": "A",
+            },
+          },
+          Object {
+            "kind": "FunctionParameter",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 36,
+                "line": 2,
+              },
+              "identifierName": "b",
+              "start": Position {
+                "column": 32,
+                "line": 2,
+              },
+            },
+            "name": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 36,
+                  "line": 2,
+                },
+                "identifierName": "b",
+                "start": Position {
+                  "column": 32,
+                  "line": 2,
+                },
+              },
+              "name": "b",
+            },
+            "optional": false,
+            "type": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 36,
+                  "line": 2,
+                },
+                "identifierName": "B",
+                "start": Position {
+                  "column": 35,
+                  "line": 2,
+                },
+              },
+              "name": "B",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 47,
+              "line": 2,
+            },
+            "identifierName": "Result",
+            "start": Position {
+              "column": 41,
+              "line": 2,
+            },
+          },
+          "name": "Result",
+        },
+        "typeParams": Array [],
+      },
+      "typeParameters": Array [
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 10,
+                "line": 2,
+              },
+              "start": Position {
+                "column": 9,
+                "line": 2,
+              },
+            },
+            "name": "A",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 10,
+              "line": 2,
+            },
+            "start": Position {
+              "column": 9,
+              "line": 2,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 13,
+                "line": 2,
+              },
+              "start": Position {
+                "column": 12,
+                "line": 2,
+              },
+            },
+            "name": "B",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 13,
+              "line": 2,
+            },
+            "start": Position {
+              "column": 12,
+              "line": 2,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 21,
+                "line": 2,
+              },
+              "start": Position {
+                "column": 15,
+                "line": 2,
+              },
+            },
+            "name": "Result",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 21,
+              "line": 2,
+            },
+            "start": Position {
+              "column": 15,
+              "line": 2,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+      ],
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 8,
+            "line": 3,
+          },
+          "identifierName": "Fn3",
+          "start": Position {
+            "column": 5,
+            "line": 3,
+          },
+        },
+        "name": "Fn3",
+      },
+      "kind": "TypeAliasDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 57,
+          "line": 3,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 3,
+        },
+      },
+      "type": Object {
+        "isConstructor": false,
+        "kind": "FunctionTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 56,
+            "line": 3,
+          },
+          "start": Position {
+            "column": 28,
+            "line": 3,
+          },
+        },
+        "params": Array [
+          Object {
+            "kind": "FunctionParameter",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 33,
+                "line": 3,
+              },
+              "identifierName": "a",
+              "start": Position {
+                "column": 29,
+                "line": 3,
+              },
+            },
+            "name": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 33,
+                  "line": 3,
+                },
+                "identifierName": "a",
+                "start": Position {
+                  "column": 29,
+                  "line": 3,
+                },
+              },
+              "name": "a",
+            },
+            "optional": false,
+            "type": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 33,
+                  "line": 3,
+                },
+                "identifierName": "A",
+                "start": Position {
+                  "column": 32,
+                  "line": 3,
+                },
+              },
+              "name": "A",
+            },
+          },
+          Object {
+            "kind": "FunctionParameter",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 39,
+                "line": 3,
+              },
+              "identifierName": "b",
+              "start": Position {
+                "column": 35,
+                "line": 3,
+              },
+            },
+            "name": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 39,
+                  "line": 3,
+                },
+                "identifierName": "b",
+                "start": Position {
+                  "column": 35,
+                  "line": 3,
+                },
+              },
+              "name": "b",
+            },
+            "optional": false,
+            "type": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 39,
+                  "line": 3,
+                },
+                "identifierName": "B",
+                "start": Position {
+                  "column": 38,
+                  "line": 3,
+                },
+              },
+              "name": "B",
+            },
+          },
+          Object {
+            "kind": "FunctionParameter",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 45,
+                "line": 3,
+              },
+              "identifierName": "c",
+              "start": Position {
+                "column": 41,
+                "line": 3,
+              },
+            },
+            "name": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 45,
+                  "line": 3,
+                },
+                "identifierName": "c",
+                "start": Position {
+                  "column": 41,
+                  "line": 3,
+                },
+              },
+              "name": "c",
+            },
+            "optional": false,
+            "type": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 45,
+                  "line": 3,
+                },
+                "identifierName": "C",
+                "start": Position {
+                  "column": 44,
+                  "line": 3,
+                },
+              },
+              "name": "C",
+            },
+          },
+        ],
+        "restParam": undefined,
+        "returnType": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 56,
+              "line": 3,
+            },
+            "identifierName": "Result",
+            "start": Position {
+              "column": 50,
+              "line": 3,
+            },
+          },
+          "name": "Result",
+        },
+        "typeParams": Array [],
+      },
+      "typeParameters": Array [
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 10,
+                "line": 3,
+              },
+              "start": Position {
+                "column": 9,
+                "line": 3,
+              },
+            },
+            "name": "A",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 10,
+              "line": 3,
+            },
+            "start": Position {
+              "column": 9,
+              "line": 3,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 13,
+                "line": 3,
+              },
+              "start": Position {
+                "column": 12,
+                "line": 3,
+              },
+            },
+            "name": "B",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 13,
+              "line": 3,
+            },
+            "start": Position {
+              "column": 12,
+              "line": 3,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 16,
+                "line": 3,
+              },
+              "start": Position {
+                "column": 15,
+                "line": 3,
+              },
+            },
+            "name": "C",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 16,
+              "line": 3,
+            },
+            "start": Position {
+              "column": 15,
+              "line": 3,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 24,
+                "line": 3,
+              },
+              "start": Position {
+                "column": 18,
+                "line": 3,
+              },
+            },
+            "name": "Result",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 24,
+              "line": 3,
+            },
+            "start": Position {
+              "column": 18,
+              "line": 3,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+      ],
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 5,
+          },
+          "identifierName": "CurriedFn2",
+          "start": Position {
+            "column": 5,
+            "line": 5,
+          },
+        },
+        "name": "CurriedFn2",
+      },
+      "kind": "TypeAliasDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 75,
+          "line": 5,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 5,
+        },
+      },
+      "type": Object {
+        "kind": "IntersectionTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 74,
+            "line": 5,
+          },
+          "start": Position {
+            "column": 32,
+            "line": 5,
+          },
+        },
+        "types": Array [
+          Object {
+            "kind": "GenericTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 54,
+                "line": 5,
+              },
+              "start": Position {
+                "column": 32,
+                "line": 5,
+              },
+            },
+            "type": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 35,
+                  "line": 5,
+                },
+                "identifierName": "Fn1",
+                "start": Position {
+                  "column": 32,
+                  "line": 5,
+                },
+              },
+              "name": "Fn1",
+            },
+            "typeArguments": Array [
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 37,
+                    "line": 5,
+                  },
+                  "identifierName": "A",
+                  "start": Position {
+                    "column": 36,
+                    "line": 5,
+                  },
+                },
+                "name": "A",
+              },
+              Object {
+                "kind": "GenericTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 53,
+                    "line": 5,
+                  },
+                  "start": Position {
+                    "column": 39,
+                    "line": 5,
+                  },
+                },
+                "type": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 42,
+                      "line": 5,
+                    },
+                    "identifierName": "Fn1",
+                    "start": Position {
+                      "column": 39,
+                      "line": 5,
+                    },
+                  },
+                  "name": "Fn1",
+                },
+                "typeArguments": Array [
+                  Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 44,
+                        "line": 5,
+                      },
+                      "identifierName": "B",
+                      "start": Position {
+                        "column": 43,
+                        "line": 5,
+                      },
+                    },
+                    "name": "B",
+                  },
+                  Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 52,
+                        "line": 5,
+                      },
+                      "identifierName": "Result",
+                      "start": Position {
+                        "column": 46,
+                        "line": 5,
+                      },
+                    },
+                    "name": "Result",
+                  },
+                ],
+              },
+            ],
+          },
+          Object {
+            "kind": "GenericTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 74,
+                "line": 5,
+              },
+              "start": Position {
+                "column": 57,
+                "line": 5,
+              },
+            },
+            "type": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 60,
+                  "line": 5,
+                },
+                "identifierName": "Fn2",
+                "start": Position {
+                  "column": 57,
+                  "line": 5,
+                },
+              },
+              "name": "Fn2",
+            },
+            "typeArguments": Array [
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 62,
+                    "line": 5,
+                  },
+                  "identifierName": "A",
+                  "start": Position {
+                    "column": 61,
+                    "line": 5,
+                  },
+                },
+                "name": "A",
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 65,
+                    "line": 5,
+                  },
+                  "identifierName": "B",
+                  "start": Position {
+                    "column": 64,
+                    "line": 5,
+                  },
+                },
+                "name": "B",
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 73,
+                    "line": 5,
+                  },
+                  "identifierName": "Result",
+                  "start": Position {
+                    "column": 67,
+                    "line": 5,
+                  },
+                },
+                "name": "Result",
+              },
+            ],
+          },
+        ],
+      },
+      "typeParameters": Array [
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 17,
+                "line": 5,
+              },
+              "start": Position {
+                "column": 16,
+                "line": 5,
+              },
+            },
+            "name": "A",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 17,
+              "line": 5,
+            },
+            "start": Position {
+              "column": 16,
+              "line": 5,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 20,
+                "line": 5,
+              },
+              "start": Position {
+                "column": 19,
+                "line": 5,
+              },
+            },
+            "name": "B",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 20,
+              "line": 5,
+            },
+            "start": Position {
+              "column": 19,
+              "line": 5,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 28,
+                "line": 5,
+              },
+              "start": Position {
+                "column": 22,
+                "line": 5,
+              },
+            },
+            "name": "Result",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 28,
+              "line": 5,
+            },
+            "start": Position {
+              "column": 22,
+              "line": 5,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+      ],
+    },
+    Object {
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 15,
+            "line": 6,
+          },
+          "identifierName": "CurriedFn3",
+          "start": Position {
+            "column": 5,
+            "line": 6,
+          },
+        },
+        "name": "CurriedFn3",
+      },
+      "kind": "TypeAliasDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 23,
+          "line": 8,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 6,
+        },
+      },
+      "type": Object {
+        "kind": "IntersectionTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 22,
+            "line": 8,
+          },
+          "start": Position {
+            "column": 35,
+            "line": 6,
+          },
+        },
+        "types": Array [
+          Object {
+            "kind": "GenericTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 67,
+                "line": 6,
+              },
+              "start": Position {
+                "column": 35,
+                "line": 6,
+              },
+            },
+            "type": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 38,
+                  "line": 6,
+                },
+                "identifierName": "Fn1",
+                "start": Position {
+                  "column": 35,
+                  "line": 6,
+                },
+              },
+              "name": "Fn1",
+            },
+            "typeArguments": Array [
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 40,
+                    "line": 6,
+                  },
+                  "identifierName": "A",
+                  "start": Position {
+                    "column": 39,
+                    "line": 6,
+                  },
+                },
+                "name": "A",
+              },
+              Object {
+                "kind": "GenericTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 66,
+                    "line": 6,
+                  },
+                  "start": Position {
+                    "column": 42,
+                    "line": 6,
+                  },
+                },
+                "type": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 52,
+                      "line": 6,
+                    },
+                    "identifierName": "CurriedFn2",
+                    "start": Position {
+                      "column": 42,
+                      "line": 6,
+                    },
+                  },
+                  "name": "CurriedFn2",
+                },
+                "typeArguments": Array [
+                  Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 54,
+                        "line": 6,
+                      },
+                      "identifierName": "B",
+                      "start": Position {
+                        "column": 53,
+                        "line": 6,
+                      },
+                    },
+                    "name": "B",
+                  },
+                  Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 57,
+                        "line": 6,
+                      },
+                      "identifierName": "C",
+                      "start": Position {
+                        "column": 56,
+                        "line": 6,
+                      },
+                    },
+                    "name": "C",
+                  },
+                  Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 65,
+                        "line": 6,
+                      },
+                      "identifierName": "Result",
+                      "start": Position {
+                        "column": 59,
+                        "line": 6,
+                      },
+                    },
+                    "name": "Result",
+                  },
+                ],
+              },
+            ],
+          },
+          Object {
+            "kind": "GenericTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 27,
+                "line": 7,
+              },
+              "start": Position {
+                "column": 2,
+                "line": 7,
+              },
+            },
+            "type": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 5,
+                  "line": 7,
+                },
+                "identifierName": "Fn2",
+                "start": Position {
+                  "column": 2,
+                  "line": 7,
+                },
+              },
+              "name": "Fn2",
+            },
+            "typeArguments": Array [
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 7,
+                    "line": 7,
+                  },
+                  "identifierName": "A",
+                  "start": Position {
+                    "column": 6,
+                    "line": 7,
+                  },
+                },
+                "name": "A",
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 10,
+                    "line": 7,
+                  },
+                  "identifierName": "B",
+                  "start": Position {
+                    "column": 9,
+                    "line": 7,
+                  },
+                },
+                "name": "B",
+              },
+              Object {
+                "kind": "GenericTypeAnnotation",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 26,
+                    "line": 7,
+                  },
+                  "start": Position {
+                    "column": 12,
+                    "line": 7,
+                  },
+                },
+                "type": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 15,
+                      "line": 7,
+                    },
+                    "identifierName": "Fn1",
+                    "start": Position {
+                      "column": 12,
+                      "line": 7,
+                    },
+                  },
+                  "name": "Fn1",
+                },
+                "typeArguments": Array [
+                  Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 17,
+                        "line": 7,
+                      },
+                      "identifierName": "C",
+                      "start": Position {
+                        "column": 16,
+                        "line": 7,
+                      },
+                    },
+                    "name": "C",
+                  },
+                  Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 25,
+                        "line": 7,
+                      },
+                      "identifierName": "Result",
+                      "start": Position {
+                        "column": 19,
+                        "line": 7,
+                      },
+                    },
+                    "name": "Result",
+                  },
+                ],
+              },
+            ],
+          },
+          Object {
+            "kind": "GenericTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 22,
+                "line": 8,
+              },
+              "start": Position {
+                "column": 2,
+                "line": 8,
+              },
+            },
+            "type": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 5,
+                  "line": 8,
+                },
+                "identifierName": "Fn3",
+                "start": Position {
+                  "column": 2,
+                  "line": 8,
+                },
+              },
+              "name": "Fn3",
+            },
+            "typeArguments": Array [
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 7,
+                    "line": 8,
+                  },
+                  "identifierName": "A",
+                  "start": Position {
+                    "column": 6,
+                    "line": 8,
+                  },
+                },
+                "name": "A",
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 10,
+                    "line": 8,
+                  },
+                  "identifierName": "B",
+                  "start": Position {
+                    "column": 9,
+                    "line": 8,
+                  },
+                },
+                "name": "B",
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 13,
+                    "line": 8,
+                  },
+                  "identifierName": "C",
+                  "start": Position {
+                    "column": 12,
+                    "line": 8,
+                  },
+                },
+                "name": "C",
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 21,
+                    "line": 8,
+                  },
+                  "identifierName": "Result",
+                  "start": Position {
+                    "column": 15,
+                    "line": 8,
+                  },
+                },
+                "name": "Result",
+              },
+            ],
+          },
+        ],
+      },
+      "typeParameters": Array [
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 17,
+                "line": 6,
+              },
+              "start": Position {
+                "column": 16,
+                "line": 6,
+              },
+            },
+            "name": "A",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 17,
+              "line": 6,
+            },
+            "start": Position {
+              "column": 16,
+              "line": 6,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 20,
+                "line": 6,
+              },
+              "start": Position {
+                "column": 19,
+                "line": 6,
+              },
+            },
+            "name": "B",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 20,
+              "line": 6,
+            },
+            "start": Position {
+              "column": 19,
+              "line": 6,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 23,
+                "line": 6,
+              },
+              "start": Position {
+                "column": 22,
+                "line": 6,
+              },
+            },
+            "name": "C",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 23,
+              "line": 6,
+            },
+            "start": Position {
+              "column": 22,
+              "line": 6,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 31,
+                "line": 6,
+              },
+              "start": Position {
+                "column": 25,
+                "line": 6,
+              },
+            },
+            "name": "Result",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 31,
+              "line": 6,
+            },
+            "start": Position {
+              "column": 25,
+              "line": 6,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+      ],
+    },
+    Object {
+      "body": Array [
+        Object {
+          "argument": Object {
+            "body": Array [
+              Object {
+                "declare": false,
+                "definite": false,
+                "id": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 18,
+                      "line": 13,
+                    },
+                    "identifierName": "combined",
+                    "start": Position {
+                      "column": 10,
+                      "line": 13,
+                    },
+                  },
+                  "name": "combined",
+                },
+                "init": Object {
+                  "arguments": Array [
+                    Object {
+                      "arguments": Array [
+                        Object {
+                          "kind": "Identifier",
+                          "leadingComments": Array [],
+                          "loc": SourceLocation {
+                            "end": Position {
+                              "column": 68,
+                              "line": 13,
+                            },
+                            "identifierName": "arguments",
+                            "start": Position {
+                              "column": 59,
+                              "line": 13,
+                            },
+                          },
+                          "name": "arguments",
+                        },
+                      ],
+                      "callee": Object {
+                        "kind": "MemberExpression",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 58,
+                            "line": 13,
+                          },
+                          "start": Position {
+                            "column": 32,
+                            "line": 13,
+                          },
+                        },
+                        "object": Object {
+                          "kind": "MemberExpression",
+                          "leadingComments": Array [],
+                          "loc": SourceLocation {
+                            "end": Position {
+                              "column": 53,
+                              "line": 13,
+                            },
+                            "start": Position {
+                              "column": 32,
+                              "line": 13,
+                            },
+                          },
+                          "object": Object {
+                            "kind": "MemberExpression",
+                            "leadingComments": Array [],
+                            "loc": SourceLocation {
+                              "end": Position {
+                                "column": 47,
+                                "line": 13,
+                              },
+                              "start": Position {
+                                "column": 32,
+                                "line": 13,
+                              },
+                            },
+                            "object": Object {
+                              "kind": "Identifier",
+                              "leadingComments": Array [],
+                              "loc": SourceLocation {
+                                "end": Position {
+                                  "column": 37,
+                                  "line": 13,
+                                },
+                                "identifierName": "Array",
+                                "start": Position {
+                                  "column": 32,
+                                  "line": 13,
+                                },
+                              },
+                              "name": "Array",
+                            },
+                            "property": Object {
+                              "kind": "Identifier",
+                              "leadingComments": Array [],
+                              "loc": SourceLocation {
+                                "end": Position {
+                                  "column": 47,
+                                  "line": 13,
+                                },
+                                "identifierName": "prototype",
+                                "start": Position {
+                                  "column": 38,
+                                  "line": 13,
+                                },
+                              },
+                              "name": "prototype",
+                            },
+                          },
+                          "property": Object {
+                            "kind": "Identifier",
+                            "leadingComments": Array [],
+                            "loc": SourceLocation {
+                              "end": Position {
+                                "column": 53,
+                                "line": 13,
+                              },
+                              "identifierName": "slice",
+                              "start": Position {
+                                "column": 48,
+                                "line": 13,
+                              },
+                            },
+                            "name": "slice",
+                          },
+                        },
+                        "property": Object {
+                          "kind": "Identifier",
+                          "leadingComments": Array [],
+                          "loc": SourceLocation {
+                            "end": Position {
+                              "column": 58,
+                              "line": 13,
+                            },
+                            "identifierName": "call",
+                            "start": Position {
+                              "column": 54,
+                              "line": 13,
+                            },
+                          },
+                          "name": "call",
+                        },
+                      },
+                      "kind": "CallExpression",
+                      "leadingComments": Array [],
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 69,
+                          "line": 13,
+                        },
+                        "start": Position {
+                          "column": 32,
+                          "line": 13,
+                        },
+                      },
+                      "typeArguments": Array [],
+                    },
+                  ],
+                  "callee": Object {
+                    "kind": "MemberExpression",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 31,
+                        "line": 13,
+                      },
+                      "start": Position {
+                        "column": 21,
+                        "line": 13,
+                      },
+                    },
+                    "object": Object {
+                      "kind": "Identifier",
+                      "leadingComments": Array [],
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 24,
+                          "line": 13,
+                        },
+                        "identifierName": "acc",
+                        "start": Position {
+                          "column": 21,
+                          "line": 13,
+                        },
+                      },
+                      "name": "acc",
+                    },
+                    "property": Object {
+                      "kind": "Identifier",
+                      "leadingComments": Array [],
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 31,
+                          "line": 13,
+                        },
+                        "identifierName": "concat",
+                        "start": Position {
+                          "column": 25,
+                          "line": 13,
+                        },
+                      },
+                      "name": "concat",
+                    },
+                  },
+                  "kind": "CallExpression",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 70,
+                      "line": 13,
+                    },
+                    "start": Position {
+                      "column": 21,
+                      "line": 13,
+                    },
+                  },
+                  "typeArguments": Array [],
+                },
+                "kind": "VariableDeclaration",
+                "leadingComments": Array [
+                  Object {
+                    "kind": "CommentLine",
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 50,
+                        "line": 12,
+                      },
+                      "start": Position {
+                        "column": 4,
+                        "line": 12,
+                      },
+                    },
+                    "value": " eslint-disable-next-line prefer-rest-params",
+                  },
+                ],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 71,
+                    "line": 13,
+                  },
+                  "start": Position {
+                    "column": 4,
+                    "line": 13,
+                  },
+                },
+                "mode": "const",
+                "type": undefined,
+              },
+              Object {
+                "argument": Object {
+                  "alternate": Object {
+                    "arguments": Array [
+                      Object {
+                        "kind": "Identifier",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 17,
+                            "line": 16,
+                          },
+                          "identifierName": "f",
+                          "start": Position {
+                            "column": 16,
+                            "line": 16,
+                          },
+                        },
+                        "name": "f",
+                      },
+                      Object {
+                        "kind": "Identifier",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 25,
+                            "line": 16,
+                          },
+                          "identifierName": "length",
+                          "start": Position {
+                            "column": 19,
+                            "line": 16,
+                          },
+                        },
+                        "name": "length",
+                      },
+                      Object {
+                        "kind": "Identifier",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 35,
+                            "line": 16,
+                          },
+                          "identifierName": "combined",
+                          "start": Position {
+                            "column": 27,
+                            "line": 16,
+                          },
+                        },
+                        "name": "combined",
+                      },
+                    ],
+                    "callee": Object {
+                      "kind": "Identifier",
+                      "leadingComments": Array [],
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 15,
+                          "line": 16,
+                        },
+                        "identifierName": "curried",
+                        "start": Position {
+                          "column": 8,
+                          "line": 16,
+                        },
+                      },
+                      "name": "curried",
+                    },
+                    "kind": "CallExpression",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 36,
+                        "line": 16,
+                      },
+                      "start": Position {
+                        "column": 8,
+                        "line": 16,
+                      },
+                    },
+                    "typeArguments": Array [],
+                  },
+                  "consequent": Object {
+                    "arguments": Array [
+                      Object {
+                        "kind": "ThisExpression",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 20,
+                            "line": 15,
+                          },
+                          "start": Position {
+                            "column": 16,
+                            "line": 15,
+                          },
+                        },
+                      },
+                      Object {
+                        "kind": "Identifier",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 30,
+                            "line": 15,
+                          },
+                          "identifierName": "combined",
+                          "start": Position {
+                            "column": 22,
+                            "line": 15,
+                          },
+                        },
+                        "name": "combined",
+                      },
+                    ],
+                    "callee": Object {
+                      "kind": "MemberExpression",
+                      "leadingComments": Array [],
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 15,
+                          "line": 15,
+                        },
+                        "start": Position {
+                          "column": 8,
+                          "line": 15,
+                        },
+                      },
+                      "object": Object {
+                        "kind": "Identifier",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 9,
+                            "line": 15,
+                          },
+                          "identifierName": "f",
+                          "start": Position {
+                            "column": 8,
+                            "line": 15,
+                          },
+                        },
+                        "name": "f",
+                      },
+                      "property": Object {
+                        "kind": "Identifier",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 15,
+                            "line": 15,
+                          },
+                          "identifierName": "apply",
+                          "start": Position {
+                            "column": 10,
+                            "line": 15,
+                          },
+                        },
+                        "name": "apply",
+                      },
+                    },
+                    "kind": "CallExpression",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 31,
+                        "line": 15,
+                      },
+                      "start": Position {
+                        "column": 8,
+                        "line": 15,
+                      },
+                    },
+                    "typeArguments": Array [],
+                  },
+                  "kind": "ConditionalExpression",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 36,
+                      "line": 16,
+                    },
+                    "start": Position {
+                      "column": 11,
+                      "line": 14,
+                    },
+                  },
+                  "test": Object {
+                    "kind": "BinaryExpression",
+                    "leadingComments": Array [],
+                    "left": Object {
+                      "kind": "MemberExpression",
+                      "leadingComments": Array [],
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 26,
+                          "line": 14,
+                        },
+                        "start": Position {
+                          "column": 11,
+                          "line": 14,
+                        },
+                      },
+                      "object": Object {
+                        "kind": "Identifier",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 19,
+                            "line": 14,
+                          },
+                          "identifierName": "combined",
+                          "start": Position {
+                            "column": 11,
+                            "line": 14,
+                          },
+                        },
+                        "name": "combined",
+                      },
+                      "property": Object {
+                        "kind": "Identifier",
+                        "leadingComments": Array [],
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 26,
+                            "line": 14,
+                          },
+                          "identifierName": "length",
+                          "start": Position {
+                            "column": 20,
+                            "line": 14,
+                          },
+                        },
+                        "name": "length",
+                      },
+                    },
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 36,
+                        "line": 14,
+                      },
+                      "start": Position {
+                        "column": 11,
+                        "line": 14,
+                      },
+                    },
+                    "operator": ">=",
+                    "right": Object {
+                      "kind": "Identifier",
+                      "leadingComments": Array [],
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 36,
+                          "line": 14,
+                        },
+                        "identifierName": "length",
+                        "start": Position {
+                          "column": 30,
+                          "line": 14,
+                        },
+                      },
+                      "name": "length",
+                    },
+                  },
+                },
+                "kind": "ReturnStatement",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 37,
+                    "line": 16,
+                  },
+                  "start": Position {
+                    "column": 4,
+                    "line": 14,
+                  },
+                },
+              },
+            ],
+            "id": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 20,
+                  "line": 11,
+                },
+                "identifierName": "fn",
+                "start": Position {
+                  "column": 18,
+                  "line": 11,
+                },
+              },
+              "name": "fn",
+            },
+            "isArrowFunction": false,
+            "kind": "FunctionExpression",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 3,
+                "line": 17,
+              },
+              "start": Position {
+                "column": 9,
+                "line": 11,
+              },
+            },
+            "params": Array [
+              Object {
+                "kind": "FunctionParameter",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 30,
+                    "line": 11,
+                  },
+                  "identifierName": "this",
+                  "start": Position {
+                    "column": 21,
+                    "line": 11,
+                  },
+                },
+                "name": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 30,
+                      "line": 11,
+                    },
+                    "identifierName": "this",
+                    "start": Position {
+                      "column": 21,
+                      "line": 11,
+                    },
+                  },
+                  "name": "this",
+                },
+                "optional": false,
+                "type": Object {
+                  "kind": "AnyTypeAnnotation",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 30,
+                      "line": 11,
+                    },
+                    "start": Position {
+                      "column": 27,
+                      "line": 11,
+                    },
+                  },
+                },
+              },
+            ],
+            "restParam": undefined,
+            "returnType": undefined,
+            "typeParams": Array [],
+          },
+          "kind": "ReturnStatement",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 4,
+              "line": 17,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 11,
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 10,
+          },
+          "identifierName": "curried",
+          "start": Position {
+            "column": 9,
+            "line": 10,
+          },
+        },
+        "name": "curried",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 18,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 10,
+        },
+      },
+      "params": Array [
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 23,
+              "line": 10,
+            },
+            "identifierName": "f",
+            "start": Position {
+              "column": 17,
+              "line": 10,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 23,
+                "line": 10,
+              },
+              "identifierName": "f",
+              "start": Position {
+                "column": 17,
+                "line": 10,
+              },
+            },
+            "name": "f",
+          },
+          "optional": false,
+          "type": Object {
+            "kind": "AnyTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 23,
+                "line": 10,
+              },
+              "start": Position {
+                "column": 20,
+                "line": 10,
+              },
+            },
+          },
+        },
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 36,
+              "line": 10,
+            },
+            "identifierName": "length",
+            "start": Position {
+              "column": 25,
+              "line": 10,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 36,
+                "line": 10,
+              },
+              "identifierName": "length",
+              "start": Position {
+                "column": 25,
+                "line": 10,
+              },
+            },
+            "name": "length",
+          },
+          "optional": false,
+          "type": Object {
+            "kind": "AnyTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 36,
+                "line": 10,
+              },
+              "start": Position {
+                "column": 33,
+                "line": 10,
+              },
+            },
+          },
+        },
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 46,
+              "line": 10,
+            },
+            "identifierName": "acc",
+            "start": Position {
+              "column": 38,
+              "line": 10,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 46,
+                "line": 10,
+              },
+              "identifierName": "acc",
+              "start": Position {
+                "column": 38,
+                "line": 10,
+              },
+            },
+            "name": "acc",
+          },
+          "optional": false,
+          "type": Object {
+            "kind": "AnyTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 46,
+                "line": 10,
+              },
+              "start": Position {
+                "column": 43,
+                "line": 10,
+              },
+            },
+          },
+        },
+      ],
+      "restParam": undefined,
+      "returnType": Object {
+        "kind": "AnyTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 52,
+            "line": 10,
+          },
+          "start": Position {
+            "column": 49,
+            "line": 10,
+          },
+        },
+      },
+      "typeParams": Array [],
+    },
+    Object {
+      "body": undefined,
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 29,
+            "line": 20,
+          },
+          "identifierName": "curry",
+          "start": Position {
+            "column": 24,
+            "line": 20,
+          },
+        },
+        "name": "curry",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 77,
+          "line": 20,
+        },
+        "start": Position {
+          "column": 15,
+          "line": 20,
+        },
+      },
+      "params": Array [
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 54,
+              "line": 20,
+            },
+            "identifierName": "f",
+            "start": Position {
+              "column": 39,
+              "line": 20,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 54,
+                "line": 20,
+              },
+              "identifierName": "f",
+              "start": Position {
+                "column": 39,
+                "line": 20,
+              },
+            },
+            "name": "f",
+          },
+          "optional": false,
+          "type": Object {
+            "kind": "GenericTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 54,
+                "line": 20,
+              },
+              "start": Position {
+                "column": 42,
+                "line": 20,
+              },
+            },
+            "type": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 45,
+                  "line": 20,
+                },
+                "identifierName": "Fn2",
+                "start": Position {
+                  "column": 42,
+                  "line": 20,
+                },
+              },
+              "name": "Fn2",
+            },
+            "typeArguments": Array [
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 47,
+                    "line": 20,
+                  },
+                  "identifierName": "A",
+                  "start": Position {
+                    "column": 46,
+                    "line": 20,
+                  },
+                },
+                "name": "A",
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 50,
+                    "line": 20,
+                  },
+                  "identifierName": "B",
+                  "start": Position {
+                    "column": 49,
+                    "line": 20,
+                  },
+                },
+                "name": "B",
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 53,
+                    "line": 20,
+                  },
+                  "identifierName": "C",
+                  "start": Position {
+                    "column": 52,
+                    "line": 20,
+                  },
+                },
+                "name": "C",
+              },
+            ],
+          },
+        },
+      ],
+      "restParam": undefined,
+      "returnType": Object {
+        "kind": "GenericTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 76,
+            "line": 20,
+          },
+          "start": Position {
+            "column": 57,
+            "line": 20,
+          },
+        },
+        "type": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 67,
+              "line": 20,
+            },
+            "identifierName": "CurriedFn2",
+            "start": Position {
+              "column": 57,
+              "line": 20,
+            },
+          },
+          "name": "CurriedFn2",
+        },
+        "typeArguments": Array [
+          Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 69,
+                "line": 20,
+              },
+              "identifierName": "A",
+              "start": Position {
+                "column": 68,
+                "line": 20,
+              },
+            },
+            "name": "A",
+          },
+          Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 72,
+                "line": 20,
+              },
+              "identifierName": "B",
+              "start": Position {
+                "column": 71,
+                "line": 20,
+              },
+            },
+            "name": "B",
+          },
+          Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 75,
+                "line": 20,
+              },
+              "identifierName": "C",
+              "start": Position {
+                "column": 74,
+                "line": 20,
+              },
+            },
+            "name": "C",
+          },
+        ],
+      },
+      "typeParams": Array [
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 31,
+                "line": 20,
+              },
+              "start": Position {
+                "column": 30,
+                "line": 20,
+              },
+            },
+            "name": "A",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 31,
+              "line": 20,
+            },
+            "start": Position {
+              "column": 30,
+              "line": 20,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 34,
+                "line": 20,
+              },
+              "start": Position {
+                "column": 33,
+                "line": 20,
+              },
+            },
+            "name": "B",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 34,
+              "line": 20,
+            },
+            "start": Position {
+              "column": 33,
+              "line": 20,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 37,
+                "line": 20,
+              },
+              "start": Position {
+                "column": 36,
+                "line": 20,
+              },
+            },
+            "name": "C",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 37,
+              "line": 20,
+            },
+            "start": Position {
+              "column": 36,
+              "line": 20,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+      ],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 29,
+            "line": 20,
+          },
+          "identifierName": "curry",
+          "start": Position {
+            "column": 24,
+            "line": 20,
+          },
+        },
+        "name": "curry",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 77,
+          "line": 20,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 20,
+        },
+      },
+    },
+    Object {
+      "body": undefined,
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 29,
+            "line": 21,
+          },
+          "identifierName": "curry",
+          "start": Position {
+            "column": 24,
+            "line": 21,
+          },
+        },
+        "name": "curry",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 26,
+          "line": 23,
+        },
+        "start": Position {
+          "column": 15,
+          "line": 21,
+        },
+      },
+      "params": Array [
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 20,
+              "line": 22,
+            },
+            "identifierName": "f",
+            "start": Position {
+              "column": 2,
+              "line": 22,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 20,
+                "line": 22,
+              },
+              "identifierName": "f",
+              "start": Position {
+                "column": 2,
+                "line": 22,
+              },
+            },
+            "name": "f",
+          },
+          "optional": false,
+          "type": Object {
+            "kind": "GenericTypeAnnotation",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 20,
+                "line": 22,
+              },
+              "start": Position {
+                "column": 5,
+                "line": 22,
+              },
+            },
+            "type": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 8,
+                  "line": 22,
+                },
+                "identifierName": "Fn3",
+                "start": Position {
+                  "column": 5,
+                  "line": 22,
+                },
+              },
+              "name": "Fn3",
+            },
+            "typeArguments": Array [
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 10,
+                    "line": 22,
+                  },
+                  "identifierName": "A",
+                  "start": Position {
+                    "column": 9,
+                    "line": 22,
+                  },
+                },
+                "name": "A",
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 13,
+                    "line": 22,
+                  },
+                  "identifierName": "B",
+                  "start": Position {
+                    "column": 12,
+                    "line": 22,
+                  },
+                },
+                "name": "B",
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 16,
+                    "line": 22,
+                  },
+                  "identifierName": "C",
+                  "start": Position {
+                    "column": 15,
+                    "line": 22,
+                  },
+                },
+                "name": "C",
+              },
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 19,
+                    "line": 22,
+                  },
+                  "identifierName": "D",
+                  "start": Position {
+                    "column": 18,
+                    "line": 22,
+                  },
+                },
+                "name": "D",
+              },
+            ],
+          },
+        },
+      ],
+      "restParam": undefined,
+      "returnType": Object {
+        "kind": "GenericTypeAnnotation",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 25,
+            "line": 23,
+          },
+          "start": Position {
+            "column": 3,
+            "line": 23,
+          },
+        },
+        "type": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 13,
+              "line": 23,
+            },
+            "identifierName": "CurriedFn3",
+            "start": Position {
+              "column": 3,
+              "line": 23,
+            },
+          },
+          "name": "CurriedFn3",
+        },
+        "typeArguments": Array [
+          Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 15,
+                "line": 23,
+              },
+              "identifierName": "A",
+              "start": Position {
+                "column": 14,
+                "line": 23,
+              },
+            },
+            "name": "A",
+          },
+          Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 18,
+                "line": 23,
+              },
+              "identifierName": "B",
+              "start": Position {
+                "column": 17,
+                "line": 23,
+              },
+            },
+            "name": "B",
+          },
+          Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 21,
+                "line": 23,
+              },
+              "identifierName": "C",
+              "start": Position {
+                "column": 20,
+                "line": 23,
+              },
+            },
+            "name": "C",
+          },
+          Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 24,
+                "line": 23,
+              },
+              "identifierName": "D",
+              "start": Position {
+                "column": 23,
+                "line": 23,
+              },
+            },
+            "name": "D",
+          },
+        ],
+      },
+      "typeParams": Array [
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 31,
+                "line": 21,
+              },
+              "start": Position {
+                "column": 30,
+                "line": 21,
+              },
+            },
+            "name": "A",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 31,
+              "line": 21,
+            },
+            "start": Position {
+              "column": 30,
+              "line": 21,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 34,
+                "line": 21,
+              },
+              "start": Position {
+                "column": 33,
+                "line": 21,
+              },
+            },
+            "name": "B",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 34,
+              "line": 21,
+            },
+            "start": Position {
+              "column": 33,
+              "line": 21,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 37,
+                "line": 21,
+              },
+              "start": Position {
+                "column": 36,
+                "line": 21,
+              },
+            },
+            "name": "C",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 37,
+              "line": 21,
+            },
+            "start": Position {
+              "column": 36,
+              "line": 21,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+        Object {
+          "constraint": undefined,
+          "default": undefined,
+          "id": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 40,
+                "line": 21,
+              },
+              "start": Position {
+                "column": 39,
+                "line": 21,
+              },
+            },
+            "name": "D",
+          },
+          "kind": "TypeParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 40,
+              "line": 21,
+            },
+            "start": Position {
+              "column": 39,
+              "line": 21,
+            },
+          },
+          "variance": "ReadWrite",
+        },
+      ],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 29,
+            "line": 21,
+          },
+          "identifierName": "curry",
+          "start": Position {
+            "column": 24,
+            "line": 21,
+          },
+        },
+        "name": "curry",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 26,
+          "line": 23,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 21,
+        },
+      },
+    },
+    Object {
+      "body": Array [
+        Object {
+          "argument": Object {
+            "arguments": Array [
+              Object {
+                "kind": "Identifier",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 18,
+                    "line": 26,
+                  },
+                  "identifierName": "f",
+                  "start": Position {
+                    "column": 17,
+                    "line": 26,
+                  },
+                },
+                "name": "f",
+              },
+              Object {
+                "kind": "MemberExpression",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 28,
+                    "line": 26,
+                  },
+                  "start": Position {
+                    "column": 20,
+                    "line": 26,
+                  },
+                },
+                "object": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 21,
+                      "line": 26,
+                    },
+                    "identifierName": "f",
+                    "start": Position {
+                      "column": 20,
+                      "line": 26,
+                    },
+                  },
+                  "name": "f",
+                },
+                "property": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 28,
+                      "line": 26,
+                    },
+                    "identifierName": "length",
+                    "start": Position {
+                      "column": 22,
+                      "line": 26,
+                    },
+                  },
+                  "name": "length",
+                },
+              },
+              Object {
+                "elements": Array [],
+                "kind": "ArrayExpression",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 32,
+                    "line": 26,
+                  },
+                  "start": Position {
+                    "column": 30,
+                    "line": 26,
+                  },
+                },
+              },
+            ],
+            "callee": Object {
+              "kind": "Identifier",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 16,
+                  "line": 26,
+                },
+                "identifierName": "curried",
+                "start": Position {
+                  "column": 9,
+                  "line": 26,
+                },
+              },
+              "name": "curried",
+            },
+            "kind": "CallExpression",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 33,
+                "line": 26,
+              },
+              "start": Position {
+                "column": 9,
+                "line": 26,
+              },
+            },
+            "typeArguments": Array [],
+          },
+          "kind": "ReturnStatement",
+          "leadingComments": Array [
+            Object {
+              "kind": "CommentLine",
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 37,
+                  "line": 25,
+                },
+                "start": Position {
+                  "column": 2,
+                  "line": 25,
+                },
+              },
+              "value": " eslint-disable-line no-redeclare",
+            },
+          ],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 34,
+              "line": 26,
+            },
+            "start": Position {
+              "column": 2,
+              "line": 26,
+            },
+          },
+        },
+      ],
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 29,
+            "line": 24,
+          },
+          "identifierName": "curry",
+          "start": Position {
+            "column": 24,
+            "line": 24,
+          },
+        },
+        "name": "curry",
+      },
+      "kind": "FunctionDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 27,
+        },
+        "start": Position {
+          "column": 15,
+          "line": 24,
+        },
+      },
+      "params": Array [
+        Object {
+          "kind": "FunctionParameter",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 41,
+              "line": 24,
+            },
+            "identifierName": "f",
+            "start": Position {
+              "column": 30,
+              "line": 24,
+            },
+          },
+          "name": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 41,
+                "line": 24,
+              },
+              "identifierName": "f",
+              "start": Position {
+                "column": 30,
+                "line": 24,
+              },
+            },
+            "name": "f",
+          },
+          "optional": false,
+          "type": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 41,
+                "line": 24,
+              },
+              "identifierName": "Function",
+              "start": Position {
+                "column": 33,
+                "line": 24,
+              },
+            },
+            "name": "Function",
+          },
+        },
+      ],
+      "restParam": undefined,
+      "returnType": undefined,
+      "typeParams": Array [],
+    },
+    Object {
+      "expression": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 29,
+            "line": 24,
+          },
+          "identifierName": "curry",
+          "start": Position {
+            "column": 24,
+            "line": 24,
+          },
+        },
+        "name": "curry",
+      },
+      "kind": "ExportDefault",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 1,
+          "line": 27,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 24,
+        },
+      },
+    },
+    Object {
+      "declare": false,
+      "definite": false,
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 28,
+          },
+          "identifierName": "add",
+          "start": Position {
+            "column": 13,
+            "line": 28,
+          },
+        },
+        "name": "add",
+      },
+      "init": Object {
+        "arguments": Array [
+          Object {
+            "body": Array [
+              Object {
+                "argument": Object {
+                  "kind": "BinaryExpression",
+                  "leadingComments": Array [],
+                  "left": Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 60,
+                        "line": 28,
+                      },
+                      "identifierName": "a",
+                      "start": Position {
+                        "column": 59,
+                        "line": 28,
+                      },
+                    },
+                    "name": "a",
+                  },
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 64,
+                      "line": 28,
+                    },
+                    "start": Position {
+                      "column": 59,
+                      "line": 28,
+                    },
+                  },
+                  "operator": "+",
+                  "right": Object {
+                    "kind": "Identifier",
+                    "leadingComments": Array [],
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 64,
+                        "line": 28,
+                      },
+                      "identifierName": "b",
+                      "start": Position {
+                        "column": 63,
+                        "line": 28,
+                      },
+                    },
+                    "name": "b",
+                  },
+                },
+                "kind": "ReturnStatement",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 64,
+                    "line": 28,
+                  },
+                  "start": Position {
+                    "column": 59,
+                    "line": 28,
+                  },
+                },
+              },
+            ],
+            "id": undefined,
+            "isArrowFunction": true,
+            "kind": "FunctionExpression",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 64,
+                "line": 28,
+              },
+              "start": Position {
+                "column": 25,
+                "line": 28,
+              },
+            },
+            "params": Array [
+              Object {
+                "kind": "FunctionParameter",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 35,
+                    "line": 28,
+                  },
+                  "identifierName": "a",
+                  "start": Position {
+                    "column": 26,
+                    "line": 28,
+                  },
+                },
+                "name": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 35,
+                      "line": 28,
+                    },
+                    "identifierName": "a",
+                    "start": Position {
+                      "column": 26,
+                      "line": 28,
+                    },
+                  },
+                  "name": "a",
+                },
+                "optional": false,
+                "type": Object {
+                  "kind": "StringTypeAnnotation",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 35,
+                      "line": 28,
+                    },
+                    "start": Position {
+                      "column": 29,
+                      "line": 28,
+                    },
+                  },
+                },
+              },
+              Object {
+                "kind": "FunctionParameter",
+                "leadingComments": Array [],
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 46,
+                    "line": 28,
+                  },
+                  "identifierName": "b",
+                  "start": Position {
+                    "column": 37,
+                    "line": 28,
+                  },
+                },
+                "name": Object {
+                  "kind": "Identifier",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 46,
+                      "line": 28,
+                    },
+                    "identifierName": "b",
+                    "start": Position {
+                      "column": 37,
+                      "line": 28,
+                    },
+                  },
+                  "name": "b",
+                },
+                "optional": false,
+                "type": Object {
+                  "kind": "StringTypeAnnotation",
+                  "leadingComments": Array [],
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 46,
+                      "line": 28,
+                    },
+                    "start": Position {
+                      "column": 40,
+                      "line": 28,
+                    },
+                  },
+                },
+              },
+            ],
+            "restParam": undefined,
+            "returnType": Object {
+              "kind": "StringTypeAnnotation",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 55,
+                  "line": 28,
+                },
+                "start": Position {
+                  "column": 49,
+                  "line": 28,
+                },
+              },
+            },
+            "typeParams": Array [],
+          },
+        ],
+        "callee": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 24,
+              "line": 28,
+            },
+            "identifierName": "curry",
+            "start": Position {
+              "column": 19,
+              "line": 28,
+            },
+          },
+          "name": "curry",
+        },
+        "kind": "CallExpression",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 65,
+            "line": 28,
+          },
+          "start": Position {
+            "column": 19,
+            "line": 28,
+          },
+        },
+        "typeArguments": Array [],
+      },
+      "kind": "VariableDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 66,
+          "line": 28,
+        },
+        "start": Position {
+          "column": 7,
+          "line": 28,
+        },
+      },
+      "mode": "const",
+      "type": undefined,
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 28,
+          },
+          "identifierName": "add",
+          "start": Position {
+            "column": 13,
+            "line": 28,
+          },
+        },
+        "name": "add",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 66,
+          "line": 28,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 28,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 16,
+            "line": 28,
+          },
+          "identifierName": "add",
+          "start": Position {
+            "column": 13,
+            "line": 28,
+          },
+        },
+        "name": "add",
+      },
+    },
+    Object {
+      "declare": false,
+      "definite": false,
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 30,
+          },
+          "identifierName": "x",
+          "start": Position {
+            "column": 13,
+            "line": 30,
+          },
+        },
+        "name": "x",
+      },
+      "init": Object {
+        "arguments": Array [
+          Object {
+            "kind": "NumericLiteral",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 25,
+                "line": 30,
+              },
+              "start": Position {
+                "column": 24,
+                "line": 30,
+              },
+            },
+            "value": 2,
+          },
+        ],
+        "callee": Object {
+          "arguments": Array [
+            Object {
+              "kind": "NumericLiteral",
+              "leadingComments": Array [],
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 22,
+                  "line": 30,
+                },
+                "start": Position {
+                  "column": 21,
+                  "line": 30,
+                },
+              },
+              "value": 1,
+            },
+          ],
+          "callee": Object {
+            "kind": "Identifier",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 20,
+                "line": 30,
+              },
+              "identifierName": "add",
+              "start": Position {
+                "column": 17,
+                "line": 30,
+              },
+            },
+            "name": "add",
+          },
+          "kind": "CallExpression",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 23,
+              "line": 30,
+            },
+            "start": Position {
+              "column": 17,
+              "line": 30,
+            },
+          },
+          "typeArguments": Array [],
+        },
+        "kind": "CallExpression",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 30,
+          },
+          "start": Position {
+            "column": 17,
+            "line": 30,
+          },
+        },
+        "typeArguments": Array [],
+      },
+      "kind": "VariableDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 27,
+          "line": 30,
+        },
+        "start": Position {
+          "column": 7,
+          "line": 30,
+        },
+      },
+      "mode": "const",
+      "type": undefined,
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 30,
+          },
+          "identifierName": "x",
+          "start": Position {
+            "column": 13,
+            "line": 30,
+          },
+        },
+        "name": "x",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 27,
+          "line": 30,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 30,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 30,
+          },
+          "identifierName": "x",
+          "start": Position {
+            "column": 13,
+            "line": 30,
+          },
+        },
+        "name": "x",
+      },
+    },
+    Object {
+      "declare": false,
+      "definite": false,
+      "id": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 31,
+          },
+          "identifierName": "y",
+          "start": Position {
+            "column": 13,
+            "line": 31,
+          },
+        },
+        "name": "y",
+      },
+      "init": Object {
+        "arguments": Array [
+          Object {
+            "kind": "NumericLiteral",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 22,
+                "line": 31,
+              },
+              "start": Position {
+                "column": 21,
+                "line": 31,
+              },
+            },
+            "value": 1,
+          },
+          Object {
+            "kind": "NumericLiteral",
+            "leadingComments": Array [],
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 25,
+                "line": 31,
+              },
+              "start": Position {
+                "column": 24,
+                "line": 31,
+              },
+            },
+            "value": 2,
+          },
+        ],
+        "callee": Object {
+          "kind": "Identifier",
+          "leadingComments": Array [],
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 20,
+              "line": 31,
+            },
+            "identifierName": "add",
+            "start": Position {
+              "column": 17,
+              "line": 31,
+            },
+          },
+          "name": "add",
+        },
+        "kind": "CallExpression",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 31,
+          },
+          "start": Position {
+            "column": 17,
+            "line": 31,
+          },
+        },
+        "typeArguments": Array [],
+      },
+      "kind": "VariableDeclaration",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 27,
+          "line": 31,
+        },
+        "start": Position {
+          "column": 7,
+          "line": 31,
+        },
+      },
+      "mode": "const",
+      "type": undefined,
+    },
+    Object {
+      "exportedName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 31,
+          },
+          "identifierName": "y",
+          "start": Position {
+            "column": 13,
+            "line": 31,
+          },
+        },
+        "name": "y",
+      },
+      "kind": "ExportNamed",
+      "leadingComments": Array [],
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 27,
+          "line": 31,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 31,
+        },
+      },
+      "localName": Object {
+        "kind": "Identifier",
+        "leadingComments": Array [],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 14,
+            "line": 31,
+          },
+          "identifierName": "y",
+          "start": Position {
+            "column": 13,
+            "line": 31,
+          },
+        },
+        "name": "y",
+      },
+    },
+  ],
+}
+`;

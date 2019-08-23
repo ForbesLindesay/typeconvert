@@ -5,6 +5,7 @@ import normalizeComments from './normalizeComments';
 import normalizeGenericTypeAnnotation from './normalizeGenericTypeAnnotation';
 import normalizeFunctionTypeAnnotation from './normalizeFunctionTypeAnnotation';
 import normalizeObjectTypeAnnotation from './normalizeObjectTypeAnnotation';
+import normalizeGenericTypeAnnotationTS from './normalizeGenericTypeAnnotationTS';
 
 function normalizeTypeCore(
   input: bt.FlowType | bt.TSType,
@@ -122,6 +123,8 @@ function normalizeTypeCore(
       return normalizeFunctionTypeAnnotation(input, ctx);
     case 'ObjectTypeAnnotation':
       return normalizeObjectTypeAnnotation(input, ctx);
+    case 'TSTypeReference':
+      return normalizeGenericTypeAnnotationTS(input, ctx);
     default:
       return ctx.assertNever(input as never);
   }
