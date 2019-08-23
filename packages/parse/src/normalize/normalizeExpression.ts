@@ -97,6 +97,11 @@ export default function normalizeExpression(
         loc: input.loc,
         leadingComments: normalizeComments(input.leadingComments),
       });
+    case 'ThisExpression':
+      return ast.createThisExpression({
+        loc: input.loc,
+        leadingComments: normalizeComments(input.leadingComments),
+      });
 
     case 'ConditionalExpression':
       return ast.createConditionalExpression({

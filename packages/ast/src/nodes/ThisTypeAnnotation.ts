@@ -1,6 +1,8 @@
 import NodeKind from '../NodeKind';
 import NodeBase from '../NodeBase';
 
+// TODO: is this used at all?
+
 /**
  * Example:
  *
@@ -10,4 +12,4 @@ import NodeBase from '../NodeBase';
  */
 export default interface ThisTypeAnnotation extends NodeBase {
   readonly kind: NodeKind.ThisTypeAnnotation;
-};
+}

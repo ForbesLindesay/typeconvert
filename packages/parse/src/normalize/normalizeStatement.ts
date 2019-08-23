@@ -6,7 +6,6 @@ import normalizeExpression from './normalizeExpression';
 import ParseContext from '../ParseContext';
 import normalizeIdentifier from './normalizeIdentifier';
 import normalizeDeclaration from './normalizeDeclaration';
-import normalizeVariableDeclaration from './normalizeVariableDeclaration';
 
 export default function normalizeStatement(
   input: bt.Statement,
@@ -126,8 +125,6 @@ export default function normalizeStatement(
       return input.body
         .map(s => normalizeStatement(s, ctx))
         .reduce((a, b) => [...a, ...b], []);
-    case 'VariableDeclaration':
-      return normalizeVariableDeclaration(input, ctx);
     default:
       if (bt.isDeclaration(input)) {
         return normalizeDeclaration(input, ctx);

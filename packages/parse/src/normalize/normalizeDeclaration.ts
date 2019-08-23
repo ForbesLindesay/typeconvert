@@ -8,6 +8,7 @@ import normalizeTypeParameterDeclaration from './normalizeTypeParameterDeclarati
 import normalizeFunctionDeclaration from './normalizeFunctionDeclaration';
 import normalizeDeclareFunction from './normalizeDeclareFunction';
 import normalizeDeclareFunctionTS from './normalizeDeclareFunctionTS';
+import normalizeVariableDeclaration from './normalizeVariableDeclaration';
 
 export default function normalizeDeclaration(
   input: bt.Declaration,
@@ -129,6 +130,8 @@ export default function normalizeDeclaration(
           ),
         }),
       ];
+    case 'VariableDeclaration':
+      return normalizeVariableDeclaration(input, ctx);
     default:
       return ctx.assertNever(input as never);
   }

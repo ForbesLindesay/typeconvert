@@ -17,6 +17,7 @@ import NumericLiteral from '../nodes/NumericLiteral';
 import ObjectExpression from '../nodes/ObjectExpression';
 import StringLiteral from '../nodes/StringLiteral';
 import TemplateLiteral from '../nodes/TemplateLiteral';
+import ThisExpression from '../nodes/ThisExpression';
 import UnaryExpression from '../nodes/UnaryExpression';
 
 type Expression = 
@@ -35,6 +36,7 @@ type Expression =
   | ObjectExpression
   | StringLiteral
   | TemplateLiteral
+  | ThisExpression
   | UnaryExpression;
 
 export default Expression;

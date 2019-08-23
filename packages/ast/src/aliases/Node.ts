@@ -25,6 +25,7 @@ import FunctionDeclaration from '../nodes/FunctionDeclaration';
 import FunctionExpression from '../nodes/FunctionExpression';
 import FunctionParameter from '../nodes/FunctionParameter';
 import FunctionTypeAnnotation from '../nodes/FunctionTypeAnnotation';
+import GenericTypeAnnotation from '../nodes/GenericTypeAnnotation';
 import Identifier from '../nodes/Identifier';
 import IfStatement from '../nodes/IfStatement';
 import ImportStatement from '../nodes/ImportStatement';
@@ -56,6 +57,7 @@ import StringTypeAnnotation from '../nodes/StringTypeAnnotation';
 import SymbolTypeAnnotation from '../nodes/SymbolTypeAnnotation';
 import {TemplateElement} from '../nodes/TemplateLiteral';
 import TemplateLiteral from '../nodes/TemplateLiteral';
+import ThisExpression from '../nodes/ThisExpression';
 import ThisTypeAnnotation from '../nodes/ThisTypeAnnotation';
 import TupleTypeAnnotation from '../nodes/TupleTypeAnnotation';
 import TypeAliasDeclaration from '../nodes/TypeAliasDeclaration';
@@ -92,6 +94,7 @@ type Node =
   | FunctionExpression
   | FunctionParameter
   | FunctionTypeAnnotation
+  | GenericTypeAnnotation
   | Identifier
   | IfStatement
   | ImportStatement
@@ -123,6 +126,7 @@ type Node =
   | SymbolTypeAnnotation
   | TemplateElement
   | TemplateLiteral
+  | ThisExpression
   | ThisTypeAnnotation
   | TupleTypeAnnotation
   | TypeAliasDeclaration

@@ -9,6 +9,7 @@ import BooleanTypeAnnotation from '../nodes/BooleanTypeAnnotation';
 import EmptyTypeAnnotation from '../nodes/EmptyTypeAnnotation';
 import ExistsTypeAnnotation from '../nodes/ExistsTypeAnnotation';
 import FunctionTypeAnnotation from '../nodes/FunctionTypeAnnotation';
+import GenericTypeAnnotation from '../nodes/GenericTypeAnnotation';
 import Identifier from '../nodes/Identifier';
 import ImportTypeAnnotation from '../nodes/ImportTypeAnnotation';
 import InferTypeAnnotation from '../nodes/InferTypeAnnotation';
@@ -35,6 +36,7 @@ type TypeAnnotation =
   | EmptyTypeAnnotation
   | ExistsTypeAnnotation
   | FunctionTypeAnnotation
+  | GenericTypeAnnotation
   | Identifier
   | ImportTypeAnnotation
   | InferTypeAnnotation
